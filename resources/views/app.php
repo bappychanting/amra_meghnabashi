@@ -15,11 +15,16 @@
 
   <title><?php startblock('title') ?><?php endblock() ?></title>
 
-  <!-- Bootstrap CSS-->
-  <?php echo style('plugins/bootstrap/css/bootstrap.min.css'); ?>
-
-  <!-- Iconic CSS-->
-  <?php echo style('plugins/iconic/css/open-iconic-bootstrap.css'); ?>
+  <!-- Font Awesome -->
+  <?php echo style('plugins/fontawesome/css/all.min.css'); ?>
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <?php echo style('css/bootstrap.min.css'); ?>
+  <!-- Material Design Bootstrap -->
+  <?php echo style('css/mdb.min.css'); ?>
+  <!-- Your custom styles (optional) -->
+  <?php echo style('style.css'); ?>
 
 </head>
 <!-- #ENDS# Header -->
@@ -86,11 +91,16 @@
         </div>
       </div>
 
-      <!-- Jquery -->
-      <?php echo script('plugins/jquery/jquery.min.js'); ?>
-
+      <!-- jQuery -->
+      <?php echo script('js/jquery.min.js'); ?>
+      <!-- Bootstrap tooltips -->
+      <?php echo script('js/popper.min.js'); ?>
       <!-- Bootstrap core JavaScript -->
-      <?php echo script('plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>
+      <?php echo script('js/bootstrap.min.js'); ?>
+      <!-- MDB core JavaScript -->
+      <?php echo script('js/mdb.min.js'); ?>
+      <!-- Custom JavaScript -->
+      <?php echo script('js/script.js'); ?>
 
     </body>
 
