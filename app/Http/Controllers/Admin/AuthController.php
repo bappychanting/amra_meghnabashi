@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\User; 
+namespace App\Http\Controllers\Admin; 
 
 use Base\Request;
-use App\Models\User\Auth; 
-use App\Models\User\User; 
+use App\Models\Admin\Auth; 
+use App\Models\Admin\User; 
 use App\Http\Controllers\Controller; 
 
 class AuthController extends Controller

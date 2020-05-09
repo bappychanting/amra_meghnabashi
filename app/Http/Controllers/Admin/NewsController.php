@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Base\Request; 
 use App\Models\User\Auth; 
-use App\Models\Item; 
+use App\Models\News; 
+use App\Http\Controllers\Controller; 
 
-class ItemController extends Controller
+class NewsController extends Controller
 {
 
     private $item;
@@ -15,7 +16,7 @@ class ItemController extends Controller
 
     public function __construct() {
         $this->guard('CheckAuth');
-        $this->item = new Item;
+        $this->item = new News;
         $this->auth = new Auth;
         $this->request = new Request;  
     }

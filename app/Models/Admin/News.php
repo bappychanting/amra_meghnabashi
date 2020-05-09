@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models; 
+namespace App\Models\Admin; 
 
 use App\Models\Model;
 
-class Item extends Model{
+class News extends Model{
 
     /* Declaring all variables */
 
