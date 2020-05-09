@@ -25,7 +25,7 @@ class AuthController extends Controller
         $number1 = rand(10,100); $number2 = rand(10,100); $total = $number1 + $number2;
         $captcha = ['number1' => $number1, 'number2' => $number2, 'total' => $total]; 
         $this->request->put('captcha', $captcha);   
-        return $this->view('auth.login');
+        return $this->view('admin.auth.login');
     }
 
     public function checkCaptcha() 
@@ -42,7 +42,7 @@ class AuthController extends Controller
         $this->auth->setPassword(isset($_POST['password']) ? $_POST['password'] : '');
         $signin = $this->auth->signin();
         if($signin){
-            $this->redirect('home');
+            $this->redirect('admin/users/all');
         }
         else{
           $this->redirect('signin');
@@ -52,7 +52,7 @@ class AuthController extends Controller
     public function forgotPassword() 
     {
         $this->guard('CheckGuest'); 
-        return $this->view('auth.forgot_pass');
+        return $this->view('admin.auth.forgot_pass');
     }
 
     public function sendResetInfo() 
@@ -81,7 +81,7 @@ class AuthController extends Controller
         $this->auth->setToken($_GET['token']);
         $link = $this->auth->getLink(); 
         if($link['validity'] == 1 && ((strtotime($link['created_at'])+ 60*60) > time())){
-            return $this->view('auth.reset_pass', compact('link'));
+            return $this->view('admin.auth.reset_pass', compact('link'));
         }
         else{
             $this->request->setFlash(['danger' => "This link is expired!"]);

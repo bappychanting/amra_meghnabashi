@@ -26,13 +26,13 @@ class NewsController extends Controller
         $auth_user = $this->auth->getAuth(); 
         $this->item->setUser($auth_user->id);
         $items = $this->item->getItems();
-        return $this->view('items.index', compact('items'));
+        return $this->view('admin.items.index', compact('items'));
     }
 
     public function create() 
     {
         $auth_user = $this->auth->getAuth(); 
-        return $this->view('items.create', compact('auth_user'));
+        return $this->view('admin.items.create', compact('auth_user'));
     }
 
     public function store() 
@@ -51,13 +51,13 @@ class NewsController extends Controller
     public function show() 
     {
         $item = $this->item->setData($_GET)->getItem();
-        return $this->view('items.show', compact('item'));  
+        return $this->view('admin.items.show', compact('item'));  
     }
 
     public function edit() 
     {
         $item = $this->item->setData($_GET)->getItem();
-        return $this->view('items.edit', compact('item'));  
+        return $this->view('admin.items.edit', compact('item'));  
     }
 
     public function update() 

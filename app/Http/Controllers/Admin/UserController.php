@@ -22,13 +22,13 @@ class UserController extends Controller
 
     public function index() 
     {
-        return $this->view('home');
+        return $this->view('admin.home');
     }
 
     public function create() 
     {
         $this->guard('CheckGuest');  
-        return $this->view('auth.register');
+        return $this->view('admin.auth.register');
     }
 
     public function store() 
@@ -45,21 +45,21 @@ class UserController extends Controller
     { 
         $auth_user = $this->auth->getAuth(); 
         $user = $this->user->setData((array) $auth_user)->getUser();
-        return $this->view('user.show', compact('user'));
+        return $this->view('admin.user.show', compact('user'));
     }
 
     public function edit() 
     {
         $auth_user = $this->auth->getAuth(); 
         $user = $this->user->setData((array) $auth_user)->getUser();
-        return $this->view('user.edit', compact('user'));
+        return $this->view('admin.user.edit', compact('user'));
     }
 
     public function editPassword() 
     { 
         $auth_user = $this->auth->getAuth(); 
         $user = $this->user->setData((array) $auth_user)->getUser();
-        return $this->view('user.edit_pass', compact('user'));
+        return $this->view('admin.user.edit_pass', compact('user'));
     }
 
     public function update() 

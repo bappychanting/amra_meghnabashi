@@ -1,4 +1,4 @@
-<?php inherits('app'); ?>
+<?php inherits('admin.app'); ?>
 
 <?php startblock('title') ?>
 

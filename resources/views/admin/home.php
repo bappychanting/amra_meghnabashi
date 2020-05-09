@@ -1,8 +1,8 @@
-<?php inherits('app'); ?>
+<?php inherits('admin.app'); ?>
 
 <?php startblock('title') ?>
 
-<?php echo 'Account || '.$user['name'].' || '.title(); ?>
+<?php echo 'Home || '.title(); ?>
 
 <?php endblock() ?>
 
@@ -10,7 +10,7 @@
 
 <div class="card">
   <div class="card-header">
-    <?php echo $user['name'] ?>
+    Dashboard
   </div>
   <div class="card-body">
     <?php 
@@ -26,10 +26,10 @@
       }
     } 
     ?>
-    <p><strong>Userame:</strong> <?php echo $user['username']; ?></p>
-    <p><strong>Email:</strong> <?php echo $user['email']; ?></p>
-    <a class="btn btn-warning" href="<?php echo route('user/edit') ?>"><span class="oi oi-pencil pr-2"></span>Edit Details</a>
-    <a class="btn btn-warning" href="<?php echo route('user/edit/password') ?>"><span class="oi oi-pencil pr-2"></span>Edit Password</a>
+    <h3 class="text-center my-5 text-muted">
+    	<span class="oi oi-dashboard pr-2"></span>
+    	Welcome to dashboard!
+    </h3>
   </div>
 </div>
 
