@@ -105,7 +105,7 @@ class AuthController extends Controller
     public function signout() 
     {
         $this->auth->signout();
-        $this->redirect('signin');
+        $this->redirect('admin/signin');
     }
 
 }

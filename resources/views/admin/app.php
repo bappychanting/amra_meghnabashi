@@ -72,9 +72,6 @@
               <span class="navbar-text">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link <?php echo route_is('admin/signup') ? 'active' : ''; ?>" href="<?php echo route('admin/signup'); ?>"><span class="oi oi-pencil pr-2"></span>Sign Up</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link <?php echo route_is('admin/signin') ? 'active' : ''; ?>" href="<?php echo route('admin/signin'); ?>"><span class="oi oi-account-login pr-2"></span>Sign In</a>
                   </li>
                 </ul>
