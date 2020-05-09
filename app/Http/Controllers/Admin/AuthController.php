@@ -49,22 +49,6 @@ class AuthController extends Controller
         }
     }
 
-    public function signup() 
-    {
-        $this->guard('CheckGuest');  
-        return $this->view('auth.register');
-    }
-
-    public function register() 
-    {
-        $store = $this->user->setData($_POST)->validateData()->storeUser();
-        if($store){
-            $this->request->setFlash(['success' => "You have now been registered!"]);
-            $this->redirect('signin');
-        }
-        $this->redirect(back());
-    }
-
     public function forgotPassword() 
     {
         $this->guard('CheckGuest'); 

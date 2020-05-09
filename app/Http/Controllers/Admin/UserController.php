@@ -20,6 +20,27 @@ class UserController extends Controller
         $this->request = new Request; 
     }
 
+    public function all() 
+    {
+
+    }
+
+    public function create() 
+    {
+        $this->guard('CheckGuest');  
+        return $this->view('auth.register');
+    }
+
+    public function store() 
+    {
+        $store = $this->user->setData($_POST)->validateData()->storeUser();
+        if($store){
+            $this->request->setFlash(['success' => "You have now been registered!"]);
+            $this->redirect('signin');
+        }
+        $this->redirect(back());
+    }
+
     public function show() 
     { 
         $auth_user = $this->auth->getAuth(); 
@@ -69,6 +90,11 @@ class UserController extends Controller
             $this->request->setFlash(['danger' => "Password could not be updated! Please try again!"]);
             $this->redirect(back());
         }
+    }
+
+    public function delete() 
+    {
+        
     }
 
 }

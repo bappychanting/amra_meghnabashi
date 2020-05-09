@@ -86,9 +86,11 @@ return [
 
 		// admin user pages
 
-	'admin/users/add' => 'Admin/AuthController@signup',
+	'admin/users/all' => 'Admin/UserController@index',
 
-	'admin/users/store' => 'Admin/AuthController@register',
+	'admin/users/create' => 'Admin/UserController@create',
+
+	'admin/users/store' => 'Admin/UserController@store',
 
 	'admin/users/show' => 'Admin/UserController@show',
 
