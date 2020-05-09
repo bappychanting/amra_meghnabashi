@@ -12,50 +12,94 @@ return [
 
 	'welcome' => 'HomeController@welcome',
 
-	'signin' => 'User/AuthController@signin',
+	// admin pages
 
-	'captcha' => 'User/AuthController@checkCaptcha',
+	'admin/signin' => 'Admin/AuthController@signin',
 
-	'login' => 'User/AuthController@login',
+	'admin/captcha' => 'Admin/AuthController@checkCaptcha',
 
-	'signup' => 'User/AuthController@signup',
+	'admin/login' => 'Admin/AuthController@login',
 
-	'register' => 'User/AuthController@register',
+	'admin/password/forgot' => 'Admin/AuthController@forgotPassword',
 
-	'password/forgot' => 'User/AuthController@forgotPassword',
+	'admin/password/mail' => 'Admin/AuthController@sendResetInfo',
 
-	'password/mail' => 'User/AuthController@sendResetInfo',
+	'admin/password/reset' => 'Admin/AuthController@resetPassword',
 
-	'password/reset' => 'User/AuthController@resetPassword',
+	'admin/password/update' => 'Admin/AuthController@updatePassword',
 
-	'password/update' => 'User/AuthController@updatePassword',
+	'admin/home' => 'Admin/HomeController@home',
 
-	'signout' => 'User/AuthController@signout',
+	'admin/signout' => 'Admin/AuthController@signout',
 
-	'home' => 'HomeController@home',
+		// admin news pages
 
-	'items/all' => 'ItemController@index',
+	'admin/news/all' => 'Admin/NewsController@index',
 
-	'items/create' => 'ItemController@create',
+	'admin/news/create' => 'Admin/NewsController@create',
 
-	'items/store' => 'ItemController@store',
+	'admin/news/store' => 'Admin/NewsController@store',
 
-	'items/show' => 'ItemController@show',
+	'admin/news/show' => 'Admin/NewsController@show',
 
-	'items/edit' => 'ItemController@edit',
+	'admin/news/edit' => 'Admin/NewsController@edit',
 
-	'items/update' => 'ItemController@update',
+	'admin/news/update' => 'Admin/NewsController@update',
 
-	'items/delete' => 'ItemController@delete',
+	'admin/news/delete' => 'Admin/NewsController@delete',
 
-	'user/show' => 'User/UserController@show',
+		// admin members pages
 
-	'user/edit' => 'User/UserController@edit',
+	'admin/members/all' => 'Admin/MemberController@index',
 
-	'user/edit/password' => 'User/UserController@editPassword',
+	'admin/members/create' => 'Admin/MemberController@create',
 
-	'user/update' => 'User/UserController@update',
+	'admin/members/store' => 'Admin/MemberController@store',
 
-	'user/update/password' => 'User/UserController@updatePassword',
+	'admin/members/show' => 'Admin/MemberController@show',
+
+	'admin/members/donations/add' => 'Admin/MemberController@addDonation',
+
+	'admin/members/donations/delete' => 'Admin/MemberController@deleteDonation',
+
+	'admin/members/edit' => 'Admin/MemberController@edit',
+
+	'admin/members/update' => 'Admin/MemberController@update',
+
+	'admin/members/delete' => 'Admin/MemberController@delete',
+
+		// admin projects pages
+
+	'admin/projects/all' => 'Admin/ProjectController@index',
+
+	'admin/projects/create' => 'Admin/ProjectController@create',
+
+	'admin/projects/store' => 'Admin/ProjectController@store',
+
+	'admin/projects/show' => 'Admin/ProjectController@show',
+
+	'admin/projects/edit' => 'Admin/ProjectController@edit',
+
+	'admin/projects/update' => 'Admin/ProjectController@update',
+
+	'admin/projects/delete' => 'Admin/ProjectController@delete',
+
+		// admin user pages
+
+	'admin/users/add' => 'Admin/AuthController@signup',
+
+	'admin/users/store' => 'Admin/AuthController@register',
+
+	'admin/users/show' => 'Admin/UserController@show',
+
+	'admin/users/edit' => 'Admin/UserController@edit',
+
+	'admin/users/update' => 'Admin/UserController@update',
+
+	'admin/users/edit/password' => 'Admin/UserController@editPassword',
+
+	'admin/users/update/password' => 'Admin/UserController@updatePassword',
+
+	'admin/users/delete' => 'Admin/UserController@delete',
 
 ];
