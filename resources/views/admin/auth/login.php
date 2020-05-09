@@ -18,7 +18,7 @@
       <h5 class="card-title">Spam Protection</h5>
       <p class="text-secondary"><?php echo Base\Request::show('captcha')->number1.' + '. Base\Request::show('captcha')->number2.' = ?'; ?></p>
       <a href="<?php echo $_SERVER['REQUEST_URI']; ?>" class="btn btn-block bg-red waves-effect"><span class="oi oi-reload pr-2"></span> <span class="icon-name">ReCaptcha</span></a>
-      <form method="POST" action="<?php echo route('captcha'); ?>">            
+      <form method="POST" action="<?php echo route('admin/captcha'); ?>">            
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <div class="form-group">
           <label for="email">Captcha:</label>
@@ -27,7 +27,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     <?php } else{ ?>
-      <form method="POST" action="<?php echo route('login'); ?>">            
+      <form method="POST" action="<?php echo route('admin/login'); ?>">            
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <?php 
         $alerts = Base\Request::getFlash();
@@ -56,7 +56,7 @@
           <label class="form-check-label" for="remember">Remember Me</label>
         </div>
         <button type="submit" class="btn btn-primary mr-5">Submit</button>
-        <a href="<?php echo route('password/forgot'); ?>">Forgot Password?</a>
+        <a href="<?php echo route('admin/password/forgot'); ?>">Forgot Password?</a>
       </form>
     <?php  } ?>
   </div>
