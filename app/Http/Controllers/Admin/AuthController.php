@@ -33,7 +33,7 @@ class AuthController extends Controller
         if($_POST['check'] == $this->request->show('captcha')->total){
           $this->auth->signout();
         }
-        $this->redirect('signin');
+        $this->redirect('admin/signin');
     }
 
     public function login() 
@@ -45,7 +45,7 @@ class AuthController extends Controller
             $this->redirect('admin/users/all');
         }
         else{
-          $this->redirect('signin');
+          $this->redirect('admin/signin');
         }
     }
 
