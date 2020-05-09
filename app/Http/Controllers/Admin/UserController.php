@@ -20,9 +20,9 @@ class UserController extends Controller
         $this->request = new Request; 
     }
 
-    public function all() 
+    public function index() 
     {
-
+        return $this->view('home');
     }
 
     public function create() 

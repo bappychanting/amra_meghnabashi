@@ -28,8 +28,6 @@ return [
 
 	'admin/password/update' => 'Admin/AuthController@updatePassword',
 
-	'admin/home' => 'Admin/HomeController@home',
-
 	'admin/signout' => 'Admin/AuthController@signout',
 
 		// admin news pages
