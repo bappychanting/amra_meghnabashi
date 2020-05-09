@@ -134,6 +134,11 @@ class User extends Model{
     return $this;
   }
 
+  public function getUsers(){    
+    $users = $this->db->table('users')->orderBy('created_at', 'desc')->limit(20)->read();
+    return $users;
+  }
+
   public function getUser(){    
     $user = $this->db->table('users')->where('id', '=', $this->getId())->or('username', '=', $this->getUsername())->or('email', '=', $this->getEmail())->read();
     return $user[0];
@@ -168,6 +173,11 @@ class User extends Model{
       $update = $this->db->table('users')->set(['password' => empty($this->getPassword()) ? '' : password_hash($this->getPassword(), PASSWORD_BCRYPT)])->where('id', '=', $this->getId())->update();
       return $update;
     }
+  }
+
+  public function deleteUser() {  
+      $delete = $this->db->table('users')->where('id', '=', $this->getId())->delete();
+      return $delete; 
   }
 
 }
