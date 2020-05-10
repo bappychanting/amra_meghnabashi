@@ -42,6 +42,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <?php $auth = new Base\Authenticable; if($auth->check()){ ?>
           <ul class="navbar-nav mr-auto">
+            <li class="nav-item <?php echo route_is('admin/web') ? 'active' : '' ?>">
+              <a class="nav-link" href="<?php echo route('admin/web/all'); ?>">Web Content</a>
+            </li>
             <li class="nav-item <?php echo route_is('admin/users') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/users/all'); ?>">Users</a>
             </li>

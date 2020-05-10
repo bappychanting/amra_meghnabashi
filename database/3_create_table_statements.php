@@ -6,11 +6,8 @@ return [
 
 	'create_web_contents' => 	"CREATE TABLE `web_contents` (
 							`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-							`content_type` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   							`content` longtext COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-							`created_at` timestamp NULL DEFAULT NULL,
 							`updated_at` timestamp NULL DEFAULT NULL,
-							`deleted_at` timestamp NULL DEFAULT NULL,
 							PRIMARY KEY (`id`)
 						)",
 

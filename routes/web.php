@@ -30,6 +30,12 @@ return [
 
 	'admin/signout' => 'Admin/AuthController@signout',
 
+		// admin web pages
+
+	'admin/web/all' => 'Admin/WebController@index',
+
+	'admin/web/update' => 'Admin/WebController@update',
+
 		// admin news pages
 
 	'admin/news/all' => 'Admin/NewsController@index',
