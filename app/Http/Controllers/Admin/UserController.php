@@ -68,9 +68,8 @@ class UserController extends Controller
 
     public function editPassword() 
     { 
-        $auth_user = $this->auth->getAuth(); 
-        $user = $this->user->setData((array) $auth_user)->getUser();
-        return $this->view('admin.user.edit_pass', compact('user'));
+        $user = $this->user->setData($_GET)->getUser();
+        return $this->view('admin.users.edit_pass', compact('user'));
     }
 
     public function updatePassword() 
@@ -79,11 +78,12 @@ class UserController extends Controller
         $this->auth->setPassword($_POST['auth_pass']);
         $check = $this->auth->passVerify();
         if($check){
+            $this->auth->setPassword('');
             $update = $this->auth->setData($_POST)->validateData()->updatePass();
         }
         if($update){
             $this->request->setFlash(['success' => "Password has beed updated!"]);
-            $this->redirect('user/show');
+            $this->redirect('admin/users/show', ['id' => $_POST['id']]);
         }
         else{
             $this->request->setFlash(['danger' => "Password could not be updated! Please try again!"]);

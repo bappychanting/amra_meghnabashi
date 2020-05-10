@@ -2,16 +2,14 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'Account || '.$user['name'].' || Edit Password || '.title(); ?>
+<?php echo 'All Users || '.$user['name'].' || Edit Password || '.title(); ?>
 
 <?php endblock() ?>
 
 <?php startblock('content') ?>
 
 <div class="card">
-  <div class="card-header">
-    Edit Password
-  </div>
+  <div class="card-header">Admin Dashboard</div>
   <div class="card-body">
     <?php 
     $alerts = Base\Request::getFlash();
@@ -26,7 +24,9 @@
     } 
     ?>
 
-    <form method="POST" action="<?php echo route('user/update/password'); ?>"> 
+    <h5 class="text-center my-3 text-muted"><i class="fas fa-user-edit pr-2"></i>Edit Password</h5>
+
+    <form method="POST" action="<?php echo route('admin/users/update/password'); ?>"> 
 
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
@@ -55,9 +55,9 @@
       <button type="submit" class="btn btn-primary mr-5">Update</button>
     </form>
 
-    <a href="<?php echo route('user/show') ?>" class="btn btn-primary btn-sm my-3"><span class="oi oi-arrow-left pr-2"></span>Go Back</a>
-
   </div>
 </div>
+
+<a class="btn btn-primary btn-sm my-3" href="<?php echo route('admin/users/show', ['id' => $user['id']]) ?>"><i class="fas fa-arrow-left pr-2"></i>Go back</a>
 
 <?php endblock() ?>

@@ -2,17 +2,17 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'Account || '.$user['name'].' || Edit Details || '.title(); ?>
+<?php echo 'All Users || '.$user['name'].' || Edit Details || '.title(); ?>
 
 <?php endblock() ?>
 
 <?php startblock('content') ?>
 
 <div class="card">
-  <div class="card-header">
-    Edit Details
-  </div>
+  <div class="card-header">Admin Dashboard</div>
   <div class="card-body">
+
+      <h5 class="text-center my-3 text-muted"><i class="fas fa-user-edit pr-2"></i>Edit Details</h5>
 
       <form method="POST" action="<?php echo route('admin/users/update'); ?>"> 
 
