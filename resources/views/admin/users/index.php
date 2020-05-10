@@ -29,7 +29,8 @@
     <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
         <tr>
-          <th class="th-sm">Name </th>
+          <th class="th-sm">#</th>
+          <th class="th-sm">Name</th>
           <th class="th-sm">Username</th>
           <th class="th-sm">Email</th>
           <th class="th-sm">Created At</th>
@@ -39,6 +40,7 @@
       <tbody>
         <?php foreach ($users as $user) { ?>
           <tr>
+            <td class="font-weight-bold"><?php echo $user['id']; ?></td>
             <td><?php echo $user['name']; ?></td>
             <td><?php echo $user['username']; ?></td>
             <td><?php echo $user['email']; ?></td>
@@ -56,7 +58,8 @@
       </tbody>
       <tfoot>
         <tr>
-          <th class="th-sm">Name </th>
+          <th class="th-sm">#</th>
+          <th class="th-sm">Name</th>
           <th class="th-sm">Username</th>
           <th class="th-sm">Email</th>
           <th class="th-sm">Created At</th>
