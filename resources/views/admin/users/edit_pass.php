@@ -11,18 +11,6 @@
 <div class="card">
   <div class="card-header">Admin Dashboard</div>
   <div class="card-body">
-    <?php 
-    $alerts = Base\Request::getFlash();
-    if(!empty((array) $alerts)){
-      foreach($alerts as $key=>$value){
-        ?>
-        <div class="alert alert-<?php echo $key; ?>"> 
-          <?php echo $value; ?>
-        </div>
-        <?php                            
-      }
-    } 
-    ?>
 
     <h5 class="text-center my-3 text-muted"><i class="fas fa-user-edit pr-2"></i>Edit Password</h5>
 
@@ -31,11 +19,6 @@
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
       <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
-
-      <div class="form-label-group my-3">
-        <label for="inputAuthPass">Old Password</label>
-        <input type="password" name="auth_pass" id="inputAuthPass" class="form-control">
-      </div>
 
       <div class="form-label-group my-3">
         <label for="inputPassword">Password</label>

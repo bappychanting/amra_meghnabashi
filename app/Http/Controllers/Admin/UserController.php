@@ -74,19 +74,12 @@ class UserController extends Controller
 
     public function updatePassword() 
     {
-        $this->auth->setId($_POST['id']);
-        $this->auth->setPassword($_POST['auth_pass']);
-        $check = $this->auth->passVerify();
-        if($check){
-            $this->auth->setPassword('');
-            $update = $this->auth->setData($_POST)->validateData()->updatePass();
-        }
+        $update = $this->auth->setData($_POST)->validateData()->updatePass();
         if($update){
             $this->request->setFlash(['success' => "Password has beed updated!"]);
             $this->redirect('admin/users/show', ['id' => $_POST['id']]);
         }
         else{
-            $this->request->setFlash(['danger' => "Password could not be updated! Please try again!"]);
             $this->redirect(back());
         }
     }
