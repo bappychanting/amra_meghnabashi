@@ -21,22 +21,22 @@
       <input type="hidden" name="id" value="<?php echo $news['id']; ?>">
 
       <div class="form-label-group my-3">
-        <label for="inputName">Title</label>
+        <label>Title</label>
         <textarea rows="1" class="form-control" name="title" maxlength="500" minlength="5" required><?php echo $news['title']; ?></textarea>
       </div>
 
       <div class="form-label-group my-3">
-        <label for="inputName">Tags</label>
+        <label>Tags</label>
         <input type="text" name="tags" value="<?php echo $news['tags']; ?>" class="form-control">
       </div>
 
       <div class="form-label-group my-3">
-        <label for="inputName">Image Link</label>
+        <label>Image Link</label>
         <input type="url" name="image_path" value="<?php echo $news['image_path']; ?>" class="form-control" required>
       </div>
 
       <div class="form-label-group my-3">
-        <label for="inputName">Details</label>
+        <label>Details</label>
         <textarea rows="10" class="form-control" name="details" required><?php echo $news['details']; ?></textarea>
       </div>
 

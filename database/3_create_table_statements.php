@@ -75,8 +75,7 @@ return [
 							`created_at` timestamp NULL DEFAULT NULL,
 							`updated_at` timestamp NULL DEFAULT NULL,
 							`deleted_at` timestamp NULL DEFAULT NULL,
-							PRIMARY KEY (`id`),
-							UNIQUE KEY `members_contact_unique` (`contact`)
+							PRIMARY KEY (`id`)
 						)",
 
 		// Create members

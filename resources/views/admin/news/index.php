@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'News || '.title(); ?>
+<?php echo 'All News || '.title(); ?>
 
 <?php endblock() ?>
 

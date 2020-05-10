@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'Projects || '.title(); ?>
+<?php echo 'All Projects || '.title(); ?>
 
 <?php endblock() ?>
 
@@ -24,7 +24,7 @@
       }
     } 
     ?>
-    <h5 class="text-center my-3 text-muted"><i class="fas fa-Projectspaper pr-2"></i>All Projects</h5>
+    <h5 class="text-center my-3 text-muted"><i class="fas fa-briefcase pr-2"></i>All Projects</h5>
     <a class="btn btn-success btn-sm" href="<?php echo route('admin/projects/create') ?>"><i class="fas fa-plus pr-2"></i>Add New Project</a>
     <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>

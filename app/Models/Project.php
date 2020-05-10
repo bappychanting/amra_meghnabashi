@@ -74,6 +74,12 @@ class Project extends Model{
 	    return $projects[0];
     }
 
+        // Function for getting project donations
+    public function getProjectDonations(){    
+        $donations = $this->db->table('donations_view')->where('project_id', '=', $this->getId())->read();
+        return $donations;
+    }
+
     	// Function for storing projects
     public function store() {   
         $store = $this->db->table('projects')->data(['name' => $this->getName(), 'details' => $this->getDetail()])->create();

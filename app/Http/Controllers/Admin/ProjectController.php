@@ -3,27 +3,24 @@
 namespace App\Http\Controllers\Admin;
 
 use Base\Request; 
-use App\Models\Auth; 
 use App\Models\Project; 
 use App\Http\Controllers\Controller; 
 
-class projectController extends Controller
+class ProjectController extends Controller
 {
 
     private $project;
-    private $auth;
     private $request;
 
     public function __construct() {
         $this->guard('CheckAuth');
         $this->project = new Project;
-        $this->auth = new Auth;
         $this->request = new Request;  
     }
 
     public function index() 
     {
-        $projects = $this->project->getAllprojects();
+        $projects = $this->project->getAllProjects();
         return $this->view('admin.projects.index', compact('projects'));
     }
 

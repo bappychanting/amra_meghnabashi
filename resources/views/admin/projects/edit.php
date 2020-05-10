@@ -21,12 +21,12 @@
       <input type="hidden" name="id" value="<?php echo $project['id']; ?>">
 
       <div class="form-label-group my-3">
-        <label for="inputName">Name</label>
+        <label>Name</label>
         <input type="text" name="name" value="<?php echo $project['name']; ?>" maxlength="50" minlength="2" class="form-control">
       </div>
 
       <div class="form-label-group my-3">
-        <label for="inputName">Details</label>
+        <label>Details</label>
         <textarea rows="10" class="form-control" name="details" required><?php echo $project['details']; ?></textarea>
       </div>
 

@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'All News || '.$news['title'].' || Edit News || '.title(); ?>
+<?php echo 'All Members || '.$member['name'].' || Edit Member || '.title(); ?>
 
 <?php endblock() ?>
 
@@ -12,32 +12,32 @@
   <div class="card-header">Admin Dashboard</div>
   <div class="card-body">
 
-    <h5 class="text-center my-3 text-muted"><i class="fas fa-user-edit pr-2"></i>Edit Details</h5>
+    <h5 class="text-center my-3 text-muted"><i class="fas fa-edit pr-2"></i>Edit Member</h5>
 
-    <form method="POST" action="<?php echo route('admin/news/update'); ?>"> 
+    <form method="POST" action="<?php echo route('admin/members/update'); ?>"> 
 
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
-      <input type="hidden" name="id" value="<?php echo $news['id']; ?>">
+      <input type="hidden" name="id" value="<?php echo $member['id']; ?>">
 
       <div class="form-label-group my-3">
-        <label for="inputName">Title</label>
-        <textarea rows="1" class="form-control" name="title" maxlength="500" minlength="5" required><?php echo $news['title']; ?></textarea>
+        <label>Name</label>
+        <input type="text" name="name" value="<?php echo $member['name']; ?>" class="form-control" maxlength="50" minlength="2" required>
       </div>
 
       <div class="form-label-group my-3">
-        <label for="inputName">Tags</label>
-        <input type="text" name="tags" value="<?php echo $news['tags']; ?>" class="form-control">
+        <label>Designation</label>
+        <input type="text" name="designation" value="<?php echo $member['designation']; ?>" class="form-control">
       </div>
 
       <div class="form-label-group my-3">
-        <label for="inputName">Image Link</label>
-        <input type="url" name="image_path" value="<?php echo $news['image_path']; ?>" class="form-control" required>
+        <label>Contact</label>
+        <input type="text" name="contact" value="<?php echo $member['contact']; ?>" class="form-control" required>
       </div>
 
       <div class="form-label-group my-3">
-        <label for="inputName">Details</label>
-        <textarea rows="10" class="form-control" name="details" required><?php echo $news['details']; ?></textarea>
+        <label>Details</label>
+        <textarea rows="5" class="form-control" name="details" required><?php echo $member['details']; ?></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>
@@ -46,6 +46,6 @@
   </div>
 </div>
 
-<a class="btn btn-primary btn-sm my-3" href="<?php echo route('admin/news/all') ?>"><i class="fas fa-arrow-left pr-2"></i>Go back</a>
+<a class="btn btn-primary btn-sm my-3" href="<?php echo route('admin/members/show', ['id' => $member['id']]) ?>"><i class="fas fa-arrow-left pr-2"></i>Go back</a>
 
 <?php endblock() ?>

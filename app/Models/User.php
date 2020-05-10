@@ -4,7 +4,7 @@ namespace App\Models;
 
 class User extends Model{
 
-	/* Declaring all ariables */
+	/* Declaring all variables */
 
   protected $id;
   protected $name;

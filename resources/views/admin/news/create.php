@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'News || Add New News || '.title(); ?>
+<?php echo 'All News || Add New News || '.title(); ?>
 
 <?php endblock() ?>
 
@@ -21,23 +21,23 @@
       <input type="hidden" name="user_id" value="<?php echo $auth_user->id; ?>">
 
       <div class="form-label-group my-3">
-        <label for="inputName">Title</label>
+        <label>Title</label>
         <textarea rows="1" class="form-control" name="title" maxlength="500" minlength="5" required></textarea>
       </div>
 
       <div class="form-label-group my-3">
-        <label for="inputName">Tags</label>
+        <label>Tags</label>
         <input type="text" name="tags" class="form-control" required>
         <small>Use comma to seperate tags</small>
       </div>
 
       <div class="form-label-group my-3">
-        <label for="inputName">Image Link</label>
+        <label>Image Link</label>
         <input type="url" name="image_path" class="form-control" required>
       </div>
 
       <div class="form-label-group my-3">
-        <label for="inputName">Details</label>
+        <label>Details</label>
         <textarea rows="10" class="form-control" name="details" required></textarea>
       </div>
 
