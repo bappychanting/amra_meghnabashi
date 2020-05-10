@@ -1,6 +1,6 @@
-<footer class="py-5">
+<footer>
   <div class="container">
-      <div class="row text-light">
+      <div class="row">
         <div class="col-sm-5">
           <h1 class="font-weight-bold"><?php echo APP_NAME; ?></h1>
           <p id="site-footer-slogan">Student Relationship Management System</p>
@@ -22,7 +22,7 @@
       </div>
       <hr>
       <p class="m-0 mt-3 text-center text-light">Copyright &copy; <?php echo APP_NAME; ?></p>
-      <p class="m-0 mt-3 text-center text-light">Powered By <a href="https://www.codecubeit.com/" target="_blank">CodeCube IT Solutions</a></p>
+      <p class="m-0 mt-3 text-center text-light">Powered By <a href="<?php echo route('admin/signin'); ?>">Administrator Group</a></p>
   </div>
   <!-- /.container -->
 </footer>
