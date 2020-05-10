@@ -3,20 +3,20 @@
 namespace App\Http\Controllers\Admin;
 
 use Base\Request; 
-use App\Models\User\Auth; 
+use App\Models\Auth; 
 use App\Models\News; 
 use App\Http\Controllers\Controller; 
 
 class NewsController extends Controller
 {
 
-    private $item;
+    private $news;
     private $auth;
     private $request;
 
     public function __construct() {
         $this->guard('CheckAuth');
-        $this->item = new News;
+        $this->news = new News;
         $this->auth = new Auth;
         $this->request = new Request;  
     }
@@ -24,24 +24,23 @@ class NewsController extends Controller
     public function index() 
     {
         $auth_user = $this->auth->getAuth(); 
-        $this->item->setUser($auth_user->id);
-        $items = $this->item->getItems();
-        return $this->view('admin.items.index', compact('items'));
+        $newses = $this->news->getAllNewses();
+        return $this->view('admin.news.index', compact('newses'));
     }
 
     public function create() 
     {
         $auth_user = $this->auth->getAuth(); 
-        return $this->view('admin.items.create', compact('auth_user'));
+        return $this->view('admin.newss.create', compact('auth_user'));
     }
 
     public function store() 
     {
-        $store = $this->item->setData($_POST)->validateData()->storeItem();
+        $store = $this->news->setData($_POST)->validateData()->storenews();
         if($store){
             $this->request->destroy('post');
             $this->request->setFlash(['success' => locale('message', 'success')]);
-            $this->redirect('items/show', ['id' => $this->item->getLastId()]);
+            $this->redirect('newss/show', ['id' => $this->news->getLastId()]);
         }
         else{
             $this->redirect(back());
@@ -50,23 +49,23 @@ class NewsController extends Controller
 
     public function show() 
     {
-        $item = $this->item->setData($_GET)->getItem();
-        return $this->view('admin.items.show', compact('item'));  
+        $news = $this->news->setData($_GET)->getnews();
+        return $this->view('admin.newss.show', compact('news'));  
     }
 
     public function edit() 
     {
-        $item = $this->item->setData($_GET)->getItem();
-        return $this->view('admin.items.edit', compact('item'));  
+        $news = $this->news->setData($_GET)->getnews();
+        return $this->view('admin.newss.edit', compact('news'));  
     }
 
     public function update() 
     {
-        $update = $this->item->setData($_POST)->validateData()->updateItem();
+        $update = $this->news->setData($_POST)->validateData()->updatenews();
         if($update){
             $this->request->destroy('post');
             $this->request->setFlash(['success' => locale('message', 'success')]);
-            $this->redirect('items/show', ['id' => $_POST['id']]);
+            $this->redirect('newss/show', ['id' => $_POST['id']]);
         }
         else{
             $this->redirect(back());
@@ -75,10 +74,10 @@ class NewsController extends Controller
 
     public function delete() 
     { 
-        $delete = $this->item->setData($_POST)->deleteItem();
+        $delete = $this->news->setData($_POST)->deletenews();
         if($delete){
             $this->request->setFlash(['success' => locale('message', 'success')]);
-            $this->redirect('items/all');
+            $this->redirect('newss/all');
         }
         else{
             $this->request->setFlash(['danger' => locale('message', 'danger')]);
