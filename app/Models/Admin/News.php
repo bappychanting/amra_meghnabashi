@@ -9,8 +9,10 @@ class News extends Model{
     /* Declaring all variables */
 
     private $id;
-    private $name;
-    private $price;
+    private $title;
+    private $tags;
+    private $image_path;
+    private $details;
     private $user_id;
 
     /* Setter getter for all variables */
@@ -23,31 +25,36 @@ class News extends Model{
         return $this->id;
     }
 
-    	// item name Setter Getter
-    function setName($name){
-        if(is_numeric($name) && $name != 0){
-            if(strlen($name) == 1){
-                $name = "0".$name;
-            }
-            elseif(strlen($name) > 2) {
-                $name = ltrim($name, '0');
-                if(strlen($name) == 1){
-                    $name = "0".$name;
-                }
-            }
-        }
-        $this->name = ucwords(strtolower($name));   
-    }	    
-    function getName(){
-        return $this->name;
+    	// News title Setter Getter
+    function setTitle($title){
+        $this->title = str_replace('\' ', '\'', ucwords(str_replace('\'', '\' ', strtolower($title))));
+    }
+    function getTitle(){
+        return $this->title;
     }
 
-        // Price name Setter Getter
-    function setPrice($price){
-        $this->price = intval($price); 
-    }       
-    function getPrice(){
-        return $this->price;
+        // Tags setter getter
+    function setTag($tags){
+        $this->tags = $tags;
+    }
+    function getTag(){
+        return $this->tags;
+    }
+
+        // Image setter getter
+    function setImage($image_path){
+        $this->image_path = $image_path;
+    }
+    function getImage(){
+        return $this->image_path;
+    }
+
+        // Detail setter getter
+    function setDetail($details){
+        $this->details = $details;
+    }
+    function getDetail(){
+        return $this->details;
     }
 
         // User Id Setter Getter
@@ -63,14 +70,25 @@ class News extends Model{
       // Setting all the data
     public function setData($data = ''){
 		if (isset($data['id'])){
-			$this->setId($data['id']);
-		}
-		if (isset($data['name'])){
-			$this->setName($data['name']);
-		}
-        if (isset($data['price'])){
-            $this->setPrice($data['price']);
+            $this->setId($data['id']);
         }
+
+        if (isset($data['title'])){
+            $this->setTitle($data['title']);
+        }
+
+        if (isset($data['image'])){
+            $this->setTitle($data['title']);
+        }
+
+        if (isset($data['tags'])){
+            $this->setTag($data['tags']);
+        }
+
+        if (isset($data['details'])){
+            $this->setDetail($data['details']);
+        }
+
         if (isset($data['user_id'])){
             $this->setUser($data['user_id']);
         }
@@ -82,57 +100,61 @@ class News extends Model{
 	{
 		$errors = array();
 
-		if(empty($this->getName())){
-		  $errors['name'] = locale('validation', 'empty', ['data' => 'name']);
-		}
-        else{
-            $item = $this->db->table('items')->where('name', '=', $this->getName())->and('id', '!=', $this->getId())->read();
-            if($item){
-                $errors['name'] = locale('validation', 'exists', ['data' => 'name']);
-            }
-        }
+        if(empty($this->getTitle())){
+          $errors['title'] = "Title can not be empty!";
+        }       
 
-        if(empty($this->getPrice())){
-          $errors['price'] = locale('validation', 'empty', ['data' => 'price']);
-        }
+        if(empty($this->getTag())){
+          $errors['tags'] = "Tags can not be empty!";
+        }   
+
+        if(empty($this->getDetail())){
+          $errors['details'] = "Details can not be empty!";
+        }   
 
 		setErrors($errors);   
 
 		return $this;
 	}
 
-		// Function for showing items
-    public function getItems() {   
-        $items = $this->db->table('items')->where('user_id', '=', $this->getUser())->orderBy('created_at', 'desc')->limit(2)->read();
+		// Function for getting news
+    public function getNewses() {   
+        $news = $this->db->table('news')->orderBy('created_at', 'desc')->limit(10)->read();
         $pagination = $this->db->pagination();
-        return array('items' => $items, 'pagination' => $pagination);
+        return array('news' => $news, 'pagination' => $pagination);
     }
 
-    	// Function for showing item
-    public function getItem() {   
-	    $item = $this->db->table('items')->where('id', '=', $this->getId())->read();
-	    return $item[0];
+        // Function for all news
+    public function getAllNewses() {   
+        $news = $this->db->table('news_view')->orderBy('created_at', 'desc')->limit(2000)->read();
+        return $news;
     }
 
-    	// Function for storing item
-    public function storeItem() {   
+    	// Function for showing News
+    public function getNews() {   
+	    $news = $this->db->table('news')->where('id', '=', $this->getId())->read();
+	    return $news[0];
+    }
+
+    	// Function for storing News
+    public function storeNews() {   
         if(empty(getErrors())){
-            $store = $this->db->table('items')->data(['name' => $this->getName(), 'price' => $this->getPrice(), 'user_id' => $this->getUser()])->create();
+            $store = $this->db->table('news')->data(['title' => $this->getTitle(), 'tags' => $this->getTag(), 'image_path' => $this->getImage(), 'details' => $this->getDetail(), 'user_id' => $this->getUser()])->create();
             return $store;
         }       
     }
 
-    	// Function for Editing item
-    public function updateItem() {
+    	// Function for Editing News
+    public function updateNews() {
         if(empty(getErrors())){
-            $update = $this->db->table('items')->set(['name' => $this->getName(), 'price' => $this->getPrice()])->where('id', '=', $this->getId())->update();
+            $update = $this->db->table('news')->set(['title' => $this->getTitle(), 'tags' => $this->getTag(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->where('id', '=', $this->getId())->update();
             return $update;
         }
     }
 
-    	// Function for deleting item
-    public function deleteItem() {  
-        $delete = $this->db->table('items')->where('id', '=', $this->getId())->delete();
+    	// Function for deleting News
+    public function deleteNews() {  
+        $delete = $this->db->table('news')->where('id', '=', $this->getId())->delete();
         return $delete; 
     }
 
