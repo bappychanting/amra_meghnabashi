@@ -30,7 +30,7 @@ class AuthController extends Controller
 
     public function checkCaptcha() 
     {
-        if($_POST['check'] == $this->request->show('captcha')->total){
+        if($_POST['check'] == $this->request->show('captcha')['total']){
           $this->auth->signout();
         }
         $this->redirect('admin/signin');
@@ -68,11 +68,11 @@ class AuthController extends Controller
             $this->auth->storeLink();
             $subject = 'Link For Password Reset!';
             $body = 'Please click the below link to reset your password-';
-            $body .= '<br><a href="'.route("password/reset", ["token" => $token]).'" target="_blank">Link to reset password!</a>';
+            $body .= '<br><a href="'.route("admin/password/reset", ["token" => $token]).'" target="_blank">Link to reset password!</a>';
             $this->sendMail($user['email'], $subject, $body);
         }
         $this->request->setFlash(['success' => "Pleace check your mail! You will get an email if your given credential is found in our database!"]);
-        $this->redirect('password/forgot');
+        $this->redirect('admin/password/forgot');
     }
 
     public function resetPassword() 
@@ -85,7 +85,7 @@ class AuthController extends Controller
         }
         else{
             $this->request->setFlash(['danger' => "This link is expired!"]);
-            $this->redirect('password/forgot');
+            $this->redirect('admin/password/forgot');
         }
     }
 
@@ -97,7 +97,7 @@ class AuthController extends Controller
             $this->auth->setToken($_POST['token']);
             $this->auth->updateValidity();
             $this->request->setFlash(['success' => "Your password has been updated!"]);
-            $this->redirect('signin');
+            $this->redirect('admin/signin');
         }
         $this->redirect(back());
     }

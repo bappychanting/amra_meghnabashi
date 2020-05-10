@@ -15,7 +15,7 @@
   <div class="card-body">
       <h5 class="card-title">Enter Your New Password, <?php echo $link['name']; ?></h5>
 
-      <form method="POST" action="<?php echo route('password/update'); ?>"> 
+      <form method="POST" action="<?php echo route('admin/password/update'); ?>"> 
 
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <input type="hidden" name="id" value="<?php echo $link['user_id']; ?>">

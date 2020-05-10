@@ -16,8 +16,8 @@
     <?php if(!empty(Base\Request::getData('timeout'))){ ?>
       <div class="alert alert-danger"><?php echo Base\Request::getData('timeout'); ?></div>
       <h5 class="card-title">Spam Protection</h5>
-      <p class="text-secondary"><?php echo Base\Request::show('captcha')->number1.' + '. Base\Request::show('captcha')->number2.' = ?'; ?></p>
-      <a href="<?php echo $_SERVER['REQUEST_URI']; ?>" class="btn btn-block bg-red waves-effect"><span class="oi oi-reload pr-2"></span> <span class="icon-name">ReCaptcha</span></a>
+      <p class="text-secondary"><?php echo Base\Request::show('captcha')['number1'].' + '. Base\Request::show('captcha')['number2'].' = ?'; ?></p>
+      <a href="<?php echo $_SERVER['REQUEST_URI']; ?>" class="btn btn-block btn-warning waves-effect"><i class="fas fa-redo"></i> ReCaptcha</a>
       <form method="POST" action="<?php echo route('admin/captcha'); ?>">            
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <div class="form-group">

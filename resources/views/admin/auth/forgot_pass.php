@@ -25,7 +25,7 @@
       }
     } 
     else { ?> 
-      <form method="POST" action="<?php echo route('password/mail'); ?>">            
+      <form method="POST" action="<?php echo route('admin/password/mail'); ?>">            
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <h5 class="card-title">Please Input Your Username/Email address</h5>
         <div class="form-group">

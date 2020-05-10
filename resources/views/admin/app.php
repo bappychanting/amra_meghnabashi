@@ -41,19 +41,22 @@
         <?php $auth = new Base\Authenticable; if($auth->check()){ ?>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item <?php echo route_is('admin/users') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/users/all'); ?>"><span class="oi oi-home pr-2"></span>Users <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<?php echo route('admin/users/all'); ?>">Users</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/members') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/members/all'); ?>"><span class="oi oi-home pr-2"></span>Members <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<?php echo route('admin/members/all'); ?>">Members</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/news') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/news/all'); ?>"><span class="oi oi-list pr-2"></span>News <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<?php echo route('admin/news/all'); ?>">News</a>
+            </li>
+            <li class="nav-item <?php echo route_is('admin/projects') ? 'active' : '' ?>">
+              <a class="nav-link" href="<?php echo route('admin/projects/all'); ?>">Projects</a>
             </li>
           </ul>
           <span class="navbar-text">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0);" onclick="signout();"><span class="oi oi-account-logout pr-2"></span>Sign Out</a>
+                <a class="nav-link" href="javascript:void(0);" onclick="signout();"><i class="fas fa-sign-out-alt pr-2"></i>Sign Out</a>
                 <form id="signout-form" action="<?php echo route('admin/signout') ?>" method="POST" style="display: none;">
                   <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                 </form>
@@ -72,7 +75,7 @@
               <span class="navbar-text">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                    <a class="nav-link <?php echo route_is('admin/signin') ? 'active' : ''; ?>" href="<?php echo route('admin/signin'); ?>"><span class="oi oi-account-login pr-2"></span>Sign In</a>
+                    <a class="nav-link <?php echo route_is('admin/signin') ? 'active' : ''; ?>" href="<?php echo route('admin/signin'); ?>"><i class="fas fa-sign-in-alt pr-2"></i>Sign In</a>
                   </li>
                 </ul>
               </span>

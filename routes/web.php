@@ -12,7 +12,7 @@ return [
 
 	'welcome' => 'HomeController@welcome',
 
-	// admin pages
+		// admin sign in pages
 
 	'admin/signin' => 'Admin/AuthController@signin',
 
