@@ -98,11 +98,6 @@ class Member extends Model{
     return $members[0];
   }
 
-  public function getMemberDonations(){    
-    $donations = $this->db->table('donations_view')->where('member_id', '=', $this->getId())->read();
-    return $donations;
-  }
-
   public function store(){   
     $store = $this->db->table('members')->data(['name' => $this->getName(), 'designation' => $this->getDesignation(), 'contact' => $this->getContact(), 'details' => $this->getDetail()])->create();
     return $store;

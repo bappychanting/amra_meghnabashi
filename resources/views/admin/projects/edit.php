@@ -36,6 +36,6 @@
   </div>
 </div>
 
-<a class="btn btn-primary btn-sm my-3" href="<?php echo route('admin/projects/all') ?>"><i class="fas fa-arrow-left pr-2"></i>Go back</a>
+<a class="btn btn-primary btn-sm my-3" href="<?php echo route('admin/projects/show', ['id' => $project['id']]) ?>"><i class="fas fa-arrow-left pr-2"></i>Go back</a>
 
 <?php endblock() ?>

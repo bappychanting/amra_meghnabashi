@@ -4,17 +4,20 @@ namespace App\Http\Controllers\Admin;
 
 use Base\Request; 
 use App\Models\Project; 
+use App\Models\Donation; 
 use App\Http\Controllers\Controller; 
 
 class ProjectController extends Controller
 {
 
     private $project;
+    private $donation;
     private $request;
 
     public function __construct() {
         $this->guard('CheckAuth');
         $this->project = new Project;
+        $this->donation = new Donation;
         $this->request = new Request;  
     }
 
@@ -41,6 +44,14 @@ class ProjectController extends Controller
         }
     }
 
+    public function show() 
+    {
+        $project = $this->project->setData($_GET)->getProject();
+        $this->donation->setProject($project['id']);
+        $donations = $this->donation->getProjectDonations();
+        return $this->view('admin.projects.show', compact('project', 'donations'));  
+    }
+
     public function edit() 
     {
         $project = $this->project->setData($_GET)->getProject();
@@ -52,7 +63,7 @@ class ProjectController extends Controller
         $update = $this->project->setData($_POST)->update();
         if($update){
             $this->request->setFlash(['success' => locale('message', 'success')]);
-            $this->redirect('admin/projects/all');
+            $this->redirect('admin/projects/show', ['id' => $_POST['id']]);
         }
         else{
             $this->redirect(back());

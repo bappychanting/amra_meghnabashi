@@ -47,7 +47,7 @@
               <form method="post" action="<?php echo route('admin/projects/delete') ?>" onsubmit="return confirm('Do you really want to delete this project?');">
                 <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                 <input type="hidden" value="<?php echo $project['id']; ?>" name="id">
-                <a class="btn btn-warning btn-sm" href="<?php echo route('admin/projects/edit', ['id' => $project['id']]) ?>"><i class="fas fa-edit"></i></a>
+                <a class="btn btn-primary btn-sm" href="<?php echo route('admin/projects/show', ['id' => $project['id']]) ?>"><i class="fas fa-eye"></i></a>
                 <button class="btn btn-danger btn-sm" type="submit"><i class="fas fa-trash"></i></button>
               </form>
             </td>
