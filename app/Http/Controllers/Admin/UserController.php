@@ -22,12 +22,13 @@ class UserController extends Controller
 
     public function index() 
     {
-        return $this->view('admin.home');
+        $auth_user = $this->auth->getAuth(); 
+        $users = $this->user->getUsers();
+        return $this->view('admin.users.index', compact('users', 'auth_user'));
     }
 
     public function create() 
-    {
-        $this->guard('CheckGuest');  
+    { 
         return $this->view('admin.auth.register');
     }
 

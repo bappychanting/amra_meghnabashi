@@ -21,10 +21,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
   <!-- Bootstrap core CSS -->
   <?php echo style('css/bootstrap.min.css'); ?>
+  <!-- Datatable CSS -->
+  <?php echo style('plugins/mdbootstrap/css/addons/datatables.min.css'); ?>
   <!-- Material Design Bootstrap -->
   <?php echo style('css/mdb.min.css'); ?>
   <!-- Your custom styles (optional) -->
-  <?php echo style('style.css'); ?>
+  <?php echo style('css/style.css'); ?>
 
 </head>
 <!-- #ENDS# Header -->
@@ -33,7 +35,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="<?php echo route('welcome'); ?>"><?php echo title(); ?></a>
+      <a class="navbar-brand font-weight-bold" href="<?php echo route('welcome'); ?>"><?php echo title(); ?></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -97,6 +99,8 @@
       <?php echo script('js/popper.min.js'); ?>
       <!-- Bootstrap core JavaScript -->
       <?php echo script('js/bootstrap.min.js'); ?>
+      <!-- Datatables JavaScript -->
+      <?php echo script('plugins/mdbootstrap/js/addons/datatables.min.js'); ?>
       <!-- MDB core JavaScript -->
       <?php echo script('js/mdb.min.js'); ?>
       <!-- Custom JavaScript -->
