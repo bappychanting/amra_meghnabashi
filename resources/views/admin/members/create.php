@@ -34,6 +34,11 @@
       </div>
 
       <div class="form-label-group my-3">
+        <label>Image Link</label>
+        <input type="url" name="image_path" class="form-control" required>
+      </div>
+
+      <div class="form-label-group my-3">
         <label>Details</label>
         <textarea rows="5" class="form-control" name="details" required></textarea>
       </div>
