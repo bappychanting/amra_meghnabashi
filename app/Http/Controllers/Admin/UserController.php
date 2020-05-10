@@ -36,8 +36,8 @@ class UserController extends Controller
     {
         $store = $this->user->setData($_POST)->validateData()->storeUser();
         if($store){
-            $this->request->setFlash(['success' => "You have now been registered!"]);
-            $this->redirect('signin');
+            $this->request->setFlash(['success' => "New user has been added!"]);
+            $this->redirect('admin/users/all');
         }
         $this->redirect(back());
     }
@@ -50,16 +50,8 @@ class UserController extends Controller
 
     public function edit() 
     {
-        $auth_user = $this->auth->getAuth(); 
-        $user = $this->user->setData((array) $auth_user)->getUser();
-        return $this->view('admin.user.edit', compact('user'));
-    }
-
-    public function editPassword() 
-    { 
-        $auth_user = $this->auth->getAuth(); 
-        $user = $this->user->setData((array) $auth_user)->getUser();
-        return $this->view('admin.user.edit_pass', compact('user'));
+        $user = $this->user->setData($_GET)->getUser();
+        return $this->view('admin.users.edit', compact('user'));
     }
 
     public function update() 
@@ -67,11 +59,18 @@ class UserController extends Controller
         $update = $this->user->setData($_POST)->validateData()->updateUser();
         if($update){
             $this->request->setFlash(['success' => "User has beed updated!"]);
-            $this->redirect('user/show');
+            $this->redirect('admin/users/show', ['id' => $_POST['id']]);
         }
         else{
             $this->redirect(back());
         }
+    }
+
+    public function editPassword() 
+    { 
+        $auth_user = $this->auth->getAuth(); 
+        $user = $this->user->setData((array) $auth_user)->getUser();
+        return $this->view('admin.user.edit_pass', compact('user'));
     }
 
     public function updatePassword() 
@@ -94,6 +93,15 @@ class UserController extends Controller
 
     public function delete() 
     {
+        $delete = $this->user->setData($_POST)->deleteUser();
+        if($delete){
+            $this->request->setFlash(['success' => locale('message', 'success')]);
+            $this->redirect('admin/users/all');
+        }
+        else{
+            $this->request->setFlash(['danger' => locale('message', 'danger')]);
+            $this->redirect(back());
+        }  
         
     }
 

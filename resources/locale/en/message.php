@@ -4,8 +4,8 @@ return [
 
 		// alert messages
     'info' => 'This is a info alert!',
-    'success' => 'This is a success alert!',
+    'success' => 'The operation has been successful!',
     'warning' => 'This is a warning alert!',
-    'danger' => 'This is a danger alert!'
+    'danger' => 'Operation failed!'
 
 ];

@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'Account || '.$user['name'].' || '.title(); ?>
+<?php echo 'All Users || '.$user['name'].' || '.title(); ?>
 
 <?php endblock() ?>
 

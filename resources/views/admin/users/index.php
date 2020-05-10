@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'Home || '.title(); ?>
+<?php echo 'All Users || '.title(); ?>
 
 <?php endblock() ?>
 
@@ -48,7 +48,7 @@
                 <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                 <input type="hidden" value="<?php echo $user['id']; ?>" name="id">
                 <a class="btn btn-primary btn-sm" href="<?php echo route('admin/users/show', ['id' => $user['id']]) ?>"><i class="fas fa-eye"></i></a>
-                <button class="btn btn-danger btn-sm <?php if($user['id'] == 1 || $user['username'] == $auth_user['username']); ?> disabled <? } ?>" type="submit"><i class="fas fa-trash"></i></button>
+                <button class="btn btn-danger btn-sm <?php echo ($user['id'] == 1 || $user['username'] == $auth_user->username)? 'disabled' : '' ?>" type="submit"><i class="fas fa-trash"></i></button>
               </form>
             </td>
           </tr>

@@ -2,17 +2,15 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'Register || '.title(); ?>
+<?php echo 'All Users || Add New User || '.title(); ?>
 
 <?php endblock() ?>
 
 <?php startblock('content') ?>
 <div class="card">
-  <div class="card-header">
-    Register
-  </div>
+  <div class="card-header">Admin Dashboard</div>
   <div class="card-body">
-    <form class="form-signin" action="<?php echo route('register'); ?>" method="POST">
+    <form class="form-signin" action="<?php echo route('admin/users/store'); ?>" method="POST">
 
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
@@ -61,7 +59,7 @@
           <input type="password" name="confirmPassword" id="inputConfirmPassword" class="form-control">
         </div>
 
-        <button class="btn btn-primary text-uppercase" type="submit">Register</button>
+        <button class="btn btn-primary text-uppercase" type="submit">Submit</button>
       </form>
     </div>
   </div>

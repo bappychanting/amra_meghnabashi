@@ -14,7 +14,7 @@
   </div>
   <div class="card-body">
 
-      <form method="POST" action="<?php echo route('user/update'); ?>"> 
+      <form method="POST" action="<?php echo route('admin/users/update'); ?>"> 
 
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
@@ -53,9 +53,9 @@
         <button type="submit" class="btn btn-primary mr-5">Update</button>
       </form>
 
-      <a href="<?php echo route('user/show') ?>" class="btn btn-primary btn-sm my-3"><span class="oi oi-arrow-left pr-2"></span>Go Back</a>
-
   </div>
 </div>
+
+<a class="btn btn-primary btn-sm my-3" href="<?php echo route('admin/users/show', ['id' => $user['id']]) ?>"><i class="fas fa-arrow-left pr-2"></i>Go back</a>
 
 <?php endblock() ?>
