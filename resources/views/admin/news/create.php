@@ -2,49 +2,50 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'Items || Add New Item || '.title(); ?>
+<?php echo 'News || Add New News || '.title(); ?>
 
 <?php endblock() ?>
 
 <?php startblock('content') ?>
 
 <div class="card">
-  <div class="card-header">
-    Add New Item
-  </div>
+  <div class="card-header">Admin Dashboard</div>
   <div class="card-body">
 
-      <form method="POST" action="<?php echo route('items/store'); ?>"> 
+    <h5 class="text-center my-3 text-muted"><i class="fas fa-plus pr-2"></i>Add New News</h5>
 
-        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+    <form method="POST" action="<?php echo route('admin/news/store'); ?>"> 
 
-        <input type="hidden" name="user_id" value="<?php echo $auth_user->id; ?>">
-        
-        <div class="form-label-group my-3">
-          <label for="inputName">Name</label>
-          <input type="text" name="name" value="<?php echo field_val('name'); ?>" id="inputName" class="form-control <?php echo empty(field_err('name'))? '' : 'is-invalid'; ?>">
-          <?php if(!empty(field_err('name'))){ ?>
-          <span class="invalid-feedback" role="alert">
-            <strong><?php echo field_err('name'); ?></strong>
-          </span>
-          <?php } ?>
-        </div>
-        
-        <div class="form-label-group my-3">
-          <label for="inputPrice">Price</label>
-          <input type="number" step="0.01" value="<?php echo field_val('price'); ?>" name="price" id="inputPrice" class="form-control <?php echo empty(field_err('price'))? '' : 'is-invalid'; ?>">
-          <?php if(!empty(field_err('price'))){ ?>
-          <span class="invalid-feedback" role="alert">
-            <strong><?php echo field_err('price'); ?></strong>
-          </span>
-          <?php } ?>
-        </div>
+      <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
-        <button type="submit" class="btn btn-primary mr-5">Submit</button>
-      </form>
+      <input type="hidden" name="user_id" value="<?php echo $auth_user->id; ?>">
 
-      <a href="<?php echo route('items/all') ?>" class="btn btn-primary btn-sm my-3"><span class="oi oi-arrow-left pr-2"></span>Go Back</a>
+      <div class="form-label-group my-3">
+        <label for="inputName">Title</label>
+        <textarea rows="1" class="form-control" name="title" maxlength="500" minlength="5" required></textarea>
+      </div>
+
+      <div class="form-label-group my-3">
+        <label for="inputName">Tags</label>
+        <input type="text" name="tags" class="form-control" required>
+        <small>Use comma to seperate tags</small>
+      </div>
+
+      <div class="form-label-group my-3">
+        <label for="inputName">Image Link</label>
+        <input type="url" name="image_path" class="form-control" required>
+      </div>
+
+      <div class="form-label-group my-3">
+        <label for="inputName">Details</label>
+        <textarea rows="10" class="form-control" name="details" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary mr-5">Submit</button>
+    </form>
   </div>
 </div>
+
+<a class="btn btn-primary btn-sm my-3" href="<?php echo route('admin/news/all') ?>"><i class="fas fa-arrow-left pr-2"></i>Go back</a>
 
 <?php endblock() ?>

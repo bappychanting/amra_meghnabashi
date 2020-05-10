@@ -38,8 +38,6 @@ return [
 
 	'admin/news/store' => 'Admin/NewsController@store',
 
-	'admin/news/show' => 'Admin/NewsController@show',
-
 	'admin/news/edit' => 'Admin/NewsController@edit',
 
 	'admin/news/update' => 'Admin/NewsController@update',

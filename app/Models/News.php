@@ -75,12 +75,12 @@ class News extends Model{
             $this->setTitle($data['title']);
         }
 
-        if (isset($data['image'])){
-            $this->setTitle($data['title']);
-        }
-
         if (isset($data['tags'])){
             $this->setTag($data['tags']);
+        }
+
+        if (isset($data['image_path'])){
+            $this->setImage($data['image_path']);
         }
 
         if (isset($data['details'])){
@@ -92,28 +92,6 @@ class News extends Model{
         }
       	return $this;
     }
-
-    	// Validating necesarry data 
-	public function validateData()
-	{
-		$errors = array();
-
-        if(empty($this->getTitle())){
-          $errors['title'] = "Title can not be empty!";
-        }       
-
-        if(empty($this->getTag())){
-          $errors['tags'] = "Tags can not be empty!";
-        }   
-
-        if(empty($this->getDetail())){
-          $errors['details'] = "Details can not be empty!";
-        }   
-
-		setErrors($errors);   
-
-		return $this;
-	}
 
 		// Function for getting news
     public function getNewses() {   
@@ -135,23 +113,19 @@ class News extends Model{
     }
 
     	// Function for storing News
-    public function storeNews() {   
-        if(empty(getErrors())){
-            $store = $this->db->table('news')->data(['title' => $this->getTitle(), 'tags' => $this->getTag(), 'image_path' => $this->getImage(), 'details' => $this->getDetail(), 'user_id' => $this->getUser()])->create();
-            return $store;
-        }       
+    public function store() {   
+        $store = $this->db->table('news')->data(['title' => $this->getTitle(), 'tags' => $this->getTag(), 'image_path' => $this->getImage(), 'details' => $this->getDetail(), 'user_id' => $this->getUser()])->create();
+        return $store;
     }
 
     	// Function for Editing News
-    public function updateNews() {
-        if(empty(getErrors())){
-            $update = $this->db->table('news')->set(['title' => $this->getTitle(), 'tags' => $this->getTag(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->where('id', '=', $this->getId())->update();
-            return $update;
-        }
+    public function update() {
+        $update = $this->db->table('news')->set(['title' => $this->getTitle(), 'tags' => $this->getTag(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->where('id', '=', $this->getId())->update();
+        return $update;
     }
 
     	// Function for deleting News
-    public function deleteNews() {  
+    public function delete() {  
         $delete = $this->db->table('news')->where('id', '=', $this->getId())->delete();
         return $delete; 
     }

@@ -23,7 +23,6 @@ class NewsController extends Controller
 
     public function index() 
     {
-        $auth_user = $this->auth->getAuth(); 
         $newses = $this->news->getAllNewses();
         return $this->view('admin.news.index', compact('newses'));
     }
@@ -31,41 +30,33 @@ class NewsController extends Controller
     public function create() 
     {
         $auth_user = $this->auth->getAuth(); 
-        return $this->view('admin.newss.create', compact('auth_user'));
+        return $this->view('admin.news.create', compact('auth_user'));
     }
 
     public function store() 
     {
-        $store = $this->news->setData($_POST)->validateData()->storenews();
+        $store = $this->news->setData($_POST)->store();
         if($store){
-            $this->request->destroy('post');
             $this->request->setFlash(['success' => locale('message', 'success')]);
-            $this->redirect('newss/show', ['id' => $this->news->getLastId()]);
+            $this->redirect('admin/news/all');
         }
         else{
             $this->redirect(back());
         }
     }
 
-    public function show() 
-    {
-        $news = $this->news->setData($_GET)->getnews();
-        return $this->view('admin.newss.show', compact('news'));  
-    }
-
     public function edit() 
     {
-        $news = $this->news->setData($_GET)->getnews();
-        return $this->view('admin.newss.edit', compact('news'));  
+        $news = $this->news->setData($_GET)->getNews();
+        return $this->view('admin.news.edit', compact('news'));  
     }
 
     public function update() 
     {
-        $update = $this->news->setData($_POST)->validateData()->updatenews();
+        $update = $this->news->setData($_POST)->update();
         if($update){
-            $this->request->destroy('post');
             $this->request->setFlash(['success' => locale('message', 'success')]);
-            $this->redirect('newss/show', ['id' => $_POST['id']]);
+            $this->redirect('admin/news/all');
         }
         else{
             $this->redirect(back());
@@ -74,10 +65,10 @@ class NewsController extends Controller
 
     public function delete() 
     { 
-        $delete = $this->news->setData($_POST)->deletenews();
+        $delete = $this->news->setData($_POST)->delete();
         if($delete){
             $this->request->setFlash(['success' => locale('message', 'success')]);
-            $this->redirect('newss/all');
+            $this->redirect('admin/news/all');
         }
         else{
             $this->request->setFlash(['danger' => locale('message', 'danger')]);
