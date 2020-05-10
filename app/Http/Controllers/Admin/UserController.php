@@ -29,7 +29,7 @@ class UserController extends Controller
 
     public function create() 
     { 
-        return $this->view('admin.auth.register');
+        return $this->view('admin.users.create');
     }
 
     public function store() 
@@ -44,9 +44,8 @@ class UserController extends Controller
 
     public function show() 
     { 
-        $auth_user = $this->auth->getAuth(); 
-        $user = $this->user->setData((array) $auth_user)->getUser();
-        return $this->view('admin.user.show', compact('user'));
+        $user = $this->user->setData($_GET)->getUser();
+        return $this->view('admin.users.show', compact('user'));
     }
 
     public function edit() 
