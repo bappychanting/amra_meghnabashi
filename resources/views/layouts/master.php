@@ -14,6 +14,8 @@
 	<?php echo style('plugins/fontawesome/css/all.min.css'); ?>
 	<!-- Google Fonts Roboto -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+	<!-- Bangla Font -->
+	<!-- <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet"> -->
 	<!-- Bootstrap core CSS -->
 	<?php echo style('css/bootstrap.min.css'); ?>
 	<!-- Material Design Bootstrap -->
