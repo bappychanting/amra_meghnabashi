@@ -1,4 +1,4 @@
-<div class="cyan text-white lighten-2 py-2">
+<div class="green text-white py-2">
   <div class="container">
     <div class="row">
       <div class="col-6">
@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<nav class="navbar navbar-expand-lg navbar-dark cyan darken-4">
+<nav class="navbar navbar-expand-lg navbar-dark green darken-4">
   <div class="container py-2">
     <a class="navbar-brand font-weight-bold" href="<?php echo route('welcome'); ?>"><?php echo title(); ?></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
