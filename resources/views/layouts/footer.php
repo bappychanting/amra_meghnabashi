@@ -12,46 +12,38 @@
   <div class="container container-fluid text-center text-md-left">
     <div class="row">
       <div class="col-md-6 mt-md-0 mt-3">
-        <h5 class="text-uppercase font-weight-bold"><?php echo locale('views', 'app_title'); ?></h5>
-        <p><?php echo $contents['slogan']; ?></p>
+        <h2 class="text-uppercase font-weight-bold"><i class="fas fa-home red-text pr-2"></i><?php echo locale('views', 'app_title'); ?></h2>
+        <h6><?php echo $contents['slogan']; ?></h6>
       </div>
       <hr class="clearfix w-100 d-md-none pb-3">
       <div class="col-md-3 mb-md-0 mb-3">
-        <h5 class="text-uppercase">Links</h5>
+        <h5 class="text-uppercase"><?php echo locale('views', 'links'); ?></h5>
         <ul class="list-unstyled">
           <li>
-            <a href="#!">Link 1</a>
+            <a href="#!"><?php echo locale('views', 'members'); ?></a>
           </li>
           <li>
-            <a href="#!">Link 2</a>
+            <a href="#!"><?php echo locale('views', 'projects'); ?></a>
           </li>
           <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
+            <a href="#!"><?php echo locale('views', 'news'); ?></a>
           </li>
         </ul>
-
       </div>
       <div class="col-md-3 mb-md-0 mb-3">
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
+        <h5 class="text-uppercase"><?php echo locale('views', 'contact_us'); ?></h5>
+        <p><i class="fas fa-envelope pr-2"></i><?php echo $contents['email']; ?></p>
+        <p><i class="fas fa-phone pr-2"></i><?php echo $contents['contact']; ?></p>
+        <p><i class="fas fa-map-marker-alt pr-2"></i><?php echo $contents['address']; ?></p>
       </div>
+    </div>
+    <div class="text-center mb-3">
+      <h5 class="text-uppercase"><?php echo locale('views', 'join_us'); ?></h5>
+      <nav class="nav justify-content-center">
+        <a class="nav-link text-white" href="<?php echo $contents['facebook']; ?>"><i class="fab fa-facebook"></i></a>
+        <a class="nav-link text-white" href="<?php echo $contents['twitter']; ?>"><i class="fab fa-twitter"></i></a>
+        <a class="nav-link text-white" href="<?php echo $contents['youtube']; ?>"><i class="fab fa-youtube"></i></a>
+      </nav>
     </div>
   </div>
   <div class="footer-copyright text-center py-3">© <?php echo date('Y'); ?> Copyright:

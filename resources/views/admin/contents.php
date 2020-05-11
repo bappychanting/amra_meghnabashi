@@ -54,6 +54,11 @@
       </div>
 
       <div class="form-label-group my-3">
+        <label>Address</label>
+        <textarea rows="1" class="form-control" name="content[address]" required><?php echo $content['address'] ?></textarea>
+      </div>
+
+      <div class="form-label-group my-3">
         <label>About Us</label>
         <textarea rows="4" class="form-control" name="content[about_us]" required><?php echo $content['about_us'] ?></textarea>
       </div>

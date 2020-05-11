@@ -20,7 +20,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark green darken-4">
   <div class="container py-2">
-    <a class="navbar-brand font-weight-bold" href="<?php echo route('welcome'); ?>"><?php echo locale('views', 'app_title'); ?></a>
+    <a class="navbar-brand font-weight-bold" href="<?php echo route('welcome'); ?>"><i class="fas fa-home red-text pr-2"></i><?php echo locale('views', 'app_title'); ?></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="basicExampleNav">
       <ul class="navbar-nav ml-auto">
