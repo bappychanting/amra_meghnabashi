@@ -25,10 +25,15 @@
 
 <div class="mb-3 grey lighten-4">
 	<div class="container py-3">
-		<h6>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</h6>
-		<div class="row justify-content-center">
+		<p class="text-muted font-weight-bold my-3"><?php echo $contents['about_us']; ?></p>
+		<div class="row">
+		<?php $count = 1; foreach ($members['members'] as $member) { ?>
+		<div class="col-sm-2">
+			<img src="<?php echo $member['image_path']; ?>" class="rounded-circle mx-2 mt-3" alt="<?php echo $member['name']; ?>" height="100px" width="100px">
+		</div>
+		<?php if($count == 6){ break; } $count++; } ?>
+		</div>
+		<div class="row justify-content-center my-3">
 			<button class="btn btn-danger">See All Members</button>
 		</div>
 	</div>
@@ -42,7 +47,7 @@
 			<div class="border border-light px-3 py-4 mx-3" style='height:150px;'>
 				<h5 class="green-text"><?php echo $project['name'] ?></h5>
 				<hr>
-				<p class="card-text"><?php echo strip_tags(substr($project['details'], 0, 30)); ?></p>
+				<p><?php echo strip_tags(substr($project['details'], 0, 30)); ?>...</p>
 			</div>
 		</div>
 		<?php if($count == 4){ break; } $count++; } ?>
@@ -58,7 +63,7 @@
 					<img class="card-img-top" src="<?php echo $news['image_path'] ?>" alt="<?php echo $news['title'] ?>" height='300px'>
 					<div class="card-body">
 						<h4 class="card-title"><?php echo strip_tags(substr($news['title'], 0, 30)); ?></h4>
-						<p class="card-text"><?php echo strip_tags(substr($news['details'], 0, 30)); ?></p>
+						<p class="card-text"><?php echo strip_tags(substr($news['details'], 0, 30)); ?>...</p>
 					</div>
 				</div>
 			</div>

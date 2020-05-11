@@ -24,7 +24,8 @@ class HomeController extends Controller
     public function welcome() 
     {
         $this->content->setId(1);
-        $content = $this->content->getWebContent();
+        $get_content = $this->content->getWebContent();
+        $contents = json_decode($get_content['content'], 'true');
         $newses = $this->news->getNewses();
         $members = $this->member->getMembers();
         $projects = $this->project->getProjects();
