@@ -1,7 +1,12 @@
+<?php 
+	use App\Models\Content; 
+    $content = new Content;
+    $content->setId(1);
+    $contents = $content->getWebContent();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Header -->
 <head>
 
 	<meta charset="UTF-8">
@@ -29,13 +34,13 @@
 <body>
 
 	<!-- Topbar -->
-	<?php append('layouts.topbar'); ?>
+	<?php append('layouts.topbar', $contents); ?>
 
 	<!-- Page Content -->
 	<?php startblock('content') ?><?php endblock() ?>
 
 	<!-- Footer -->
-	<?php append('layouts.footer'); ?>
+	<?php append('layouts.footer', $contents); ?>
 
 	<!-- jQuery -->
 	<?php echo script('js/jquery.min.js'); ?>

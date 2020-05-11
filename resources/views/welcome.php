@@ -30,13 +30,13 @@
 	<div class="row justify-content-center">
 		<button class="btn btn-danger">See All Members</button>
 	</div>
-	<h2 class="green-text font-weight-bold my-3">Our Projects</h2>
+	<h2 class="green-text font-weight-bold my-3 text-center">Our Projects</h2>
 	<div class="row">
 	</div>
 	<div class="row justify-content-center">
 		<button class="btn btn-danger">Find Out More</button>
 	</div>
-	<h2 class="green-text font-weight-bold my-3">News</h2>
+	<h2 class="green-text font-weight-bold my-3 text-center">News</h2>
 	<div class="row">
 	</div>
 	<div class="row justify-content-center">
