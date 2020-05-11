@@ -28,8 +28,8 @@
 
 <body>
 
-	<!-- Navigation -->
-	<?php append('layouts.navigation'); ?>
+	<!-- Topbar -->
+	<?php append('layouts.topbar'); ?>
 
 	<!-- Page Content -->
 	<div class="container">
