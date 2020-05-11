@@ -51,8 +51,6 @@
 	<?php echo script('js/bootstrap.min.js'); ?>
 	<!-- MDB core JavaScript -->
 	<?php echo script('js/mdb.min.js'); ?>
-	<!-- Custom JavaScript -->
-	<?php echo script('js/script.js'); ?>
 
 </body>
 

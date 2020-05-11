@@ -2,5 +2,5 @@
     display:block;
 	background-size: cover;
 	background-repeat: no-repeat;
-    background-image: url('https://i.imgur.com/Wzo8bJI.png');
+	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/background.jpg');
 }

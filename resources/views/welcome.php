@@ -10,7 +10,7 @@
 
 <div class="front-page-top-div">
 	<div class="container text-white py-5">
-		<h1 class="font-weight-bold mt-5 mb-3">Lorem ipsum dolor sit amet.</h1>
+		<h1 class="font-weight-bold mt-5 mb-3"><?php echo $contents['slogan']; ?></h1>
 		<button class="btn btn-danger mt-3 mb-5">DONATE NOW!</button>
 	</div>
 </div>

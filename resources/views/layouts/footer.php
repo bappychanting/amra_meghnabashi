@@ -54,8 +54,8 @@
       </div>
     </div>
   </div>
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  <div class="footer-copyright text-center py-3">© <?php echo date('Y'); ?> Copyright:
+    <a href="https://mdbootstrap.com/"> AmraMeghnabashi.com</a>
   </div>
 </footer>
 <!-- Footer -->

@@ -19,6 +19,11 @@
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
       <div class="form-label-group my-3">
+        <label>Slogan</label>
+        <input type="text" name="content[slogan]" value="<?php echo $content['slogan']; ?>" class="form-control" maxlength="50" minlength="2" required>
+      </div>
+
+      <div class="form-label-group my-3">
         <label>SEO Keywords</label>
         <input type="text" name="content[keywords]" value="<?php echo $content['keywords']; ?>" class="form-control" maxlength="50" minlength="2" required>
       </div>
