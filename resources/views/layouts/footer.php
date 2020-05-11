@@ -13,7 +13,7 @@
     <div class="row">
       <div class="col-md-6 mt-md-0 mt-3">
         <h5 class="text-uppercase font-weight-bold"><?php echo APP_NAME; ?></h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
       </div>
       <hr class="clearfix w-100 d-md-none pb-3">
       <div class="col-md-3 mb-md-0 mb-3">
