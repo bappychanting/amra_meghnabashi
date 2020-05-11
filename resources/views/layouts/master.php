@@ -1,10 +1,3 @@
-<?php 
-	use App\Models\Content; 
-    $content = new Content;
-    $content->setId(1);
-    $contents = $content->getWebContent();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,14 +26,22 @@
 
 <body>
 
+	<?php 
+		use App\Models\Content; 
+		$content = new Content;
+		$content->setId(1);
+		$get_content = $content->getWebContent();
+		$contents = json_decode($get_content['content'], 'true');
+	?>
+
 	<!-- Topbar -->
-	<?php append('layouts.topbar', $contents); ?>
+	<?php append('layouts.topbar', ['contents' => $contents]); ?>
 
 	<!-- Page Content -->
 	<?php startblock('content') ?><?php endblock() ?>
 
 	<!-- Footer -->
-	<?php append('layouts.footer', $contents); ?>
+	<?php append('layouts.footer', ['contents' => $contents]); ?>
 
 	<!-- jQuery -->
 	<?php echo script('js/jquery.min.js'); ?>

@@ -3,15 +3,15 @@
     <div class="row">
       <div class="col-6">
         <nav class="nav">
-          <span class="nav-link"><i class="fas fa-phone pr-2"></i>01712423414</span>
-          <span class="nav-link"><i class="fas fa-envelope pr-2"></i>bappychanting@outlook.com</span>
+          <span class="nav-link"><i class="fas fa-phone pr-2"></i><?php echo $contents['contact']; ?></span>
+          <span class="nav-link"><i class="fas fa-envelope pr-2"></i><?php echo $contents['email']; ?></span>
         </nav>
       </div>
       <div class="col-6">
         <nav class="nav float-right">
-          <a class="nav-link text-white" href="#"><i class="fab fa-facebook"></i></a>
-          <a class="nav-link text-white" href="#"><i class="fab fa-twitter"></i></a>
-          <a class="nav-link text-white" href="#"><i class="fab fa-youtube"></i></a>
+          <a class="nav-link text-white" href="<?php echo $contents['facebook']; ?>"><i class="fab fa-facebook"></i></a>
+          <a class="nav-link text-white" href="<?php echo $contents['twitter']; ?>"><i class="fab fa-twitter"></i></a>
+          <a class="nav-link text-white" href="<?php echo $contents['youtube']; ?>"><i class="fab fa-youtube"></i></a>
         </nav>
       </div>
     </div>
