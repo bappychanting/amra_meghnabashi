@@ -2,7 +2,14 @@
 
 <?php startblock('title') ?>
 
-<?php echo title(); ?>
+<?php echo title().' || '.$contents['slogan']; ?>
+
+<?php endblock() ?>
+
+<?php startblock('meta_tags') ?>
+    
+  <meta name="keywords" content="<?php echo $contents['keywords']; ?>">
+  <meta name="description" content="<?php echo $contents['slogan']; ?>">
 
 <?php endblock() ?>
 
@@ -17,7 +24,7 @@
 <div class="green accent-3 py-2">
 	<div class="container py-3">
 		<h2 class="red-text font-weight-bold"><?php echo locale('views', 'who_are_we'); ?></h2>
-		<p class="text-white my-3"><?php echo $contents['about_us']; ?></p>
+		<p class="font-weight-bold text-white my-3"><?php echo $contents['about_us']; ?></p>
 	</div>
 </div>
 
