@@ -1,21 +1,11 @@
 <!-- Footer -->
 <div class="green text-white py-2">
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <nav class="nav">
-          <span class="nav-link"><i class="fas fa-phone pr-2"></i>01712423414</span>
-          <span class="nav-link"><i class="fas fa-envelope pr-2"></i>bappychanting@outlook.com</span>
-        </nav>
-      </div>
-      <div class="col-6">
-        <nav class="nav float-right">
-          <a class="nav-link text-white" href="#"><i class="fab fa-facebook"></i></a>
-          <a class="nav-link text-white" href="#"><i class="fab fa-twitter"></i></a>
-          <a class="nav-link text-white" href="#"><i class="fab fa-youtube"></i></a>
-        </nav>
-      </div>
-    </div>
+  <div class="container d-flex justify-content-center">
+    <form class="form-inline my-2 my-lg-0">
+      <label class="text-uppercase my-1 mr-2" for="sub_email">Subscribe to us</label>
+      <input class="form-control" type="email" id="sub_email" placeholder="example@example.com" aria-label="email">
+      <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Submit</button>
+    </form>
   </div>
 </div>
 <footer class="page-footer font-small  green darken-4 pt-4">
