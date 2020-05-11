@@ -8,6 +8,8 @@
 
 <?php startblock('content') ?>
 
-<p>hello</p>
+<div class="front-page-top-div">
+    div with background
+</div>
 
 <?php endblock() ?>

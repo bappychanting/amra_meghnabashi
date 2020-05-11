@@ -3,7 +3,7 @@
   <div class="container d-flex justify-content-center">
     <form class="form-inline my-2 my-lg-0">
       <label class="text-uppercase my-1 mr-2" for="sub_email">Subscribe to us</label>
-      <input class="form-control" type="email" id="sub_email" placeholder="example@example.com" aria-label="email">
+      <input class="form-control" type="email" id="sub_email" placeholder="example@example.com" aria-label="email" required>
       <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Submit</button>
     </form>
   </div>

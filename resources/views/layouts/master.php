@@ -32,9 +32,7 @@
 	<?php append('layouts.topbar'); ?>
 
 	<!-- Page Content -->
-	<div class="container">
-		<?php startblock('content') ?><?php endblock() ?>
-	</div>
+	<?php startblock('content') ?><?php endblock() ?>
 
 	<!-- Footer -->
 	<?php append('layouts.footer'); ?>
