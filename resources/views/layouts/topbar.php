@@ -24,14 +24,14 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="basicExampleNav">
       <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
-          </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Members<span class="sr-only">(current)</span></a>
+        <li class="nav-item <?php echo route_is('members') ? 'active' : '' ; ?>">
+          <a class="nav-link" href="<?php echo route('members'); ?>">Members<?php echo route_is('members') ? '<span class="sr-only">(current)</span>' : '' ; ?></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">News</a>
+        <li class="nav-item <?php echo route_is('projects') ? 'active' : '' ; ?>">
+          <a class="nav-link" href="<?php echo route('projects'); ?>">Projects<?php echo route_is('projects') ? '<span class="sr-only">(current)</span>' : '' ; ?></a>
+        </li>
+        <li class="nav-item <?php echo route_is('news') ? 'active' : '' ; ?>">
+          <a class="nav-link" href="<?php echo route('news'); ?>">News<?php echo route_is('news') ? '<span class="sr-only">(current)</span>' : '' ; ?></a>
         </li>
       </ul>
     </div>

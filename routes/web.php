@@ -12,6 +12,12 @@ return [
 
 	'welcome' => 'HomeController@welcome',
 
+	'members' => 'HomeController@members',
+
+	'projects' => 'HomeController@projects',
+
+	'news' => 'HomeController@news',
+
 		// admin sign in pages
 
 	'admin/signin' => 'Admin/AuthController@signin',
