@@ -42,7 +42,7 @@ class AuthController extends Controller
         $this->auth->setPassword(isset($_POST['password']) ? $_POST['password'] : '');
         $signin = $this->auth->signin();
         if($signin){
-            $this->redirect('admin/web/all');
+            $this->redirect('admin/members/all');
         }
         else{
           $this->redirect('admin/signin');

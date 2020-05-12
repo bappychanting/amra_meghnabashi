@@ -42,20 +42,20 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <?php $auth = new Base\Authenticable; if($auth->check()){ ?>
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item <?php echo route_is('admin/web') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/web/all'); ?>">Web Content</a>
-            </li>
-            <li class="nav-item <?php echo route_is('admin/users') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/users/all'); ?>">Users</a>
+            <li class="nav-item <?php echo route_is('admin/members') ? 'active' : '' ?>">
+              <a class="nav-link" href="<?php echo route('admin/members/all'); ?>">Members</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/projects') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/projects/all'); ?>">Projects</a>
             </li>
-            <li class="nav-item <?php echo route_is('admin/members') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/members/all'); ?>">Members</a>
-            </li>
             <li class="nav-item <?php echo route_is('admin/news') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/news/all'); ?>">News</a>
+            </li>
+            <li class="nav-item <?php echo route_is('admin/users') ? 'active' : '' ?>">
+              <a class="nav-link" href="<?php echo route('admin/users/all'); ?>">Users</a>
+            </li>
+            <li class="nav-item <?php echo route_is('admin/web') ? 'active' : '' ?>">
+              <a class="nav-link" href="<?php echo route('admin/web/all'); ?>">Web Content</a>
             </li>
           </ul>
           <span class="navbar-text">
