@@ -37,6 +37,7 @@ class NewsController extends Controller
     {
         $store = $this->news->setData($_POST)->store();
         if($store){
+            $this->notifySubscibers($_POST['title'], route('news/show', ['id' => $this->news->getLastId()]));
             $this->request->setFlash(['success' => locale('message', 'success')]);
             $this->redirect('admin/news/all');
         }
@@ -74,6 +75,14 @@ class NewsController extends Controller
             $this->request->setFlash(['danger' => locale('message', 'danger')]);
             $this->redirect(back());
         }  
+    }
+
+    private function notifySubscibers($title, $link){
+        $subscribers = $this->get_subscribers();
+        $subject = 'Amra Meghnabashi: New news article has been added!';
+        $body = 'We have published a new article titled "<b>'.$title.'</b>"! Please click on <a href="'.$link.'">this link</a> to checkout this article!';
+        $body .= '<br><b>Regards,</b><br>Amra Meghnabashi';
+        $this->sendMail($subscribers, $subject, $body);
     }
 
 }

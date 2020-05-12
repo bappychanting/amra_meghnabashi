@@ -36,6 +36,7 @@ class ProjectController extends Controller
     {
         $store = $this->project->setData($_POST)->store();
         if($store){
+            $this->notifySubscibers($_POST['name'], route('projects/show', ['id' => $this->project->getLastId()]));
             $this->request->setFlash(['success' => locale('message', 'success')]);
             $this->redirect('admin/projects/all');
         }
@@ -81,6 +82,14 @@ class ProjectController extends Controller
             $this->request->setFlash(['danger' => locale('message', 'danger')]);
             $this->redirect(back());
         }  
+    }
+
+    private function notifySubscibers($title, $link){
+        $subscribers = $this->get_subscribers();
+        $subject = 'Amra Meghnabashi: Please checkout our latest project!';
+        $body = 'Our new project is called "<b>'.$title.'</b>"! Please click on <a href="'.$link.'">this link</a> to checkout our latest project!';
+        $body .= '<br><b>Regards</b><br>Amra Meghnabashi';
+        $this->sendMail($subscribers, $subject, $body);
     }
 
 }

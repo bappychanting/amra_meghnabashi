@@ -69,7 +69,7 @@ class AuthController extends Controller
             $subject = 'Link For Password Reset!';
             $body = 'Please click the below link to reset your password-';
             $body .= '<br><a href="'.route("admin/password/reset", ["token" => $token]).'" target="_blank">Link to reset password!</a>';
-            $this->sendMail($user['email'], $subject, $body);
+            $this->sendMail([$user['email']], $subject, $body);
         }
         $this->request->setFlash(['success' => "Pleace check your mail! You will get an email if your given credential is found in our database!"]);
         $this->redirect('admin/password/forgot');

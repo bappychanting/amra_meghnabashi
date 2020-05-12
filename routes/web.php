@@ -14,9 +14,17 @@ return [
 
 	'members' => 'HomeController@members',
 
+	'members/show' => 'HomeController@showMember',
+
 	'projects' => 'HomeController@projects',
 
+	'projects/show' => 'HomeController@showPoject',
+
 	'news' => 'HomeController@news',
+
+	'news/show' => 'HomeController@showNews',
+
+	'subscribe' => 'HomeController@subscribe',
 
 		// admin sign in pages
 

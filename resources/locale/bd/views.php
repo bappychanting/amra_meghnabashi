@@ -2,13 +2,13 @@
 
 return [
 
-    	// view texts
+    	// key texts
 	'app_title' => 'আমরা মেঘনাবাসী',
 	'links' => 'লিংকসমূহ',
     'members' => 'সদস্যগণ',
     'projects' => 'প্রকল্পসমূহ',
     'news' => 'খবর',
-    'donate_now' => 'এখন দান করুন!',
+    'donate_now' => 'দান করুন!',
     'who_are_we' => 'আমাদের পরিচয়',
     'our_goals' => 'আমাদের লক্ষ্য',
     'our_achievements' => 'আমাদের অর্জনসমূহ',
