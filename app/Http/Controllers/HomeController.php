@@ -46,12 +46,14 @@ class HomeController extends Controller
 
     public function projects() 
     {
-        return $this->view('projects.index');
+        $projects = $this->project->getProjects();
+        return $this->view('projects.index', compact('projects'));
     }
 
     public function showPoject() 
     {
-        return $this->view('projects.show');
+        $project = $this->project->setData($_GET)->getProject();
+        return $this->view('projects.show', compact('project'));
     }
 
     public function news() 

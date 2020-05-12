@@ -212,9 +212,7 @@
 	<div class="row">
 	<?php $count = 1; foreach ($members as $member) { ?>
 	<div class="col-sm-2">
-		<a href="<?php echo route('members/show', ['id' => $member['id']]); ?>">
-			<img src="<?php echo $member['image_path']; ?>" class="rounded-circle mx-2 mt-3" alt="<?php echo $member['name']; ?>" height="100px" width="100px">
-		</a>
+		<img src="<?php echo $member['image_path']; ?>" class="rounded-circle mx-2 mt-3" alt="<?php echo $member['name']; ?>" height="100px" width="100px">
 	</div>
 	<?php if($count == 6){ break; } $count++; } ?>
 	</div>
