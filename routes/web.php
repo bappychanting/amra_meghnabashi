@@ -12,7 +12,21 @@ return [
 
 	'welcome' => 'HomeController@welcome',
 
-	// admin pages
+	'members' => 'HomeController@members',
+
+	'members/show' => 'HomeController@showMember',
+
+	'projects' => 'HomeController@projects',
+
+	'projects/show' => 'HomeController@showPoject',
+
+	'news' => 'HomeController@news',
+
+	'news/show' => 'HomeController@showNews',
+
+	'subscribe' => 'HomeController@subscribe',
+
+		// admin sign in pages
 
 	'admin/signin' => 'Admin/AuthController@signin',
 
@@ -28,9 +42,13 @@ return [
 
 	'admin/password/update' => 'Admin/AuthController@updatePassword',
 
-	'admin/home' => 'Admin/HomeController@home',
-
 	'admin/signout' => 'Admin/AuthController@signout',
+
+		// admin web pages
+
+	'admin/web/all' => 'Admin/WebController@index',
+
+	'admin/web/update' => 'Admin/WebController@update',
 
 		// admin news pages
 
@@ -39,8 +57,6 @@ return [
 	'admin/news/create' => 'Admin/NewsController@create',
 
 	'admin/news/store' => 'Admin/NewsController@store',
-
-	'admin/news/show' => 'Admin/NewsController@show',
 
 	'admin/news/edit' => 'Admin/NewsController@edit',
 
@@ -86,9 +102,11 @@ return [
 
 		// admin user pages
 
-	'admin/users/add' => 'Admin/AuthController@signup',
+	'admin/users/all' => 'Admin/UserController@index',
 
-	'admin/users/store' => 'Admin/AuthController@register',
+	'admin/users/create' => 'Admin/UserController@create',
+
+	'admin/users/store' => 'Admin/UserController@store',
 
 	'admin/users/show' => 'Admin/UserController@show',
 

@@ -1,0 +1,7 @@
+.front-page-top-div {
+    display:block;
+	min-height: 400px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) ), url('../img/background.jpg');
+}

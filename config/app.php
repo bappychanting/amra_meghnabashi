@@ -14,6 +14,6 @@ return [
 
 		'auto_logging' => 'on', // configuration for allowing automatic logging 
 
-		'locale' => 'en', // configuration for default locale
+		'locale' => 'bd', // configuration for default locale
 
 ];
