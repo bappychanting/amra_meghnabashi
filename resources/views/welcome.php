@@ -15,30 +15,92 @@
 
 <?php startblock('content') ?>
 
-<div class="front-page-top-div">
+<!-- Intro -->
+<section class="front-page-top-div">
 	<div class="container text-center py-5">
-		<h1 class="font-weight-bold green-text mt-5"><?php echo locale('views', 'app_title'); ?></h1>
-		<h2 class="text-white mb-3"><?php echo $contents['slogan']; ?></h2>
-		<button class="btn btn-danger mt-3 mb-5"><i class="fas fa-donate pr-2"></i><?php echo locale('views', 'donate_now'); ?></button>
+		<h1 class="text-white mt-5 mb-3"><?php echo $contents['slogan']; ?></h1>
+		<a class="btn btn-danger mt-3 mb-5" href="<?php echo $contents['donate_link']; ?>" target="_blank"><i class="fas fa-donate pr-2"></i><?php echo locale('views', 'donate_now'); ?></a>
 	</div>
-</div>
-<div class="green accent-3 py-2">
-	<div class="container py-3">
-		<div class="row">
-			<div class="col-sm-6">
-				<h2 class="red-text font-weight-bold"><?php echo locale('views', 'who_are_we'); ?></h2>
-				<p class="text-white my-3"><?php echo $contents['about_us']; ?></p>
-			</div>
-			<div class="col-sm-6">
-				<div class="embed-responsive embed-responsive-16by9">
-            		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cXTThxoywNQ" allowfullscreen></iframe>
-            	</div>
-			</div>
+</section>
+<!-- #END# Intro -->
+
+<!-- About Us -->
+<section class="container py-5">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2 class="green-text font-weight-bold"><?php echo locale('views', 'who_are_we'); ?></h2>
+			<p class="grey-text my-3"><?php echo $contents['about_us']; ?></p>
+		</div>
+		<div class="col-sm-6">
+			<div class="embed-responsive embed-responsive-16by9">
+        		<iframe class="embed-responsive-item" src="<?php echo $contents['video_src']; ?>" allowfullscreen></iframe>
+        	</div>
 		</div>
 	</div>
-</div>
+	<hr>
+</section>
+<!-- #END# About Us -->
 
-<!-- Dynamic Section -->
+<!--Section: Not enough-->
+<section class="container py-3">
+<h2 class="green-text font-weight-bold text-center my-3"><?php echo locale('views', 'our_goals'); ?></h2>
+<div class="row my-5">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-2">
+        <i class="fas fa-check-circle fa-2x green-text"></i>
+      </div>
+      <div class="col-10">
+        <h6 class="feature-title">Free for personal and commercial use</h6>
+        <p class="grey-text">Our license is user-friendly. Feel free to use MDB for both private as well as commercial projects.
+        </p>
+        <div style="height:15px"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <i class="fas fa-check-circle fa-2x green-text"></i>
+      </div>
+      <div class="col-10">
+        <h6 class="feature-title">400+ UI elements</h6>
+        <p class="grey-text">An impressive collection of flexible components allows you to develop any project.
+        </p>
+        <div style="height:15px"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 flex-center">
+  <?php echo image('resources/assets/img/logo.png', APP_NAME, ['class'=>'z-depth-0 img-fluid']); ?>
+  </div>
+  <div class="col-md-4 mt-2">
+    <div class="row">
+      <div class="col-2">
+        <i class="fas fa-check-circle fa-2x green-text"></i>
+      </div>
+      <div class="col-10">
+        <h6 class="feature-title">70+ CSS animations</h6>
+        <p class="grey-text">Neat and easy to use animations, which will increase the interactivity of your project and delight your visitors.
+        </p>
+        <div style="height:15px"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <i class="fas fa-check-circle fa-2x green-text"></i>
+      </div>
+      <div class="col-10">
+        <h6 class="feature-title">Plenty of useful templates</h6>
+        <p class="grey-text">Need inspiration? Use one of our predefined templates for free.</p>
+        <div style="height:15px"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+</section>
+<!--Section: Not enough-->
+
+<!-- Dynamic -->
 <section class="container py-3">
 	<h2 class="green-text font-weight-bold my-3 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h2>
 	<div class="row">
@@ -82,10 +144,11 @@
 	<div class="row justify-content-center mt-3 mb-5">
 		<a class="btn btn-danger" href="<?php echo route('news'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_news'); ?></a>
 	</div>
+	<hr>
 </section>
-<!-- #END# Dynamic Section -->
+<!-- #END# Dynamic -->
 
-<!-- More Section -->
+<!-- More -->
 <section class='container py-3'>
 	<h2 class="green-text font-weight-bold my-3 text-center"><?php echo locale('views', 'extra_section_title'); ?></h2>
 	<div class="row features-small mt-5 wow fadeIn">
@@ -188,6 +251,6 @@
 	  </div>
 	</div>
 </section>
-<!-- #END# More Section -->
+<!-- #END# More -->
 
 <?php endblock() ?>

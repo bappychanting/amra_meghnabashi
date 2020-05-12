@@ -11,6 +11,15 @@ return [
 							PRIMARY KEY (`id`)
 						)",
 
+		// Create subscribers
+
+	'create_subscribers' => 	"CREATE TABLE `subscribers` (
+							`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+							`email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+							PRIMARY KEY (`id`),
+							UNIQUE KEY `subscribers_email_unique` (`email`)
+						)",
+
 		// Create users
 
 	'create_users' => 	"CREATE TABLE `users` (
