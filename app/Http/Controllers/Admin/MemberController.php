@@ -23,7 +23,7 @@ class MemberController extends Controller
 
     public function index() 
     {
-        $members = $this->member->getAllMembers();
+        $members = $this->member->getMembers();
         return $this->view('admin.members.index', compact('members'));
     }
 

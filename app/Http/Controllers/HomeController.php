@@ -27,14 +27,15 @@ class HomeController extends Controller
         $get_content = $this->content->getWebContent();
         $contents = json_decode($get_content['content'], 'true');
         $newses = $this->news->getNewses();
-        $members = $this->member->getMembers();
+        $members = $this->member->getNewMembers();
         $projects = $this->project->getProjects();
         return $this->view('welcome', compact('contents', 'newses', 'members', 'projects'));
     }
 
     public function members() 
     {
-        return $this->view('members.index');
+        $members = $this->member->getMembers();
+        return $this->view('members.index', compact('members'));
     }
 
     public function showMember() 

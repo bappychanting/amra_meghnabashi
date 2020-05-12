@@ -210,7 +210,7 @@
 <section class="container py-3">
 	<h2 class="green-text font-weight-bold my-3 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h2>
 	<div class="row">
-	<?php $count = 1; foreach ($members['members'] as $member) { ?>
+	<?php $count = 1; foreach ($members as $member) { ?>
 	<div class="col-sm-2">
 		<img src="<?php echo $member['image_path']; ?>" class="rounded-circle mx-2 mt-3" alt="<?php echo $member['name']; ?>" height="100px" width="100px">
 	</div>

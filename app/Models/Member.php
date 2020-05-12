@@ -95,13 +95,12 @@ class Member extends Model{
   }
 
   public function getMembers(){    
-    $members = $this->db->table('members')->orderBy('created_at', 'desc')->limit(10)->read();
-    $pagination = $this->db->pagination();
-    return array('members' => $members, 'pagination' => $pagination);
+    $members = $this->db->table('members')->orderBy('name')->limit(2000)->read();
+    return $members;
   }
 
-  public function getAllMembers(){    
-    $members = $this->db->table('members')->orderBy('created_at', 'desc')->limit(20)->read();
+  public function getNewMembers(){    
+    $members = $this->db->table('members')->orderBy('created_at', 'desc')->limit(10)->read();
     return $members;
   }
 
