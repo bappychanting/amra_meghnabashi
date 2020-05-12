@@ -19,6 +19,9 @@
 	<!-- <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet"> -->
 	<!-- Bootstrap core CSS -->
 	<?php echo style('css/bootstrap.min.css'); ?>
+	<!-- Social Sharing -->
+	<?php echo style('plugins/jssocials/jssocials.css'); ?>
+	<?php echo style('plugins/jssocials/jssocials-theme-classic.css'); ?>
 	<!-- Material Design Bootstrap -->
 	<?php echo style('css/mdb.min.css'); ?>
 	<!-- Custom styles (optional) -->
@@ -52,8 +55,25 @@
 	<?php echo script('js/popper.min.js'); ?>
 	<!-- Bootstrap core JavaScript -->
 	<?php echo script('js/bootstrap.min.js'); ?>
+	<!-- Social Sharing -->
+	<?php echo script('plugins/jssocials/jssocials.min.js'); ?>
 	<!-- MDB core JavaScript -->
 	<?php echo script('js/mdb.min.js'); ?>
+	<!-- Custom Script -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Initialize Social Share
+			$("#social_share").jsSocials({
+				shares: [
+					{
+					    share: "facebook",
+					    logo: "fab fa-facebook-f",
+					    label: "Share",
+					},
+				],
+			});
+		});
+	</script>
 
 </body>
 

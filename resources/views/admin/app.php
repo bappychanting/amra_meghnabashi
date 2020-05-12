@@ -108,6 +108,15 @@
       <?php echo script('js/mdb.min.js'); ?>
       <!-- Custom JavaScript -->
       <?php echo script('js/script.js'); ?>
+      <!-- Custom Script -->
+      <script type="text/javascript">
+        $(document).ready(function () {
+
+          // Initialize datatable
+          $('#dtBasicExample').DataTable();
+          $('.dataTables_length').addClass('bs-select');
+        });
+      </script>
 
     </body>
 

@@ -4,7 +4,7 @@ return [
 
 		// Create news view
 
-	'create_news_view' => 	"CREATE VIEW `news_view` AS SELECT n.id AS id, n.title AS title, n.tags AS tags, n.image_path AS image_path, n.details AS details, n.user_id AS user_id, u.name AS name, n.created_at AS created_at, n.updated_at AS updated_at, n.deleted_at AS deleted_at FROM news n, users u WHERE n.user_id = u.id AND n.deleted_at IS NULL",
+	'create_news_view' => 	"CREATE VIEW `news_view` AS SELECT n.id AS id, n.title AS title, n.tags AS tags, n.image_path AS image_path, n.details AS details, n.user_id AS user_id, u.name AS user_name, n.created_at AS created_at, n.updated_at AS updated_at, n.deleted_at AS deleted_at FROM news n, users u WHERE n.user_id = u.id AND n.deleted_at IS NULL",
 
 		// Create donations view
 
