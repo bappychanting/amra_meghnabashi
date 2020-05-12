@@ -1,4 +1,4 @@
-<div class="green text-white py-2">
+<div class="green text-white py">
   <div class="container">
     <div class="row">
       <div class="col-6">
