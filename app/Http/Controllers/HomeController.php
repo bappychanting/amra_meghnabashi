@@ -23,9 +23,7 @@ class HomeController extends Controller
 
     public function welcome() 
     {
-        $this->content->setId(1);
-        $get_content = $this->content->getWebContent();
-        $contents = json_decode($get_content['content'], 'true');
+        $contents = $this->getContents();
         $newses = $this->news->getNewses();
         $members = $this->member->getNewMembers();
         $projects = $this->project->getProjects();
@@ -34,36 +32,44 @@ class HomeController extends Controller
 
     public function members() 
     {
+        $contents = $this->getContents();
         $members = $this->member->getMembers();
-        return $this->view('members.index', compact('members'));
+        return $this->view('members.index', compact('contents', 'members'));
     }
 
     public function showMember() 
     {
+        $contents = $this->getContents();
         $member = $this->member->setData($_GET)->getMember();
-        return $this->view('members.show', compact('member'));
+        return $this->view('members.show', compact('contents', 'member'));
     }
 
     public function projects() 
     {
+        $contents = $this->getContents();
         $projects = $this->project->getProjects();
-        return $this->view('projects.index', compact('projects'));
+        return $this->view('projects.index', compact('contents', 'projects'));
     }
 
     public function showPoject() 
     {
+        $contents = $this->getContents();
         $project = $this->project->setData($_GET)->getProject();
-        return $this->view('projects.show', compact('project'));
+        return $this->view('projects.show', compact('contents', 'project'));
     }
 
     public function news() 
     {
-        return $this->view('news.index');
+        $contents = $this->getContents();
+        $newses = $this->news->getNewses();
+        return $this->view('news.index', compact('contents', 'newses'));
     }
 
     public function showNews() 
     {
-        return $this->view('news.show');
+        $contents = $this->getContents();
+        $news = $this->news->setData($_GET)->getNews();
+        return $this->view('news.show', compact('contents', 'news'));
     }
 
     public function subscribe(){
@@ -78,6 +84,13 @@ class HomeController extends Controller
     public function error() 
     {
         $this->abort(404);
+    }
+
+    private function getContents($id = 1){
+        $this->content->setId($id);
+        $get_content = $this->content->getWebContent();
+        $contents = json_decode($get_content['content'], 'true');
+        return $contents;
     }
 
 }

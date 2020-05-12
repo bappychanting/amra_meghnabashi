@@ -6,6 +6,13 @@
 
 <?php endblock() ?>
 
+<?php startblock('meta_tags') ?>
+    
+  <meta name="keywords" content="<?php echo $contents['keywords']; ?>">
+  <meta name="description" content="<?php echo $contents['slogan']; ?>">
+
+<?php endblock() ?>
+
 <?php startblock('content') ?>
 
 <section class="container my-3 py-3">
@@ -15,7 +22,7 @@
 		<div class="border border-light py-4 px-3 mb-3">
 			<h5 class="font-weight-bold green-text"><?php echo $project['name'] ?></h5><hr>
 			<p><?php echo strip_tags(substr($project['details'], 0, 100)); ?>...</p>
-			<a class="btn btn-danger btn-sm" href="<?php echo route('projects/show', ['id' => $project['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+			<a class="btn btn-danger btn-md" href="<?php echo route('projects/show', ['id' => $project['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 		</div>
 	<?php } ?>
 

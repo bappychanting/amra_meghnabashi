@@ -47,8 +47,10 @@
       </nav>
     </div>
   </div>
-  <div class="footer-copyright text-center py-3">© <?php echo date('Y'); ?> Copyright:
-    <a href="https://mdbootstrap.com/"> AmraMeghnabashi.com</a>
+  <div class="footer-copyright text-center py-3">
+    © <?php echo date('Y'); ?> Copyright:<a href="javascript:void(0);"> AmraMeghnabashi.com</a>
+    <br>
+    Developed By <a href="https://www.linkedin.com/in/mahadi-hasan-966112b0/" target="_blank">Mahadi Hasan</a> Using <a href="http://mhasan.amarneta.com/codecube-framework/" target="_blank">CodeCube Framework</a>
   </div>
 </footer>
 <!-- Footer -->
