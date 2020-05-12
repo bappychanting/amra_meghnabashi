@@ -40,7 +40,8 @@ class HomeController extends Controller
 
     public function showMember() 
     {
-        return $this->view('members.show');
+        $member = $this->member->setData($_GET)->getMember();
+        return $this->view('members.show', compact('member'));
     }
 
     public function projects() 
