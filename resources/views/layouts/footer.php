@@ -13,7 +13,7 @@
   <div class="container container-fluid text-center text-md-left">
     <div class="row">
       <div class="col-md-6 mt-md-0 mt-3">
-        <h2 class="text-uppercase font-weight-bold"><i class="fas fa-home red-text pr-2"></i><?php echo locale('views', 'app_title'); ?></h2>
+        <h2 class="text-uppercase font-weight-bold"><?php echo image('resources/assets/img/favicon.png', APP_NAME, ['class'=>'z-depth-0 img-fluid pr-2', 'style'=>'width:50px;height:50px;']); echo locale('views', 'app_title'); ?></h2>
         <h6><?php echo $contents['slogan']; ?></h6>
       </div>
       <hr class="clearfix w-100 d-md-none pb-3">
@@ -21,13 +21,13 @@
         <h5 class="text-uppercase"><?php echo locale('views', 'links'); ?></h5>
         <ul class="list-unstyled">
           <li>
-            <a href="#!"><?php echo locale('views', 'members'); ?></a>
+            <a href="<?php echo route('members'); ?>"><?php echo locale('views', 'members'); ?></a>
           </li>
           <li>
-            <a href="#!"><?php echo locale('views', 'projects'); ?></a>
+            <a href="<?php echo route('projects'); ?>"><?php echo locale('views', 'projects'); ?></a>
           </li>
           <li>
-            <a href="#!"><?php echo locale('views', 'news'); ?></a>
+            <a href="<?php echo route('news'); ?>"><?php echo locale('views', 'news'); ?></a>
           </li>
         </ul>
       </div>
