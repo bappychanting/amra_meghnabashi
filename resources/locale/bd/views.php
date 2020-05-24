@@ -12,6 +12,7 @@ return [
     'who_are_we' => 'আমাদের পরিচয়',
     'our_programs' => 'আমাদের কর্মসূচি',
     'our_achievements' => 'আমাদের অর্জনসমূহ',
+    'our_meghna' => 'আমাদের মেঘনা',
     'our_members' => 'আমাদের সদস্যগণ',
     'see_all_members' => 'সমস্ত সদস্যদের দেখুন',
     'our_projects' => 'আমাদের প্রকল্পসমূহ',

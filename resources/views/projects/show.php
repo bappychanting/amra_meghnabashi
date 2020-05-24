@@ -8,8 +8,13 @@
 
 <?php startblock('meta_tags') ?>
     
-  <meta name="keywords" content="<?php echo $contents['keywords']; ?>">
+  <meta name="keywords" content="<?php echo $contents['keywords'].', '.$project['tags']; ?>">
   <meta name="description" content="<?php echo $contents['slogan']; ?>">
+
+<meta property="og:title" content="<?php echo $project['name'] ?>">
+<meta property="og:description" content="<?php echo strip_tags(substr($project['details'], 0, 50)); ?>...">
+<meta property="og:image" content="<?php echo $project['image_path'] ?>">
+<meta property="og:url" content="<?php echo route('projects/show', ['id' => $project['id']]); ?>">
 
 <?php endblock() ?>
 

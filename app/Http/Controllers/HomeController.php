@@ -30,6 +30,12 @@ class HomeController extends Controller
         return $this->view('welcome', compact('contents', 'newses', 'members', 'projects'));
     }
 
+    public function aboutMeghna() 
+    {
+        $contents = $this->getContents();
+        return $this->view('meghna', compact('contents'));
+    }
+
     public function members() 
     {
         $contents = $this->getContents();

@@ -12,6 +12,8 @@ return [
 
 	'welcome' => 'HomeController@welcome',
 
+	'meghna' => 'HomeController@aboutMeghna',
+
 	'members' => 'HomeController@members',
 
 	'members/show' => 'HomeController@showMember',
