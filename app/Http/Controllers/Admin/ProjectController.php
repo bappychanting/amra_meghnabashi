@@ -86,10 +86,12 @@ class ProjectController extends Controller
 
     private function notifySubscibers($title, $link){
         $subscribers = $this->get_subscribers();
-        $subject = 'Amra Meghnabashi: Please checkout our latest project!';
-        $body = 'Our new project is called "<b>'.$title.'</b>"! Please click on <a href="'.$link.'">this link</a> to checkout our latest project!';
-        $body .= '<br><b>Regards</b><br>Amra Meghnabashi';
-        $this->sendMail($subscribers, $subject, $body);
+        if(count($subscribers) > 0){
+            $subject = 'Amra Meghnabashi: Please checkout our latest project!';
+            $body = 'Our new project is called "<b>'.$title.'</b>"! Please click on <a href="'.$link.'">this link</a> to checkout our latest project!';
+            $body .= '<br><b>Regards</b><br>Amra Meghnabashi';
+            $this->sendMail($subscribers, $subject, $body);
+        }
     }
 
 }

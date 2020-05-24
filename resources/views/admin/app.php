@@ -141,6 +141,7 @@
                       },
                       success: function(response) {
                           $("#image_uploaded_src").val(response.data.link);
+                          alert("Image upload done!");
                       }, error: function() {
                           alert("Error while uploading...");
                       }
