@@ -229,7 +229,7 @@
 				<div class="card">
 					<img class="card-img-top" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>" height='150px'>
 					<div class="card-body">
-						<h4 class="card-title"><?php echo $project['name'] ?></h4>
+						<h4 class="card-title red-text"><?php echo $project['name'] ?></h4>
 						<span class="card-text"><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</span>
 					</div>
 				</div>
