@@ -39,6 +39,13 @@
         <input type="text" name="contact" class="form-control" maxlength="50" minlength="5" required>
       </div>
 
+      <div class="input-group my-4">
+        <div class="custom-file">
+          <input type="file" name="member_image" class="custom-file-input" id="member_image" aria-describedby="inputGroupFileAddon01" required>
+          <label class="custom-file-label" for="member_image">Member Image</label>
+        </div>
+      </div>
+
       <div class="form-label-group my-3">
         <label>Image Link</label>
         <input type="url" name="image_path" class="form-control" required>
