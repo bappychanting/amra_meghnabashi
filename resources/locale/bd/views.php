@@ -10,7 +10,7 @@ return [
     'news' => 'খবর',
     'donate_now' => 'দান করুন!',
     'who_are_we' => 'আমাদের পরিচয়',
-    'our_goals' => 'আমাদের লক্ষ্য',
+    'our_programs' => 'আমাদের কর্মসূচি',
     'our_achievements' => 'আমাদের অর্জনসমূহ',
     'our_members' => 'আমাদের সদস্যগণ',
     'see_all_members' => 'সমস্ত সদস্যদের দেখুন',

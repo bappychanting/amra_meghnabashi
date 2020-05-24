@@ -43,7 +43,7 @@
 
 <!--Our Goals-->
 <section class="container py-3">
-<h2 class="green-text font-weight-bold text-center my-3"><?php echo locale('views', 'our_goals'); ?></h2>
+<h2 class="green-text font-weight-bold text-center my-3"><?php echo locale('views', 'our_programs'); ?></h2>
 <div class="row my-5">
   <div class="col-md-4">
     <div class="row">
@@ -208,47 +208,56 @@
 
 <!-- Dynamic -->
 <section class="container py-3">
-	<h2 class="green-text font-weight-bold my-3 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h2>
+	<h2 class="green-text font-weight-bold mt-3 mb-4 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h2>
 	<div class="row">
 	<?php $count = 1; foreach ($members as $member) { ?>
 	<div class="col-sm-2">
-		<img src="<?php echo $member['image_path']; ?>" class="rounded-circle mx-2 mt-3" alt="<?php echo $member['name']; ?>" height="100px" width="100px">
+		<a href="<?php echo route('members/show', ['id' => $member['id']]); ?>" title="<?php echo $member['name']; ?>" class="link-unstyled">
+    		<?php echo image($member['image_path'], $member['name'], ['class'=>'rounded-circle mx-2 mt-3', 'height'=>'100px', 'width' => '100px']); ?>
+		</a>
 	</div>
 	<?php if($count == 6){ break; } $count++; } ?>
 	</div>
-	<div class="row justify-content-center mt-3 mb-5">
-		<a class="btn btn-danger" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>
+	<div class="row justify-content-center my-5">
+		<a class="btn btn-danger btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>
 	</div>
-	<h2 class="green-text font-weight-bold my-3 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h2>
+	<h2 class="green-text font-weight-bold mt-3 mb-4 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h2>
 	<div class="row">
 		<?php $count = 1; foreach ($projects['projects'] as $project) { ?>
 		<div class="col-sm-3">
-			<div class="border border-light px-3 py-4 mx-3" style='height:150px;'>
-				<h5 class="green-text"><?php echo $project['name'] ?></h5><hr>
-				<p class="grey-text"><?php echo strip_tags(substr($project['details'], 0, 30)); ?>...</p>
-			</div>
+			<a href="<?php echo route('projects/show', ['id' => $project['id']]); ?>" class="link-unstyled">
+				<div class="card">
+					<img class="card-img-top" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>" height='150px'>
+					<div class="card-body">
+						<h4 class="card-title"><?php echo $project['name'] ?></h4>
+						<span class="card-text"><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</span>
+					</div>
+				</div>
+			</a>
 		</div>
 		<?php if($count == 4){ break; } $count++; } ?>
 	</div>
-	<div class="row justify-content-center mt-3 mb-5">
-		<a class="btn btn-danger" href="<?php echo route('projects'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_projects'); ?></a>
+	<div class="row justify-content-center my-5">
+		<a class="btn btn-danger btn-md" href="<?php echo route('projects'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_projects'); ?></a>
 	</div>
-	<h2 class="green-text font-weight-bold my-3 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></h2>
+	<h2 class="green-text font-weight-bold mt-3 mb-4 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></h2>
 	<div class="row">
 	<?php $count = 1; foreach ($newses['news'] as $news) { ?>
 		<div class="col-sm-4">
-			<div class="card">
-				<img class="card-img-top" src="<?php echo $news['image_path'] ?>" alt="<?php echo $news['title'] ?>" height='300px'>
-				<div class="card-body">
-					<h4 class="card-title"><?php echo strip_tags(substr($news['title'], 0, 30)); ?></h4>
-					<p class="card-text"><?php echo strip_tags(substr($news['details'], 0, 80)); ?>...</p>
+			<a href="<?php echo route('news/show', ['id' => $news['id']]); ?>" class="link-unstyled">
+				<div class="card">
+					<img class="card-img-top" src="<?php echo $news['image_path'] ?>" alt="<?php echo $news['title'] ?>" height='200px'>
+					<div class="card-body">
+						<h4 class="card-title"><?php echo substr($news['title'], 0, 30); ?></h4>
+						<span class="card-text"><?php echo strip_tags(substr($news['details'], 0, 80)); ?>...</span>
+					</div>
 				</div>
-			</div>
+			</a>
 		</div>
 		<?php if($count == 3){ break; } $count++; } ?>
 	</div>
-	<div class="row justify-content-center mt-3 mb-5">
-		<a class="btn btn-danger" href="<?php echo route('news'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_news'); ?></a>
+	<div class="row justify-content-center my-5">
+		<a class="btn btn-danger btn-md" href="<?php echo route('news'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_news'); ?></a>
 	</div>
 </section>
 <!-- #END# Dynamic -->

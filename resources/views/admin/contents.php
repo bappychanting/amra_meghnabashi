@@ -82,7 +82,7 @@
 
       <div class="form-label-group my-3">
         <label>About Us</label>
-        <textarea class="form-control" name="content[about_us]" id="editor" required><?php echo $content['about_us'] ?></textarea>
+        <textarea rows="5" class="form-control" name="content[about_us]" required><?php echo $content['about_us'] ?></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>

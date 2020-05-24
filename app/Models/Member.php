@@ -113,7 +113,7 @@ class Member extends Model{
   }
 
   public function getVips(){    
-    $vips = $this->db->table('members')->where('tags', 'LIKE', '%vip%')->orderBy('name')->limit(2000)->read();
+    $vips = $this->db->table('members')->where('tags', 'LIKE', '%vip%')->orderBy('name')->limit(20)->read();
     $pagination = $this->db->pagination();
     return array('vips' => $vips, 'pagination' => $pagination);
   }
