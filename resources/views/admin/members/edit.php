@@ -26,6 +26,12 @@
       </div>
 
       <div class="form-label-group my-3">
+        <label>Tags</label>
+        <input type="text" name="tags" value="<?php echo $member['tags']; ?>" class="form-control" required>
+        <small>Use comma to seperate tags</small>
+      </div>
+
+      <div class="form-label-group my-3">
         <label>Designation</label>
         <input type="text" name="designation" value="<?php echo $member['designation']; ?>" class="form-control">
       </div>

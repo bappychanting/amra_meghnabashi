@@ -24,6 +24,12 @@
       </div>
 
       <div class="form-label-group my-3">
+        <label>Tags</label>
+        <input type="text" name="tags" class="form-control" placeholder="member, vip etc." required>
+        <small>Use comma to seperate tags</small>
+      </div>
+
+      <div class="form-label-group my-3">
         <label>Designation</label>
         <input type="text" name="designation" class="form-control" maxlength="50" minlength="2" required>
       </div>
