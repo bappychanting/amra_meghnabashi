@@ -25,6 +25,8 @@
   <?php echo style('plugins/mdbootstrap/css/addons/datatables.min.css'); ?>
   <!-- Material Design Bootstrap -->
   <?php echo style('css/mdb.min.css'); ?>
+  <!-- Text Edior -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <?php echo style('css/style.css'); ?>
 
@@ -106,15 +108,50 @@
       <?php echo script('plugins/mdbootstrap/js/addons/datatables.min.js'); ?>
       <!-- MDB core JavaScript -->
       <?php echo script('js/mdb.min.js'); ?>
+      <!-- Text Edior -->
+      <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+      
       <!-- Custom JavaScript -->
       <?php echo script('js/script.js'); ?>
       <!-- Custom Script -->
       <script type="text/javascript">
         $(document).ready(function () {
 
+          // Initialize Editor 
+          var quill = new Quill('#editor', {
+            theme: 'snow'
+          });
+
           // Initialize datatable
           $('#dtBasicExample').DataTable();
           $('.dataTables_length').addClass('bs-select');
+
+          // Upload Image
+          $("#image_uploader").change(function() {
+              var reader = new FileReader();
+              reader.onload = function(e) {
+                  var data = e.target.result.substr(e.target.result.indexOf(",") + 1, e.target.result.length);
+                  $("#image_uploader_preview").attr("src", e.target.result);
+                  $.ajax({
+                      url: 'https://api.imgur.com/3/image',
+                      headers: {
+                          'Authorization': 'Client-ID a9fd5eeebbcf71d'
+                      },
+                      type: 'POST',
+                      data: {
+                          'image': data,
+                          'type': 'base64'
+                      },
+                      success: function(response) {
+                          $("#image_uploaded_src").val(response.data.link);
+                      }, error: function() {
+                          alert("Error while uploading...");
+                      }
+                  });
+              };
+              reader.readAsDataURL(this.files[0]);
+          });
+
         });
       </script>
 
