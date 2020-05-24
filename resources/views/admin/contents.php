@@ -76,13 +76,13 @@
       </div>
 
       <div class="form-label-group my-3">
-        <label>About Us</label>
-        <textarea rows="4" class="form-control" name="content[about_us]" required><?php echo $content['about_us'] ?></textarea>
+        <label>Video Src URL</label>
+        <input type="url" name="content[video_src]" value="<?php echo $content['video_src']; ?>" class="form-control" required>
       </div>
 
       <div class="form-label-group my-3">
-        <label>Video Src URL</label>
-        <input type="url" name="content[video_src]" value="<?php echo $content['video_src']; ?>" class="form-control" required>
+        <label>About Us</label>
+        <textarea rows="4" class="form-control" name="content[about_us]" id="editor" required><?php echo $content['about_us'] ?></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>

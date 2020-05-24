@@ -75,6 +75,7 @@ return [
 	'create_members' => 	"CREATE TABLE `members` (
 							`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
 							`name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  							`tags` text COLLATE utf8_unicode_ci NULL DEFAULT NULL,
 							`designation` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
 							`contact` varchar(255) COLLATE utf8_unicode_ci  NULL DEFAULT NULL,
 							`image_path` varchar(255) COLLATE utf8_unicode_ci NULL DEFAULT NULL,
@@ -90,6 +91,8 @@ return [
 	'create_projects' => 	"CREATE TABLE `projects` (
 							`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
 							`name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  							`tags` text COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+							`image_path` varchar(255) COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   							`details` longtext COLLATE utf8_unicode_ci NULL DEFAULT NULL,
 							`created_at` timestamp NULL DEFAULT NULL,
 							`updated_at` timestamp NULL DEFAULT NULL,

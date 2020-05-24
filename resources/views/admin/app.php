@@ -25,8 +25,6 @@
   <?php echo style('plugins/mdbootstrap/css/addons/datatables.min.css'); ?>
   <!-- Material Design Bootstrap -->
   <?php echo style('css/mdb.min.css'); ?>
-  <!-- Text Edior -->
-  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <?php echo style('css/style.css'); ?>
 
@@ -108,19 +106,18 @@
       <?php echo script('plugins/mdbootstrap/js/addons/datatables.min.js'); ?>
       <!-- MDB core JavaScript -->
       <?php echo script('js/mdb.min.js'); ?>
-      <!-- Text Edior -->
-      <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-      
+      <!-- Editor JavaScript -->
+      <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
       <!-- Custom JavaScript -->
       <?php echo script('js/script.js'); ?>
       <!-- Custom Script -->
       <script type="text/javascript">
         $(document).ready(function () {
 
-          // Initialize Editor 
-          var quill = new Quill('#editor', {
-            theme: 'snow'
-          });
+          // Initialize Editor
+          tinymce.init({
+            selector: '#editor'
+        });
 
           // Initialize datatable
           $('#dtBasicExample').DataTable();
