@@ -25,7 +25,7 @@
     } 
     ?>
     <h5 class="text-center my-3 text-muted"><i class="fas fa-user-tag pr-2"></i><?php echo $member['name']; ?></h5>
-    <img src="<?php echo $member['image_path']; ?>" alt="<?php echo $member['name']; ?>" class="img-fluid img-thumbnail my-3" style="width: 200px">
+    <?php echo image($member['image_path'], $member['name'], ['class'=>'img-fluid img-thumbnail my-3', 'style'=>'width: 200px']); ?>
     <p><strong>Tags:</strong> <?php echo '#'.str_replace(",", ", #", $member['tags']); ?></p>
     <p><strong>Designation:</strong> <?php echo $member['designation']; ?></p>
     <p><strong>Contact:</strong> <?php echo $member['contact']; ?></p>

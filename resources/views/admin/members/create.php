@@ -14,7 +14,7 @@
 
     <h5 class="text-center my-3 text-muted"><i class="fas fa-plus pr-2"></i>Add New Member</h5>
 
-    <form method="POST" action="<?php echo route('admin/members/store'); ?>"> 
+    <form method="POST" action="<?php echo route('admin/members/store'); ?>" enctype="multipart/form-data"> 
 
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
@@ -47,13 +47,11 @@
       </div>
 
       <div class="form-label-group my-3">
-        <label>Image Link</label>
-        <input type="url" name="image_path" class="form-control" required>
-      </div>
-
-      <div class="form-label-group my-3">
         <label>Details</label>
-        <textarea rows="5" class="form-control" name="details" required></textarea>
+        <textarea rows="5" class="form-control" name="details" id="editor" required>
+          <p><b>Email:</b></p>
+          <p><b>Address:</b></p>
+        </textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>

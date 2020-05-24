@@ -14,7 +14,7 @@
 
     <h5 class="text-center my-3 text-muted"><i class="fas fa-edit pr-2"></i>Edit Member</h5>
 
-    <form method="POST" action="<?php echo route('admin/members/update'); ?>"> 
+    <form method="POST" action="<?php echo route('admin/members/update'); ?>" enctype="multipart/form-data"> 
 
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
@@ -41,14 +41,17 @@
         <input type="text" name="contact" value="<?php echo $member['contact']; ?>" class="form-control" required>
       </div>
 
-      <div class="form-label-group my-3">
-        <label>Image Link</label>
-        <input type="url" name="image_path" value="<?php echo $member['image_path']; ?>" class="form-control" required>
+      <div class="input-group my-4">
+        <div class="custom-file">
+          <input type="hidden" name="image_path" value="<?php echo $member['image_path']; ?>">
+          <input type="file" name="member_image" class="custom-file-input" id="member_image" aria-describedby="inputGroupFileAddon01">
+          <label class="custom-file-label" for="member_image">Update Member Image</label>
+        </div>
       </div>
 
       <div class="form-label-group my-3">
         <label>Details</label>
-        <textarea rows="5" class="form-control" name="details" required><?php echo $member['details']; ?></textarea>
+        <textarea rows="5" class="form-control" name="details" id="editor" required><?php echo $member['details']; ?></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>
