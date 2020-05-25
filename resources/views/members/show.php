@@ -19,7 +19,7 @@
 	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h1>
 	<h4 class="my-3 font-weight-bold"><?php echo $member['name']; ?></h4>
 	<hr>
-    <a href="<?php echo $member['image_path']; ?>" target="_blank">
+    <a href="<?php echo APP_URL.'/'.$member['image_path']; ?>" target="_blank">
       <?php echo image($member['image_path'], $member['name'], ['class'=>'img-fluid img-thumbnail my-3', 'style'=>'width: 300px']); ?>
     </a>
     <p class="font-weight-bold"><i class="far fa-id-card pr-2"></i><?php echo $member['designation']; ?></p>
