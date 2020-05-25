@@ -104,7 +104,7 @@
 						<div class="card">
 							<img class="card-img-top" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>" height='150px'>
 							<div class="card-body">
-								<h4 class="card-title text-warning"><?php echo $project['name'] ?></h4>
+								<h4 class="card-title text-warning"><?php echo substr($project['name'], 0, 30); ?>..</h4>
 								<span class="card-text"><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</span>
 							</div>
 						</div>
@@ -125,7 +125,7 @@
 						<div class="card">
 							<img class="card-img-top" src="<?php echo $news['image_path'] ?>" alt="<?php echo $news['title'] ?>" height='200px'>
 							<div class="card-body">
-								<h4 class="card-title"><?php echo substr($news['title'], 0, 30); ?></h4>
+								<h4 class="card-title"><?php echo substr($news['title'], 0, 30); ?>..</h4>
 								<span class="card-text"><?php echo strip_tags(substr($news['details'], 0, 80)); ?>...</span>
 							</div>
 						</div>
