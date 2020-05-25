@@ -78,6 +78,16 @@
         <textarea rows="1" class="form-control" name="content[address]" required><?php echo $content['address'] ?></textarea>
       </div>
 
+      <input type="hidden" name="content[header_image]" id="image_uploaded_src" value="<?php echo $content['header_image']; ?>">
+      <img src="<?php echo $content['header_image']; ?>" id="image_uploader_preview" class="img-fluid z-depth-1 rounded mb-3"/>
+
+      <div class="input-group my-4">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="image_uploader" aria-describedby="inputGroupFileAddon01">
+          <label class="custom-file-label" for="image_uploader">Header Top Image</label>
+        </div>
+      </div>
+
       <div class="form-label-group my-3">
         <label>Video Src URL</label>
         <input type="url" name="content[video_src]" value="<?php echo $content['video_src']; ?>" class="form-control" required>
