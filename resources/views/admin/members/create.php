@@ -42,13 +42,13 @@
       <div class="input-group my-4">
         <div class="custom-file">
           <input type="file" name="member_image" class="custom-file-input" id="member_image" aria-describedby="inputGroupFileAddon01" required>
-          <label class="custom-file-label" for="member_image">Member Image</label>
+          <label class="custom-file-label" for="member_image">Member Image (must be less than 1.5mb)</label>
         </div>
       </div>
 
       <div class="form-label-group my-3">
         <label>Details</label>
-        <textarea rows="5" class="form-control" name="details" id="editor" required>
+        <textarea name="details" id="editor" required>
           <p><b>Email:</b></p>
           <p><b>Address:</b></p>
         </textarea>

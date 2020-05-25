@@ -47,7 +47,7 @@
 
       <div class="form-label-group my-3">
         <label>Details</label>
-        <textarea class="form-control" name="details" id="editor"><?php echo $news['details']; ?></textarea>
+        <textarea name="details" id="editor"><?php echo $news['details']; ?></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>

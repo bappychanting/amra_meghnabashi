@@ -48,6 +48,8 @@ return [
 
 		// admin web pages
 
+	'admin/meghna' => 'Admin/WebController@meghna',
+
 	'admin/web/all' => 'Admin/WebController@index',
 
 	'admin/web/update' => 'Admin/WebController@update',

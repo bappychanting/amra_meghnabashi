@@ -208,6 +208,7 @@
 
 <!-- Dynamic -->
 <section class="container py-3">
+	<ul class="pagination-sm content-paginate"></ul>
 	<h2 class="green-text font-weight-bold mt-3 mb-4 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h2>
 	<div class="row">
 	<?php $count = 1; foreach ($members as $member) { ?>

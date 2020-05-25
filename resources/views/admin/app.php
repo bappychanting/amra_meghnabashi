@@ -51,11 +51,14 @@
             <li class="nav-item <?php echo route_is('admin/news') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/news/all'); ?>">News</a>
             </li>
-            <li class="nav-item <?php echo route_is('admin/users') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/users/all'); ?>">Users</a>
+            <li class="nav-item <?php echo route_is('admin/meghna') ? 'active' : '' ?>">
+              <a class="nav-link" href="<?php echo route('admin/meghna'); ?>">Amader Meghna</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/web') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/web/all'); ?>">Web Content</a>
+            </li>
+            <li class="nav-item <?php echo route_is('admin/users') ? 'active' : '' ?>">
+              <a class="nav-link" href="<?php echo route('admin/users/all'); ?>">Users</a>
             </li>
           </ul>
           <span class="navbar-text">

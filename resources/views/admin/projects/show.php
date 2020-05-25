@@ -25,7 +25,7 @@
     } 
     ?>
     <h5 class="text-center my-3 text-muted"><i class="fas fa-briefcase pr-2"></i><?php echo $project['name']; ?></h5>
-    <img src="<?php echo $project['image_path']; ?>" id="image_uploader_preview" class="img-fluid z-depth-1 rounded mb-3"/>
+    <img src="<?php echo $project['image_path']; ?>" class="img-fluid z-depth-1 rounded mb-3"/>
     <p><strong>Created At:</strong> <?php echo date('F d (l), Y', strtotime($project['created_at'])); ?></p>
     <p><strong>Tags:</strong> <?php echo '#'.str_replace(",", ", #", $project['tags']); ?></p>
     <?php echo $project['details']; ?>

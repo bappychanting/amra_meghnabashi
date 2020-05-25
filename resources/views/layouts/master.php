@@ -57,6 +57,8 @@
 	<?php echo script('js/bootstrap.min.js'); ?>
 	<!-- Social Sharing -->
 	<?php echo script('plugins/jssocials/jssocials.min.js'); ?>
+    <!-- pagination JavaScript -->
+    <?php echo script('plugins/pagination/jquery.twbsPagination.min.js'); ?>
 	<!-- MDB core JavaScript -->
 	<?php echo script('js/mdb.min.js'); ?>
 	<!-- Custom Script -->
@@ -66,6 +68,14 @@
 			$(function () {
 				$('[data-trigger="popover"]').popover()
 			});
+			// Pagination
+			$('.content-paginate').twbsPagination({
+            	totalPages: 35,
+            	visiblePages: 7,
+            	onPageClick: function (event, page) {
+              		$('#page-content').text('Page ' + page);
+            	}
+          	});
 			// Initialize Social Share
 			$("#social_share").jsSocials({
 				shares: [

@@ -48,7 +48,7 @@
 
       <div class="form-label-group my-3">
         <label>Details</label>
-        <textarea class="form-control" name="details" id="editor"></textarea>
+        <textarea name="details" id="editor"></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>

@@ -45,13 +45,13 @@
         <div class="custom-file">
           <input type="hidden" name="image_path" value="<?php echo $member['image_path']; ?>">
           <input type="file" name="member_image" class="custom-file-input" id="member_image" aria-describedby="inputGroupFileAddon01">
-          <label class="custom-file-label" for="member_image">Update Member Image</label>
+          <label class="custom-file-label" for="member_image">Update Member Image (must be less than 1.5mb)</label>
         </div>
       </div>
 
       <div class="form-label-group my-3">
         <label>Details</label>
-        <textarea rows="5" class="form-control" name="details" id="editor" required><?php echo $member['details']; ?></textarea>
+        <textarea name="details" id="editor" required><?php echo $member['details']; ?></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>
