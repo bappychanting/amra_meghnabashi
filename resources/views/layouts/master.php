@@ -64,7 +64,7 @@
 		$(document).ready(function() {
 			// Initialize Popover
 			$(function () {
-				$('[data-trigger="popover"]').popover()
+				$('[data-toggle="popover"]').popover()
 			});
 			// Initialize Social Share
 			$("#social_share").jsSocials({

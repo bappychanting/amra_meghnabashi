@@ -210,7 +210,7 @@
 <section class="container py-3">
 	<ul class="pagination-sm content-paginate"></ul>
 	<h2 class="green-text font-weight-bold mt-3 mb-4 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h2>
-	<div class="members-section scroll">
+	<div class="members-section scroll" data-toggle="popover" title="<?php echo locale('views', 'our_members'); ?>" data-content="Scroll for more!">
 		<div class="row">
 		<?php foreach ($members as $member) { ?>
 		<div class="col-sm-2">
@@ -225,7 +225,7 @@
 		<a class="btn btn-danger btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>
 	</div>
 	<h2 class="green-text font-weight-bold mt-3 mb-4 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h2>
-	<div class="projects-section scroll">
+	<div class="projects-section scroll" data-toggle="popover" title="<?php echo locale('views', 'our_projects'); ?>" data-content="Scroll for more!">
 		<div class="row">
 			<?php foreach ($projects['projects'] as $project) { ?>
 			<div class="col-sm-3 mb-3">
@@ -246,7 +246,7 @@
 		<a class="btn btn-danger btn-md" href="<?php echo route('projects'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_projects'); ?></a>
 	</div>
 	<h2 class="green-text font-weight-bold mt-3 mb-4 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></h2>
-	<div class="news-section scroll">
+	<div class="news-section scroll" data-toggle="popover" title="<?php echo locale('views', 'news'); ?>" data-content="Scroll for more!">
 		<div class="row">
 		<?php foreach ($newses['news'] as $news) { ?>
 			<div class="col-sm-4 mb-3">
