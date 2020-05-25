@@ -35,7 +35,7 @@
           <div class="input-group my-4">
             <div class="custom-file">
               <input type="file" class="custom-file-input" id="image_uploader" aria-describedby="inputGroupFileAddon01">
-              <label class="custom-file-label" for="image_uploader">News Image</label>
+              <label class="custom-file-label" for="image_uploader">Project Image</label>
             </div>
           </div>
         </div>
