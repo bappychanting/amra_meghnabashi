@@ -16,7 +16,7 @@
 <?php startblock('content') ?>
 
 <section class="container my-3 py-3">
-	<h1 class="green-text font-weight-bold mb-5"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h1>
+	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h1>
 
 	<?php foreach ($projects['projects'] as $project) { ?>
 
@@ -28,11 +28,11 @@
             </div>
           </div>
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-            <h3 class="mb-3 font-weight-bold red-text">
+            <h3 class="mb-3 font-weight-bold text-warning">
               <strong><?php echo $project['name']; ?></strong>
             </h3>
             <p class="grey-text"><?php echo strip_tags(substr($project['details'], 0, 150)); ?>...</p>
-            <a href="<?php echo route('projects/show', ['id' => $project['id']]); ?>" class="btn btn-danger btn-md"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+            <a href="<?php echo route('projects/show', ['id' => $project['id']]); ?>" class="btn btn-warning btn-md"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
           </div>
         </div>
         <hr class="mb-5">

@@ -32,7 +32,6 @@
           <th class="th-sm">#</th>
           <th class="th-sm">Name</th>
           <th class="th-sm">Designation</th>
-          <th class="th-sm">Contact</th>
           <th class="th-sm">Created At</th>
           <th class="th-sm">Actions</th>
         </tr>
@@ -43,7 +42,6 @@
             <td class="font-weight-bold"><?php echo $member['id']; ?></td>
             <td><?php echo $member['name']; ?></td>
             <td><?php echo $member['designation']; ?></td>
-            <td><?php echo $member['contact']; ?></td>
             <td><?php echo date('F d (l), Y', strtotime($member['created_at'])); ?></td>
             <td>
               <form method="post" action="<?php echo route('admin/members/delete') ?>" onsubmit="return confirm('Do you really want to delete this member?');">
@@ -61,7 +59,6 @@
           <th class="th-sm">#</th>
           <th class="th-sm">Name</th>
           <th class="th-sm">Designation</th>
-          <th class="th-sm">Contact</th>
           <th class="th-sm">Created At</th>
           <th class="th-sm">Actions</th>
         </tr>

@@ -16,7 +16,7 @@
 <?php startblock('content') ?>
 
 <section class="container my-3 py-3">
-	<h1 class="green-text font-weight-bold mb-5"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></h1>
+	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></h1>
 
 	<?php foreach ($newses['news'] as $news) { ?>
 
@@ -32,7 +32,7 @@
               <strong><?php echo $news['title']; ?></strong>
             </h3>
             <p class="grey-text"><?php echo strip_tags(substr($news['details'], 0, 150)); ?>...</p>
-            <a href="<?php echo route('news/show', ['id' => $news['id']]); ?>" class="btn btn-danger btn-md"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+            <a href="<?php echo route('news/show', ['id' => $news['id']]); ?>" class="btn btn-warning btn-md"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
           </div>
         </div>
         <hr class="mb-5">

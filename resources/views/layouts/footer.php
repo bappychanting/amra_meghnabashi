@@ -1,15 +1,15 @@
 <!-- Footer -->
-<div class="green text-white py-2">
+<div class="yellow lighten-4 py-2">
   <div class="container d-flex justify-content-center">
     <form class="form-inline my-2 my-lg-0" method="post" action="<?php echo route('subscribe'); ?>">
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
       <label class="text-uppercase my-1 mr-2" for="sub_email"><?php echo locale('views', 'subscribe_us'); ?></label>
       <input class="form-control" type="email" name="sub_email" id="sub_email" placeholder="example@example.com" aria-label="email" required>
-      <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Submit</button>
+      <button class="btn btn-outline-dark btn-md my-2 my-sm-0 ml-3" type="submit">Submit</button>
     </form>
   </div>
 </div>
-<footer class="page-footer font-small  green darken-4 pt-4">
+<footer class="page-footer font-small blue lighten-1 pt-4">
   <div class="container container-fluid text-center text-md-left">
     <div class="row">
       <div class="col-md-6 mt-md-0 mt-3">

@@ -10,7 +10,6 @@ class Member extends Model{
   protected $name;
   protected $tags;
   protected $designation;
-  protected $contact;
   protected $details;
 
   /* Setter getter for all variables */
@@ -45,14 +44,6 @@ class Member extends Model{
   }
   function getDesignation(){
     return $this->designation;
-  }
-
-  	// Contact setter getter
-  function setContact($contact){
-  	$this->contact = $contact;
-  }
-  function getContact(){
-    return $this->contact;
   }
 
       // Image setter getter
@@ -96,10 +87,6 @@ class Member extends Model{
       $this->setImage($data['image_path']);
     }
 
-    if (isset($data['contact'])){
-      $this->setContact($data['contact']);
-    }
-
     if (isset($data['details'])){
         $this->setDetail($data['details']);
     }
@@ -129,13 +116,13 @@ class Member extends Model{
   }
 
   public function store(){   
-    $store = $this->db->table('members')->data(['name' => $this->getName(), 'tags' => $this->getTag(), 'designation' => $this->getDesignation(), 'contact' => $this->getContact(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->create();
+    $store = $this->db->table('members')->data(['name' => $this->getName(), 'tags' => $this->getTag(), 'designation' => $this->getDesignation(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->create();
     return $store;
   }
 
   public function update(){ 
     if(empty(getErrors())){
-      $update = $this->db->table('members')->set(['name' => $this->getName(), 'tags' => $this->getTag(), 'designation' => $this->getDesignation(), 'contact' => $this->getContact(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->where('id', '=', $this->getId())->update();
+      $update = $this->db->table('members')->set(['name' => $this->getName(), 'tags' => $this->getTag(), 'designation' => $this->getDesignation(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->where('id', '=', $this->getId())->update();
       return $update;
     }
   }

@@ -16,7 +16,7 @@
 <?php startblock('content') ?>
 
 <section class="container my-3 py-3">
-	<h1 class="green-text font-weight-bold mb-5"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h1>
+	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h1>
 	<div class="row">
 		<?php $count = 0; foreach ($members as $member) { ?>
 			<div class="col-sm-3 mb-3">
@@ -27,7 +27,7 @@
 				    <i class="far fa-id-card pr-2"></i><?php echo $member['designation']; ?>
 				  </div>
 				</div>
-				<a class="btn btn-danger btn-sm" href="<?php echo route('members/show', ['id' => $member['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $member['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 			</div>
 		<?php $count++; echo ($count%4==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
 	</div>
