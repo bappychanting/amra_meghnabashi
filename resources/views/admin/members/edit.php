@@ -36,11 +36,6 @@
         <input type="text" name="designation" value="<?php echo $member['designation']; ?>" class="form-control">
       </div>
 
-      <div class="form-label-group my-3">
-        <label>Contact</label>
-        <input type="text" name="contact" value="<?php echo $member['contact']; ?>" class="form-control" required>
-      </div>
-
       <div class="input-group my-4">
         <div class="custom-file">
           <input type="hidden" name="image_path" value="<?php echo $member['image_path']; ?>">

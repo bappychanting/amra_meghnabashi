@@ -34,11 +34,6 @@
         <input type="text" name="designation" class="form-control" maxlength="50" minlength="2" required>
       </div>
 
-      <div class="form-label-group my-3">
-        <label>Contact</label>
-        <input type="text" name="contact" class="form-control" maxlength="50" minlength="5" required>
-      </div>
-
       <div class="input-group my-4">
         <div class="custom-file">
           <input type="file" name="member_image" class="custom-file-input" id="member_image" aria-describedby="inputGroupFileAddon01" required>
@@ -49,8 +44,8 @@
       <div class="form-label-group my-3">
         <label>Details</label>
         <textarea name="details" class="editor">
+          <p><b>Phone:</b></p>
           <p><b>Email:</b></p>
-          <p><b>Address:</b></p>
         </textarea>
       </div>
 
