@@ -26,6 +26,10 @@ return [
 
 	'drop_members' => 	"DROP TABLE IF EXISTS `members`", 
 
+		// Reverse subscribers table.
+
+	'drop_subscribers' => 	"DROP TABLE IF EXISTS `subscribers`",
+
 		// Reverse web_contents table.
 
 	'drop_web_contents' => 	"DROP TABLE IF EXISTS `web_contents`", 

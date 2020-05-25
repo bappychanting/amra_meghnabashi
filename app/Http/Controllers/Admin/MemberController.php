@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Base\Request; 
 use App\Models\Member; 
+use App\Helpers\Upload;
 use App\Models\Project; 
-use App\Models\Donation; 
+use App\Models\Donation;
 use App\Http\Controllers\Controller; 
 
 class MemberController extends Controller
@@ -34,6 +35,8 @@ class MemberController extends Controller
 
     public function store() 
     {
+        $app = $this->config('app');  
+        $_POST['image_path'] = Upload::fileUpload($_FILES['member_image'], $app['upload'].'/member_images');
         $store = $this->member->setData($_POST)->store();
         if($store){
             $this->request->setFlash(['success' => locale('message', 'success')]);
@@ -87,6 +90,10 @@ class MemberController extends Controller
 
     public function update() 
     {
+        if(isset($_FILES['member_image']) && $_FILES['member_image']['size'] > 0){
+            $app = $this->config('app');  
+            $_POST['image_path'] = Upload::fileUpload($_FILES['member_image'], $app['upload'].'/member_images');
+        }  
         $update = $this->member->setData($_POST)->update();
         if($update){
             $this->request->setFlash(['success' => locale('message', 'success')]);

@@ -30,14 +30,24 @@
         <input type="text" name="tags" value="<?php echo $news['tags']; ?>" class="form-control">
       </div>
 
-      <div class="form-label-group my-3">
-        <label>Image Link</label>
-        <input type="url" name="image_path" value="<?php echo $news['image_path']; ?>" class="form-control" required>
+      <div class="row">
+        <div class="col-sm-10">
+          <div class="input-group my-4">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="image_uploader" aria-describedby="inputGroupFileAddon01">
+              <label class="custom-file-label" for="image_uploader">News Image</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <input type="hidden" name="image_path" id="image_uploaded_src" value="<?php echo $news['image_path']; ?>">
+          <img src="<?php echo $news['image_path']; ?>" id="image_uploader_preview" class="img-fluid img-thumbnail" width="150px"/>
+        </div>
       </div>
 
       <div class="form-label-group my-3">
         <label>Details</label>
-        <textarea rows="10" class="form-control" name="details" required><?php echo $news['details']; ?></textarea>
+        <textarea name="details" class="editor"><?php echo $news['details']; ?></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>

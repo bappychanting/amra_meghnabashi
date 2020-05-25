@@ -24,6 +24,9 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="basicExampleNav">
       <ul class="navbar-nav ml-auto">
+        <li class="nav-item <?php echo route_is('meghna') ? 'active' : '' ; ?>">
+          <a class="nav-link" href="<?php echo route('meghna'); ?>"><?php echo locale('views', 'our_meghna'); echo route_is('meghna') ? '<span class="sr-only">(current)</span>' : '' ; ?></a>
+        </li>
         <li class="nav-item <?php echo route_is('members') ? 'active' : '' ; ?>">
           <a class="nav-link" href="<?php echo route('members'); ?>"><?php echo locale('views', 'members'); echo route_is('members') ? '<span class="sr-only">(current)</span>' : '' ; ?></a>
         </li>

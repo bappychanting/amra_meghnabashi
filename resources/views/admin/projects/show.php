@@ -25,8 +25,10 @@
     } 
     ?>
     <h5 class="text-center my-3 text-muted"><i class="fas fa-briefcase pr-2"></i><?php echo $project['name']; ?></h5>
+    <img src="<?php echo $project['image_path']; ?>" class="img-fluid z-depth-1 rounded mb-3"/>
     <p><strong>Created At:</strong> <?php echo date('F d (l), Y', strtotime($project['created_at'])); ?></p>
-    <p><?php echo $project['details']; ?></p>
+    <p><strong>Tags:</strong> <?php echo '#'.str_replace(",", ", #", $project['tags']); ?></p>
+    <?php echo $project['details']; ?>
     <a class="btn btn-warning btn-sm" href="<?php echo route('admin/projects/edit', ['id' => $project['id']]) ?>"><i class="fas fa-edit pr-2"></i>Edit Project</a>
     <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>

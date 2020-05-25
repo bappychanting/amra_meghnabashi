@@ -31,7 +31,7 @@
     	<img src="<?php echo $news['image_path'] ?>" class="img-fluid" alt="<?php echo $news['title'] ?>">
     </div>
 
-	<p><?php echo $news['details']; ?></p>
+	<?php echo $news['details']; ?>
 	<a class="btn btn-danger btn-sm my-3" href="<?php echo route('news') ?>"><i class="fas fa-arrow-left pr-2"></i><?php echo locale('views', 'go_back'); ?></a>
 	
 </section>

@@ -51,11 +51,14 @@
             <li class="nav-item <?php echo route_is('admin/news') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/news/all'); ?>">News</a>
             </li>
-            <li class="nav-item <?php echo route_is('admin/users') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/users/all'); ?>">Users</a>
+            <li class="nav-item <?php echo route_is('admin/meghna') ? 'active' : '' ?>">
+              <a class="nav-link" href="<?php echo route('admin/meghna'); ?>">Amader Meghna</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/web') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/web/all'); ?>">Web Content</a>
+            </li>
+            <li class="nav-item <?php echo route_is('admin/users') ? 'active' : '' ?>">
+              <a class="nav-link" href="<?php echo route('admin/users/all'); ?>">Users</a>
             </li>
           </ul>
           <span class="navbar-text">
@@ -106,15 +109,50 @@
       <?php echo script('plugins/mdbootstrap/js/addons/datatables.min.js'); ?>
       <!-- MDB core JavaScript -->
       <?php echo script('js/mdb.min.js'); ?>
+      <!-- Editor JavaScript -->
+      <script src="https://cdn.tiny.cloud/1/4uzp4rkc020bnav1v5x2qt5z5n44g2rlj85299ltuwx2djgw/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
       <!-- Custom JavaScript -->
       <?php echo script('js/script.js'); ?>
       <!-- Custom Script -->
       <script type="text/javascript">
         $(document).ready(function () {
 
+          // Initialize Editor
+          tinymce.init({
+            selector: '.editor'
+        });
+
           // Initialize datatable
           $('#dtBasicExample').DataTable();
           $('.dataTables_length').addClass('bs-select');
+
+          // Upload Image
+          $("#image_uploader").change(function() {
+              var reader = new FileReader();
+              reader.onload = function(e) {
+                  var data = e.target.result.substr(e.target.result.indexOf(",") + 1, e.target.result.length);
+                  $("#image_uploader_preview").attr("src", e.target.result);
+                  $.ajax({
+                      url: 'https://api.imgur.com/3/image',
+                      headers: {
+                          'Authorization': 'Client-ID a9fd5eeebbcf71d'
+                      },
+                      type: 'POST',
+                      data: {
+                          'image': data,
+                          'type': 'base64'
+                      },
+                      success: function(response) {
+                          $("#image_uploaded_src").val(response.data.link);
+                          alert("Image upload done!");
+                      }, error: function() {
+                          alert("Error while uploading...");
+                      }
+                  });
+              };
+              reader.readAsDataURL(this.files[0]);
+          });
+
         });
       </script>
 

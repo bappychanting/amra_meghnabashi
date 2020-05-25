@@ -21,6 +21,9 @@
         <h5 class="text-uppercase"><?php echo locale('views', 'links'); ?></h5>
         <ul class="list-unstyled">
           <li>
+            <a href="<?php echo route('meghna'); ?>"><?php echo locale('views', 'our_meghna'); ?></a>
+          </li>
+          <li>
             <a href="<?php echo route('members'); ?>"><?php echo locale('views', 'members'); ?></a>
           </li>
           <li>

@@ -62,6 +62,10 @@
 	<!-- Custom Script -->
 	<script type="text/javascript">
 		$(document).ready(function() {
+			// Initialize Popover
+			$(function () {
+				$('[data-toggle="popover"]').popover()
+			});
 			// Initialize Social Share
 			$("#social_share").jsSocials({
 				shares: [

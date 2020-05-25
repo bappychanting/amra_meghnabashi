@@ -8,6 +8,7 @@ class Member extends Model{
 
   protected $id;
   protected $name;
+  protected $tags;
   protected $designation;
   protected $contact;
   protected $details;
@@ -28,6 +29,14 @@ class Member extends Model{
   }
   function getName(){
     return $this->name;
+  }
+
+      // Tags setter getter
+  function setTag($tags){
+      $this->tags = $tags;
+  }
+  function getTag(){
+      return $this->tags;
   }
 
   	// Designation setter and geter
@@ -75,6 +84,10 @@ class Member extends Model{
       $this->setName($data['name']);
     }
 
+    if (isset($data['tags'])){
+        $this->setTag($data['tags']);
+    }
+
     if (isset($data['designation'])){
       $this->setDesignation($data['designation']);
     }
@@ -95,12 +108,18 @@ class Member extends Model{
   }
 
   public function getMembers(){    
-    $members = $this->db->table('members')->orderBy('name')->limit(2000)->read();
+    $members = $this->db->table('members')->where('tags', 'LIKE', '%member%')->orderBy('name')->limit(2000)->read();
     return $members;
   }
 
+  public function getVips(){    
+    $vips = $this->db->table('members')->where('tags', 'LIKE', '%vip%')->orderBy('name')->limit(12)->read();
+    $pagination = $this->db->pagination();
+    return array('vips' => $vips, 'pagination' => $pagination);
+  }
+
   public function getNewMembers(){    
-    $members = $this->db->table('members')->orderBy('created_at', 'desc')->limit(10)->read();
+    $members = $this->db->table('members')->orderBy('created_at', 'desc')->limit(12)->read();
     return $members;
   }
 
@@ -110,13 +129,13 @@ class Member extends Model{
   }
 
   public function store(){   
-    $store = $this->db->table('members')->data(['name' => $this->getName(), 'designation' => $this->getDesignation(), 'contact' => $this->getContact(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->create();
+    $store = $this->db->table('members')->data(['name' => $this->getName(), 'tags' => $this->getTag(), 'designation' => $this->getDesignation(), 'contact' => $this->getContact(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->create();
     return $store;
   }
 
   public function update(){ 
     if(empty(getErrors())){
-      $update = $this->db->table('members')->set(['name' => $this->getName(), 'designation' => $this->getDesignation(), 'contact' => $this->getContact(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->where('id', '=', $this->getId())->update();
+      $update = $this->db->table('members')->set(['name' => $this->getName(), 'tags' => $this->getTag(), 'designation' => $this->getDesignation(), 'contact' => $this->getContact(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->where('id', '=', $this->getId())->update();
       return $update;
     }
   }

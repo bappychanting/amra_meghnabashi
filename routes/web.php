@@ -12,6 +12,8 @@ return [
 
 	'welcome' => 'HomeController@welcome',
 
+	'meghna' => 'HomeController@aboutMeghna',
+
 	'members' => 'HomeController@members',
 
 	'members/show' => 'HomeController@showMember',
@@ -45,6 +47,8 @@ return [
 	'admin/signout' => 'Admin/AuthController@signout',
 
 		// admin web pages
+
+	'admin/meghna' => 'Admin/WebController@meghna',
 
 	'admin/web/all' => 'Admin/WebController@index',
 

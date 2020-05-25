@@ -14,13 +14,19 @@
 
     <h5 class="text-center my-3 text-muted"><i class="fas fa-plus pr-2"></i>Add New Member</h5>
 
-    <form method="POST" action="<?php echo route('admin/members/store'); ?>"> 
+    <form method="POST" action="<?php echo route('admin/members/store'); ?>" enctype="multipart/form-data"> 
 
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
       <div class="form-label-group my-3">
         <label>Name</label>
         <input type="text" name="name" class="form-control" maxlength="50" minlength="2" required>
+      </div>
+
+      <div class="form-label-group my-3">
+        <label>Tags</label>
+        <input type="text" name="tags" class="form-control" placeholder="member, vip etc." required>
+        <small>Use comma to seperate tags</small>
       </div>
 
       <div class="form-label-group my-3">
@@ -33,14 +39,19 @@
         <input type="text" name="contact" class="form-control" maxlength="50" minlength="5" required>
       </div>
 
-      <div class="form-label-group my-3">
-        <label>Image Link</label>
-        <input type="url" name="image_path" class="form-control" required>
+      <div class="input-group my-4">
+        <div class="custom-file">
+          <input type="file" name="member_image" class="custom-file-input" id="member_image" aria-describedby="inputGroupFileAddon01" required>
+          <label class="custom-file-label" for="member_image">Member Image (must be less than 1.5mb)</label>
+        </div>
       </div>
 
       <div class="form-label-group my-3">
         <label>Details</label>
-        <textarea rows="5" class="form-control" name="details" required></textarea>
+        <textarea name="details" class="editor">
+          <p><b>Email:</b></p>
+          <p><b>Address:</b></p>
+        </textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>

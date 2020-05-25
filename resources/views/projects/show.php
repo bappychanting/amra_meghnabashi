@@ -8,8 +8,13 @@
 
 <?php startblock('meta_tags') ?>
     
-  <meta name="keywords" content="<?php echo $contents['keywords']; ?>">
+  <meta name="keywords" content="<?php echo $contents['keywords'].', '.$project['tags']; ?>">
   <meta name="description" content="<?php echo $contents['slogan']; ?>">
+
+<meta property="og:title" content="<?php echo $project['name'] ?>">
+<meta property="og:description" content="<?php echo strip_tags(substr($project['details'], 0, 50)); ?>...">
+<meta property="og:image" content="<?php echo $project['image_path'] ?>">
+<meta property="og:url" content="<?php echo route('projects/show', ['id' => $project['id']]); ?>">
 
 <?php endblock() ?>
 
@@ -17,9 +22,12 @@
 
 <section class="container my-3 py-3">
 	<h1 class="green-text font-weight-bold mb-5"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h1>
-	<h4 class="my-3 font-weight-bold green-text"><?php echo $project['name']; ?></h4>
+	<h4 class="my-3 font-weight-bold red-text"><?php echo $project['name']; ?></h4>
 	<hr>
-    <p><?php echo $project['details']; ?></p>
+	<div class="card mb-4 wow fadeIn">
+    	<img src="<?php echo $project['image_path'] ?>" class="img-fluid" alt="<?php echo $news['title'] ?>">
+    </div>
+    <?php echo $project['details']; ?>
 	<a class="btn btn-danger btn-sm my-3" href="<?php echo route('projects') ?>"><i class="fas fa-arrow-left pr-2"></i><?php echo locale('views', 'go_back'); ?></a>
 	
 </section>

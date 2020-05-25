@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'All Project || '.$project['title'].' || Edit Project || '.title(); ?>
+<?php echo 'All Project || '.$project['name'].' || Edit Project || '.title(); ?>
 
 <?php endblock() ?>
 
@@ -26,8 +26,28 @@
       </div>
 
       <div class="form-label-group my-3">
+        <label>Tags</label>
+        <input type="text" name="tags" value="<?php echo $project['tags']; ?>" class="form-control">
+      </div>
+
+      <div class="row">
+        <div class="col-sm-10">
+          <div class="input-group my-4">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="image_uploader" aria-describedby="inputGroupFileAddon01">
+              <label class="custom-file-label" for="image_uploader">News Image</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <input type="hidden" name="image_path" id="image_uploaded_src" value="<?php echo $project['image_path']; ?>">
+          <img src="<?php echo $project['image_path']; ?>" id="image_uploader_preview" class="img-fluid img-thumbnail" width="150px"/>
+        </div>
+      </div>
+
+      <div class="form-label-group my-3">
         <label>Details</label>
-        <textarea rows="10" class="form-control" name="details" required><?php echo $project['details']; ?></textarea>
+        <textarea name="details" class="editor"><?php echo $project['details']; ?></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>
