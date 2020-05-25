@@ -20,7 +20,7 @@
 	<div class="header-content">
 		<div class="container text-center">
 			<p class="h2 text-white mb-3"><?php echo $contents['slogan']; ?></p>
-			<a class="btn btn-danger mt-3" href="<?php echo $contents['donate_link']; ?>" target="_blank"><i class="fas fa-donate pr-2"></i><?php echo locale('views', 'donate_now'); ?></a>
+			<a class="btn btn-outline-warning waves-effect mt-3" href="<?php echo $contents['donate_link']; ?>" target="_blank"><i class="fas fa-donate pr-2"></i><?php echo locale('views', 'donate_now'); ?></a>
 		</div>
 	</div>
 </section>
@@ -30,7 +30,7 @@
 <section class="container py-5">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2 class="green-text font-weight-bold"><?php echo locale('views', 'who_are_we'); ?></h2>
+			<h2 class="text-info font-weight-bold"><?php echo locale('views', 'who_are_we'); ?></h2>
 			<p class="grey-text my-3"><?php echo $contents['about_us']; ?></p>
 		</div>
 		<div class="col-sm-6">
@@ -45,7 +45,7 @@
 
 <!--Our Goals-->
 <section class="container py-3">
-	<h2 class="green-text font-weight-bold text-center my-3"><i class="fas fa-praying-hands pr-2"></i><?php echo locale('views', 'our_programs'); ?></h2>
+	<h2 class="text-info font-weight-bold text-center my-3"><i class="fas fa-praying-hands pr-2"></i><?php echo locale('views', 'our_programs'); ?></h2>
 	<div class="row my-5">
 		<div class="col-md-5">
 			<?php echo image('resources/assets/img/logo.png', APP_NAME, ['class'=>'z-depth-0 img-fluid']); ?>
@@ -58,8 +58,8 @@
 
 <!-- Our Achievements -->
 <section class='container py-3'>
-	<h2 class="green-text font-weight-bold my-3 text-center"><i class="fas fa-award pr-2"></i><?php echo locale('views', 'our_achievements'); ?></h2>
-	<div class="row features-small mt-5 wow fadeIn">
+	<h2 class="text-info font-weight-bold my-3 text-center"><i class="fas fa-award pr-2"></i><?php echo locale('views', 'our_achievements'); ?></h2>
+	<div class="row features-small my-5 wow fadeIn">
 		<div class="col-xl-3 col-lg-6">
 			<?php echo $contents['our_achievements_1'] ?>
 		</div>
@@ -80,7 +80,7 @@
 <!-- Dynamic -->
 <section class="container py-3">
 	<ul class="pagination-sm content-paginate"></ul>
-	<h2 class="green-text font-weight-bold mt-3 mb-4 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h2>
+	<h2 class="text-info font-weight-bold mt-3 mb-5 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h2>
 	<div class="members-section scroll" data-toggle="popover" title="<?php echo locale('views', 'our_members'); ?>" data-content="Scroll for more!">
 		<div class="row">
 			<?php foreach ($members as $member) { ?>
@@ -93,9 +93,9 @@
 		</div>
 	</div>
 	<div class="row justify-content-center my-5">
-		<a class="btn btn-danger btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>
+		<a class="btn btn-warning btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>
 	</div>
-	<h2 class="green-text font-weight-bold mt-3 mb-4 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h2>
+	<h2 class="text-info font-weight-bold mt-3 mb-5 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h2>
 	<div class="projects-section scroll" data-toggle="popover" title="<?php echo locale('views', 'our_projects'); ?>" data-content="Scroll for more!">
 		<div class="row">
 			<?php foreach ($projects['projects'] as $project) { ?>
@@ -104,7 +104,7 @@
 						<div class="card">
 							<img class="card-img-top" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>" height='150px'>
 							<div class="card-body">
-								<h4 class="card-title red-text"><?php echo $project['name'] ?></h4>
+								<h4 class="card-title green-text"><?php echo $project['name'] ?></h4>
 								<span class="card-text"><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</span>
 							</div>
 						</div>
@@ -114,9 +114,9 @@
 		</div>
 	</div>
 	<div class="row justify-content-center my-5">
-		<a class="btn btn-danger btn-md" href="<?php echo route('projects'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_projects'); ?></a>
+		<a class="btn btn-warning btn-md" href="<?php echo route('projects'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_projects'); ?></a>
 	</div>
-	<h2 class="green-text font-weight-bold mt-3 mb-4 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></h2>
+	<h2 class="text-info font-weight-bold mt-3 mb-5 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></h2>
 	<div class="news-section scroll" data-toggle="popover" title="<?php echo locale('views', 'news'); ?>" data-content="Scroll for more!">
 		<div class="row">
 			<?php foreach ($newses['news'] as $news) { ?>
@@ -135,7 +135,7 @@
 		</div>
 	</div>
 	<div class="row justify-content-center my-5">
-		<a class="btn btn-danger btn-md" href="<?php echo route('news'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_news'); ?></a>
+		<a class="btn btn-warning btn-md" href="<?php echo route('news'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_news'); ?></a>
 	</div>
 </section>
 <!-- #END# Dynamic -->
