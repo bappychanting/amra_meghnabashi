@@ -83,7 +83,7 @@ class Project extends Model{
 
 		// Function for getting projects
     public function getProjects() {   
-        $projects = $this->db->table('projects')->orderBy('created_at', 'desc')->limit(10)->read();
+        $projects = $this->db->table('projects')->orderBy('created_at', 'desc')->limit(12)->read();
         $pagination = $this->db->pagination();
         return array('projects' => $projects, 'pagination' => $pagination);
     }

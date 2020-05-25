@@ -95,7 +95,7 @@ class News extends Model{
 
 		// Function for getting news
     public function getNewses() {   
-        $news = $this->db->table('news_view')->orderBy('created_at', 'desc')->limit(10)->read();
+        $news = $this->db->table('news_view')->orderBy('created_at', 'desc')->limit(12)->read();
         $pagination = $this->db->pagination();
         return array('news' => $news, 'pagination' => $pagination);
     }

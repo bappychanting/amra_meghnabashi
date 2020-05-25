@@ -113,13 +113,13 @@ class Member extends Model{
   }
 
   public function getVips(){    
-    $vips = $this->db->table('members')->where('tags', 'LIKE', '%vip%')->orderBy('name')->limit(20)->read();
+    $vips = $this->db->table('members')->where('tags', 'LIKE', '%vip%')->orderBy('name')->limit(12)->read();
     $pagination = $this->db->pagination();
     return array('vips' => $vips, 'pagination' => $pagination);
   }
 
   public function getNewMembers(){    
-    $members = $this->db->table('members')->orderBy('created_at', 'desc')->limit(10)->read();
+    $members = $this->db->table('members')->orderBy('created_at', 'desc')->limit(12)->read();
     return $members;
   }
 
