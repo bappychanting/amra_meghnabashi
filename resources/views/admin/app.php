@@ -107,7 +107,7 @@
       <!-- MDB core JavaScript -->
       <?php echo script('js/mdb.min.js'); ?>
       <!-- Editor JavaScript -->
-      <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+      <script src="https://cdn.tiny.cloud/1/4uzp4rkc020bnav1v5x2qt5z5n44g2rlj85299ltuwx2djgw/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
       <!-- Custom JavaScript -->
       <?php echo script('js/script.js'); ?>
       <!-- Custom Script -->
