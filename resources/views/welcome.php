@@ -16,10 +16,12 @@
 <?php startblock('content') ?>
 
 <!-- Intro -->
-<section class="front-page-top-div" style="display:block; min-height: 400px; background-size: cover; background-repeat: no-repeat; background-image: url('<?php echo $contents['header_image']; ?>');">
-	<div class="container text-center py-5">
-		<h1 class="text-white mt-5 mb-3"><?php echo $contents['slogan']; ?></h1>
-		<a class="btn btn-danger mt-3 mb-5" href="<?php echo $contents['donate_link']; ?>" target="_blank"><i class="fas fa-donate pr-2"></i><?php echo locale('views', 'donate_now'); ?></a>
+<section class="front-page-top-div" style="background-size:cover;background-repeat:no-repeat;background-image:url('<?php echo $contents['header_image']; ?>');">
+	<div class="header-content">
+		<div class="container text-center">
+			<p class="h2 text-white mb-3"><?php echo $contents['slogan']; ?></p>
+			<a class="btn btn-danger mt-3" href="<?php echo $contents['donate_link']; ?>" target="_blank"><i class="fas fa-donate pr-2"></i><?php echo locale('views', 'donate_now'); ?></a>
+		</div>
 	</div>
 </section>
 <!-- #END# Intro -->
