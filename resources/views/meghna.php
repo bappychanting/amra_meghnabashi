@@ -8,7 +8,7 @@
 
 <?php startblock('meta_tags') ?>
     
-  <meta name="keywords" content="<?php echo $contents['keywords']; ?>">
+  <meta name="keywords" content="<?php echo $contents['keywords'].', '.$meghna['keywords']; ?>">
   <meta name="description" content="<?php echo $contents['slogan']; ?>">
 
 <?php endblock() ?>
