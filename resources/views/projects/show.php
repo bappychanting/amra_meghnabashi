@@ -27,7 +27,7 @@
 	<div class="card mb-4 wow fadeIn">
     	<img src="<?php echo $project['image_path'] ?>" class="img-fluid" alt="<?php echo $news['title'] ?>">
     </div>
-    <p><?php echo $project['details']; ?></p>
+    <?php echo $project['details']; ?>
 	<a class="btn btn-danger btn-sm my-3" href="<?php echo route('projects') ?>"><i class="fas fa-arrow-left pr-2"></i><?php echo locale('views', 'go_back'); ?></a>
 	
 </section>

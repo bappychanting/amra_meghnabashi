@@ -33,7 +33,8 @@ class HomeController extends Controller
     public function aboutMeghna() 
     {
         $contents = $this->getContents();
-        return $this->view('meghna', compact('contents'));
+        $meghna = $this->getContents(2);
+        return $this->view('meghna', compact('contents', 'meghna'));
     }
 
     public function members() 
