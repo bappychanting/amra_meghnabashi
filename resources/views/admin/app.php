@@ -119,7 +119,7 @@
 
           // Initialize Editor
           tinymce.init({
-            selector: '#editor'
+            selector: '.editor'
         });
 
           // Initialize datatable

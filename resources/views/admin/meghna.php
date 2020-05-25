@@ -50,7 +50,7 @@
 
 			<div class="form-label-group my-3">
 				<label>Main Article</label>
-				<textarea name="content[main]" id="editor"><?php echo $content['main'] ?></textarea>
+				<textarea name="content[main]" class="editor"><?php echo $content['main'] ?></textarea>
 			</div>
 
 			<button type="submit" class="btn btn-primary mr-5">Submit</button>

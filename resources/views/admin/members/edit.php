@@ -51,7 +51,7 @@
 
       <div class="form-label-group my-3">
         <label>Details</label>
-        <textarea name="details" id="editor" required><?php echo $member['details']; ?></textarea>
+        <textarea name="details" class="editor"><?php echo $member['details']; ?></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>

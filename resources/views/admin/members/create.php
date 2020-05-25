@@ -48,7 +48,7 @@
 
       <div class="form-label-group my-3">
         <label>Details</label>
-        <textarea name="details" id="editor" required>
+        <textarea name="details" class="editor">
           <p><b>Email:</b></p>
           <p><b>Address:</b></p>
         </textarea>

@@ -98,6 +98,31 @@
         <textarea rows="5" class="form-control" name="content[about_us]" required><?php echo $content['about_us'] ?></textarea>
       </div>
 
+      <div class="form-label-group my-3">
+        <label>Our Programs</label>
+        <textarea class="editor" name="content[our_programs]"><?php echo $content['our_programs'] ?></textarea>
+      </div>
+
+      <div class="form-label-group my-3">
+        <label>Achievements 1</label>
+        <textarea class="editor" name="content[our_achievements_1]"><?php echo $content['our_achievements_1'] ?></textarea>
+      </div>
+
+      <div class="form-label-group my-3">
+        <label>Achievements 2</label>
+        <textarea class="editor" name="content[our_achievements_2]"><?php echo $content['our_achievements_2'] ?></textarea>
+      </div>
+
+      <div class="form-label-group my-3">
+        <label>Achievements 3</label>
+        <textarea class="editor" name="content[our_achievements_3]"><?php echo $content['our_achievements_3'] ?></textarea>
+      </div>
+
+      <div class="form-label-group my-3">
+        <label>Achievements 4</label>
+        <textarea class="editor" name="content[our_achievements_4]"><?php echo $content['our_achievements_4'] ?></textarea>
+      </div>
+
       <button type="submit" class="btn btn-primary mr-5">Submit</button>
     </form>
   </div>
