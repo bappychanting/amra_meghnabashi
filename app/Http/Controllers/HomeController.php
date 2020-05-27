@@ -41,7 +41,7 @@ class HomeController extends Controller
     public function members() 
     {
         $contents = $this->getContents();
-        $members = $this->member->getMembers();
+        $members = $this->member->getMembersByCategory();
         return $this->view('members.index', compact('contents', 'members'));
     }
 
