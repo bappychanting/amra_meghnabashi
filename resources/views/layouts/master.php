@@ -81,6 +81,15 @@
 					},
 				],
 			});
+			// Initialize Carousel
+  			$(".owl-carousel").owlCarousel({
+			    items:6,
+			    loop:true,
+			    margin:10,
+			    autoplay:true,
+			    autoplayTimeout:1500,
+			    autoplayHoverPause:true
+			});
 		});
 	</script>
 

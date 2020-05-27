@@ -19,18 +19,6 @@ a.link-unstyled:hover {
   text-decoration: none;
 }
 
-.members-section{
-  height: 120px;
-}
-
-.projects-section{
-  height: 265px;
-}
-
-.news-section{
-  height: 310px;
-}
-
 .scroll {
   overflow-y: scroll; /* Add the ability to scroll */
 }
