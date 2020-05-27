@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="text-center mb-3">
-      <h5 class="text-uppercase"><?php echo locale('views', 'join_us'); ?></h5>
+      <h5 class="text-uppercase"><?php echo locale('views', 'follow_us'); ?></h5>
       <nav class="nav justify-content-center">
         <a class="nav-link text-white" href="<?php echo $contents['facebook']; ?>"><i class="fab fa-facebook"></i></a>
         <a class="nav-link text-white" href="<?php echo $contents['twitter']; ?>"><i class="fab fa-twitter"></i></a>
