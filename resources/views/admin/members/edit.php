@@ -40,7 +40,7 @@
         <div class="custom-file">
           <input type="hidden" name="image_path" value="<?php echo $member['image_path']; ?>">
           <input type="file" name="member_image" class="custom-file-input" id="member_image" aria-describedby="inputGroupFileAddon01">
-          <label class="custom-file-label" for="member_image">Update Member Image (must be less than 1.5mb)</label>
+          <label class="custom-file-label" for="member_image">Update Member Image (must be less than 1mb)</label>
         </div>
       </div>
 

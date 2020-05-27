@@ -37,7 +37,7 @@
       <div class="input-group my-4">
         <div class="custom-file">
           <input type="file" name="member_image" class="custom-file-input" id="member_image" aria-describedby="inputGroupFileAddon01" required>
-          <label class="custom-file-label" for="member_image">Member Image (must be less than 1.5mb)</label>
+          <label class="custom-file-label" for="member_image">Member Image (must be less than 1mb)</label>
         </div>
       </div>
 

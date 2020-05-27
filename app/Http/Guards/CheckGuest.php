@@ -11,7 +11,7 @@ class CheckGuest
 	{
 		$auth = new auth;
 		if($auth->check()){
-			base::redirect('admin/users/all');
+			base::redirect('admin/members/all');
 		}
 	}
 

@@ -6,6 +6,7 @@ use App\Models\News;
 use App\Models\Member; 
 use App\Models\Content; 
 use App\Models\Project; 
+use App\Helpers\ApiHelper;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,7 @@ class HomeController extends Controller
     {
         $contents = $this->getContents();
         $newses = $this->news->getNewses();
-        $members = $this->member->getNewMembers();
+        $members = $this->member->getMembers();
         $projects = $this->project->getProjects();
         return $this->view('welcome', compact('contents', 'newses', 'members', 'projects'));
     }
@@ -40,7 +41,7 @@ class HomeController extends Controller
     public function members() 
     {
         $contents = $this->getContents();
-        $members = $this->member->getMembers();
+        $members = $this->member->getMembersByCategory();
         return $this->view('members.index', compact('contents', 'members'));
     }
 
@@ -91,6 +92,11 @@ class HomeController extends Controller
     public function error() 
     {
         $this->abort(404);
+    }
+
+    public function testApi() 
+    {
+        echo ApiHelper::success();
     }
 
     private function getContents($id = 1){

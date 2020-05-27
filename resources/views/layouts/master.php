@@ -22,6 +22,9 @@
 	<!-- Social Sharing -->
 	<?php echo style('plugins/jssocials/jssocials.css'); ?>
 	<?php echo style('plugins/jssocials/jssocials-theme-classic.css'); ?>
+	<!-- Carousel -->
+	<?php echo style('plugins/owlcarousel/css/owl.carousel.min.css'); ?>
+	<?php echo style('plugins/owlcarousel/css/owl.theme.default.min.css'); ?>
 	<!-- Material Design Bootstrap -->
 	<?php echo style('css/mdb.min.css'); ?>
 	<!-- Custom styles (optional) -->
@@ -57,6 +60,8 @@
 	<?php echo script('js/bootstrap.min.js'); ?>
 	<!-- Social Sharing -->
 	<?php echo script('plugins/jssocials/jssocials.min.js'); ?>
+	<!-- Carousel -->
+	<?php echo script('plugins/owlcarousel/js/owl.carousel.min.js'); ?>
 	<!-- MDB core JavaScript -->
 	<?php echo script('js/mdb.min.js'); ?>
 	<!-- Custom Script -->
@@ -75,6 +80,15 @@
 					    label: "Share",
 					},
 				],
+			});
+			// Initialize Carousel
+  			$(".owl-carousel").owlCarousel({
+			    items:6,
+			    loop:true,
+			    margin:10,
+			    autoplay:true,
+			    autoplayTimeout:1500,
+			    autoplayHoverPause:true
 			});
 		});
 	</script>

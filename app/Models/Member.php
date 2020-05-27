@@ -95,19 +95,16 @@ class Member extends Model{
   }
 
   public function getMembers(){    
-    $members = $this->db->table('members')->where('tags', 'LIKE', '%member%')->orderBy('name')->limit(2000)->read();
+    $members = $this->db->table('members')->orderBy('name')->limit(2000)->read();
     return $members;
   }
 
-  public function getVips(){    
-    $vips = $this->db->table('members')->where('tags', 'LIKE', '%vip%')->orderBy('name')->limit(12)->read();
-    $pagination = $this->db->pagination();
-    return array('vips' => $vips, 'pagination' => $pagination);
-  }
-
-  public function getNewMembers(){    
-    $members = $this->db->table('members')->orderBy('created_at', 'desc')->limit(12)->read();
-    return $members;
+  public function getMembersByCategory(){    
+    $volunteers = $this->db->table('members')->where('tags', 'LIKE', '%volunteer%')->orderBy('name')->read();
+    $admins = $this->db->table('members')->where('tags', 'LIKE', '%admin%')->orderBy('name')->read();
+    $vips = $this->db->table('members')->where('tags', 'LIKE', '%vip%')->orderBy('name')->read();
+    $advisers = $this->db->table('members')->where('tags', 'LIKE', '%adviser%')->orderBy('name')->read();
+    return array('volunteers' => $volunteers, 'admins' => $admins, 'vips' => $vips, 'advisers' => $advisers);
   }
 
   public function getMember(){    
