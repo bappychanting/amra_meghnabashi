@@ -107,11 +107,6 @@ class Member extends Model{
     return array('volunteers' => $volunteers, 'admins' => $admins, 'vips' => $vips, 'advisers' => $advisers);
   }
 
-  public function getNewMembers(){    
-    $members = $this->db->table('members')->orderBy('created_at', 'desc')->limit(12)->read();
-    return $members;
-  }
-
   public function getMember(){    
     $members = $this->db->table('members')->where('id', '=', $this->getId())->read();
     return $members[0];

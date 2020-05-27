@@ -82,13 +82,13 @@
 	<ul class="pagination-sm content-paginate"></ul>
 	<h2 class="text-info font-weight-bold mt-3 mb-5 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h2>
 	<div class="owl-carousel">
-		<?php foreach ($members as $member) { ?>
+		<?php $i=0; foreach ($members as $member) { ?>
 			<div>
 				<a href="<?php echo route('members/show', ['id' => $member['id']]); ?>" title="<?php echo $member['name']; ?>" class="link-unstyled">
 					<?php echo image($member['image_path'], $member['name'], ['class'=>'rounded mt-3', 'height'=>'100px']); ?>
 				</a>
 			</div>
-		<?php } ?>
+		<?php $i++; if($i==24) break; } ?>
 	</div>
 	<div class="row justify-content-center my-5">
 		<a class="btn btn-warning btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>

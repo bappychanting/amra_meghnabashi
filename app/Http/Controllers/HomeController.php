@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         $contents = $this->getContents();
         $newses = $this->news->getNewses();
-        $members = $this->member->getNewMembers();
+        $members = $this->member->getMembers();
         $projects = $this->project->getProjects();
         return $this->view('welcome', compact('contents', 'newses', 'members', 'projects'));
     }
