@@ -93,6 +93,11 @@ class HomeController extends Controller
         $this->abort(404);
     }
 
+    public function testApi() 
+    {
+        echo ApiHelper::success();
+    }
+
     private function getContents($id = 1){
         $this->content->setId($id);
         $get_content = $this->content->getWebContent();

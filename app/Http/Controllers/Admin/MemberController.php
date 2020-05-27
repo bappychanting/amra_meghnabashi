@@ -36,7 +36,7 @@ class MemberController extends Controller
     public function store() 
     {
         $app = $this->config('app');  
-        $_POST['image_path'] = Upload::fileUpload($_FILES['member_image'], $app['upload'].'/member_images');
+        $_POST['image_path'] = Upload::imageUpload($_FILES['member_image'], $app['upload'].'/member_images', 500, 375, true);
         $store = $this->member->setData($_POST)->store();
         if($store){
             $this->request->setFlash(['success' => locale('message', 'success')]);
