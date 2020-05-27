@@ -98,12 +98,12 @@
 	<h2 class="text-info font-weight-bold mt-3 mb-5 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h2>
 	<div id="project-carousel" class="carousel slide carousel-fade" data-ride="carousel">
 		<ol class="carousel-indicators">
-			<?php foreach ($projects['projects'] as $key=>$project) { ?>
+			<?php $i=0; foreach ($projects['projects'] as $key=>$project) { ?>
 			<li data-target="#project-carousel" data-slide-to="<?php echo $key; ?>" <?php echo $key==0 ? 'class="active"' : '' ; ?>></li>
-			<?php } ?>
+			<?php $i++; if($i==4) break; } ?>
 		</ol>
 		<div class="carousel-inner" role="listbox">
-			<?php foreach ($projects['projects'] as $key=>$project) { ?>
+			<?php $i=0; foreach ($projects['projects'] as $key=>$project) { ?>
 			<div class="carousel-item <?php echo $key==0 ? 'active' : '' ; ?>">
 				<div class="view">
 					<img class="d-block w-100" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>">
@@ -116,7 +116,7 @@
 					</a>
 				</div>
 			</div>
-			<?php } ?>
+			<?php $i++; if($i==4) break; } ?>
 		</div>
 		<a class="carousel-control-prev" href="#project-carousel" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -17,7 +17,7 @@
 
 <section class="container my-3 py-3">
 	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h1>
-	<a class="my-3 font-weight-bold text-warning h4" data-toggle="collapse" href="#volunteers" aria-expanded="false" aria-controls="volunteers">
+	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#volunteers" aria-expanded="false" aria-controls="volunteers">
 		<?php echo locale('views', 'volunteers'); ?>
 	</a>
 	<div class="collapse show mt-3" id="volunteers">
@@ -36,7 +36,7 @@
 			<?php $count++; echo ($count%4==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
 		</div>
 	</div>
-	<a class="my-3 font-weight-bold text-warning h4" data-toggle="collapse" href="#admins" aria-expanded="false" aria-controls="admins">
+	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#admins" aria-expanded="false" aria-controls="admins">
 		<?php echo locale('views', 'admins'); ?>
 	</a>
 	<div class="collapse show mt-3" id="admins">
@@ -55,7 +55,7 @@
 			<?php $count++; echo ($count%4==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
 		</div>
 	</div>
-	<a class="my-3 font-weight-bold text-warning h4" data-toggle="collapse" href="#vips" aria-expanded="false" aria-controls="vips">
+	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#vips" aria-expanded="false" aria-controls="vips">
 		<?php echo locale('views', 'vips'); ?>
 	</a>
 	<div class="collapse show mt-3" id="vips">
@@ -74,7 +74,7 @@
 			<?php $count++; echo ($count%4==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
 		</div>
 	</div>
-	<a class="my-3 font-weight-bold text-warning h4" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
+	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
 		<?php echo locale('views', 'advisers'); ?>
 	</a>
 	<div class="collapse show mt-3" id="advisers">

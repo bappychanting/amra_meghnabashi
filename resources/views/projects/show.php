@@ -22,7 +22,7 @@
 
 <section class="container my-3 py-3">
 	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h1>
-	<h4 class="my-3 font-weight-bold text-warning"><?php echo $project['name']; ?></h4>
+	<h4 class="my-3 font-weight-bold text-primary"><?php echo $project['name']; ?></h4>
 	<div class="card mb-4 wow fadeIn">
     	<img src="<?php echo $project['image_path'] ?>" class="img-fluid" alt="<?php echo $news['title'] ?>">
     </div>
