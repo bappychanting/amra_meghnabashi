@@ -17,21 +17,21 @@
 
 <section class="container my-3 py-3">
 	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h1>
-	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#volunteers" aria-expanded="false" aria-controls="volunteers">
-		<?php echo locale('views', 'volunteers'); ?>
+	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
+		<?php echo locale('views', 'advisers'); ?>
 	</a>
-	<div class="collapse show mt-3" id="volunteers">
+	<div class="collapse show mt-3" id="advisers">
 		<div class="row">
-		<?php $count = 0; foreach ($members['volunteers'] as $volunteer) { ?>
+		<?php $count = 0; foreach ($members['advisers'] as $adviser) { ?>
 			<div class="col-sm-3 mb-3">
 				<div class="media">
-					<?php echo image($volunteer['image_path'], $volunteer['name'], ['class'=>'rounded-circle mr-3', 'height'=>'50px', 'width' => '50px']); ?>
+					<?php echo image($adviser['image_path'], $adviser['name'], ['class'=>'rounded-circle mr-3', 'height'=>'50px', 'width' => '50px']); ?>
 					<div class="media-body">
-						<h5 class="mt-0 font-weight-bold"><?php echo $volunteer['name']; ?></h5>
-						<i class="far fa-id-card pr-2"></i><?php echo $volunteer['designation']; ?>
+						<h5 class="mt-0 font-weight-bold"><?php echo $adviser['name']; ?></h5>
+						<i class="far fa-id-card pr-2"></i><?php echo $adviser['designation']; ?>
 					</div>
 				</div>
-				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $volunteer['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $adviser['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 			</div>
 			<?php $count++; echo ($count%4==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
 		</div>
@@ -74,21 +74,21 @@
 			<?php $count++; echo ($count%4==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
 		</div>
 	</div>
-	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
-		<?php echo locale('views', 'advisers'); ?>
+	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#volunteers" aria-expanded="false" aria-controls="volunteers">
+		<?php echo locale('views', 'volunteers'); ?>
 	</a>
-	<div class="collapse show mt-3" id="advisers">
+	<div class="collapse show mt-3" id="volunteers">
 		<div class="row">
-		<?php $count = 0; foreach ($members['advisers'] as $adviser) { ?>
+		<?php $count = 0; foreach ($members['volunteers'] as $volunteer) { ?>
 			<div class="col-sm-3 mb-3">
 				<div class="media">
-					<?php echo image($adviser['image_path'], $adviser['name'], ['class'=>'rounded-circle mr-3', 'height'=>'50px', 'width' => '50px']); ?>
+					<?php echo image($volunteer['image_path'], $volunteer['name'], ['class'=>'rounded-circle mr-3', 'height'=>'50px', 'width' => '50px']); ?>
 					<div class="media-body">
-						<h5 class="mt-0 font-weight-bold"><?php echo $adviser['name']; ?></h5>
-						<i class="far fa-id-card pr-2"></i><?php echo $adviser['designation']; ?>
+						<h5 class="mt-0 font-weight-bold"><?php echo $volunteer['name']; ?></h5>
+						<i class="far fa-id-card pr-2"></i><?php echo $volunteer['designation']; ?>
 					</div>
 				</div>
-				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $adviser['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $volunteer['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 			</div>
 			<?php $count++; echo ($count%4==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
 		</div>
