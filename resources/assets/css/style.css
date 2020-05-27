@@ -44,3 +44,8 @@ a.link-unstyled:hover {
 .scroll {
   -ms-overflow-style: none;
 }
+
+/* Hide scrollbar for Firefox */
+.scroll {
+  scrollbar-width: none; 
+}
