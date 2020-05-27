@@ -96,22 +96,36 @@
 		<a class="btn btn-warning btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>
 	</div>
 	<h2 class="text-info font-weight-bold mt-3 mb-5 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h2>
-	<div class="projects-section scroll" data-toggle="popover" title="<?php echo locale('views', 'our_projects'); ?>" data-content="Scroll for more!">
-		<div class="row">
-			<?php foreach ($projects['projects'] as $project) { ?>
-				<div class="col-sm-3 mb-3">
+	<div id="project-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<?php foreach ($projects['projects'] as $key=>$project) { ?>
+			<li data-target="#project-carousel" data-slide-to="<?php echo $key; ?>" <?php echo $key==0 ? 'class="active"' : '' ; ?>></li>
+			<?php } ?>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<?php foreach ($projects['projects'] as $key=>$project) { ?>
+			<div class="carousel-item <?php echo $key==0 ? 'active' : '' ; ?>">
+				<div class="view">
+					<img class="d-block w-100" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>">
+					<div class="mask rgba-black-light"></div>
+				</div>
+				<div class="carousel-caption">
 					<a href="<?php echo route('projects/show', ['id' => $project['id']]); ?>" class="link-unstyled">
-						<div class="card">
-							<img class="card-img-top" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>" height='150px'>
-							<div class="card-body">
-								<h4 class="card-title text-warning"><?php echo substr($project['name'], 0, 30); ?>..</h4>
-								<span class="card-text"><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</span>
-							</div>
-						</div>
+						<h3 class="h3-responsive"><?php echo $project['name']; ?></h3>
+						<p><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</p>
 					</a>
 				</div>
+			</div>
 			<?php } ?>
 		</div>
+		<a class="carousel-control-prev" href="#project-carousel" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#project-carousel" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
 	</div>
 	<div class="row justify-content-center my-5">
 		<a class="btn btn-warning btn-md" href="<?php echo route('projects'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_projects'); ?></a>
