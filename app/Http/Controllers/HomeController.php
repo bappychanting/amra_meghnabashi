@@ -6,6 +6,7 @@ use App\Models\News;
 use App\Models\Member; 
 use App\Models\Content; 
 use App\Models\Project; 
+use App\Helpers\ApiHelper;
 
 class HomeController extends Controller
 {
