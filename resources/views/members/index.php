@@ -23,9 +23,9 @@
 	<div class="collapse show mt-3" id="advisers">
 		<div class="row">
 		<?php $count = 0; foreach ($members['advisers'] as $adviser) { ?>
-			<div class="col-sm-3 mb-3">
+			<div class="col-sm-4 mb-3">
 				<div class="media">
-					<?php echo image($adviser['image_path'], $adviser['name'], ['class'=>'rounded-circle mr-3', 'height'=>'50px', 'width' => '50px']); ?>
+					<?php echo image($adviser['image_path'], $adviser['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
 					<div class="media-body">
 						<h5 class="mt-0 font-weight-bold"><?php echo $adviser['name']; ?></h5>
 						<i class="far fa-id-card pr-2"></i><?php echo $adviser['designation']; ?>
@@ -33,7 +33,7 @@
 				</div>
 				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $adviser['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 			</div>
-			<?php $count++; echo ($count%4==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
+			<?php $count++; echo ($count%3==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
 		</div>
 	</div>
 	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#admins" aria-expanded="false" aria-controls="admins">
@@ -42,9 +42,9 @@
 	<div class="collapse show mt-3" id="admins">
 		<div class="row">
 		<?php $count = 0; foreach ($members['admins'] as $admin) { ?>
-			<div class="col-sm-3 mb-3">
+			<div class="col-sm-4 mb-3">
 				<div class="media">
-					<?php echo image($admin['image_path'], $admin['name'], ['class'=>'rounded-circle mr-3', 'height'=>'50px', 'width' => '50px']); ?>
+					<?php echo image($admin['image_path'], $admin['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
 					<div class="media-body">
 						<h5 class="mt-0 font-weight-bold"><?php echo $admin['name']; ?></h5>
 						<i class="far fa-id-card pr-2"></i><?php echo $admin['designation']; ?>
@@ -52,7 +52,7 @@
 				</div>
 				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $admin['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 			</div>
-			<?php $count++; echo ($count%4==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
+			<?php $count++; echo ($count%3==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
 		</div>
 	</div>
 	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#vips" aria-expanded="false" aria-controls="vips">
@@ -61,9 +61,9 @@
 	<div class="collapse show mt-3" id="vips">
 		<div class="row">
 		<?php $count = 0; foreach ($members['vips'] as $vip) { ?>
-			<div class="col-sm-3 mb-3">
+			<div class="col-sm-4 mb-3">
 				<div class="media">
-					<?php echo image($vip['image_path'], $vip['name'], ['class'=>'rounded-circle mr-3', 'height'=>'50px', 'width' => '50px']); ?>
+					<?php echo image($vip['image_path'], $vip['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
 					<div class="media-body">
 						<h5 class="mt-0 font-weight-bold"><?php echo $vip['name']; ?></h5>
 						<i class="far fa-id-card pr-2"></i><?php echo $vip['designation']; ?>
@@ -71,7 +71,7 @@
 				</div>
 				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $vip['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 			</div>
-			<?php $count++; echo ($count%4==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
+			<?php $count++; echo ($count%3==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
 		</div>
 	</div>
 	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#volunteers" aria-expanded="false" aria-controls="volunteers">
@@ -80,9 +80,9 @@
 	<div class="collapse show mt-3" id="volunteers">
 		<div class="row">
 		<?php $count = 0; foreach ($members['volunteers'] as $volunteer) { ?>
-			<div class="col-sm-3 mb-3">
+			<div class="col-sm-4 mb-3">
 				<div class="media">
-					<?php echo image($volunteer['image_path'], $volunteer['name'], ['class'=>'rounded-circle mr-3', 'height'=>'50px', 'width' => '50px']); ?>
+					<?php echo image($volunteer['image_path'], $volunteer['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
 					<div class="media-body">
 						<h5 class="mt-0 font-weight-bold"><?php echo $volunteer['name']; ?></h5>
 						<i class="far fa-id-card pr-2"></i><?php echo $volunteer['designation']; ?>
@@ -90,7 +90,7 @@
 				</div>
 				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $volunteer['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 			</div>
-			<?php $count++; echo ($count%4==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
+			<?php $count++; echo ($count%3==0) ? '<div class="col-sm-12"><hr></div>' : '' ; } ?>
 		</div>
 	</div>
 </section>

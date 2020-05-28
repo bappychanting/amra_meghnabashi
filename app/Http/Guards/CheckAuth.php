@@ -11,7 +11,7 @@ class CheckAuth
     {
         $auth = new auth;
         if(!$auth->check()){
-            base::redirect('signin');
+            base::redirect('admin/signin');
         }
     }
 
