@@ -100,7 +100,7 @@
 		<a class="btn btn-warning btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>
 	</div>
 	<h2 class="text-info font-weight-bold mt-3 mb-5 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h2>
-	<div id="project-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+	<!-- <div id="project-carousel" class="carousel slide carousel-fade" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<?php $i=0; foreach ($projects['projects'] as $key=>$project) { ?>
 			<li data-target="#project-carousel" data-slide-to="<?php echo $key; ?>" <?php echo $key==0 ? 'class="active"' : '' ; ?>></li>
@@ -130,6 +130,21 @@
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
+	</div> -->
+	<div class="row">
+		<?php $i=0; foreach ($projects['projects'] as $project) { ?>
+			<div class="col-sm-3 mb-3">
+				<a href="<?php echo route('projects/show', ['id' => $project['id']]); ?>" class="link-unstyled">
+					<div class="card">
+						<img class="card-img-top" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>" height='120px'>
+						<div class="card-body">
+							<h4 class="card-title text-primary"><?php echo $project['name']; ?></h4>
+							<span class="card-text"><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		<?php $i++; if($i==4) break; } ?>
 	</div>
 	<div class="row justify-content-center my-5">
 		<a class="btn btn-warning btn-md" href="<?php echo route('projects'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_projects'); ?></a>
