@@ -84,8 +84,8 @@
 			// Initialize Carousel
   			$(".owl-carousel").owlCarousel({
 			    loop:true,
-			    margin:10,
 			    nav:false,
+			    margin:80,
 			    autoplay:true,
 			    autoplayTimeout:1500,
 			    autoplayHoverPause:true,
