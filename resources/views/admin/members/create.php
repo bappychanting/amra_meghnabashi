@@ -25,8 +25,8 @@
 
       <div class="form-label-group my-3">
         <label>Tags</label>
-        <input type="text" name="tags" class="form-control" placeholder="member, vip etc." required>
-        <small>Use comma to seperate tags</small>
+        <input type="text" name="tags" class="form-control" placeholder="admin, vip etc." required>
+        <small>Tags must be included to seperate <span class="red-text">adviser, admin, vip and volunteer</span> category. Use comma to seperate tags</small>
       </div>
 
       <div class="form-label-group my-3">

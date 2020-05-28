@@ -85,7 +85,7 @@
 		<?php $i=0; foreach ($members as $member) { ?>
 			<div>
 				<a href="<?php echo route('members/show', ['id' => $member['id']]); ?>" title="<?php echo $member['name']; ?>" class="link-unstyled">
-					<?php echo image($member['image_path'], $member['name'], ['class'=>'rounded mt-3', 'height'=>'100px']); ?>
+					<?php echo image($member['image_path'], $member['name'], ['class'=>'rounded mt-3', 'height'=>'150px']); ?>
 				</a>
 			</div>
 		<?php $i++; if($i==24) break; } ?>

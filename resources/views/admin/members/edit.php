@@ -28,7 +28,7 @@
       <div class="form-label-group my-3">
         <label>Tags</label>
         <input type="text" name="tags" value="<?php echo $member['tags']; ?>" class="form-control" required>
-        <small>Use comma to seperate tags</small>
+        <small>Tags must be included to seperate <span class="red-text">adviser, admin, vip and volunteer</span> category. Use comma to seperate tags</small>
       </div>
 
       <div class="form-label-group my-3">
