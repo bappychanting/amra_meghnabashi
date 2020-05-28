@@ -83,12 +83,23 @@
 			});
 			// Initialize Carousel
   			$(".owl-carousel").owlCarousel({
-			    items:6,
 			    loop:true,
-			    margin:10,
+			    nav:false,
+			    margin:80,
 			    autoplay:true,
 			    autoplayTimeout:1500,
-			    autoplayHoverPause:true
+			    autoplayHoverPause:true,
+			    responsive:{
+			        0:{
+			            items:2,
+			        },
+			        600:{
+			            items:4,
+			        },
+			        1000:{
+			            items:6,
+			        }
+			    }
 			});
 		});
 	</script>
