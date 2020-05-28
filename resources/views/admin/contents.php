@@ -99,8 +99,13 @@
       </div>
 
       <div class="form-label-group my-3">
-        <label>Our Programs</label>
-        <textarea class="editor" name="content[our_programs]"><?php echo $content['our_programs'] ?></textarea>
+        <label>Our Programs 1</label>
+        <textarea class="editor" name="content[our_programs_1]"><?php echo $content['our_programs_1'] ?></textarea>
+      </div>
+
+      <div class="form-label-group my-3">
+        <label>Our Programs 2</label>
+        <textarea class="editor" name="content[our_programs_2]"><?php echo $content['our_programs_2'] ?></textarea>
       </div>
 
       <div class="form-label-group my-3">
