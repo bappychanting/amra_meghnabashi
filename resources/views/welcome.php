@@ -173,7 +173,7 @@
 	<div class="collapse mt-3" id="advisers">
 		<?php echo $contents['our_programs_3'] ?>
 	</div>
-	<div class="mb-5"></div>
+	<div class="mb-3"></div>
 </section>
 <!-- #END# Our Goals -->
 
