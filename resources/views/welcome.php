@@ -85,13 +85,20 @@
 	<ul class="pagination-sm content-paginate"></ul>
 	<p class="h3 text-info font-weight-bold my-3 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></p>
 	<div class="owl-carousel">
-		<?php $i=0; foreach ($members as $member) { ?>
+		<?php foreach ($members['advisers'] as $adviser) { ?>
 			<div>
-				<a href="<?php echo route('members/show', ['id' => $member['id']]); ?>" title="<?php echo $member['name']; ?>" class="link-unstyled">
-					<?php echo image($member['image_path'], $member['name'], ['class'=>'rounded-circle mt-3', 'height'=>'150px']); ?>
+				<a href="<?php echo route('members/show', ['id' => $adviser['id']]); ?>" title="<?php echo $adviser['name']; ?>" class="link-unstyled">
+					<?php echo image($adviser['image_path'], $adviser['name'], ['class'=>'rounded-circle mt-3', 'height'=>'150px']); ?>
 				</a>
 			</div>
-		<?php $i++; if($i==24) break; } ?>
+		<?php } ?>
+		<?php foreach ($members['admins'] as $admin) { ?>
+			<div>
+				<a href="<?php echo route('members/show', ['id' => $admin['id']]); ?>" title="<?php echo $admin['name']; ?>" class="link-unstyled">
+					<?php echo image($admin['image_path'], $admin['name'], ['class'=>'rounded-circle mt-3', 'height'=>'150px']); ?>
+				</a>
+			</div>
+		<?php } ?>
 	</div>
 	<div class="row justify-content-center my-3">
 		<a class="btn btn-warning btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>

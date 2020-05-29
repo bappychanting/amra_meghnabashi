@@ -95,7 +95,7 @@ class Member extends Model{
   }
 
   public function getMembers(){    
-    $members = $this->db->table('members')->orderBy('name')->limit(2000)->read();
+    $members = $this->db->table('members')->orderBy('created_at')->limit(2000)->read();
     return $members;
   }
 
