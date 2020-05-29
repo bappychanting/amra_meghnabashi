@@ -56,7 +56,7 @@
 	<div class="row">
 		<div class="col-sm-6">
 			<p class="h3 text-info font-weight-bold"><?php echo locale('views', 'who_are_we'); ?></p>
-			<p class="my-3"><?php echo $contents['about_us']; ?></p>
+			<p class="mt-3"><?php echo $contents['about_us']; ?></p>
 		</div>
 		<div class="col-sm-6">
 			<div class="embed-responsive embed-responsive-16by9">
@@ -159,7 +159,7 @@
 
 <!--Our Goals-->
 <section class="container py-3">
-	<p class="h3 text-info font-weight-bold text-center my-3"><i class="fas fa-praying-hands pr-2"></i><?php echo locale('views', 'our_programs'); ?></p>
+	<p class="h3 text-info font-weight-bold text-center"><i class="fas fa-praying-hands pr-2"></i><?php echo locale('views', 'our_programs'); ?></p>
 	<div class="row">
 		<div class="col-md-4"><?php echo $contents['our_programs_1'] ?></div>
 		<div class="col-md-4">
@@ -167,7 +167,7 @@
 		</div>
 		<div class="col-md-4"><?php echo $contents['our_programs_2'] ?></div>
 	</div>
-	<a class="font-weight-bold text-primary h4" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
+	<a class="font-weight-bold text-primary h5" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
 		<?php echo locale('views', 'read_more'); ?>
 	</a>
 	<div class="collapse mt-3" id="advisers">
