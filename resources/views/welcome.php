@@ -33,18 +33,30 @@
 
 <!-- Our Achievements -->
 <section class='container py-3'>
-	<div class="row features-small wow fadeIn">
+	<div class="row features-small wow fadeIn text-center">
 		<div class="col-xl-3 col-lg-6">
-			<?php echo $contents['our_achievements_1'] ?>
+			<p>
+				<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['programs']; ?>" data-speed="5000" data-refresh-interval="50"></span>
+				<br><span><?php echo locale('views', 'programs'); ?></span>
+			</p>
 		</div>
 		<div class="col-xl-3 col-lg-6">
-			<?php echo $contents['our_achievements_2'] ?>
+			<p>
+				<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['beneficiaries']; ?>" data-speed="5000" data-refresh-interval="50"></span>
+				<br><span><?php echo locale('views', 'beneficiaries'); ?></span>
+			</p>
 		</div>
 		<div class="col-xl-3 col-lg-6">
-			<?php echo $contents['our_achievements_3'] ?>
+			<p>
+				<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['reached']; ?>" data-speed="10000" data-refresh-interval="50"></span><span class="h1 text-primary">&#37;</span>
+				<br><span><?php echo locale('views', 'reached'); ?></span>
+			</p>
 		</div>
 		<div class="col-xl-3 col-lg-6">
-			<?php echo $contents['our_achievements_4'] ?>
+			<p>
+				<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['job_scholarship']; ?>" data-speed="5000" data-refresh-interval="50"></span><span class="h1 text-primary">&#43;</span>
+				<br><span><?php echo locale('views', 'job_scholarship'); ?></span>
+			</p>
 		</div>
 	</div>
 	<hr>

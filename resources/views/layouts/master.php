@@ -62,11 +62,15 @@
 	<?php echo script('plugins/jssocials/jssocials.min.js'); ?>
 	<!-- Carousel -->
 	<?php echo script('plugins/owlcarousel/js/owl.carousel.min.js'); ?>
+    <!-- Editor JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js" referrerpolicy="origin"></script>
 	<!-- MDB core JavaScript -->
 	<?php echo script('js/mdb.min.js'); ?>
 	<!-- Custom Script -->
 	<script type="text/javascript">
 		$(document).ready(function() {
+			// Initialize Count To
+			$('.timer').countTo();
 			// Initialize Popover
 			$(function () {
 				$('[data-toggle="popover"]').popover()

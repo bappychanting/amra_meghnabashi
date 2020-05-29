@@ -88,6 +88,25 @@
         </div>
       </div>
 
+      <div class="form-row">
+        <div class="col-3">
+          <label for="programs">Programs</label>
+          <input type="number" name="content[programs]" min="0" value="<?php echo $content['programs']; ?>" class="form-control" id="programs" placeholder="Programs" required>
+        </div>
+        <div class="col-3">
+          <label for="beneficiaries">Beneficiaries</label>
+          <input type="number" name="content[beneficiaries]" min="0" value="<?php echo $content['beneficiaries']; ?>" class="form-control" id="beneficiaries" placeholder="Beneficiaries" required>
+        </div>
+        <div class="col-3">
+          <label for="reached">Reached</label>
+          <input type="number" name="content[reached]" min="0" max="100" value="<?php echo $content['reached']; ?>" class="form-control" id="reached" placeholder="Reached" required>
+        </div>
+        <div class="col-3">
+          <label for="job_scholarship">Job & Scholarship</label>
+          <input type="number" name="content[job_scholarship]" min="0" value="<?php echo $content['job_scholarship']; ?>" class="form-control" id="job_scholarship" placeholder="Job & Scholarship" required>
+        </div>
+      </div>
+
       <div class="form-label-group my-3">
         <label>Video Src URL</label>
         <input type="url" name="content[video_src]" value="<?php echo $content['video_src']; ?>" class="form-control" required>
@@ -111,26 +130,6 @@
       <div class="form-label-group my-3">
         <label>Our Programs 3</label>
         <textarea class="editor" name="content[our_programs_3]"><?php echo $content['our_programs_3'] ?></textarea>
-      </div>
-
-      <div class="form-label-group my-3">
-        <label>Achievements 1</label>
-        <textarea class="editor" name="content[our_achievements_1]"><?php echo $content['our_achievements_1'] ?></textarea>
-      </div>
-
-      <div class="form-label-group my-3">
-        <label>Achievements 2</label>
-        <textarea class="editor" name="content[our_achievements_2]"><?php echo $content['our_achievements_2'] ?></textarea>
-      </div>
-
-      <div class="form-label-group my-3">
-        <label>Achievements 3</label>
-        <textarea class="editor" name="content[our_achievements_3]"><?php echo $content['our_achievements_3'] ?></textarea>
-      </div>
-
-      <div class="form-label-group my-3">
-        <label>Achievements 4</label>
-        <textarea class="editor" name="content[our_achievements_4]"><?php echo $content['our_achievements_4'] ?></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary mr-5">Submit</button>
