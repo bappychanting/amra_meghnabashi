@@ -26,46 +26,14 @@
 </section> -->
 <section class="py-5" style="background-size:cover;background-repeat:no-repeat;background-image:url('<?php echo $contents['header_image']; ?>');">
 	<div class="container text-center my-5 py-5">
-		<p class="h2 text-white my-5"><?php echo $contents['slogan']; ?></p>
+		<p class="h1 text-white my-5"><?php echo $contents['slogan']; ?></p>
 	</div>
 </section>
 <!-- #END# Intro -->
 
-<!-- About Us -->
-<section class="container py-5">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2 class="text-info font-weight-bold"><?php echo locale('views', 'who_are_we'); ?></h2>
-			<p class="grey-text my-3"><?php echo $contents['about_us']; ?></p>
-		</div>
-		<div class="col-sm-6">
-			<div class="embed-responsive embed-responsive-16by9">
-				<iframe class="embed-responsive-item" src="<?php echo $contents['video_src']; ?>" allowfullscreen></iframe>
-			</div>
-		</div>
-	</div>
-	<hr>
-</section>
-<!-- #END# About Us -->
-
-<!--Our Goals-->
-<section class="container py-3">
-	<h2 class="text-info font-weight-bold text-center my-3"><i class="fas fa-praying-hands pr-2"></i><?php echo locale('views', 'our_programs'); ?></h2>
-	<div class="row my-5">
-		<div class="col-md-4"><?php echo $contents['our_programs_1'] ?></div>
-		<div class="col-md-4">
-			<?php echo image('resources/assets/img/logo.png', APP_NAME, ['class'=>'z-depth-0 img-fluid img-thumbnail mb-3']); ?>
-		</div>
-		<div class="col-md-4"><?php echo $contents['our_programs_2'] ?></div>
-	</div>
-	<hr>
-</section>
-<!-- #END# Our Goals -->
-
 <!-- Our Achievements -->
 <section class='container py-3'>
-	<h2 class="text-info font-weight-bold my-3 text-center"><i class="fas fa-award pr-2"></i><?php echo locale('views', 'our_achievements'); ?></h2>
-	<div class="row features-small my-5 wow fadeIn">
+	<div class="row features-small wow fadeIn">
 		<div class="col-xl-3 col-lg-6">
 			<?php echo $contents['our_achievements_1'] ?>
 		</div>
@@ -83,10 +51,27 @@
 </section>
 <!-- #END# Our Achievements -->
 
+<!-- About Us -->
+<section class="container py-3">
+	<div class="row">
+		<div class="col-sm-6">
+			<p class="h3 text-info font-weight-bold"><?php echo locale('views', 'who_are_we'); ?></p>
+			<p class="my-3"><?php echo $contents['about_us']; ?></p>
+		</div>
+		<div class="col-sm-6">
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="<?php echo $contents['video_src']; ?>" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<hr>
+</section>
+<!-- #END# About Us -->
+
 <!-- Dynamic -->
 <section class="container py-3">
 	<ul class="pagination-sm content-paginate"></ul>
-	<h2 class="text-info font-weight-bold mt-3 mb-5 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h2>
+	<p class="h3 text-info font-weight-bold my-3 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></p>
 	<div class="owl-carousel">
 		<?php $i=0; foreach ($members as $member) { ?>
 			<div>
@@ -96,10 +81,10 @@
 			</div>
 		<?php $i++; if($i==24) break; } ?>
 	</div>
-	<div class="row justify-content-center my-5">
+	<div class="row justify-content-center my-3">
 		<a class="btn btn-warning btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>
 	</div>
-	<h2 class="text-info font-weight-bold mt-3 mb-5 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></h2>
+	<p class="h3 text-info font-weight-bold mt-5 mb-4 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></p>
 	<!-- <div id="project-carousel" class="carousel slide carousel-fade" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<?php $i=0; foreach ($projects['projects'] as $key=>$project) { ?>
@@ -146,10 +131,10 @@
 			</div>
 		<?php $i++; if($i==4) break; } ?>
 	</div>
-	<div class="row justify-content-center my-5">
+	<div class="row justify-content-center my-3">
 		<a class="btn btn-warning btn-md" href="<?php echo route('projects'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_projects'); ?></a>
 	</div>
-	<h2 class="text-info font-weight-bold mt-3 mb-5 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></h2>
+	<p class="h3 text-info font-weight-bold mt-5 mb-4 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></p>
 	<div class="row">
 		<?php $i=0; foreach ($newses['news'] as $news) { ?>
 			<div class="col-sm-4 mb-3">
@@ -165,10 +150,31 @@
 			</div>
 		<?php $i++; if($i==3) break; } ?>
 	</div>
-	<div class="row justify-content-center my-5">
+	<div class="row justify-content-center my-3">
 		<a class="btn btn-warning btn-md" href="<?php echo route('news'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_news'); ?></a>
 	</div>
+	<hr>
 </section>
 <!-- #END# Dynamic -->
+
+<!--Our Goals-->
+<section class="container py-3">
+	<p class="h3 text-info font-weight-bold text-center my-3"><i class="fas fa-praying-hands pr-2"></i><?php echo locale('views', 'our_programs'); ?></p>
+	<div class="row">
+		<div class="col-md-4"><?php echo $contents['our_programs_1'] ?></div>
+		<div class="col-md-4">
+			<?php echo image('resources/assets/img/logo.png', APP_NAME, ['class'=>'z-depth-0 img-fluid img-thumbnail mb-3']); ?>
+		</div>
+		<div class="col-md-4"><?php echo $contents['our_programs_2'] ?></div>
+	</div>
+	<a class="font-weight-bold text-primary h4" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
+		<?php echo locale('views', 'read_more'); ?>
+	</a>
+	<div class="collapse mt-3" id="advisers">
+		<?php echo $contents['our_programs_3'] ?>
+	</div>
+	<div class="mb-5"></div>
+</section>
+<!-- #END# Our Goals -->
 
 <?php endblock() ?>

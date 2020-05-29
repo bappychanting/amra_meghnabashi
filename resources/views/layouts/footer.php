@@ -3,9 +3,9 @@
   <div class="container d-flex justify-content-center">
     <form class="form-inline my-2 my-lg-0" method="post" action="<?php echo route('subscribe'); ?>">
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-      <label class="text-uppercase my-1 mr-2" for="sub_email"><?php echo locale('views', 'subscribe_us'); ?></label>
+      <label class="text-muted my-1 mr-2" for="sub_email"><?php echo locale('views', 'subscribe_us'); ?></label>
       <input class="form-control" type="email" name="sub_email" id="sub_email" placeholder="example@example.com" aria-label="email" required>
-      <button class="btn btn-outline-dark btn-md my-2 my-sm-0 ml-3" type="submit">Submit</button>
+      <button class="btn btn-outline-grey btn-md my-2 my-sm-0 ml-3" type="submit">Submit</button>
     </form>
   </div>
 </div>

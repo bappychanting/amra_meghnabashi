@@ -23,6 +23,7 @@ return [
     'see_all_projects' => 'সমস্ত প্রকল্পসমূহ দেখুন',
     'see_all_news' => 'সমস্ত খবর দেখুন',
     'show_details' => 'বিস্তারিত দেখুন',
+    'read_more' => 'আরও পড়ুন',
     'go_back' => 'ফিরে যান',
     'subscribe_us' => 'আমাদের সাবস্ক্রাইব করুন',
     'contact_us' => 'যোগাযোগ করুন',

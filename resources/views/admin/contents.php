@@ -109,6 +109,11 @@
       </div>
 
       <div class="form-label-group my-3">
+        <label>Our Programs 3</label>
+        <textarea class="editor" name="content[our_programs_3]"><?php echo $content['our_programs_3'] ?></textarea>
+      </div>
+
+      <div class="form-label-group my-3">
         <label>Achievements 1</label>
         <textarea class="editor" name="content[our_achievements_1]"><?php echo $content['our_achievements_1'] ?></textarea>
       </div>
