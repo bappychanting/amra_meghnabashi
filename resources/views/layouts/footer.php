@@ -18,7 +18,7 @@
             <?php echo image('resources/assets/img/logo.png', APP_NAME, ['class'=>'z-depth-0 img-fluid', 'style'=>'width:120px;height:120px;']); ?>
           </div>
           <div class="col-sm-9 mb-2 pl-3">
-            <h3 class="text-uppercase font-weight-bold mb-1"><?php echo locale('views', 'app_title'); ?></h3>
+            <p class="h3 text-uppercase font-weight-bold mb-1"><?php echo locale('views', 'app_title'); ?></p>
             <p class="h6 mt-2 mb-4"><?php echo $contents['slogan']; ?></p>
             <!-- Facebook -->
             <a class="fb-ic" href="<?php echo $contents['facebook']; ?>">
