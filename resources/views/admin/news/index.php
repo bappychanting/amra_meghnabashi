@@ -31,7 +31,7 @@
         <tr>
           <th class="th-sm">#</th>
           <th class="th-sm">Title</th>
-          <th class="th-sm">Details</th>
+          <th class="th-sm">Tags</th>
           <th class="th-sm">Created At</th>
           <th class="th-sm">Actions</th>
         </tr>
@@ -40,8 +40,8 @@
         <?php foreach ($newses as $news) { ?>
           <tr>
             <td class="font-weight-bold"><?php echo $news['id']; ?></td>
-            <td><?php echo strip_tags(substr($news['title'], 0, 10)); ?>...</td>
-            <td><?php echo strip_tags(substr($news['details'], 0, 30)); ?>...</td>
+            <td><?php echo strip_tags(substr($news['title'], 0, 30)); ?>...</td>
+            <td><?php echo $news['tags']; ?></td>
             <td><?php echo date('F d (l), Y', strtotime($news['created_at'])); ?></td>
             <td>
               <form method="post" action="<?php echo route('admin/news/delete') ?>" onsubmit="return confirm('Do you really want to delete this news?');">
@@ -58,7 +58,7 @@
         <tr>
           <th class="th-sm">#</th>
           <th class="th-sm">Title</th>
-          <th class="th-sm">Details</th>
+          <th class="th-sm">Tags</th>
           <th class="th-sm">Created At</th>
           <th class="th-sm">Actions</th>
         </tr>
