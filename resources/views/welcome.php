@@ -159,7 +159,7 @@
 
 <!--Our Goals-->
 <section class="container py-3">
-	<p class="h3 text-info font-weight-bold text-center"><i class="fas fa-praying-hands pr-2"></i><?php echo locale('views', 'our_programs'); ?></p>
+	<p class="h3 text-info font-weight-bold mb-4 text-center"><i class="fas fa-praying-hands pr-2"></i><?php echo locale('views', 'our_programs'); ?></p>
 	<div class="row">
 		<div class="col-md-4"><?php echo $contents['our_programs_1'] ?></div>
 		<div class="col-md-4">
