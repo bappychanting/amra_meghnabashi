@@ -32,7 +32,7 @@
 <!-- #END# Intro -->
 
 <!-- Our Achievements -->
-<section class='grey lighten-4 py-3'>
+<section class='grey lighten-3 py-3'>
 	<div class="container">
 		<div class="row features-small wow fadeIn text-center">
 			<div class="col-xl-3 col-lg-6">
