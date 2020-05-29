@@ -3,15 +3,15 @@
     <div class="row">
       <div class="col-6">
         <nav class="nav">
-          <span class="nav-link"><i class="fas fa-phone pr-2"></i><?php echo $contents['contact']; ?></span>
-          <span class="nav-link"><a href="mailto:<?php echo $contents['email']; ?>" class="text-dark"><i class="fas fa-envelope pr-2"></i><?php echo $contents['email']; ?></a></span>
+          <a href="javascript:void(0);" class="nav-link"><i class="fas fa-phone pr-2"></i><?php echo $contents['contact']; ?></a>
+          <a href="mailto:<?php echo $contents['email']; ?>" class="nav-link"><i class="fas fa-envelope pr-2"></i><?php echo $contents['email']; ?></a>
         </nav>
       </div>
       <div class="col-6">
         <nav class="nav float-right">
-          <a class="nav-link text-dark" href="<?php echo $contents['facebook']; ?>"><i class="fab fa-facebook"></i></a>
-          <a class="nav-link text-dark" href="<?php echo $contents['twitter']; ?>"><i class="fab fa-twitter"></i></a>
-          <a class="nav-link text-dark" href="<?php echo $contents['youtube']; ?>"><i class="fab fa-youtube"></i></a>
+          <a class="nav-link" href="<?php echo $contents['facebook']; ?>"><i class="fab fa-facebook"></i></a>
+          <a class="nav-link" href="<?php echo $contents['twitter']; ?>"><i class="fab fa-twitter"></i></a>
+          <a class="nav-link" href="<?php echo $contents['youtube']; ?>"><i class="fab fa-youtube"></i></a>
         </nav>
       </div>
     </div>
