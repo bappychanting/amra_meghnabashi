@@ -138,66 +138,66 @@
 	</div> -->
 	<div class="row">
 		<?php $i=0; foreach ($projects['projects'] as $project) { ?>
-			<div class="col-sm-3 mb-3">
-				<a href="<?php echo route('projects/show', ['id' => $project['id']]); ?>" class="link-unstyled">
-					<div class="card">
-						<img class="card-img-top" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>" height='120px'>
-						<div class="card-body">
-							<h6 class="card-title text-primary"><?php echo $project['name']; ?></h6>
-							<span class="card-text"><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</span>
-						</div>
+		<div class="col-sm-3 mb-3">
+			<a href="<?php echo route('projects/show', ['id' => $project['id']]); ?>" class="link-unstyled">
+				<div class="card">
+					<img class="card-img-top" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>" height='120px'>
+					<div class="card-body">
+						<h6 class="card-title text-primary"><?php echo $project['name']; ?></h6>
+						<span class="card-text"><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</span>
 					</div>
-				</a>
-			</div>
-			<?php $i++; if($i==4) break; } ?>
+				</div>
+			</a>
 		</div>
-		<div class="row justify-content-center my-3">
-			<a class="btn btn-warning btn-md" href="<?php echo route('projects'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_projects'); ?></a>
+		<?php $i++; if($i==4) break; } ?>
+	</div>
+	<div class="row justify-content-center my-3">
+		<a class="btn btn-warning btn-md" href="<?php echo route('projects'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_projects'); ?></a>
+	</div>
+	<hr>
+	<p class="h3 text-info font-weight-bold my-4 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></p>
+	<div class="row">
+	<?php $i=0; foreach ($newses['news'] as $news) { ?>
+		<div class="col-sm-4 mb-3">
+			<a href="<?php echo route('news/show', ['id' => $news['id']]); ?>" class="link-unstyled">
+				<div class="card">
+					<img class="card-img-top" src="<?php echo $news['image_path'] ?>" alt="<?php echo $news['title'] ?>" height='150px'>
+					<div class="card-body">
+						<h6 class="card-title text-primary"><?php echo substr($news['title'], 0, 70); ?>..</h6>
+						<span class="card-text"><?php echo strip_tags(substr($news['details'], 0, 100)); ?>...</span>
+					</div>
+				</div>
+			</a>
 		</div>
-		<hr>
-		<p class="h3 text-info font-weight-bold my-4 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></p>
-		<div class="row">
-			<?php $i=0; foreach ($newses['news'] as $news) { ?>
-				<div class="col-sm-4 mb-3">
-					<a href="<?php echo route('news/show', ['id' => $news['id']]); ?>" class="link-unstyled">
-						<div class="card">
-							<img class="card-img-top" src="<?php echo $news['image_path'] ?>" alt="<?php echo $news['title'] ?>" height='150px'>
-							<div class="card-body">
-								<h6 class="card-title text-primary"><?php echo substr($news['title'], 0, 70); ?>..</h6>
-								<span class="card-text"><?php echo strip_tags(substr($news['details'], 0, 100)); ?>...</span>
-							</div>
-						</div>
-					</a>
-				</div>
-				<?php $i++; if($i==3) break; } ?>
-			</div>
-			<div class="row justify-content-center my-3">
-				<a class="btn btn-warning btn-md" href="<?php echo route('news'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_news'); ?></a>
-			</div>
-			<hr>
-		</section>
-		<!-- #END# Dynamic -->
+		<?php $i++; if($i==3) break; } ?>
+	</div>
+	<div class="row justify-content-center my-3">
+		<a class="btn btn-warning btn-md" href="<?php echo route('news'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_news'); ?></a>
+	</div>
+	<hr>
+</section>
+<!-- #END# Dynamic -->
 
-		<!--Our Goals-->
-		<section class="container py-3">
-			<p class="h3 text-info font-weight-bold mb-4 text-center"><i class="fas fa-praying-hands pr-2"></i><?php echo locale('views', 'our_programs'); ?></p>
-			<div class="row">
-				<div class="col-md-4"><?php echo $contents['our_programs_1'] ?></div>
-				<div class="col-md-4">
-					<?php echo image('resources/assets/img/logo.png', APP_NAME, ['class'=>'z-depth-0 img-fluid img-thumbnail mb-3']); ?>
-				</div>
-				<div class="col-md-4"><?php echo $contents['our_programs_2'] ?></div>
-				<div class="col-md-12 text-center">
-					<a class="font-weight-bold text-primary h5" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
-						<?php echo locale('views', 'read_more'); ?>
-					</a>
-				</div>
-			</div>
-			<div class="collapse mt-3" id="advisers">
-				<?php echo $contents['our_programs_3'] ?>
-			</div>
-			<div class="mb-3"></div>
-		</section>
-		<!-- #END# Our Goals -->
+<!--Our Goals-->
+<section class="container py-3">
+	<p class="h3 text-info font-weight-bold mb-4 text-center"><i class="fas fa-praying-hands pr-2"></i><?php echo locale('views', 'our_programs'); ?></p>
+	<div class="row">
+		<div class="col-md-4"><?php echo $contents['our_programs_1'] ?></div>
+		<div class="col-md-4">
+			<?php echo image('resources/assets/img/logo.png', APP_NAME, ['class'=>'z-depth-0 img-fluid img-thumbnail mb-3']); ?>
+		</div>
+		<div class="col-md-4"><?php echo $contents['our_programs_2'] ?></div>
+		<div class="col-md-12 text-center">
+			<a class="font-weight-bold text-primary h5" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
+				<?php echo locale('views', 'read_more'); ?>
+			</a>
+		</div>
+	</div>
+	<div class="collapse mt-3" id="advisers">
+		<?php echo $contents['our_programs_3'] ?>
+	</div>
+	<div class="mb-3"></div>
+</section>
+<!-- #END# Our Goals -->
 
-		<?php endblock() ?>
+<?php endblock() ?>
