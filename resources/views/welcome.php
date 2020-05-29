@@ -52,13 +52,13 @@
 <!-- #END# Our Achievements -->
 
 <!-- About Us -->
-<section class="container py-3">
-	<div class="row">
+<section class="container pt-3">
+	<p class="h3 text-info font-weight-bold text-center"><?php echo locale('views', 'who_are_we'); ?></p>
+	<div class="row mt-3">
 		<div class="col-sm-6">
-			<p class="h3 text-info font-weight-bold"><?php echo locale('views', 'who_are_we'); ?></p>
-			<p class="mt-3"><?php echo $contents['about_us']; ?></p>
+			<p class="text-justify"><?php echo $contents['about_us']; ?></p>
 		</div>
-		<div class="col-sm-6">
+		<div class="col-sm-6" style="margin-top:3px;">
 			<div class="embed-responsive embed-responsive-16by9">
 				<iframe class="embed-responsive-item" src="<?php echo $contents['video_src']; ?>" allowfullscreen></iframe>
 			</div>
@@ -84,7 +84,7 @@
 	<div class="row justify-content-center my-3">
 		<a class="btn btn-warning btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>
 	</div>
-	<p class="h3 text-info font-weight-bold mt-5 mb-4 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></p>
+	<p class="h3 text-info font-weight-bold my-4 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></p>
 	<!-- <div id="project-carousel" class="carousel slide carousel-fade" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<?php $i=0; foreach ($projects['projects'] as $key=>$project) { ?>
@@ -123,7 +123,7 @@
 					<div class="card">
 						<img class="card-img-top" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>" height='120px'>
 						<div class="card-body">
-							<h4 class="card-title text-primary"><?php echo $project['name']; ?></h4>
+							<h6 class="card-title text-primary"><?php echo $project['name']; ?></h6>
 							<span class="card-text"><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</span>
 						</div>
 					</div>
@@ -134,7 +134,8 @@
 	<div class="row justify-content-center my-3">
 		<a class="btn btn-warning btn-md" href="<?php echo route('projects'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_projects'); ?></a>
 	</div>
-	<p class="h3 text-info font-weight-bold mt-5 mb-4 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></p>
+	<hr>
+	<p class="h3 text-info font-weight-bold my-4 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></p>
 	<div class="row">
 		<?php $i=0; foreach ($newses['news'] as $news) { ?>
 			<div class="col-sm-4 mb-3">
@@ -142,7 +143,7 @@
 					<div class="card">
 						<img class="card-img-top" src="<?php echo $news['image_path'] ?>" alt="<?php echo $news['title'] ?>" height='150px'>
 						<div class="card-body">
-							<h4 class="card-title"><?php echo substr($news['title'], 0, 50); ?>..</h4>
+							<h6 class="card-title text-primary"><?php echo substr($news['title'], 0, 70); ?>..</h6>
 							<span class="card-text"><?php echo strip_tags(substr($news['details'], 0, 100)); ?>...</span>
 						</div>
 					</div>
@@ -166,10 +167,12 @@
 			<?php echo image('resources/assets/img/logo.png', APP_NAME, ['class'=>'z-depth-0 img-fluid img-thumbnail mb-3']); ?>
 		</div>
 		<div class="col-md-4"><?php echo $contents['our_programs_2'] ?></div>
+		<div class="col-md-12 text-center">
+			<a class="font-weight-bold text-primary h5" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
+				<?php echo locale('views', 'read_more'); ?>
+			</a>
+		</div>
 	</div>
-	<a class="font-weight-bold text-primary h5" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
-		<?php echo locale('views', 'read_more'); ?>
-	</a>
 	<div class="collapse mt-3" id="advisers">
 		<?php echo $contents['our_programs_3'] ?>
 	</div>
