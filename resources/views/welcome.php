@@ -66,7 +66,7 @@
 
 <!-- About Us -->
 <section class="container pt-3">
-	<p class="h3 text-info font-weight-bold text-center mt-3 mb-3"><?php echo locale('views', 'who_are_we'); ?></p>
+	<p class="h3 text-info font-weight-bold text-center my-3"><?php echo locale('views', 'who_are_we'); ?></p>
 	<div class="row">
 		<div class="col-sm-6">
 			<p class="text-justify"><?php echo $contents['about_us']; ?></p>
