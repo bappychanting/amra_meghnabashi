@@ -24,10 +24,23 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="basicExampleNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item <?php echo route_is('meghna') ? 'active' : '' ; ?>">
-          <a class="nav-link" href="<?php echo route('meghna'); ?>"><?php echo locale('views', 'our_meghna'); echo route_is('meghna') ? '<span class="sr-only">(current)</span>' : '' ; ?></a>
+        <!-- Meghna Dropdown -->
+        <li class="nav-item dropdown <?php echo route_is('meghna') ? 'active' : '' ; ?>">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <?php echo locale('views', 'our_meghna'); echo route_is('members') ? '<span class="sr-only">(current)</span>' : '' ; ?>
+          </a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="<?php echo route('meghna'); ?>"><?php echo locale('views', 'meghna_history'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna', ['type' => 'school']); ?>"><?php echo locale('views', 'meghna_school'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna', ['type' => 'college']); ?>"><?php echo locale('views', 'meghna_college'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna', ['type' => 'mosque']); ?>"><?php echo locale('views', 'meghna_mosque'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna', ['type' => 'madrasa']); ?>"><?php echo locale('views', 'meghna_madrasa'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna', ['type' => 'market']); ?>"><?php echo locale('views', 'meghna_market'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna', ['type' => 'monument']); ?>"><?php echo locale('views', 'meghna_monument'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna', ['type' => 'legend']); ?>"><?php echo locale('views', 'meghna_legend'); ?></a>
+          </div>
         </li>
-        <!-- Dropdown -->
+        <!-- Members Dropdown -->
         <li class="nav-item dropdown <?php echo route_is('members') ? 'active' : '' ; ?>">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <?php echo locale('views', 'members'); echo route_is('members') ? '<span class="sr-only">(current)</span>' : '' ; ?>
