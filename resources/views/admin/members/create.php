@@ -46,6 +46,7 @@
         <textarea name="details" class="editor">
           <p><b>Phone:</b></p>
           <p><b>Email:</b></p>
+          <p><b>Address:</b></p>
         </textarea>
       </div>
 
