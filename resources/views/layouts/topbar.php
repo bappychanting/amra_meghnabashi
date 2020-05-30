@@ -33,12 +33,12 @@
             <?php echo locale('views', 'members'); echo route_is('members') ? '<span class="sr-only">(current)</span>' : '' ; ?>
           </a>
           <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="<?php echo route('members'); ?>"><?php echo locale('views', 'our_members'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('members'); ?>"><?php echo locale('views', 'see_all_members'); ?></a>
             <a class="dropdown-item" href="<?php echo route('members', ['type' => 'advisers']); ?>"><?php echo locale('views', 'advisers'); ?></a>
             <a class="dropdown-item" href="<?php echo route('members', ['type' => 'admins']); ?>"><?php echo locale('views', 'admins'); ?></a>
             <a class="dropdown-item" href="<?php echo route('members', ['type' => 'vips']); ?>"><?php echo locale('views', 'vips'); ?></a>
             <a class="dropdown-item" href="<?php echo route('members', ['type' => 'volunteers']); ?>"><?php echo locale('views', 'volunteers'); ?></a>
-            <a class="dropdown-item" href="javascript:void(0);">Be a volunteer</a>
+            <a class="dropdown-item" href="javascript:void(0);"><?php echo locale('views', 'be_volunteer'); ?></a>
           </div>
         </li>
         <li class="nav-item <?php echo route_is('projects') ? 'active' : '' ; ?>">

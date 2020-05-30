@@ -13,6 +13,14 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+.dropdown-menu > a {
+  color: #6c757d!important;
+}
+
+.dropdown-menu > a:hover {
+  background-color: #ffffe6;
+}
+
 a.link-unstyled,
 a.link-unstyled:hover {
   color: inherit;
