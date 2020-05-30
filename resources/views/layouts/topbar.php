@@ -27,8 +27,19 @@
         <li class="nav-item <?php echo route_is('meghna') ? 'active' : '' ; ?>">
           <a class="nav-link" href="<?php echo route('meghna'); ?>"><?php echo locale('views', 'our_meghna'); echo route_is('meghna') ? '<span class="sr-only">(current)</span>' : '' ; ?></a>
         </li>
-        <li class="nav-item <?php echo route_is('members') ? 'active' : '' ; ?>">
-          <a class="nav-link" href="<?php echo route('members'); ?>"><?php echo locale('views', 'members'); echo route_is('members') ? '<span class="sr-only">(current)</span>' : '' ; ?></a>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown <?php echo route_is('members') ? 'active' : '' ; ?>">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <?php echo locale('views', 'members'); echo route_is('members') ? '<span class="sr-only">(current)</span>' : '' ; ?>
+          </a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="<?php echo route('members'); ?>"><?php echo locale('views', 'our_members'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'advisers']); ?>"><?php echo locale('views', 'advisers'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'admins']); ?>"><?php echo locale('views', 'admins'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'vips']); ?>"><?php echo locale('views', 'vips'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'volunteers']); ?>"><?php echo locale('views', 'volunteers'); ?></a>
+            <a class="dropdown-item" href="javascript:void(0);">Be a volunteer</a>
+          </div>
         </li>
         <li class="nav-item <?php echo route_is('projects') ? 'active' : '' ; ?>">
           <a class="nav-link" href="<?php echo route('projects'); ?>"><?php echo locale('views', 'projects'); echo route_is('projects') ? '<span class="sr-only">(current)</span>' : '' ; ?></a>

@@ -93,10 +93,10 @@
 				</a>
 			</div>
 		<?php } ?>
-		<?php foreach ($members['admins'] as $admin) { ?>
+		<?php foreach ($members['vips'] as $vip) { ?>
 			<div>
-				<a href="<?php echo route('members/show', ['id' => $admin['id']]); ?>" title="<?php echo $admin['name']; ?>" class="link-unstyled">
-					<?php echo image($admin['image_path'], $admin['name'], ['class'=>'rounded-circle mt-3', 'height'=>'150px']); ?>
+				<a href="<?php echo route('members/show', ['id' => $vip['id']]); ?>" title="<?php echo $vip['name']; ?>" class="link-unstyled">
+					<?php echo image($vip['image_path'], $vip['name'], ['class'=>'rounded-circle mt-3', 'height'=>'150px']); ?>
 				</a>
 			</div>
 		<?php } ?>
