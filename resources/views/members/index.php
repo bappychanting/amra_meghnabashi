@@ -17,9 +17,9 @@
 
 <section class="container my-3 py-3">
 	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h1>
-	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
+	<a class="my-3 font-weight-bold text-primary h4" <?php echo (isset($_GET['type']) && $_GET['type'] != 'advisers') ? 'style="display:none;"' : ''; ?> data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
 		<?php echo locale('views', 'advisers'); ?>
-	</a><hr>
+	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'advisers') ? 'show' : ''; ?> mt-3" id="advisers">
 		<div class="row">
 		<?php foreach ($members['advisers'] as $adviser) { ?>
@@ -36,9 +36,9 @@
 			<?php } ?>
 		</div>
 	</div>
-	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#admins" aria-expanded="false" aria-controls="admins">
+	<a class="my-3 font-weight-bold text-primary h4" <?php echo (isset($_GET['type']) && $_GET['type'] != 'admins') ? 'style="display:none;"' : ''; ?> data-toggle="collapse" href="#admins" aria-expanded="false" aria-controls="admins">
 		<?php echo locale('views', 'admins'); ?>
-	</a><hr>
+	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'admins') ? 'show' : ''; ?> mt-3" id="admins">
 		<div class="row">
 		<?php foreach ($members['admins'] as $admin) { ?>
@@ -55,9 +55,9 @@
 			<?php } ?>
 		</div>
 	</div>
-	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#vips" aria-expanded="false" aria-controls="vips">
+	<a class="my-3 font-weight-bold text-primary h4" <?php echo (isset($_GET['type']) && $_GET['type'] != 'vips') ? 'style="display:none;"' : ''; ?> data-toggle="collapse" href="#vips" aria-expanded="false" aria-controls="vips">
 		<?php echo locale('views', 'vips'); ?>
-	</a><hr>
+	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'vips') ? 'show' : ''; ?> mt-3" id="vips">
 		<div class="row">
 		<?php foreach ($members['vips'] as $vip) { ?>
@@ -74,9 +74,9 @@
 			<?php } ?>
 		</div>
 	</div>
-	<a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#volunteers" aria-expanded="false" aria-controls="volunteers">
+	<a class="my-3 font-weight-bold text-primary h4" <?php echo (isset($_GET['type']) && $_GET['type'] != 'volunteers') ? 'style="display:none;"' : ''; ?> data-toggle="collapse" href="#volunteers" aria-expanded="false" aria-controls="volunteers">
 		<?php echo locale('views', 'volunteers'); ?>
-	</a><hr>
+	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'volunteers') ? 'show' : ''; ?> mt-3" id="volunteers">
 		<div class="row">
 		<?php foreach ($members['volunteers'] as $volunteer) { ?>
