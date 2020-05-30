@@ -31,7 +31,7 @@
 						<i class="far fa-id-card pr-2"></i><?php echo $adviser['designation']; ?>
 					</div>
 				</div>
-				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $adviser['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $adviser['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a><hr>
 			</div>
 			<?php } ?>
 		</div>
@@ -50,7 +50,7 @@
 						<i class="far fa-id-card pr-2"></i><?php echo $admin['designation']; ?>
 					</div>
 				</div>
-				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $admin['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $admin['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a><hr>
 			</div>
 			<?php } ?>
 		</div>
@@ -69,7 +69,7 @@
 						<i class="far fa-id-card pr-2"></i><?php echo $vip['designation']; ?>
 					</div>
 				</div>
-				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $vip['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $vip['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a><hr>
 			</div>
 			<?php } ?>
 		</div>
@@ -88,7 +88,7 @@
 						<i class="far fa-id-card pr-2"></i><?php echo $volunteer['designation']; ?>
 					</div>
 				</div>
-				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $volunteer['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $volunteer['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a><hr>
 			</div>
 			<?php } ?>
 		</div>
