@@ -51,7 +51,7 @@
             <a class="dropdown-item" href="<?php echo route('members', ['type' => 'admins']); ?>"><?php echo locale('views', 'admins'); ?></a>
             <a class="dropdown-item" href="<?php echo route('members', ['type' => 'vips']); ?>"><?php echo locale('views', 'vips'); ?></a>
             <a class="dropdown-item" href="<?php echo route('members', ['type' => 'volunteers']); ?>"><?php echo locale('views', 'volunteers'); ?></a>
-            <a class="dropdown-item" href="javascript:void(0);"><?php echo locale('views', 'be_volunteer'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('members/join'); ?>"><?php echo locale('views', 'be_volunteer'); ?></a>
           </div>
         </li>
         <li class="nav-item <?php echo route_is('projects') ? 'active' : '' ; ?>">

@@ -22,6 +22,8 @@ return [
 
 	'members/show' => 'HomeController@showMember',
 
+	'members/join' => 'HomeController@joinMember',
+
 	'projects' => 'HomeController@projects',
 
 	'projects/show' => 'HomeController@showPoject',
