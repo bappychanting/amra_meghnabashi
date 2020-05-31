@@ -71,30 +71,14 @@
 	<!-- Custom Script -->
 	<script type="text/javascript">
 		$(document).ready(function() {
+
 			// Initialize Count To
 			$('.timer').countTo();
+
 			// Initialize Popover
 			$(function () {
 				$('[data-toggle="popover"]').popover()
 			});
-			// Initialize Pagination
-			var flexiblePagination = $('.content_paginator').flexiblePagination({
-	            itemsPerPage : 12,
-	            itemSelector : 'div.result:visible',
-	            pagingControlsContainer : '#pagingControls',
-	            // showingInfoSelector : '#showingInfo',
-	            css: {
-	                btnNumberingClass: 'btn btn-sm btn-white waves-effect',
-	                btnActiveClass:"btn btn-sm btn-primary waves-effect",
-	                btnFirstClass: 'btn btn-sm btn-white waves-effect',
-	                btnLastClass: 'btn btn-sm btn-white waves-effect',
-	                btnNextClass: 'btn btn-sm btn-white waves-effect',
-	                btnPreviousClass: 'btn btn-sm btn-white waves-effect'
-	            }
-	        });
-	        flexiblePagination.getController().onPageClick = function(pageNum, e){
-	            // console.log('You Clicked Page: '+pageNum)
-	        };
 
 			// Initialize Social Share
 			$("#social_share").jsSocials({
@@ -106,6 +90,7 @@
 					},
 				],
 			});
+
 			// Initialize Carousel
   			$(".owl-carousel").owlCarousel({
 			    loop:true,
@@ -126,6 +111,26 @@
 			        }
 			    }
 			});
+
+			// Initialize Pagination
+			var flexiblePagination = $('.content_paginator').flexiblePagination({
+	            itemsPerPage : 12,
+	            itemSelector : 'div.result:visible',
+	            pagingControlsContainer : '#pagingControls',
+	            // showingInfoSelector : '#showingInfo',
+	            css: {
+	                btnNumberingClass: 'btn btn-sm btn-white waves-effect',
+	                btnActiveClass:"btn btn-sm btn-primary waves-effect",
+	                btnFirstClass: 'btn btn-sm btn-white waves-effect',
+	                btnLastClass: 'btn btn-sm btn-white waves-effect',
+	                btnNextClass: 'btn btn-sm btn-white waves-effect',
+	                btnPreviousClass: 'btn btn-sm btn-white waves-effect'
+	            }
+	        });
+	        flexiblePagination.getController().onPageClick = function(pageNum, e){
+	            // console.log('You Clicked Page: '+pageNum)
+	        };
+	        
 		});
 	</script>
 
