@@ -60,9 +60,13 @@ class MemberController extends Controller
     public function approveMember() 
     {
         $approve = $this->member->setData($_POST)->approve();
-        if($store){
+        if($approve){
+            $subject = 'Amra Meghnabashi: Your request has been approved!';
+            $body = 'Your request to join us as a volunteer has been approved '.$_POST['name'].'! Thanks for joining us!';
+            $body .= '<br><b>Regards,</b><br>Amra Meghnabashi';
+            $this->sendMail([$_POST['email']], $subject, $body);
             $this->request->setFlash(['success' => locale('message', 'success')]);
-            $this->redirect('admin/members/show', ['id' => $_POST['member_id']]);
+            $this->redirect('admin/members/show', ['id' => $_POST['id']]);
         }
         else{
             $this->request->setFlash(['danger' => locale('message', 'danger')]);

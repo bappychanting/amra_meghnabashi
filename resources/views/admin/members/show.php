@@ -29,7 +29,7 @@
     <p><strong>Tags:</strong> <?php echo '#'.str_replace(",", ", #", $member['tags']); ?></p>
     <p><strong>Designation:</strong> <?php echo $member['designation']; ?></p>
     <p><strong>Created At:</strong> <?php echo date('F d (l), Y', strtotime($member['created_at'])); ?></p>
-    <?php echo $member['details']; ?>
+    <?php if($member['approved'] == 1){ echo $member['details']; ?>
     <a class="btn btn-warning btn-sm" href="<?php echo route('admin/members/edit', ['id' => $member['id']]) ?>"><i class="fas fa-edit pr-2"></i>Edit Member</a>
     <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#donation_modal"><i class="fas fa-plus pr-2"></i>Add Donation</button>
     <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -72,6 +72,26 @@
       </tfoot>
     </table>
     <h5 class="my-3">Total: <?php echo $total_donation; ?>/=</h5>
+    <?php 
+      } 
+      else{ 
+        $member_detail = '';
+        $details_arr = json_decode($member['details'], true);
+        foreach ($details_arr as $key => $value) {
+          $member_detail .= '<p><strong>'.$key.':</strong> '.$value.'</p>';
+        }
+        echo $member_detail; 
+    ?>
+        <span class="badge badge-danger">Not Approved</span>
+        <form method="post" action="<?php echo route('admin/members/approve') ?>" onsubmit="return confirm('Are you sure you want to approve requested volunteer?');">
+          <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+          <input type="hidden" value="<?php echo $member['id']; ?>" name="id">
+          <input type="hidden" value="<?php echo $member['name']; ?>" name="name">
+          <input type="hidden" value="<?php echo $details_arr['email']; ?>" name="email">
+          <input type="hidden" value="<?php echo $member_detail; ?>" name="details">
+          <button class="btn btn-warning btn-sm" type="submit"><i class="fas fa-check pr-2"></i>Approve Volunteer</button>
+        </form>
+    <?php } ?>
   </div>
 </div>
 

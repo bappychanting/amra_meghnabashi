@@ -123,7 +123,7 @@ class Member extends Model{
   }
 
   public function approve(){ 
-    $approve = $this->db->table('members')->set(['approved' => 1])->where('id', '=', $this->getId())->update();
+    $approve = $this->db->table('members')->set(['approved' => 1, 'details' => $this->getDetail()])->where('id', '=', $this->getId())->update();
     return $approve;
   }
 
