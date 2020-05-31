@@ -24,10 +24,27 @@
         <label>Title</label>
         <textarea rows="1" class="form-control" name="title" maxlength="500" minlength="5" required><?php echo $news['title']; ?></textarea>
       </div>
-
-      <div class="form-label-group my-3">
-        <label>Tags</label>
-        <input type="text" name="tags" value="<?php echo $news['tags']; ?>" class="form-control">
+      
+      <div class="form-row">
+        <div class="col-3">
+          <label for="select_tag">Select Category Tag</label>
+          <select class="form-control" id="select_tag">
+            <option value="news"><?php echo locale('views', 'news'); ?></option>
+            <option value="school"><?php echo locale('views', 'meghna_school'); ?></option>
+            <option value="college"><?php echo locale('views', 'meghna_college'); ?></option>
+            <option value="mosque"><?php echo locale('views', 'meghna_mosque'); ?></option>
+            <option value="madrasa"><?php echo locale('views', 'meghna_madrasa'); ?></option>
+            <option value="market"><?php echo locale('views', 'meghna_market'); ?></option>
+            <option value="monument"><?php echo locale('views', 'meghna_monument'); ?></option>
+          </select>
+        </div>
+        <div class="col-9">
+          <label for="tags">Add More Tags</label>
+          <textarea rows="1" name="tags" class="form-control" id="tags" required><?php echo $news['tags']; ?></textarea>
+        </div>
+        <div class="col-12">
+          <small>Tags must be included to seperate <span class="red-text">news, school, college, mosque, madrasa, market and monument</span> category. Use comma to seperate tags!</small>
+        </div>
       </div>
 
       <div class="row">
