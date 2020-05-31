@@ -62,8 +62,10 @@
 	<?php echo script('plugins/jssocials/jssocials.min.js'); ?>
 	<!-- Carousel -->
 	<?php echo script('plugins/owlcarousel/js/owl.carousel.min.js'); ?>
-    <!-- Editor JavaScript -->
+    <!-- Count to JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js" referrerpolicy="origin"></script>
+	<!-- Paginator Javascript -->
+	<?php echo script('plugins/paginator/flexible.pagination.js'); ?>
 	<!-- MDB core JavaScript -->
 	<?php echo script('js/mdb.min.js'); ?>
 	<!-- Custom Script -->
@@ -75,6 +77,11 @@
 			$(function () {
 				$('[data-toggle="popover"]').popover()
 			});
+			// Initialize Pagination
+			var flexiblePagination = $('.content_paginator').flexiblePagination({
+				// options
+			});
+
 			// Initialize Social Share
 			$("#social_share").jsSocials({
 				shares: [
