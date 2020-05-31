@@ -51,7 +51,7 @@
             <a class="dropdown-item" href="<?php echo route('members', ['type' => 'admins']); ?>"><?php echo locale('views', 'admins'); ?></a>
             <a class="dropdown-item" href="<?php echo route('members', ['type' => 'vips']); ?>"><?php echo locale('views', 'vips'); ?></a>
             <a class="dropdown-item" href="<?php echo route('members', ['type' => 'volunteers']); ?>"><?php echo locale('views', 'volunteers'); ?></a>
-            <a class="dropdown-item" href="<?php echo route('members/join'); ?>"><?php echo locale('views', 'be_volunteer'); ?></a>
+            <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#join_modal"><?php echo locale('views', 'be_volunteer'); ?></a>
           </div>
         </li>
         <li class="nav-item <?php echo route_is('projects') ? 'active' : '' ; ?>">
@@ -64,3 +64,34 @@
     </div>
   </div>
 </nav>
+
+<!-- Join Modal -->
+<div class="modal fade" id="join_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="myModalLabel"><?php echo locale('views', 'be_volunteer'); ?></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="<?php echo route('members/join'); ?>"> 
+
+          <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+
+          <div class="form-label-group my-3">
+            <label>Donation Date</label>
+            <input type="date" name="donation_date" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary mr-5"><?php echo locale('views', 'submit'); ?></button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white btn-sm" data-dismiss="modal"><?php echo locale('views', 'close'); ?></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- #END# Join Modal -->

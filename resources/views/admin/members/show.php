@@ -31,7 +31,7 @@
     <p><strong>Created At:</strong> <?php echo date('F d (l), Y', strtotime($member['created_at'])); ?></p>
     <?php echo $member['details']; ?>
     <a class="btn btn-warning btn-sm" href="<?php echo route('admin/members/edit', ['id' => $member['id']]) ?>"><i class="fas fa-edit pr-2"></i>Edit Member</a>
-    <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#sideModalTR"><i class="fas fa-plus pr-2"></i>Add Donation</button>
+    <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#donation_modal"><i class="fas fa-plus pr-2"></i>Add Donation</button>
     <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
         <tr>
@@ -77,54 +77,51 @@
 
 <a class="btn btn-primary btn-sm my-3" href="<?php echo route('admin/members/all') ?>"><i class="fas fa-arrow-left pr-2"></i>Go back</a>
 
-<!-- To change the direction of the modal animation change .right class -->
-<div class="modal fade right" id="sideModalTR" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-aria-hidden="true">
+<!-- Donation Modal -->
+<div class="modal fade right" id="donation_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-side modal-bottom-right" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="myModalLabel">Add Donation</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="<?php echo route('admin/members/donations/add'); ?>"> 
 
-<div class="modal-dialog modal-side modal-bottom-right" role="document">
+          <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
-  <div class="modal-content">
-    <div class="modal-header">
-      <h4 class="modal-title w-100" id="myModalLabel">Add Donation</h4>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form method="POST" action="<?php echo route('admin/members/donations/add'); ?>"> 
+          <input type="hidden" name="member_id" value="<?php echo $member['id']; ?>">
 
-        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+          <div class="form-label-group my-3">
+            <label>Select Project</label>
+            <select name="project_id" class="browser-default custom-select mb-4">
+              <?php foreach ($projects as $project) { ?>
+              <option value="<?php echo $project['id'] ?>" selected><?php echo $project['name'] ?></option>
+              <?php } ?>
+            </select>
+          </div>
 
-        <input type="hidden" name="member_id" value="<?php echo $member['id']; ?>">
+          <div class="form-label-group my-3">
+            <label>Donation Amount</label>
+            <input type="number" name="donation" class="form-control" step="0.01" required>
+          </div>
 
-        <div class="form-label-group my-3">
-          <label>Select Project</label>
-          <select name="project_id" class="browser-default custom-select mb-4">
-            <?php foreach ($projects as $project) { ?>
-            <option value="<?php echo $project['id'] ?>" selected><?php echo $project['name'] ?></option>
-            <?php } ?>
-          </select>
-        </div>
+          <div class="form-label-group my-3">
+            <label>Donation Date</label>
+            <input type="date" name="donation_date" class="form-control" required>
+          </div>
 
-        <div class="form-label-group my-3">
-          <label>Donation Amount</label>
-          <input type="number" name="donation" class="form-control" step="0.01" required>
-        </div>
-
-        <div class="form-label-group my-3">
-          <label>Donation Date</label>
-          <input type="date" name="donation_date" class="form-control" required>
-        </div>
-
-        <button type="submit" class="btn btn-primary mr-5">Submit</button>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-white btn-sm" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary mr-5">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-white btn-sm" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
 </div>
-</div>
-<!-- Side Modal Top Right -->
+<!-- #END# Donation Modal -->
 
 <?php endblock() ?>

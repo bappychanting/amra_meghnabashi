@@ -24,8 +24,6 @@ return [
 
 	'members/join' => 'HomeController@joinMember',
 
-	'members/join/submit' => 'HomeController@submitMember',
-
 	'projects' => 'HomeController@projects',
 
 	'projects/show' => 'HomeController@showPoject',
