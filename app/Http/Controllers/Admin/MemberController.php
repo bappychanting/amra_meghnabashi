@@ -57,6 +57,19 @@ class MemberController extends Controller
         return $this->view('admin.members.show', compact('member', 'donations', 'projects')); 
     }
 
+    public function approveMember() 
+    {
+        $approve = $this->member->setData($_POST)->approve();
+        if($store){
+            $this->request->setFlash(['success' => locale('message', 'success')]);
+            $this->redirect('admin/members/show', ['id' => $_POST['member_id']]);
+        }
+        else{
+            $this->request->setFlash(['danger' => locale('message', 'danger')]);
+           
+        } 
+    }
+
     public function addDonation() 
     {
         $store = $this->donation->setData($_POST)->store();

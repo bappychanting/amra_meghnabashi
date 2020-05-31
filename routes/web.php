@@ -84,6 +84,8 @@ return [
 
 	'admin/members/show' => 'Admin/MemberController@show',
 
+	'admin/members/approve' => 'Admin/MemberController@approveMember',
+
 	'admin/members/donations/add' => 'Admin/MemberController@addDonation',
 
 	'admin/members/donations/delete' => 'Admin/MemberController@deleteDonation',

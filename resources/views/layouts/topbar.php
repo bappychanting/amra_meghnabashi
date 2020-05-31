@@ -76,11 +76,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="POST" action="<?php echo route('members/join'); ?>"> 
+        <form method="POST" action="<?php echo route('members/join'); ?>" enctype="multipart/form-data"> 
 
           <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-          <input type="hidden" name="tags" class="form-control" value="volunteer">
-          <input type="hidden" name="designation" class="form-control" value="Volunteer">
 
           <div class="form-label-group my-3">
             <label>Name</label>
@@ -90,7 +88,7 @@
           <div class="input-group my-4">
             <div class="custom-file">
               <input type="file" name="member_image" class="custom-file-input" id="member_image" aria-describedby="inputGroupFileAddon01" required>
-              <label class="custom-file-label" for="member_image">Member Image (must be less than 1mb)</label>
+              <label class="custom-file-label" for="member_image">Image (must be less than 1mb)</label>
             </div>
           </div>
 
@@ -105,13 +103,13 @@
           </div>
 
           <div class="form-label-group my-3">
-            <label>Village</label>
-            <input type="text" name="village" class="form-control" maxlength="50" minlength="2" required>
+            <label>Address</label>
+            <input type="text" name="address" class="form-control" maxlength="50" minlength="2" required>
           </div>
 
           <div class="form-label-group my-3">
             <label>Details</label>
-            <textarea name="details" class="form-control" placeholder="Your address, about etc."></textarea>
+            <textarea name="details" class="form-control" placeholder="Your about, connections etc."></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary mr-5"><?php echo locale('views', 'submit'); ?></button>

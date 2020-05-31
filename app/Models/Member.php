@@ -122,6 +122,11 @@ class Member extends Model{
     return $store;
   }
 
+  public function approve(){ 
+    $approve = $this->db->table('members')->set(['approved' => 1])->where('id', '=', $this->getId())->update();
+    return $approve;
+  }
+
   public function update(){ 
     if(empty(getErrors())){
       $update = $this->db->table('members')->set(['name' => $this->getName(), 'tags' => $this->getTag(), 'designation' => $this->getDesignation(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->where('id', '=', $this->getId())->update();

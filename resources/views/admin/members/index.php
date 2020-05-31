@@ -40,7 +40,7 @@
         <?php foreach ($members as $member) { ?>
           <tr>
             <td class="font-weight-bold"><?php echo $member['id']; ?></td>
-            <td><?php echo $member['name']; ?></td>
+            <td><?php echo $member['name']; echo $member['approved'] == 0 ? '&nbsp;<span class="badge badge-danger">Not Approved</span>' : '' ; ?></td>
             <td><?php echo $member['designation']; ?></td>
             <td><?php echo date('F d (l), Y', strtotime($member['created_at'])); ?></td>
             <td>
