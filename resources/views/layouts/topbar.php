@@ -79,10 +79,39 @@
         <form method="POST" action="<?php echo route('members/join'); ?>"> 
 
           <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+          <input type="hidden" name="tags" class="form-control" value="volunteer">
+          <input type="hidden" name="designation" class="form-control" value="Volunteer">
 
           <div class="form-label-group my-3">
-            <label>Donation Date</label>
-            <input type="date" name="donation_date" class="form-control" required>
+            <label>Name</label>
+            <input type="text" name="name" class="form-control" maxlength="50" minlength="2" required>
+          </div>
+
+          <div class="input-group my-4">
+            <div class="custom-file">
+              <input type="file" name="member_image" class="custom-file-input" id="member_image" aria-describedby="inputGroupFileAddon01" required>
+              <label class="custom-file-label" for="member_image">Member Image (must be less than 1mb)</label>
+            </div>
+          </div>
+
+          <div class="form-label-group my-3">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" required>
+          </div>
+
+          <div class="form-label-group my-3">
+            <label>Phone</label>
+            <input type="text" name="phone" class="form-control" maxlength="50" minlength="2" required>
+          </div>
+
+          <div class="form-label-group my-3">
+            <label>Village</label>
+            <input type="text" name="village" class="form-control" maxlength="50" minlength="2" required>
+          </div>
+
+          <div class="form-label-group my-3">
+            <label>Details</label>
+            <textarea name="details" class="form-control" placeholder="Your address, about etc."></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary mr-5"><?php echo locale('views', 'submit'); ?></button>
