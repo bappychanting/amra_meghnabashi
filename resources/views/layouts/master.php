@@ -79,9 +79,10 @@
 			});
 			// Initialize Pagination
 			var flexiblePagination = $('.content_paginator').flexiblePagination({
-	            itemsPerPage : 3,
+	            itemsPerPage : 12,
 	            itemSelector : 'div.result:visible',
 	            pagingControlsContainer : '#pagingControls',
+	            // showingInfoSelector : '#showingInfo',
 	            css: {
 	                btnNumberingClass: 'btn btn-sm btn-white waves-effect',
 	                btnActiveClass:"btn btn-sm btn-primary waves-effect",

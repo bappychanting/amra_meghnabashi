@@ -34,6 +34,7 @@
 		<?php } ?>
 	</div>
 	<div id="pagingControls"></div>
+	<!-- <div id="showingInfo" class="well my-3"></div> -->
 </section>
 
 <?php endblock() ?>
