@@ -37,7 +37,7 @@
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'madrasa']); ?>"><?php echo locale('views', 'meghna_madrasa'); ?></a>
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'market']); ?>"><?php echo locale('views', 'meghna_market'); ?></a>
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'monument']); ?>"><?php echo locale('views', 'meghna_monument'); ?></a>
-            <a class="dropdown-item" href="<?php echo route('meghna/personality'); ?>"><?php echo locale('views', 'meghna_personality'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna/personalities'); ?>"><?php echo locale('views', 'meghna_personality'); ?></a>
           </div>
         </li>
         <!-- Members Dropdown -->

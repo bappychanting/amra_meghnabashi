@@ -16,7 +16,7 @@ return [
 
 	'meghna/items' => 'HomeController@meghnaItems',
 
-	'meghna/personality' => 'HomeController@meghnaPersonality',
+	'meghna/personalities' => 'HomeController@meghnaPersonalities',
 
 	'members' => 'HomeController@members',
 
