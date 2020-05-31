@@ -19,7 +19,7 @@
 
 <section class="container my-3 py-3">
 	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></h1>
-	<h4 class="my-3 font-weight-bold dark-grey-text"><?php echo $news['title'] ?></h4>
+	<h4 class="my-3 font-weight-bold text-primary"><?php echo $news['title'] ?></h4>
 	<hr>
 	<p class="text-muted">
 		<i class="fas fa-user pr-2"></i><?php echo $news['user_name']; ?>&nbsp;

@@ -100,11 +100,16 @@ class Member extends Model{
   }
 
   public function getMembersByCategory(){    
-    $volunteers = $this->db->table('members')->where('tags', 'LIKE', '%volunteer%')->orderBy('name')->read();
-    $admins = $this->db->table('members')->where('tags', 'LIKE', '%admin%')->orderBy('name')->read();
     $vips = $this->db->table('members')->where('tags', 'LIKE', '%vip%')->orderBy('name')->read();
     $advisers = $this->db->table('members')->where('tags', 'LIKE', '%adviser%')->orderBy('name')->read();
+    $admins = $this->db->table('members')->where('tags', 'LIKE', '%admin%')->orderBy('name')->read();
+    $volunteers = $this->db->table('members')->where('tags', 'LIKE', '%volunteer%')->and('approved', '=', 1)->orderBy('name')->read();
     return array('volunteers' => $volunteers, 'admins' => $admins, 'vips' => $vips, 'advisers' => $advisers);
+  }
+
+  public function getPersonalities(){    
+    $personalities = $this->db->table('members')->where('tags', 'LIKE', '%personality%')->orderBy('name')->limit(2000)->read();
+    return $personalities;
   }
 
   public function getMember(){    
@@ -115,6 +120,11 @@ class Member extends Model{
   public function store(){   
     $store = $this->db->table('members')->data(['name' => $this->getName(), 'tags' => $this->getTag(), 'designation' => $this->getDesignation(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->create();
     return $store;
+  }
+
+  public function approve(){ 
+    $approve = $this->db->table('members')->set(['approved' => 1, 'details' => $this->getDetail()])->where('id', '=', $this->getId())->update();
+    return $approve;
   }
 
   public function update(){ 

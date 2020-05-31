@@ -62,19 +62,24 @@
 	<?php echo script('plugins/jssocials/jssocials.min.js'); ?>
 	<!-- Carousel -->
 	<?php echo script('plugins/owlcarousel/js/owl.carousel.min.js'); ?>
-    <!-- Editor JavaScript -->
+    <!-- Count to JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js" referrerpolicy="origin"></script>
+	<!-- Paginator Javascript -->
+	<?php echo script('plugins/paginator/flexible.pagination.js'); ?>
 	<!-- MDB core JavaScript -->
 	<?php echo script('js/mdb.min.js'); ?>
 	<!-- Custom Script -->
 	<script type="text/javascript">
 		$(document).ready(function() {
+
 			// Initialize Count To
 			$('.timer').countTo();
+
 			// Initialize Popover
 			$(function () {
 				$('[data-toggle="popover"]').popover()
 			});
+
 			// Initialize Social Share
 			$("#social_share").jsSocials({
 				shares: [
@@ -85,6 +90,7 @@
 					},
 				],
 			});
+
 			// Initialize Carousel
   			$(".owl-carousel").owlCarousel({
 			    loop:true,
@@ -105,6 +111,26 @@
 			        }
 			    }
 			});
+
+			// Initialize Pagination
+			var flexiblePagination = $('.content_paginator').flexiblePagination({
+	            itemsPerPage : 12,
+	            itemSelector : 'div.result:visible',
+	            pagingControlsContainer : '#pagingControls',
+	            // showingInfoSelector : '#showingInfo',
+	            css: {
+	                btnNumberingClass: 'btn btn-sm btn-white waves-effect',
+	                btnActiveClass:"btn btn-sm btn-primary waves-effect",
+	                btnFirstClass: 'btn btn-sm btn-white waves-effect',
+	                btnLastClass: 'btn btn-sm btn-white waves-effect',
+	                btnNextClass: 'btn btn-sm btn-white waves-effect',
+	                btnPreviousClass: 'btn btn-sm btn-white waves-effect'
+	            }
+	        });
+	        flexiblePagination.getController().onPageClick = function(pageNum, e){
+	            // console.log('You Clicked Page: '+pageNum)
+	        };
+	        
 		});
 	</script>
 

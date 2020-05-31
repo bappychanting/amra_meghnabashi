@@ -32,31 +32,31 @@
 <!-- #END# Intro -->
 
 <!-- Our Achievements -->
-<section class='grey lighten-4 py-3'>
+<section class='grey lighten-3 py-3'>
 	<div class="container">
 		<div class="row features-small wow fadeIn text-center">
 			<div class="col-xl-3 col-lg-6">
 				<p>
 					<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['programs']; ?>" data-speed="5000" data-refresh-interval="50"></span>
-					<br><span class="py-1">Programs<?php // echo locale('views', 'programs'); ?></span>
+					<br><span class="py-1 text-muted">Programs<?php // echo locale('views', 'programs'); ?></span>
 				</p>
 			</div>
 			<div class="col-xl-3 col-lg-6">
 				<p>
 					<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['beneficiaries']; ?>" data-speed="5000" data-refresh-interval="50"></span>
-					<br><span class="py-1">Beneficiaries<?php // echo locale('views', 'beneficiaries'); ?></span>
+					<br><span class="py-1 text-muted">Beneficiaries<?php // echo locale('views', 'beneficiaries'); ?></span>
 				</p>
 			</div>
 			<div class="col-xl-3 col-lg-6">
 				<p>
 					<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['reached']; ?>" data-speed="5000" data-refresh-interval="50"></span><span class="h1 text-primary">&#37;</span>
-					<br><span class="py-1">Reached<?php // echo locale('views', 'reached'); ?></span>
+					<br><span class="py-1 text-muted">Reached<?php // echo locale('views', 'reached'); ?></span>
 				</p>
 			</div>
 			<div class="col-xl-3 col-lg-6">
 				<p>
 					<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['job_scholarship']; ?>" data-speed="5000" data-refresh-interval="50"></span><span class="h1 text-primary">&#43;</span>
-					<br><span class="py-1">Jobs & Scholarships<?php // locale('views', 'job_scholarship'); ?></span>
+					<br><span class="py-1 text-muted">Jobs & Scholarships<?php // locale('views', 'job_scholarship'); ?></span>
 				</p>
 			</div>
 		</div>
@@ -66,7 +66,7 @@
 
 <!-- About Us -->
 <section class="container pt-3">
-	<p class="h3 text-info font-weight-bold text-center mb-3"><?php echo locale('views', 'who_are_we'); ?></p>
+	<p class="h3 text-info font-weight-bold text-center my-3"><?php echo locale('views', 'who_are_we'); ?></p>
 	<div class="row">
 		<div class="col-sm-6">
 			<p class="text-justify"><?php echo $contents['about_us']; ?></p>
@@ -93,10 +93,10 @@
 				</a>
 			</div>
 		<?php } ?>
-		<?php foreach ($members['admins'] as $admin) { ?>
+		<?php foreach ($members['vips'] as $vip) { ?>
 			<div>
-				<a href="<?php echo route('members/show', ['id' => $admin['id']]); ?>" title="<?php echo $admin['name']; ?>" class="link-unstyled">
-					<?php echo image($admin['image_path'], $admin['name'], ['class'=>'rounded-circle mt-3', 'height'=>'150px']); ?>
+				<a href="<?php echo route('members/show', ['id' => $vip['id']]); ?>" title="<?php echo $vip['name']; ?>" class="link-unstyled">
+					<?php echo image($vip['image_path'], $vip['name'], ['class'=>'rounded-circle mt-3', 'height'=>'150px']); ?>
 				</a>
 			</div>
 		<?php } ?>

@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'All News || '.title(); ?>
+<?php echo 'All News & Items || '.title(); ?>
 
 <?php endblock() ?>
 
@@ -24,8 +24,8 @@
       }
     } 
     ?>
-    <h5 class="text-center my-3 text-muted"><i class="fas fa-newspaper pr-2"></i>All News</h5>
-    <a class="btn btn-success btn-sm" href="<?php echo route('admin/news/create') ?>"><i class="fas fa-plus pr-2"></i>Add New News</a>
+    <h5 class="text-center my-3 text-muted"><i class="fas fa-newspaper pr-2"></i>All News & Items</h5>
+    <a class="btn btn-success btn-sm" href="<?php echo route('admin/news/create') ?>"><i class="fas fa-plus pr-2"></i>Add New Item</a>
     <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
         <tr>

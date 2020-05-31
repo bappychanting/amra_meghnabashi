@@ -49,13 +49,13 @@
               <a class="nav-link" href="<?php echo route('admin/projects/all'); ?>">Projects</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/news') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/news/all'); ?>">News</a>
+              <a class="nav-link" href="<?php echo route('admin/news/all'); ?>">News & Items</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/meghna') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/meghna'); ?>">Amader Meghna</a>
+              <a class="nav-link" href="<?php echo route('admin/meghna'); ?>">Meghna History</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/web') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/web/all'); ?>">Web Content</a>
+              <a class="nav-link" href="<?php echo route('admin/web/all'); ?>">Web Contents</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/users') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/users/all'); ?>">Users</a>
@@ -120,11 +120,19 @@
           // Initialize Editor
           tinymce.init({
             selector: '.editor'
-        });
+          });
 
           // Initialize datatable
           $('#dtBasicExample').DataTable();
           $('.dataTables_length').addClass('bs-select');
+
+          // Select tag
+          $('#select_tag').on('change', function() {
+            var tag_area = $("textarea#tags");
+            seleted_tags = $(this).find(":selected").val()+','+tag_area.val();
+            seleted_tags = seleted_tags.replace(/,\s*$/, "");
+            tag_area.val(seleted_tags);
+          });
 
           // Upload Image
           $("#image_uploader").change(function() {

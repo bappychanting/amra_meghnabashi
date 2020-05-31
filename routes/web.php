@@ -12,11 +12,17 @@ return [
 
 	'welcome' => 'HomeController@welcome',
 
-	'meghna' => 'HomeController@aboutMeghna',
+	'meghna/history' => 'HomeController@meghnaHistory',
+
+	'meghna/items' => 'HomeController@meghnaItems',
+
+	'meghna/personalities' => 'HomeController@meghnaPersonalities',
 
 	'members' => 'HomeController@members',
 
 	'members/show' => 'HomeController@showMember',
+
+	'members/join' => 'HomeController@joinMember',
 
 	'projects' => 'HomeController@projects',
 
@@ -77,6 +83,8 @@ return [
 	'admin/members/store' => 'Admin/MemberController@store',
 
 	'admin/members/show' => 'Admin/MemberController@show',
+
+	'admin/members/approve' => 'Admin/MemberController@approveMember',
 
 	'admin/members/donations/add' => 'Admin/MemberController@addDonation',
 

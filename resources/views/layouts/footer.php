@@ -5,7 +5,7 @@
       <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
       <label class="text-muted my-1 mr-2" for="sub_email"><?php echo locale('views', 'subscribe_us'); ?></label>
       <input class="form-control" type="email" name="sub_email" id="sub_email" placeholder="example@example.com" aria-label="email" required>
-      <button class="btn btn-outline-grey btn-md my-2 my-sm-0 ml-3" type="submit">Submit</button>
+      <button class="btn btn-outline-grey btn-md my-2 my-sm-0 ml-3" type="submit"><?php echo locale('views', 'submit'); ?></button>
     </form>
   </div>
 </div>
@@ -40,7 +40,7 @@
         <h5 class="text-uppercase"><?php echo locale('views', 'links'); ?></h5>
         <ul class="list-unstyled">
           <li>
-            <a href="<?php echo route('meghna'); ?>"><?php echo locale('views', 'our_meghna'); ?></a>
+            <a href="<?php echo route('meghna/history'); ?>"><?php echo locale('views', 'our_meghna'); ?></a>
           </li>
           <li>
             <a href="<?php echo route('members'); ?>"><?php echo locale('views', 'members'); ?></a>

@@ -31,11 +31,25 @@ class HomeController extends Controller
         return $this->view('welcome', compact('contents', 'newses', 'members', 'projects'));
     }
 
-    public function aboutMeghna() 
+    public function meghnaHistory() 
     {
         $contents = $this->getContents();
         $meghna = $this->getContents(2);
-        return $this->view('meghna', compact('contents', 'meghna'));
+        return $this->view('meghna.history', compact('contents', 'meghna'));
+    }
+
+    public function meghnaItems() 
+    {
+        $contents = $this->getContents();
+        $items = $this->news->getItems($_GET['type']);
+        return $this->view('meghna.items', compact('contents', 'items'));
+    }
+
+    public function meghnaPersonalities() 
+    {
+        $contents = $this->getContents();
+        $personalities = $this->member->getPersonalities();
+        return $this->view('meghna.personalities', compact('contents', 'personalities'));
     }
 
     public function members() 
@@ -50,6 +64,15 @@ class HomeController extends Controller
         $contents = $this->getContents();
         $member = $this->member->setData($_GET)->getMember();
         return $this->view('members.show', compact('contents', 'member'));
+    }
+
+    public function joinMember() 
+    {
+        $app = $this->config('app');  
+        $_POST['image_path'] = \App\Helpers\Upload::imageUpload($_FILES['member_image'], $app['upload'].'/member_images', 500, 375, true);
+        $db = new \Base\DB;
+        $db->table('members')->data(['name' => $_POST['name'], 'tags' => 'volunteer', 'designation' => 'Volunteer', 'image_path' => $_POST['image_path'], 'details' => json_encode(['email' => $_POST['email'], 'phone' => $_POST['phone'], 'address' => $_POST['address'], 'details' => $_POST['details']]), 'approved' => 0])->create();
+        $this->abort(200, 'Thanks for your submission! You will get back to you asap!');
     }
 
     public function projects() 

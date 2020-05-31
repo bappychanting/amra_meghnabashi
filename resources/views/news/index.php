@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-            <h3 class="mb-3 font-weight-bold dark-grey-text">
+            <h3 class="mb-3 font-weight-bold text-primary">
               <strong><?php echo $news['title']; ?></strong>
             </h3>
             <p class="grey-text"><?php echo strip_tags(substr($news['details'], 0, 150)); ?>...</p>

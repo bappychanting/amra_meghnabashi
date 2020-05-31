@@ -79,6 +79,7 @@ return [
 							`designation` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
 							`image_path` varchar(255) COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   							`details` longtext COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+							`approved` tinyint(1) NOT NULL DEFAULT '1',
 							`created_at` timestamp NULL DEFAULT NULL,
 							`updated_at` timestamp NULL DEFAULT NULL,
 							`deleted_at` timestamp NULL DEFAULT NULL,
