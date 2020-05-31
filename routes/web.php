@@ -14,6 +14,10 @@ return [
 
 	'meghna' => 'HomeController@aboutMeghna',
 
+	'meghna/items' => 'HomeController@meghnaItems',
+
+	'meghna/personality' => 'HomeController@meghnaPersonality',
+
 	'members' => 'HomeController@members',
 
 	'members/show' => 'HomeController@showMember',

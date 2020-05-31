@@ -24,7 +24,7 @@ return [
     'meghna_madrasa' => 'মাদ্রাসাসমূহ',
     'meghna_market' => 'হাট বাজার',
     'meghna_monument' => 'ঐতিহাসিক স্থাপনা',
-    'meghna_legend' => 'মেঘনার বিশিষ্টজন',
+    'meghna_personality' => 'মেঘনার বিশিষ্টজন',
     'our_members' => 'আমাদের সদস্যগণ',
     'see_all_members' => 'সমস্ত সদস্যদের দেখুন',
     'volunteers' => 'সেচ্ছাসেবকবৃন্দ',
