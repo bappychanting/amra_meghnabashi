@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'Members || '.title(); ?>
+<?php echo 'Members || '.locale('views', 'be_volunteer').' || '.title(); ?>
 
 <?php endblock() ?>
 
