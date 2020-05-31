@@ -41,7 +41,8 @@ class HomeController extends Controller
     public function meghnaItems() 
     {
         $contents = $this->getContents();
-        return $this->view('meghna.items', compact('contents'));
+        $items = $this->news->getItems($_GET['type']);
+        return $this->view('meghna.items', compact('contents', 'items'));
     }
 
     public function meghnaPersonalities() 

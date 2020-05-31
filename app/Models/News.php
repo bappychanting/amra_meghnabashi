@@ -100,6 +100,12 @@ class News extends Model{
         return array('news' => $news, 'pagination' => $pagination);
     }
 
+        // Function for getting items
+    public function getItems($tag) {   
+        $items = $this->db->table('news_view')->where('tags', 'LIKE', '%'.$tag.'%')->orderBy('title')->limit(2000)->read();
+        return $items;
+    }
+
         // Function for all news
     public function getAllNewses() {   
         $news = $this->db->table('news_view')->orderBy('created_at', 'desc')->limit(2000)->read();

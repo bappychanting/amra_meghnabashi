@@ -47,12 +47,6 @@
         </div>
       </div>
 
-      <div class="form-label-group my-3">
-        <label>Tags</label>
-        <input type="text" name="tags" class="form-control" placeholder="important, news, update etc." required>
-        <small>Use comma to seperate tags</small>
-      </div>
-
       <div class="row">
         <div class="col-sm-10">
           <div class="input-group my-4">
