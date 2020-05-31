@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'All News || Edit News || '.title(); ?>
+<?php echo 'All News & Items || Edit News || '.title(); ?>
 
 <?php endblock() ?>
 
@@ -12,7 +12,7 @@
   <div class="card-header">Admin Dashboard</div>
   <div class="card-body">
 
-    <h5 class="text-center my-3 text-muted"><i class="fas fa-user-edit pr-2"></i>Edit Details</h5>
+    <h5 class="text-center my-3 text-muted"><i class="fas fa-user-edit pr-2"></i>Edit Item</h5>
 
     <form method="POST" action="<?php echo route('admin/news/update'); ?>"> 
 
@@ -35,7 +35,7 @@
           <div class="input-group my-4">
             <div class="custom-file">
               <input type="file" class="custom-file-input" id="image_uploader" aria-describedby="inputGroupFileAddon01">
-              <label class="custom-file-label" for="image_uploader">News Image</label>
+              <label class="custom-file-label" for="image_uploader">Item Image</label>
             </div>
           </div>
         </div>

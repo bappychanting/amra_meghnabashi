@@ -25,7 +25,7 @@
 
       <div class="form-label-group my-3">
         <label>Tags</label>
-        <input type="text" name="tags" class="form-control" placeholder="school, mosque etc." required>
+        <textarea rows="1" name="tags" class="form-control" placeholder="jobs, scholarships etc." required></textarea>
         <small>Use comma to seperate tags</small>
       </div>
 

@@ -24,7 +24,7 @@
       }
     } 
     ?>
-    <h5 class="text-center my-3 text-muted"><i class="fas fa-edit pr-2"></i>Update Web Content</h5>
+    <h5 class="text-center my-3 text-muted"><i class="fas fa-edit pr-2"></i>Update Web Contents</h5>
 
     <form method="POST" action="<?php echo route('admin/web/update'); ?>"> 
 

@@ -22,12 +22,13 @@
 
       <div class="form-label-group my-3">
         <label>Name</label>
-        <input type="text" name="name" value="<?php echo $project['name']; ?>" maxlength="50" minlength="2" class="form-control">
+        <input type="text" name="name" value="<?php echo $project['name']; ?>" maxlength="50" minlength="2" class="form-control" required>
       </div>
 
       <div class="form-label-group my-3">
         <label>Tags</label>
-        <input type="text" name="tags" value="<?php echo $project['tags']; ?>" class="form-control">
+        <textarea rows="1" name="tags" class="form-control" placeholder="jobs, scholarships etc." required><?php echo $project['tags']; ?></textarea>
+        <small>Use comma to seperate tags</small>
       </div>
 
       <div class="row">
