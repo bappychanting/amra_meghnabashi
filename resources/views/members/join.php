@@ -17,6 +17,7 @@
 
 <section class="container my-3 py-3">
 	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h1>
+  <h4 class="my-3 font-weight-bold text-primary"><?php echo locale('views', 'be_volunteer'); ?></h4>
 	
 </section>
 
