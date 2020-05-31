@@ -24,7 +24,7 @@
 			}
 		} 
 		?>
-		<h5 class="text-center my-3 text-muted"><i class="fas fa-edit pr-2"></i>Update Meghna History</h5>
+		<h5 class="text-center my-3 text-muted"><i class="fas fa-edit pr-2"></i>Update About Meghna</h5>
 
 		<form method="POST" action="<?php echo route('admin/web/update'); ?>"> 
 
