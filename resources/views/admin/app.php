@@ -120,11 +120,18 @@
           // Initialize Editor
           tinymce.init({
             selector: '.editor'
-        });
+          });
 
           // Initialize datatable
           $('#dtBasicExample').DataTable();
           $('.dataTables_length').addClass('bs-select');
+
+          // Select tag
+          $('#select_tag').on('change', function() {
+            var tag_area = $("textarea#tags");
+            old_val = tag_area.val();
+            tag_area.val(old_val+$(this).find(":selected").val()+',');
+          });
 
           // Upload Image
           $("#image_uploader").change(function() {

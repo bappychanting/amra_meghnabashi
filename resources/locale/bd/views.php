@@ -29,6 +29,7 @@ return [
     'see_all_members' => 'সমস্ত সদস্যদের দেখুন',
     'volunteers' => 'সেচ্ছাসেবকবৃন্দ',
     'admins' => 'এডমিনবৃন্দ',
+    'personalities' => 'বিশিষ্টজন',
     'vips' => 'সুধীমন্ডলী',
     'advisers' => 'উপদেষ্টামন্ডলী',
     'be_volunteer' => 'স্বেচ্ছাসেবক হোন',
