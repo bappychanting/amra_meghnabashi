@@ -25,10 +25,24 @@
         <input type="text" name="name" value="<?php echo $member['name']; ?>" class="form-control" maxlength="50" minlength="2" required>
       </div>
 
-      <div class="form-label-group my-3">
-        <label>Tags</label>
-        <input type="text" name="tags" value="<?php echo $member['tags']; ?>" class="form-control" required>
-        <small>Tags must be included to seperate <span class="red-text">adviser, admin, personality, vip and volunteer</span> category. Use comma to seperate tags</small>
+      <div class="form-row">
+        <div class="col-3">
+          <label for="select_tag">Select Category Tag</label>
+          <select class="form-control" id="select_tag">
+            <option value="adviser"><?php echo locale('views', 'advisers'); ?></option>
+            <option value="admin"><?php echo locale('views', 'admins'); ?></option>
+            <option value="personality"><?php echo locale('views', 'personalities'); ?></option>
+            <option value="vip"><?php echo locale('views', 'vips'); ?></option>
+            <option value="volunteer"><?php echo locale('views', 'volunteers'); ?></option>
+          </select>
+        </div>
+        <div class="col-9">
+          <label for="tags">Add More Tags</label>
+          <textarea rows="1" name="tags" class="form-control" id="tags" required><?php echo $member['tags']; ?></textarea>
+        </div>
+        <div class="col-12">
+          <small>Tags must be included to seperate <span class="red-text">adviser, admin, personality, vip and volunteer</span> category. Use comma to seperate tags!</small>
+        </div>
       </div>
 
       <div class="form-label-group my-3">

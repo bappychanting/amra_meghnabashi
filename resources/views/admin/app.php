@@ -130,7 +130,7 @@
           $('#select_tag').on('change', function() {
             var tag_area = $("textarea#tags");
             old_val = tag_area.val();
-            tag_area.val(old_val+$(this).find(":selected").val()+',');
+            tag_area.val($(this).find(":selected").val()+','+old_val);
           });
 
           // Upload Image

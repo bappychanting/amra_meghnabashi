@@ -36,10 +36,10 @@
         </div>
         <div class="col-9">
           <label for="tags">Add More Tags</label>
-          <textarea rows="1" name="tags" class="form-control" id="tags" placeholder="admin, vip etc." required></textarea>
+          <textarea rows="1" name="tags" class="form-control" id="tags" required></textarea>
         </div>
         <div class="col-12">
-          <small>Tags must be included to seperate <span class="red-text">adviser, admin, personality, vip and volunteer</span> category. Use comma to seperate tags</small>
+          <small>Tags must be included to seperate <span class="red-text">adviser, admin, personality, vip and volunteer</span> category. Use comma to seperate tags!</small>
         </div>
       </div>
 
