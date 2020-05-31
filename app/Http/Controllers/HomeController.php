@@ -72,6 +72,11 @@ class HomeController extends Controller
         return $this->view('members.join', compact('contents'));
     }
 
+    public function submitMember() 
+    {
+       
+    }
+
     public function projects() 
     {
         $contents = $this->getContents();
