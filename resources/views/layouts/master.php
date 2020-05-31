@@ -82,13 +82,13 @@
 	            itemsPerPage : 3,
 	            itemSelector : 'div.result:visible',
 	            pagingControlsContainer : '#pagingControls',
-	            showingInfoSelector : '#showingInfo',
 	            css: {
-	                btnNumberingClass: 'btn btn-sm btn-success',
-	                btnFirstClass: 'btn btn-sm btn-success',
-	                btnLastClass: 'btn btn-sm btn-success',
-	                btnNextClass: 'btn btn-sm btn-success',
-	                btnPreviousClass: 'btn btn-sm btn-success'
+	                btnNumberingClass: 'btn btn-sm btn-white waves-effect',
+	                btnActiveClass:"btn btn-sm btn-primary waves-effect",
+	                btnFirstClass: 'btn btn-sm btn-white waves-effect',
+	                btnLastClass: 'btn btn-sm btn-white waves-effect',
+	                btnNextClass: 'btn btn-sm btn-white waves-effect',
+	                btnPreviousClass: 'btn btn-sm btn-white waves-effect'
 	            }
 	        });
 	        flexiblePagination.getController().onPageClick = function(pageNum, e){
