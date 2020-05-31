@@ -158,10 +158,10 @@
 	<p class="h3 text-info font-weight-bold my-4 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></p>
 	<div class="row">
 	<?php $i=0; foreach ($newses['news'] as $news) { ?>
-		<div class="col-sm-4 mb-3">
+		<div class="col-sm-3 mb-3">
 			<a href="<?php echo route('news/show', ['id' => $news['id']]); ?>" class="link-unstyled">
 				<div class="card">
-					<img class="card-img-top" src="<?php echo $news['image_path'] ?>" alt="<?php echo $news['title'] ?>" height='150px'>
+					<img class="card-img-top" src="<?php echo $news['image_path'] ?>" alt="<?php echo $news['title'] ?>" height='120px'>
 					<div class="card-body">
 						<h6 class="card-title text-primary"><?php echo substr($news['title'], 0, 70); ?>..</h6>
 						<span class="card-text"><?php echo strip_tags(substr($news['details'], 0, 100)); ?>...</span>
@@ -169,7 +169,7 @@
 				</div>
 			</a>
 		</div>
-		<?php $i++; if($i==3) break; } ?>
+		<?php $i++; if($i==4) break; } ?>
 	</div>
 	<div class="row justify-content-center my-3">
 		<a class="btn btn-warning btn-md" href="<?php echo route('news'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_news'); ?></a>
