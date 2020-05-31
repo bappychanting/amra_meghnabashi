@@ -17,7 +17,7 @@ return [
     'reached' => 'পৌঁছানো',
     'job_scholarship' => 'চাকরী ও বৃত্তি',
     'our_meghna' => 'আমাদের মেঘনা',
-    'meghna_history' => 'মেঘনার ইতিহাস',
+    'about_meghna' => 'একনজরে মেঘনা',
     'meghna_school' => 'বিদ্যালয়সমূহ',
     'meghna_college' => 'কলেজসমূহ',
     'meghna_mosque' => 'মসজিদসমূহ',
