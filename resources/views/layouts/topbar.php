@@ -30,7 +30,7 @@
             <?php echo locale('views', 'our_meghna'); echo route_is('members') ? '<span class="sr-only">(current)</span>' : '' ; ?>
           </a>
           <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="<?php echo route('meghna'); ?>"><?php echo locale('views', 'meghna_history'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna/history'); ?>"><?php echo locale('views', 'meghna_history'); ?></a>
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'school']); ?>"><?php echo locale('views', 'meghna_school'); ?></a>
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'college']); ?>"><?php echo locale('views', 'meghna_college'); ?></a>
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'mosque']); ?>"><?php echo locale('views', 'meghna_mosque'); ?></a>

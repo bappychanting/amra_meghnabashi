@@ -31,25 +31,25 @@ class HomeController extends Controller
         return $this->view('welcome', compact('contents', 'newses', 'members', 'projects'));
     }
 
-    public function aboutMeghna() 
+    public function meghnaHistory() 
     {
         $contents = $this->getContents();
         $meghna = $this->getContents(2);
-        return $this->view('meghna', compact('contents', 'meghna'));
+        return $this->view('meghna.history', compact('contents', 'meghna'));
     }
 
     public function meghnaItems() 
     {
         $contents = $this->getContents();
         $meghna = $this->getContents(2);
-        return $this->view('meghna', compact('contents', 'meghna'));
+        return $this->view('meghna.items', compact('contents', 'meghna'));
     }
 
     public function meghnaPersonalities() 
     {
         $contents = $this->getContents();
         $meghna = $this->getContents(2);
-        return $this->view('meghna', compact('contents', 'meghna'));
+        return $this->view('meghna.personalities', compact('contents', 'meghna'));
     }
 
     public function members() 

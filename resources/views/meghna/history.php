@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo title().' || Amader Meghna'; ?>
+<?php echo title().' || Amader Meghna || '.locale('views', 'meghna_history'); ?>
 
 <?php endblock() ?>
 

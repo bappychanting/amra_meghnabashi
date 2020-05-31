@@ -12,7 +12,7 @@ return [
 
 	'welcome' => 'HomeController@welcome',
 
-	'meghna' => 'HomeController@aboutMeghna',
+	'meghna/history' => 'HomeController@meghnaHistory',
 
 	'meghna/items' => 'HomeController@meghnaItems',
 
