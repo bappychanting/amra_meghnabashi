@@ -129,8 +129,9 @@
           // Select tag
           $('#select_tag').on('change', function() {
             var tag_area = $("textarea#tags");
-            old_val = tag_area.val();
-            tag_area.val($(this).find(":selected").val()+','+old_val);
+            seleted_tags = $(this).find(":selected").val()+','+tag_area.val();
+            seleted_tags = seleted_tags.replace(/,\s*$/, "");
+            tag_area.val(seleted_tags);
           });
 
           // Upload Image
