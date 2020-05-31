@@ -27,7 +27,7 @@
 
       <div class="form-row">
         <div class="col-3">
-          <label for="select_tag">Select Category Tag</label>
+          <label for="select_tag">Update Category Tag</label>
           <select class="form-control" id="select_tag">
             <option value="adviser"><?php echo locale('views', 'advisers'); ?></option>
             <option value="admin"><?php echo locale('views', 'admins'); ?></option>
@@ -37,7 +37,7 @@
           </select>
         </div>
         <div class="col-9">
-          <label for="tags">Add More Tags</label>
+          <label for="tags">Update Tags</label>
           <textarea rows="1" name="tags" class="form-control" id="tags" required><?php echo $member['tags']; ?></textarea>
         </div>
         <div class="col-12">

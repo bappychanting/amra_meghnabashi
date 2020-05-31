@@ -25,6 +25,7 @@ return [
     'meghna_market' => 'হাট বাজার',
     'meghna_monument' => 'ঐতিহাসিক স্থাপনা',
     'meghna_personality' => 'মেঘনার বিশিষ্টজন',
+    'search_something' => 'কিছু অনুসন্ধান করুন',
     'our_members' => 'আমাদের সদস্যগণ',
     'see_all_members' => 'সমস্ত সদস্যদের দেখুন',
     'volunteers' => 'সেচ্ছাসেবকবৃন্দ',

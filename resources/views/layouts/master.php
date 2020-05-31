@@ -79,8 +79,21 @@
 			});
 			// Initialize Pagination
 			var flexiblePagination = $('.content_paginator').flexiblePagination({
-				// options
-			});
+	            itemsPerPage : 3,
+	            itemSelector : 'div.result:visible',
+	            pagingControlsContainer : '#pagingControls',
+	            showingInfoSelector : '#showingInfo',
+	            css: {
+	                btnNumberingClass: 'btn btn-sm btn-success',
+	                btnFirstClass: 'btn btn-sm btn-success',
+	                btnLastClass: 'btn btn-sm btn-success',
+	                btnNextClass: 'btn btn-sm btn-success',
+	                btnPreviousClass: 'btn btn-sm btn-success'
+	            }
+	        });
+	        flexiblePagination.getController().onPageClick = function(pageNum, e){
+	            // console.log('You Clicked Page: '+pageNum)
+	        };
 
 			// Initialize Social Share
 			$("#social_share").jsSocials({

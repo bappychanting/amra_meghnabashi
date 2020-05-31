@@ -41,15 +41,14 @@ class HomeController extends Controller
     public function meghnaItems() 
     {
         $contents = $this->getContents();
-        $meghna = $this->getContents(2);
-        return $this->view('meghna.items', compact('contents', 'meghna'));
+        return $this->view('meghna.items', compact('contents'));
     }
 
     public function meghnaPersonalities() 
     {
         $contents = $this->getContents();
-        $meghna = $this->getContents(2);
-        return $this->view('meghna.personalities', compact('contents', 'meghna'));
+        $personalities = $this->member->getPersonalities();
+        return $this->view('meghna.personalities', compact('contents', 'personalities'));
     }
 
     public function members() 
