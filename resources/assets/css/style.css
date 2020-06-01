@@ -21,6 +21,32 @@
   background-color: #ffffe6;
 }
 
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > a {
+  color: #6c757d!important;
+}
+
+.dropdown-submenu > a:hover {
+  background-color: #ffffe6;
+}
+
+.dropdown-submenu a::after {
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 6px;
+  top: 1.2em;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: .1rem;
+  margin-right: .1rem;
+}
+
 a.link-unstyled,
 a.link-unstyled:hover {
   color: inherit;

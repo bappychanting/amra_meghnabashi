@@ -51,9 +51,9 @@
             <li class="nav-item <?php echo route_is('admin/news') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/news/all'); ?>">News & Items</a>
             </li>
-            <li class="nav-item <?php echo route_is('admin/meghna') ? 'active' : '' ?>">
+            <!-- <li class="nav-item <?php echo route_is('admin/meghna') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/meghna'); ?>">About Meghna</a>
-            </li>
+            </li> -->
             <li class="nav-item <?php echo route_is('admin/web') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/web/all'); ?>">Web Contents</a>
             </li>

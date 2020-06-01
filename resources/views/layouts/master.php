@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<?php startblock('meta_tags') ?><?php endblock() ?>
 
 	<!-- Favicon-->
@@ -36,11 +36,11 @@
 <body>
 
 	<?php 
-		use App\Models\Content; 
-		$content = new Content;
-		$content->setId(1);
-		$get_content = $content->getWebContent();
-		$contents = json_decode($get_content['content'], 'true');
+	use App\Models\Content; 
+	$content = new Content;
+	$content->setId(1);
+	$get_content = $content->getWebContent();
+	$contents = json_decode($get_content['content'], 'true');
 	?>
 
 	<!-- Topbar -->
@@ -62,8 +62,8 @@
 	<?php echo script('plugins/jssocials/jssocials.min.js'); ?>
 	<!-- Carousel -->
 	<?php echo script('plugins/owlcarousel/js/owl.carousel.min.js'); ?>
-    <!-- Count to JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js" referrerpolicy="origin"></script>
+	<!-- Count to JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js" referrerpolicy="origin"></script>
 	<!-- Paginator Javascript -->
 	<?php echo script('plugins/paginator/flexible.pagination.js'); ?>
 	<!-- MDB core JavaScript -->
@@ -83,55 +83,68 @@
 			// Initialize Social Share
 			$("#social_share").jsSocials({
 				shares: [
-					{
-					    share: "facebook",
-					    logo: "fab fa-facebook-f",
-					    label: "Share",
-					},
+				{
+					share: "facebook",
+					logo: "fab fa-facebook-f",
+					label: "Share",
+				},
 				],
 			});
 
 			// Initialize Carousel
-  			$(".owl-carousel").owlCarousel({
-			    loop:true,
-			    nav:false,
-			    margin:30,
-			    autoplay:true,
-			    autoplayTimeout:1500,
-			    autoplayHoverPause:true,
-			    responsive:{
-			        0:{
-			            items:2,
-			        },
-			        600:{
-			            items:4,
-			        },
-			        1000:{
-			            items:6,
-			        }
-			    }
+			$(".owl-carousel").owlCarousel({
+				loop:true,
+				nav:false,
+				margin:30,
+				autoplay:true,
+				autoplayTimeout:1500,
+				autoplayHoverPause:true,
+				responsive:{
+					0:{
+						items:2,
+					},
+					600:{
+						items:4,
+					},
+					1000:{
+						items:6,
+					}
+				}
 			});
 
 			// Initialize Pagination
 			var flexiblePagination = $('.content_paginator').flexiblePagination({
-	            itemsPerPage : 12,
-	            itemSelector : 'div.result:visible',
-	            pagingControlsContainer : '#pagingControls',
+				itemsPerPage : 12,
+				itemSelector : 'div.result:visible',
+				pagingControlsContainer : '#pagingControls',
 	            // showingInfoSelector : '#showingInfo',
 	            css: {
-	                btnNumberingClass: 'btn btn-sm btn-white waves-effect',
-	                btnActiveClass:"btn btn-sm btn-primary waves-effect",
-	                btnFirstClass: 'btn btn-sm btn-white waves-effect',
-	                btnLastClass: 'btn btn-sm btn-white waves-effect',
-	                btnNextClass: 'btn btn-sm btn-white waves-effect',
-	                btnPreviousClass: 'btn btn-sm btn-white waves-effect'
+	            	btnNumberingClass: 'btn btn-sm btn-white waves-effect',
+	            	btnActiveClass:"btn btn-sm btn-primary waves-effect",
+	            	btnFirstClass: 'btn btn-sm btn-white waves-effect',
+	            	btnLastClass: 'btn btn-sm btn-white waves-effect',
+	            	btnNextClass: 'btn btn-sm btn-white waves-effect',
+	            	btnPreviousClass: 'btn btn-sm btn-white waves-effect'
 	            }
 	        });
-	        flexiblePagination.getController().onPageClick = function(pageNum, e){
+			flexiblePagination.getController().onPageClick = function(pageNum, e){
 	            // console.log('You Clicked Page: '+pageNum)
 	        };
+
+	        // Control Submenu
+	        $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+	        	if (!$(this).next().hasClass('show')) {
+	        		$(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+	        	}
+	        	var $subMenu = $(this).next('.dropdown-menu');
+	        	$subMenu.toggleClass('show');
+	        	$(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+	        		$('.dropdown-submenu .show').removeClass('show');
+	        	});
+	        	return false;
+	        });
 	        
-		});
+	    });
 	</script>
 
 </body>
