@@ -69,9 +69,9 @@
 <div class="modal fade" id="join_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header blue lighten-1 text-white">
         <h4 class="modal-title w-100" id="myModalLabel"><?php echo locale('views', 'be_volunteer'); ?></h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -116,7 +116,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-white btn-sm" data-dismiss="modal"><?php echo locale('views', 'close'); ?></button>
+        <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal"><?php echo locale('views', 'close'); ?></button>
       </div>
     </div>
   </div>
