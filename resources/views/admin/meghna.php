@@ -44,8 +44,8 @@
 
 			<div class="form-label-group my-3">
 				<label>SEO Keywords</label>
-				<input type="text" name="content[keywords]" value="<?php echo $content['keywords']; ?>" class="form-control" maxlength="50" minlength="2" required>
-        		<small>Use comma to seperate keywords</small>
+				<textarea rows="1" name="content[keywords]" class="form-control" required><?php echo $content['keywords']; ?></textarea>
+				<small>Use comma to seperate keywords</small>
 			</div>
 
 			<div class="form-label-group my-3">
