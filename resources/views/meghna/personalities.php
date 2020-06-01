@@ -20,16 +20,19 @@
 	<h4 class="my-3 font-weight-bold text-primary"><?php echo locale('views', 'meghna_personality'); ?></h4>
 
 	<input class="searchBox form-control mb-4"  class="form-control" placeholder="<?php echo locale('views', 'search_something'); ?>">
-	<div class="content_paginator">
+	<div class="row content_paginator">
 		<?php foreach ($personalities as $personality) { ?>
-			<div class="result media my-3">
-				<?php echo image($personality['image_path'], $personality['name'], ['class'=>'rounded-circle mr-3', 'height'=>'100px', 'width' => '100px']); ?>
-				<div class="media-body">
-					<h5 class="mt-0 font-weight-bold"><?php echo $personality['name']; ?></h5>
-					<?php echo strip_tags(substr($personality['details'], 0, 500)); ?>.....
-					<br><a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $personality['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
-					<hr>
+			<div class="result col-sm-4 mb-3">
+				<div class="media">
+					<?php echo image($personality['image_path'], $personality['name'], ['class'=>'rounded-circle mr-3', 'height'=>'100px', 'width' => '100px']); ?>
+					<div class="media-body">
+						<h5 class="mt-0 font-weight-bold"><?php echo $personality['name']; ?></h5>
+						<i class="far fa-id-card pr-2"></i><?php echo $personality['designation']; ?>
+						<span style="display: none;"><?php echo strip_tags($personality['details']); ?></span>
+						<br><a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $personality['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+					</div>
 				</div>
+				<hr>
 			</div>
 		<?php } ?>
 	</div>
