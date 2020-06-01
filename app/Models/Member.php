@@ -107,9 +107,9 @@ class Member extends Model{
     return array('volunteers' => $volunteers, 'admins' => $admins, 'vips' => $vips, 'advisers' => $advisers);
   }
 
-  public function getPersonalities(){    
-    $personalities = $this->db->table('members')->where('tags', 'LIKE', '%personality%')->orderBy('name')->limit(2000)->read();
-    return $personalities;
+  public function getPeople($tag='personality'){    
+    $people = $this->db->table('members')->where('tags', 'LIKE', '%'.$tag.'%')->orderBy('name')->limit(2000)->read();
+    return $people;
   }
 
   public function getMember(){    

@@ -20,32 +20,24 @@
 	<h4 class="my-3 font-weight-bold text-primary"><?php echo locale('views', 'meghna_'.$_GET['type']); ?></h4>
 
 	<input class="searchBox form-control mb-4"  class="form-control" placeholder="<?php echo locale('views', 'search_something'); ?>">
-	<div class="content_paginator">
-		<?php foreach ($items as $item) { ?>
-			<div class="result">
-				<div class="row mt-3">
-					<div class="col-lg-5 col-xl-4 mb-4">
-						<div class="view overlay rounded z-depth-1">
-							<img src="<?php echo $item['image_path']; ?>" class="img-fluid" alt="<?php echo $item['title']; ?>">
-							<a href="<?php echo $item['image_path']; ?>" target="_blank"><div class="mask rgba-white-slight"></div></a>
-						</div>
-					</div>
-					<div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
-						<h3 class="mb-3 font-weight-bold text-primary">
-							<strong><?php echo $item['title']; ?></strong>
-						</h3>
-						<p class="grey-text"><?php echo strip_tags(substr($item['details'], 0, 150)); ?>...</p>
-						<a href="<?php echo route('news/show', ['id' => $item['id']]); ?>" class="btn btn-warning btn-md"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+	<div class="row content_paginator">
+		<?php foreach ($people as $ppl) { ?>
+			<div class="result col-sm-4 mb-3">
+				<div class="media">
+					<?php echo image($ppl['image_path'], $ppl['name'], ['class'=>'rounded-circle mr-3', 'height'=>'100px', 'width' => '100px']); ?>
+					<div class="media-body">
+						<h5 class="mt-0 font-weight-bold"><?php echo $ppl['name']; ?></h5>
+						<i class="far fa-id-card pr-2"></i><?php echo $ppl['designation']; ?>
+						<span style="display: none;"><?php echo strip_tags($ppl['details']); ?></span>
+						<br><a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $ppl['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 					</div>
 				</div>
-				<hr class="mb-5">
+				<hr>
 			</div>
 		<?php } ?>
 	</div>
 	<div id="pagingControls"></div>
 	<!-- <div id="showingInfo" class="well my-3"></div> -->
-
-	
 </section>
 
 <?php endblock() ?>

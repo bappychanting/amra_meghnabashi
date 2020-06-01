@@ -31,13 +31,20 @@
           </a>
           <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="<?php echo route('meghna/about'); ?>"><?php echo locale('views', 'about_meghna'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'bridge']); ?>"><?php echo locale('views', 'meghna_bridge'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'road']); ?>"><?php echo locale('views', 'meghna_road'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'river']); ?>"><?php echo locale('views', 'meghna_river'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'education']); ?>"><?php echo locale('views', 'meghna_education'); ?></a>
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'school']); ?>"><?php echo locale('views', 'meghna_school'); ?></a>
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'college']); ?>"><?php echo locale('views', 'meghna_college'); ?></a>
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'mosque']); ?>"><?php echo locale('views', 'meghna_mosque'); ?></a>
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'madrasa']); ?>"><?php echo locale('views', 'meghna_madrasa'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'temple']); ?>"><?php echo locale('views', 'meghna_temple'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'sports']); ?>"><?php echo locale('views', 'meghna_sports'); ?></a>
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'market']); ?>"><?php echo locale('views', 'meghna_market'); ?></a>
             <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'monument']); ?>"><?php echo locale('views', 'meghna_monument'); ?></a>
-            <a class="dropdown-item" href="<?php echo route('meghna/personalities'); ?>"><?php echo locale('views', 'meghna_personality'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna/people', ['type' => 'fighter']); ?>"><?php echo locale('views', 'meghna_fighter'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('meghna/people', ['type' => 'personality']); ?>"><?php echo locale('views', 'meghna_personality'); ?></a>
           </div>
         </li>
         <!-- Members Dropdown -->
