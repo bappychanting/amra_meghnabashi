@@ -24,7 +24,6 @@
     </a>
     <p class="font-weight-bold"><i class="far fa-id-card pr-2"></i><?php echo $member['designation']; ?></p>
     <?php echo $member['details']; ?>
-	<a class="btn btn-warning btn-sm my-3" href="<?php echo route('members') ?>"><i class="fas fa-arrow-left pr-2"></i><?php echo locale('views', 'go_back'); ?></a>
 	
 </section>
 

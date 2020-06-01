@@ -22,7 +22,7 @@ return [
     'meghna_college' => 'কলেজ',
     'meghna_mosque' => 'মসজিদ',
     'meghna_madrasa' => 'মাদ্রাসা',
-    'meghna_market' => 'হাট বাজার',
+    'meghna_market' => 'হাটবাজার',
     'meghna_monument' => 'ঐতিহাসিক স্থাপনা',
     'meghna_personality' => 'মেঘনার বিশিষ্টজন',
     'search_something' => 'অনুসন্ধান করুন',

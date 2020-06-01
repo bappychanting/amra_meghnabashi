@@ -32,7 +32,6 @@
     </div>
 
 	<?php echo $news['details']; ?>
-	<a class="btn btn-warning btn-sm my-3" href="<?php echo route('news') ?>"><i class="fas fa-arrow-left pr-2"></i><?php echo locale('views', 'go_back'); ?></a>
 	
 </section>
 
