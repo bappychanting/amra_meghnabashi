@@ -131,6 +131,18 @@
             tag_area.val(seleted_tags);
           });
 
+          // Show Video
+          $(".show-video").on("click", function() {
+            $("#youtube-video-title").text($(this).data('title'));
+            $('#youtube-video-iframe').attr('src', $(this).data('youtube'));
+            $('#show_video_modal').modal('show');
+          });
+
+          $('#show_video_modal').on('hidden.bs.modal', function () {
+            $("#youtube-video-title").empty();
+            $('#youtube-video-iframe').attr('src', 'javascript:void(0);');
+          });
+
           // Upload Image
           $("#image_uploader").change(function() {
               var reader = new FileReader();
