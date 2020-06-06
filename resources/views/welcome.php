@@ -32,7 +32,8 @@
 <!-- #END# Intro -->
 
 <!-- Our Achievements -->
-<section class='grey lighten-3 py-3'>
+<!-- <section class='grey lighten-3 py-3'> -->
+<section class='yellow lighten-4 py-3'>
 	<div class="container">
 		<div class="row features-small wow fadeIn text-center">
 			<div class="col-xl-3 col-lg-6">
@@ -85,13 +86,13 @@
 	<ul class="pagination-sm content-paginate"></ul>
 	<p class="h3 text-info font-weight-bold my-3 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></p>
 	<div class="owl-carousel">
-		<?php $i=0; foreach ($members as $member) { ?>
+		<?php $i=0; foreach ($members as $member) { if((strpos($member['tags'], 'adviser') !== false) || (strpos($member['tags'], 'vip') !== false) || (strpos($member['tags'], 'admin') !== false) || (strpos($member['tags'], 'volunteer') !== false)){ ?>
 			<div>
 				<a href="<?php echo route('members/show', ['id' => $member['id']]); ?>" title="<?php echo $member['name']; ?>" class="link-unstyled">
 					<?php echo image($member['image_path'], $member['name'], ['class'=>'rounded-circle mt-3', 'height'=>'150px']); ?>
 				</a>
 			</div>
-		<?php $i++; if($i==50) break; } ?>
+		<?php $i++; if($i==50) break; } } ?>
 	</div>
 	<div class="row justify-content-center my-3">
 		<a class="btn btn-warning btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>
@@ -136,7 +137,7 @@
 				<div class="card">
 					<img class="card-img-top" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>" height='120px'>
 					<div class="card-body">
-						<h6 class="card-title text-primary"><?php echo $project['name']; ?></h6>
+						<h6 class="card-title text-primary"><?php echo substr($project['name'], 0, 70); ?>..</h6>
 						<span class="card-text"><?php echo substr(strip_tags($project['details']), 0, 80); ?>...</span>
 					</div>
 				</div>
