@@ -25,9 +25,9 @@ class HomeController extends Controller
     public function welcome() 
     {
         $contents = $this->getContents();
-        $newses = $this->news->getNewses();
-        $members = $this->member->getMembersByCategory();
         $projects = $this->project->getProjects();
+        $newses = $this->news->getItemsPeg('news');
+        $members = $this->member->getMembersByCategory();
         return $this->view('welcome', compact('contents', 'newses', 'members', 'projects'));
     }
 
@@ -106,7 +106,7 @@ class HomeController extends Controller
     public function news() 
     {
         $contents = $this->getContents();
-        $newses = $this->news->getNewses();
+        $newses = $this->news->getItemsPeg($_GET['type']);
         return $this->view('news.index', compact('contents', 'newses'));
     }
 

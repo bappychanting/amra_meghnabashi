@@ -58,8 +58,8 @@ return [
 
         // gallery
     'gallery' => 'গ্যাল্যারি',
-    'photo_gallery' => 'ছবি গ্যাল্যারি',
-    'video_gallery' => 'ভিডিও গ্যাল্যারি',
+    'gallery_photo' => 'ছবি গ্যাল্যারি',
+    'gallery_video' => 'ভিডিও গ্যাল্যারি',
 
         // Members
     'members' => 'সদস্যগণ',

@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'News || '.title(); ?>
+<?php echo title().' || '.locale('views', 'news').' || '.locale('views', $_GET['type']); ?>
 
 <?php endblock() ?>
 
@@ -17,6 +17,7 @@
 
 <section class="container my-3 py-3">
 	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></h1>
+  <h4 class="my-3 font-weight-bold text-primary"><?php echo locale('views', $_GET['type']); ?></h4>
 
 	<?php foreach ($newses['news'] as $news) { ?>
 

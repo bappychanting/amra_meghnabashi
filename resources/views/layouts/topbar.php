@@ -116,8 +116,8 @@
             <?php echo locale('views', 'gallery'); echo route_is('gallery') ? '<span class="sr-only">(current)</span>' : '' ; ?>
           </a>
           <div class="dropdown-menu dropdown-primary" aria-labelledby="galleryDropdownMenuLink">
-            <a class="dropdown-item" href="<?php echo route('gallery', ['type' => 'photo']); ?>"><?php echo locale('views', 'photo_gallery'); ?></a>
-            <a class="dropdown-item" href="<?php echo route('gallery', ['type' => 'video']); ?>"><?php echo locale('views', 'video_gallery'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('gallery', ['type' => 'photo']); ?>"><?php echo locale('views', 'gallery_photo'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('gallery', ['type' => 'video']); ?>"><?php echo locale('views', 'gallery_video'); ?></a>
           </div>
         </li>
 
