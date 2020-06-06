@@ -121,7 +121,7 @@
 				<div class="carousel-caption">
 					<a href="<?php echo route('projects/show', ['id' => $project['id']]); ?>" class="link-unstyled">
 						<h3 class="h3-responsive"><?php echo $project['name']; ?></h3>
-						<p><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</p>
+						<p><?php echo substr(strip_tags($project['details']), 0, 80); ?>...</p>
 					</a>
 				</div>
 			</div>
@@ -144,7 +144,7 @@
 					<img class="card-img-top" src="<?php echo $project['image_path'] ?>" alt="<?php echo $project['name'] ?>" height='120px'>
 					<div class="card-body">
 						<h6 class="card-title text-primary"><?php echo $project['name']; ?></h6>
-						<span class="card-text"><?php echo strip_tags(substr($project['details'], 0, 80)); ?>...</span>
+						<span class="card-text"><?php echo substr(strip_tags($project['details']), 0, 80); ?>...</span>
 					</div>
 				</div>
 			</a>
@@ -157,14 +157,14 @@
 	<hr>
 	<p class="h3 text-info font-weight-bold my-4 text-center"><i class="fas fa-newspaper pr-2"></i><?php echo locale('views', 'news'); ?></p>
 	<div class="row">
-	<?php $i=0; foreach ($newses['news'] as $news) { ?>
+	<?php $i=0; foreach ($newses['items'] as $news) { ?>
 		<div class="col-sm-3 mb-3">
 			<a href="<?php echo route('news/show', ['id' => $news['id']]); ?>" class="link-unstyled">
 				<div class="card">
 					<img class="card-img-top" src="<?php echo $news['image_path'] ?>" alt="<?php echo $news['title'] ?>" height='120px'>
 					<div class="card-body">
 						<h6 class="card-title text-primary"><?php echo substr($news['title'], 0, 70); ?>..</h6>
-						<span class="card-text"><?php echo strip_tags(substr($news['details'], 0, 100)); ?>...</span>
+						<span class="card-text"><?php echo substr(strip_tags($news['details']), 0, 100); ?>...</span>
 					</div>
 				</div>
 			</a>

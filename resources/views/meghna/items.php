@@ -34,7 +34,7 @@
 						<h3 class="mb-3 font-weight-bold text-primary">
 							<strong><?php echo $item['title']; ?></strong>
 						</h3>
-						<p class="grey-text"><?php echo strip_tags(substr($item['details'], 0, 150)); ?>...</p>
+						<p class="grey-text"><?php echo substr(strip_tags($item['details']), 0, 150); ?>...</p>
 						<a href="<?php echo route('news/show', ['id' => $item['id']]); ?>" class="btn btn-warning btn-md"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 					</div>
 				</div>

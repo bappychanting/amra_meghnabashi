@@ -9,7 +9,7 @@
 <meta name="author" content="<?php echo $news['user_name']; ?>">
 
 <meta property="og:title" content="<?php echo $news['title'] ?>">
-<meta property="og:description" content="<?php echo strip_tags(substr($news['details'], 0, 50)); ?>...">
+<meta property="og:description" content="<?php echo substr(strip_tags($news['details']), 0, 50); ?>...">
 <meta property="og:image" content="<?php echo $news['image_path'] ?>">
 <meta property="og:url" content="<?php echo route('news/show', ['id' => $news['id']]); ?>">
 

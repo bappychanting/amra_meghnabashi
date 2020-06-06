@@ -40,7 +40,7 @@
         <?php foreach ($newses as $news) { ?>
           <tr>
             <td class="font-weight-bold"><?php echo $news['id']; ?></td>
-            <td><?php echo strip_tags(substr($news['title'], 0, 30)); ?>...</td>
+            <td><?php echo substr(strip_tags($news['title']), 0, 30); ?>...</td>
             <td><?php echo $news['tags']; ?></td>
             <td><?php echo date('F d (l), Y', strtotime($news['created_at'])); ?></td>
             <td>
