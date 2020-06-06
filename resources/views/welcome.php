@@ -165,7 +165,7 @@
 		<?php $i++; if($i==4) break; } ?>
 	</div>
 	<div class="row justify-content-center my-3">
-		<a class="btn btn-warning btn-md" href="<?php echo route('news'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_news'); ?></a>
+		<a class="btn btn-warning btn-md" href="<?php echo route('news', ['type' => 'program']); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_news'); ?></a>
 	</div>
 	<hr>
 </section>

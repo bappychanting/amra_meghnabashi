@@ -29,9 +29,11 @@
         <div class="col-3">
           <label for="select_tag">Select Category Tag</label>
           <select class="form-control" id="select_tag">
-            <option value="news"><?php echo locale('views', 'news'); ?></option>
-            <option value="event"><?php echo locale('views', 'event'); ?></option>
+            <option selected disabled>Please select tags</option>
+            <option value="program"><?php echo locale('views', 'news_program'); ?></option>
             <option value="photo"><?php echo locale('views', 'gallery_photo'); ?></option>
+            <option value="size"><?php echo locale('views', 'meghna_size'); ?></option>
+            <option value="location"><?php echo locale('views', 'meghna_location'); ?></option>
             <option value="bridge"><?php echo locale('views', 'meghna_bridge'); ?></option>
             <option value="road"><?php echo locale('views', 'meghna_road'); ?></option>
             <option value="river"><?php echo locale('views', 'meghna_river'); ?></option>
@@ -58,7 +60,7 @@
           <textarea rows="1" name="tags" class="form-control" id="tags" required></textarea>
         </div>
         <div class="col-12">
-          <small>Category tags: <span class="red-text">news, event, photo, bridge, road, river, school, college, mosque, madrasa, temple, sports, monument, committee, admin, hospital, ambulance, market, dock, office, agro, link</span>. Use comma to seperate tags!</small>
+          <small>Category tags: <span class="red-text">program, event, photo, size, location, bridge, road, river, school, college, mosque, madrasa, temple, sports, monument, committee, admin, hospital, ambulance, market, dock, office, agro, link</span>. Add <span class="red-text">upcoming</span> if upcoming program. Use comma to seperate tags!</small>
         </div>
       </div>
 
