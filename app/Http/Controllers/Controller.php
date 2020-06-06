@@ -9,7 +9,7 @@ use Base\BaseController;
 
 class Controller extends BaseController{
 
-  public function sendMail($receivers = array(), $subject, $message, $sender = 'noreply@codecube.com', $cc = array(), $bcc = array()) 
+  public function sendMail($receivers = array(), $subject, $message, $sender = 'noreply@amrameghnabasi.org', $cc = array(), $bcc = array()) 
   {
     $mail = new Mail; 
     $mail->setReceivers($receivers);  

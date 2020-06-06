@@ -12,11 +12,15 @@ return [
 
 	'welcome' => 'HomeController@welcome',
 
-	'meghna/about' => 'HomeController@aboutMeghna',
-
 	'meghna/items' => 'HomeController@meghnaItems',
 
-	'meghna/personalities' => 'HomeController@meghnaPersonalities',
+	'meghna/people' => 'HomeController@meghnaPeople',
+
+	'upazilla/items' => 'HomeController@upazillaItems',
+
+	'upazilla/people' => 'HomeController@upazillaPeople',
+
+	'gallery' => 'HomeController@gallery',
 
 	'members' => 'HomeController@members',
 
@@ -53,8 +57,6 @@ return [
 	'admin/signout' => 'Admin/AuthController@signout',
 
 		// admin web pages
-
-	'admin/meghna' => 'Admin/WebController@meghna',
 
 	'admin/web/all' => 'Admin/WebController@index',
 

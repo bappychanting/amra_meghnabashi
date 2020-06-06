@@ -3,9 +3,17 @@
 		
 	</style>
 	<header>
-		
+		<![CDATA[ 
+			<center>
+			<h3> Amra Meghnabashi </h3>
+			<hr> 
+		]]>
 	</header>
 	<footer>
-		
+		<![CDATA[
+        	<p>Regards,<br><b><a href="amrameghnabasi.org">AmraMeghnabashi.org</a></b></p>
+        	<img src="https://amrameghnabasi.org/resources/assets/img/favicon.png" alt="Amra Meghnabashi Logo">
+        	</center>
+     	]]>
 	</footer>
 </mail>

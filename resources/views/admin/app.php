@@ -43,16 +43,13 @@
         <?php $auth = new Base\Authenticable; if($auth->check()){ ?>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item <?php echo route_is('admin/members') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/members/all'); ?>">Members</a>
+              <a class="nav-link" href="<?php echo route('admin/members/all'); ?>">Members & Persons</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/projects') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/projects/all'); ?>">Projects</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/news') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/news/all'); ?>">News & Items</a>
-            </li>
-            <li class="nav-item <?php echo route_is('admin/meghna') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/meghna'); ?>">About Meghna</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/web') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/web/all'); ?>">Web Contents</a>
@@ -134,6 +131,18 @@
             tag_area.val(seleted_tags);
           });
 
+          // Show Video
+          $(document).on('click', '.show-video', function(){
+            $("#youtube-video-title").text($(this).data('title'));
+            $('#youtube-video-iframe').attr('src', $(this).data('youtube'));
+            $('#show_video_modal').modal('show');
+          });
+
+          $('#show_video_modal').on('hidden.bs.modal', function () {
+            $("#youtube-video-title").empty();
+            $('#youtube-video-iframe').attr('src', 'javascript:void(0);');
+          });
+
           // Upload Image
           $("#image_uploader").change(function() {
               var reader = new FileReader();
@@ -143,7 +152,7 @@
                   $.ajax({
                       url: 'https://api.imgur.com/3/image',
                       headers: {
-                          'Authorization': 'Client-ID a9fd5eeebbcf71d'
+                          'Authorization': 'Client-ID 748467b58963c44'
                       },
                       type: 'POST',
                       data: {

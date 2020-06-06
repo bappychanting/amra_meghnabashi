@@ -13,11 +13,11 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.dropdown-menu > a {
+.dropdown-menu > a, .dropdown-wide-items > a {
   color: #6c757d!important;
 }
 
-.dropdown-menu > a:hover {
+.dropdown-menu > a:hover, .dropdown-wide-items > a:hover {
   background-color: #ffffe6;
 }
 
@@ -44,4 +44,21 @@ a.link-unstyled:hover {
 /* Hide scrollbar for Firefox */
 .scroll {
   scrollbar-width: none; 
+}
+
+@media only screen and (min-width : 1024px) {
+
+  .dropdown-wide {
+    padding: 10px;
+    min-width: 550px !important;
+  }
+
+  .dropdown-center {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+
 }

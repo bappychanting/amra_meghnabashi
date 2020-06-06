@@ -29,14 +29,6 @@ class WebController extends Controller
         return $this->view('admin.contents', compact('content'));
     }
 
-    public function meghna() 
-    {
-        $this->content->setId(2);
-        $content = $this->content->getWebContent();
-        $content = json_decode($content['content'], true);
-        return $this->view('admin.meghna', compact('content'));
-    }
-
     public function update() 
     {
         $this->content->setId($_POST['id']);

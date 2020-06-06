@@ -25,17 +25,11 @@ class HomeController extends Controller
     public function welcome() 
     {
         $contents = $this->getContents();
-        $newses = $this->news->getNewses();
-        $members = $this->member->getMembersByCategory();
         $projects = $this->project->getProjects();
+        $newses = $this->news->getItemsPeg('news');
+        $members = $this->member->getMembers();
+        shuffle($members);
         return $this->view('welcome', compact('contents', 'newses', 'members', 'projects'));
-    }
-
-    public function aboutMeghna() 
-    {
-        $contents = $this->getContents();
-        $meghna = $this->getContents(2);
-        return $this->view('meghna.about', compact('contents', 'meghna'));
     }
 
     public function meghnaItems() 
@@ -45,11 +39,32 @@ class HomeController extends Controller
         return $this->view('meghna.items', compact('contents', 'items'));
     }
 
-    public function meghnaPersonalities() 
+    public function meghnaPeople() 
     {
         $contents = $this->getContents();
-        $personalities = $this->member->getPersonalities();
-        return $this->view('meghna.personalities', compact('contents', 'personalities'));
+        $people = $this->member->getPeople($_GET['type']);
+        return $this->view('meghna.people', compact('contents', 'people'));
+    }
+
+    public function upazillaItems() 
+    {
+        $contents = $this->getContents();
+        $items = $this->news->getItems($_GET['type']);
+        return $this->view('upazilla.items', compact('contents', 'items'));
+    }
+
+    public function upazillaPeople() 
+    {
+        $contents = $this->getContents();
+        $people = $this->member->getPeople($_GET['type']);
+        return $this->view('upazilla.people', compact('contents', 'people'));
+    }
+
+    public function gallery() 
+    {
+        $contents = $this->getContents();
+        $gallery = $this->news->getItemsPeg($_GET['type']);
+        return $this->view('gallery', compact('contents', 'gallery'));
     }
 
     public function members() 
@@ -92,7 +107,7 @@ class HomeController extends Controller
     public function news() 
     {
         $contents = $this->getContents();
-        $newses = $this->news->getNewses();
+        $newses = $this->news->getItemsPeg($_GET['type']);
         return $this->view('news.index', compact('contents', 'newses'));
     }
 
@@ -105,9 +120,8 @@ class HomeController extends Controller
 
     public function subscribe(){
         $this->add_subscriber($_POST['sub_email']);
-        $subject = 'Amra Meghnabashi: Thanks for subscribing!';
+        $subject = 'Thanks for subscribing!';
         $body = 'Thanks for subscribing! You will be receiving our news and updates!';
-        $body .= '<br><b>Regards,</b><br>Amra Meghnabashi';
         $this->sendMail([$_POST['sub_email']], $subject, $body);
         $this->abort(200, 'Thanks for subscribing! Please check your email!');
     }

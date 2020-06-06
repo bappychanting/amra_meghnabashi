@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'All Members || '.$member['name'].' || Edit Member || '.title(); ?>
+<?php echo 'All Members & Persons || '.$member['name'].' || Edit Person || '.title(); ?>
 
 <?php endblock() ?>
 
@@ -12,7 +12,7 @@
   <div class="card-header">Admin Dashboard</div>
   <div class="card-body">
 
-    <h5 class="text-center my-3 text-muted"><i class="fas fa-edit pr-2"></i>Edit Member</h5>
+    <h5 class="text-center my-3 text-muted"><i class="fas fa-edit pr-2"></i>Edit Person</h5>
 
     <form method="POST" action="<?php echo route('admin/members/update'); ?>" enctype="multipart/form-data"> 
 
@@ -31,9 +31,14 @@
           <select class="form-control" id="select_tag">
             <option value="adviser"><?php echo locale('views', 'advisers'); ?></option>
             <option value="admin"><?php echo locale('views', 'admins'); ?></option>
-            <option value="personality"><?php echo locale('views', 'personalities'); ?></option>
             <option value="vip"><?php echo locale('views', 'vips'); ?></option>
             <option value="volunteer"><?php echo locale('views', 'volunteers'); ?></option>
+            <option value="ffighter"><?php echo locale('views', 'meghna_ffighter'); ?></option>
+            <option value="personality"><?php echo locale('views', 'personalities'); ?></option>
+            <option value="police"><?php echo locale('views', 'upazilla_police'); ?></option>
+            <option value="doctor"><?php echo locale('views', 'upazilla_doctor'); ?></option>
+            <option value="mdoctor"><?php echo locale('views', 'upazilla_mdoctor'); ?></option>
+            <option value="immigrant"><?php echo locale('views', 'upazilla_immigrant'); ?></option>
           </select>
         </div>
         <div class="col-9">
@@ -41,7 +46,7 @@
           <textarea rows="1" name="tags" class="form-control" id="tags" required><?php echo $member['tags']; ?></textarea>
         </div>
         <div class="col-12">
-          <small>Tags must be included to seperate <span class="red-text">adviser, admin, personality, vip and volunteer</span> category. Use comma to seperate tags!</small>
+          <small>Category tags: <span class="red-text">adviser, admin, vip, volunteer, ffighter, personality, police, doctor, mdoctor, immigrant</span>. Use comma to seperate tags!</small>
         </div>
       </div>
 

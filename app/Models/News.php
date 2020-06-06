@@ -94,21 +94,21 @@ class News extends Model{
     }
 
 		// Function for getting news
-    public function getNewses() {   
-        $news = $this->db->table('news_view')->orderBy('created_at', 'desc')->limit(12)->read();
+    public function getItemsPeg($tag) {   
+        $items = $this->db->table('news_view')->where('tags', 'LIKE', '%'.$tag.'%')->orderBy('created_at', 'desc')->limit(12)->read();
         $pagination = $this->db->pagination();
-        return array('news' => $news, 'pagination' => $pagination);
+        return array('items' => $items, 'pagination' => $pagination);
     }
 
         // Function for getting items
     public function getItems($tag) {   
-        $items = $this->db->table('news_view')->where('tags', 'LIKE', '%'.$tag.'%')->orderBy('title')->limit(2000)->read();
+        $items = $this->db->table('news_view')->where('tags', 'LIKE', '%'.$tag.'%')->orderBy('title')->limit(1000)->read();
         return $items;
     }
 
         // Function for all news
     public function getAllNewses() {   
-        $news = $this->db->table('news_view')->orderBy('created_at', 'desc')->limit(2000)->read();
+        $news = $this->db->table('news_view')->orderBy('created_at', 'desc')->limit(5000)->read();
         return $news;
     }
 
