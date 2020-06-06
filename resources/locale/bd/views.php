@@ -40,7 +40,7 @@ return [
     'meghna_temple' => 'মন্দীর',
     'meghna_sports' => 'ক্রীড়া ও সংস্কৃতি',
     'meghna_monument' => 'ঐতিহাসিক স্থাপনা',
-    'meghna_ffighter' => 'মুক্তিযুদ্ধা',
+    'meghna_ffighter' => 'মুক্তিযোদ্ধা',
     'meghna_personality' => 'মেঘনার বিশিষ্টজন',
 
         // Upazilla
