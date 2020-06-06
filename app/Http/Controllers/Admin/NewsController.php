@@ -23,8 +23,9 @@ class NewsController extends Controller
 
     public function index() 
     {
+        $auth_user = $this->auth->getAuth(); 
         $newses = $this->news->getAllNewses();
-        return $this->view('admin.news.index', compact('newses'));
+        return $this->view('admin.news.index', compact('newses', 'auth_user'));
     }
 
     public function create() 

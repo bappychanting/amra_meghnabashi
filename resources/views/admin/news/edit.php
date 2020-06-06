@@ -32,7 +32,6 @@
             <option value="news"><?php echo locale('views', 'news'); ?></option>
             <option value="event"><?php echo locale('views', 'event'); ?></option>
             <option value="photo"><?php echo locale('views', 'gallery_photo'); ?></option>
-            <option value="video"><?php echo locale('views', 'gallery_video'); ?></option>
             <option value="bridge"><?php echo locale('views', 'meghna_bridge'); ?></option>
             <option value="road"><?php echo locale('views', 'meghna_road'); ?></option>
             <option value="river"><?php echo locale('views', 'meghna_river'); ?></option>
@@ -59,7 +58,7 @@
           <textarea rows="1" name="tags" class="form-control" id="tags" required><?php echo $news['tags']; ?></textarea>
         </div>
         <div class="col-12">
-          <small>Category tags: <span class="red-text">news, event, photo, video, bridge, road, river, school, college, mosque, madrasa, temple, sports, monument, committee, admin, hospital, ambulance, market, dock, office, agro, link</span>. Use comma to seperate tags!</small>
+          <small>Category tags: <span class="red-text">news, event, photo, bridge, road, river, school, college, mosque, madrasa, temple, sports, monument, committee, admin, hospital, ambulance, market, dock, office, agro, link</span>. Use comma to seperate tags!</small>
         </div>
       </div>
 
