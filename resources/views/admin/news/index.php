@@ -50,7 +50,7 @@
                   <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                   <input type="hidden" value="<?php echo $news['id']; ?>" name="id">
                   <?php if($news['tags'] == 'video'){ ?>
-                 <!--  <button type="button" class="btn btn-primary btn-sm show-video" data-title="<?php echo $news['title']; ?>" data-youtube="<?php echo $news['image_path']; ?>"><i class="fas fa-eye"></i></button> -->
+                  <button class="btn btn-primary btn-sm show-video" type="button" data-title="<?php echo $news['title']; ?>" data-youtube="<?php echo $news['image_path']; ?>" type="button"><i class="fas fa-eye"></i></button>
                   <?php } else{ ?>
                   <a class="btn btn-warning btn-sm" href="<?php echo route('admin/news/edit', ['id' => $news['id']]) ?>"><i class="fas fa-edit"></i></a>
                   <?php } ?>
@@ -74,8 +74,6 @@
   </div>
 </div>
 
-                  
-                  <button class="btn btn-primary btn-sm show-video" type="button" data-title="<?php echo $news['title']; ?>" data-youtube="<?php echo $news['image_path']; ?>" type="button"><i class="fas fa-eye"></i></button>
 <!-- Add Video Modal -->
 <div class="modal fade" id="add_video_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">

@@ -132,7 +132,7 @@
           });
 
           // Show Video
-          $(".show-video").on("click", function() {
+          $(document).on('click', '.show-video', function(){
             $("#youtube-video-title").text($(this).data('title'));
             $('#youtube-video-iframe').attr('src', $(this).data('youtube'));
             $('#show_video_modal').modal('show');
