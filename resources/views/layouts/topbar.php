@@ -53,10 +53,42 @@
               <div class="col-sm-4 dropdown-wide-items">
                 <hr class="d-sm-none">
                 <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'sports']); ?>"><?php echo locale('views', 'meghna_sports'); ?></a>
-                <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'market']); ?>"><?php echo locale('views', 'meghna_market'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'monument']); ?>"><?php echo locale('views', 'meghna_monument'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('meghna/people', ['type' => 'fighter']); ?>"><?php echo locale('views', 'meghna_fighter'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('meghna/people', ['type' => 'personality']); ?>"><?php echo locale('views', 'meghna_personality'); ?></a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Upazilla Dropdown -->
+        <li class="nav-item dropdown <?php echo route_is('upazilla') ? 'active' : '' ; ?>">
+          <a class="nav-link dropdown-toggle" id="meghnaDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <?php echo locale('views', 'upazilla_info'); echo route_is('upazilla') ? '<span class="sr-only">(current)</span>' : '' ; ?>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right dropdown-wide dropdown-primary" aria-labelledby="meghnaDropdownMenuLink">
+            <div class="row">
+              <div class="col-sm-4 dropdown-wide-items">
+                <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'committee']); ?>"><?php echo locale('views', 'upazilla_committee'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'road']); ?>"><?php echo locale('views', 'upazilla_admin'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/people', ['type' => 'police']); ?>"><?php echo locale('views', 'upazilla_police'); ?></a>
+
+              </div>
+              <div class="col-sm-4 dropdown-wide-items">
+                <span class="text-primary font-weight-bold text-muted mx-2"><?php echo locale('views', 'upazilla_healthcare'); ?></span>
+                <hr>
+                <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'hospital']); ?>"><?php echo locale('views', 'upazilla_hospital'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/people', ['type' => 'doctor']); ?>"><?php echo locale('views', 'upazilla_doctor'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/people', ['type' => 'meghna_doctor']); ?>"><?php echo locale('views', 'upazilla_meghna_doctor'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'ambulance']); ?>"><?php echo locale('views', 'upazilla_ambulance'); ?></a>
+              </div>
+              <div class="col-sm-4 dropdown-wide-items">
+                <hr class="d-sm-none">
+                <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'market']); ?>"><?php echo locale('views', 'upazilla_market'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'dock']); ?>"><?php echo locale('views', 'upazilla_dock'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'office']); ?>"><?php echo locale('views', 'upazilla_office'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/people', ['type' => 'immigrant']); ?>"><?php echo locale('views', 'upazilla_immigrant'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'link']); ?>"><?php echo locale('views', 'upazilla_link'); ?></a>
               </div>
             </div>
           </div>

@@ -45,6 +45,20 @@ class HomeController extends Controller
         return $this->view('meghna.people', compact('contents', 'people'));
     }
 
+    public function upazillaItems() 
+    {
+        $contents = $this->getContents();
+        $items = $this->news->getItems($_GET['type']);
+        return $this->view('upazilla.items', compact('contents', 'items'));
+    }
+
+    public function upazillaPeople() 
+    {
+        $contents = $this->getContents();
+        $people = $this->member->getPeople($_GET['type']);
+        return $this->view('upazilla.people', compact('contents', 'people'));
+    }
+
     public function members() 
     {
         $contents = $this->getContents();

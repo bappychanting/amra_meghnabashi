@@ -16,6 +16,10 @@ return [
 
 	'meghna/people' => 'HomeController@meghnaPeople',
 
+	'upazilla/items' => 'HomeController@upazillaItems',
+
+	'upazilla/people' => 'HomeController@upazillaPeople',
+
 	'members' => 'HomeController@members',
 
 	'members/show' => 'HomeController@showMember',

@@ -2,7 +2,6 @@
 
 return [
 
-    	// key texts
 	'app_title' => 'আমরা মেঘনাবাসী',
 	'links' => 'লিংকসমূহ',
     'donate_now' => 'দান করুন!',
@@ -13,14 +12,14 @@ return [
     'beneficiaries' => 'দানগ্রাহী',
     'reached' => 'পৌঁছানো',
     'job_scholarship' => 'চাকরী ও বৃত্তি',
+    'contact_us' => 'যোগাযোগ করুন',
+    'follow_us' => 'আমাদের অনুসরণ করুন',
+    'subscribe_us' => 'আমাদের সাবস্ক্রাইব করুন',
     'show_details' => 'বিস্তারিত দেখুন',
     'read_more' => 'আরও পড়ুন',
     'go_back' => 'ফিরে যান',
-    'subscribe_us' => 'আমাদের সাবস্ক্রাইব করুন',
-    'submit' => 'জমা দিন',
     'close' => 'বন্ধ করুন',
-    'contact_us' => 'যোগাযোগ করুন',
-    'follow_us' => 'আমাদের অনুসরণ করুন',
+    'submit' => 'জমা দিন',
 
         // Our Meghna
     'our_meghna' => 'আমাদের মেঘনা',
@@ -35,11 +34,32 @@ return [
     'meghna_madrasa' => 'মাদ্রাসা',
     'meghna_temple' => 'মন্দীর',
     'meghna_sports' => 'ক্রীড়া ও সংস্কৃতি',
-    'meghna_market' => 'হাটবাজার',
     'meghna_monument' => 'ঐতিহাসিক স্থাপনা',
     'meghna_fighter' => 'মুক্তিযুদ্ধা',
     'meghna_personality' => 'মেঘনার বিশিষ্টজন',
     'search_something' => 'অনুসন্ধান করুন',
+
+        // Upazilla
+    'upazilla_info' => 'উপজেলার তথ্যাদি',
+    'upazilla_committee' => 'উপজেলা পরিষদ',
+    'upazilla_admin' => 'উপজেলা প্রশাসন',
+    'upazilla_police' => 'উপজেলা পুলিশ',
+    'upazilla_healthcare' => 'স্বাস্থ্য সেবা',
+    'upazilla_hospital' => 'হাসপাতাল',
+    'upazilla_doctor' => 'ডাক্তার',
+    'upazilla_meghna_doctor' => 'মেঘনাবাসী ডাক্তার ',
+    'upazilla_ambulance' => 'এ্যাম্বুলেন্স',
+    'upazilla_market' => 'হাটবাজার',
+    'upazilla_dock' => 'নৌঘাট',
+    'upazilla_office' => 'উপজেলার সব অফিস',
+    'upazilla_agro' => 'কৃষক ও এগ্রো ইন্ডাস্ট্রি',
+    'upazilla_immigrant' => 'প্রবাসী',
+    'upazilla_link' => 'গুরুত্বপূর্ণ লিংকস',
+
+        // gallery
+    'gallery' => 'গ্যাল্যারি',
+    'photo_gallery' => 'ছবি গ্যাল্যারি',
+    'video_gallery' => 'ভিডিও গ্যাল্যারি',
 
         // Members
     'members' => 'সদস্যগণ',
