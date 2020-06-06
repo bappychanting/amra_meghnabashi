@@ -40,19 +40,19 @@
         <h5 class="text-uppercase"><?php echo locale('views', 'links'); ?></h5>
         <ul class="list-unstyled">
           <li>
-            <a href="<?php echo route('news'); ?>"><?php echo locale('views', 'news'); ?></a>
-          </li>
-          <li>
-            <a href="<?php echo route('gallery', ['type' => 'photo']); ?>"><?php echo locale('views', 'gallery'); ?></a>
-          </li>
-          <li>
             <a href="<?php echo route('members'); ?>"><?php echo locale('views', 'members'); ?></a>
           </li>
           <li>
             <a href="<?php echo route('projects'); ?>"><?php echo locale('views', 'projects'); ?></a>
           </li>
           <li>
-            <a href="<?php echo route('news', ['type' => 'upcoming_events']); ?>"><?php echo locale('views', 'upcoming_events'); ?></a>
+            <a href="<?php echo route('gallery', ['type' => 'photo']); ?>"><?php echo locale('views', 'gallery'); ?></a>
+          </li>
+          <li>
+            <a href="<?php echo route('news'); ?>"><?php echo locale('views', 'news'); ?></a>
+          </li>
+          <li>
+            <a href="<?php echo route('news', ['type' => 'event']); ?>"><?php echo locale('views', 'event'); ?></a>
           </li>
         </ul>
       </div>
