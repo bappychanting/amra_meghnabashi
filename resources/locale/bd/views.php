@@ -20,6 +20,7 @@ return [
     'go_back' => 'ফিরে যান',
     'close' => 'বন্ধ করুন',
     'submit' => 'জমা দিন',
+    'search_something' => 'অনুসন্ধান করুন',
 
         // Our Meghna
     'our_meghna' => 'আমাদের মেঘনা',
@@ -37,7 +38,6 @@ return [
     'meghna_monument' => 'ঐতিহাসিক স্থাপনা',
     'meghna_ffighter' => 'মুক্তিযুদ্ধা',
     'meghna_personality' => 'মেঘনার বিশিষ্টজন',
-    'search_something' => 'অনুসন্ধান করুন',
 
         // Upazilla
     'upazilla_info' => 'উপজেলার তথ্যাদি',

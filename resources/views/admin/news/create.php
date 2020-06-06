@@ -50,6 +50,7 @@
             <option value="market"><?php echo locale('views', 'upazilla_market'); ?></option>
             <option value="dock"><?php echo locale('views', 'upazilla_dock'); ?></option>
             <option value="office"><?php echo locale('views', 'upazilla_office'); ?></option>
+            <option value="agro"><?php echo locale('views', 'upazilla_agro'); ?></option>
             <option value="link"><?php echo locale('views', 'upazilla_link'); ?></option>
           </select>
         </div>
@@ -58,7 +59,7 @@
           <textarea rows="1" name="tags" class="form-control" id="tags" required></textarea>
         </div>
         <div class="col-12">
-          <small>Category tags: <span class="red-text">news, event, photo, video, bridge, road, river, school, college, mosque, madrasa, temple, sports, monument, committee, admin, hospital, ambulance, market, dock, office, link</span>. Use comma to seperate tags!</small>
+          <small>Category tags: <span class="red-text">news, event, photo, video, bridge, road, river, school, college, mosque, madrasa, temple, sports, monument, committee, admin, hospital, ambulance, market, dock, office, agro, link</span>. Use comma to seperate tags!</small>
         </div>
       </div>
 
