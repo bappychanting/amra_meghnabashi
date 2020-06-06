@@ -31,8 +31,8 @@
           <select class="form-control" id="select_tag">
             <option value="news"><?php echo locale('views', 'news'); ?></option>
             <option value="event"><?php echo locale('views', 'event'); ?></option>
-            <option value="photo"><?php echo locale('views', 'photo_gallery'); ?></option>
-            <option value="video"><?php echo locale('views', 'video_gallery'); ?></option>
+            <option value="photo"><?php echo locale('views', 'gallery_photo'); ?></option>
+            <option value="video"><?php echo locale('views', 'gallery_video'); ?></option>
             <option value="bridge"><?php echo locale('views', 'meghna_bridge'); ?></option>
             <option value="road"><?php echo locale('views', 'meghna_road'); ?></option>
             <option value="river"><?php echo locale('views', 'meghna_river'); ?></option>

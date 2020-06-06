@@ -4,6 +4,7 @@ return [
 
 	'app_title' => 'আমরা মেঘনাবাসী',
 	'links' => 'লিংকসমূহ',
+    'home_page' => 'হোমপেজ',
     'donate_now' => 'দান করুন!',
     'who_are_we' => 'আমাদের পরিচয়',
     'our_programs' => 'আমাদের কর্মসূচি',

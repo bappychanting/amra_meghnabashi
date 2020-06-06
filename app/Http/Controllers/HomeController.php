@@ -62,7 +62,7 @@ class HomeController extends Controller
     public function gallery() 
     {
         $contents = $this->getContents();
-        $gallery = $this->news->getItems($_GET['type']);
+        $gallery = $this->news->getItemsPeg($_GET['type']);
         return $this->view('gallery', compact('contents', 'gallery'));
     }
 

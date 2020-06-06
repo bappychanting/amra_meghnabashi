@@ -40,6 +40,9 @@
         <h5 class="text-uppercase"><?php echo locale('views', 'links'); ?></h5>
         <ul class="list-unstyled">
           <li>
+            <a href="<?php echo route('welcome'); ?>"><?php echo locale('views', 'home_page'); ?></a>
+          </li>
+          <li>
             <a href="<?php echo route('members'); ?>"><?php echo locale('views', 'members'); ?></a>
           </li>
           <li>
@@ -49,10 +52,7 @@
             <a href="<?php echo route('gallery', ['type' => 'photo']); ?>"><?php echo locale('views', 'gallery'); ?></a>
           </li>
           <li>
-            <a href="<?php echo route('news'); ?>"><?php echo locale('views', 'news'); ?></a>
-          </li>
-          <li>
-            <a href="<?php echo route('news', ['type' => 'event']); ?>"><?php echo locale('views', 'event'); ?></a>
+            <a href="<?php echo route('news', ['type' => 'news']); ?>"><?php echo locale('views', 'news'); ?></a>
           </li>
         </ul>
       </div>
@@ -68,7 +68,7 @@
     &copy; <?php echo date('Y'); ?> Copyright:<a href="https://amrameghnabasi.org"> AmraMeghnabashi.org</a><br>
     Developed By <a href="https://www.linkedin.com/in/mahadi-hasan-966112b0/" target="_blank">Mahadi Hasan</a> Using <a href="http://mhasan.amarneta.com/codecube-framework/" target="_blank">CodeCube Framework</a><br>
     Planning &amp; System Analysis: <a href="https://www.facebook.com/nzamaan" target="_blank">Mohammad Nuruzzaman</a>,&nbsp;
-    Data Support &amp; Testing: <a href="https://www.facebook.com/abu.yousuf.9277" target="_blank">Abu Yousuf</a> &amp; <a href="https://www.facebook.com/sajibkhan135" target="_blank">Shopnil Sajib</a><br>
+    Data Support &amp; Testing: <a href="https://www.facebook.com/abu.yousuf.9277" target="_blank">Abu Yousuf</a> &amp; <a href="https://www.facebook.com/sajibkhan135" target="_blank">Swapnil Sajib</a><br>
   </div>
 </footer>
 <!-- Footer -->

@@ -97,7 +97,7 @@ class News extends Model{
     public function getItemsPeg($tag) {   
         $items = $this->db->table('news_view')->where('tags', 'LIKE', '%'.$tag.'%')->orderBy('created_at', 'desc')->limit(12)->read();
         $pagination = $this->db->pagination();
-        return array('news' => $items, 'pagination' => $pagination);
+        return array('items' => $items, 'pagination' => $pagination);
     }
 
         // Function for getting items
