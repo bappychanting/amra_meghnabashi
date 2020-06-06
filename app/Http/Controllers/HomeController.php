@@ -59,6 +59,13 @@ class HomeController extends Controller
         return $this->view('upazilla.people', compact('contents', 'people'));
     }
 
+    public function gallery() 
+    {
+        $contents = $this->getContents();
+        $gallery = $this->news->getItems($_GET['type']);
+        return $this->view('gallery', compact('contents', 'gallery'));
+    }
+
     public function members() 
     {
         $contents = $this->getContents();

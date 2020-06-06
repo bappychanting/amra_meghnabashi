@@ -20,6 +20,8 @@ return [
 
 	'upazilla/people' => 'HomeController@upazillaPeople',
 
+	'gallery' => 'HomeController@gallery',
+
 	'members' => 'HomeController@members',
 
 	'members/show' => 'HomeController@showMember',

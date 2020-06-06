@@ -63,10 +63,10 @@
 
         <!-- Upazilla Dropdown -->
         <li class="nav-item dropdown <?php echo route_is('upazilla') ? 'active' : '' ; ?>">
-          <a class="nav-link dropdown-toggle" id="meghnaDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="upazillaDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <?php echo locale('views', 'upazilla_info'); echo route_is('upazilla') ? '<span class="sr-only">(current)</span>' : '' ; ?>
           </a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-wide dropdown-primary" aria-labelledby="meghnaDropdownMenuLink">
+          <div class="dropdown-menu dropdown-menu-right dropdown-wide dropdown-primary" aria-labelledby="upazillaDropdownMenuLink">
             <div class="row">
               <div class="col-sm-4 dropdown-wide-items">
                 <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'committee']); ?>"><?php echo locale('views', 'upazilla_committee'); ?></a>
@@ -108,11 +108,31 @@
             <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#join_modal"><?php echo locale('views', 'be_volunteer'); ?></a>
           </div>
         </li>
+
+        <!-- Gallery Dropdown -->
+        <li class="nav-item dropdown <?php echo route_is('gallery') ? 'active' : '' ; ?>">
+          <a class="nav-link dropdown-toggle" id="galleryDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <?php echo locale('views', 'gallery'); echo route_is('gallery') ? '<span class="sr-only">(current)</span>' : '' ; ?>
+          </a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="galleryDropdownMenuLink">
+            <a class="dropdown-item" href="<?php echo route('gallery', ['type' => 'photo']); ?>"><?php echo locale('views', 'photo_gallery'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('gallery', ['type' => 'video']); ?>"><?php echo locale('views', 'video_gallery'); ?></a>
+          </div>
+        </li>
+
         <li class="nav-item <?php echo route_is('projects') ? 'active' : '' ; ?>">
           <a class="nav-link" href="<?php echo route('projects'); ?>"><?php echo locale('views', 'projects'); echo route_is('projects') ? '<span class="sr-only">(current)</span>' : '' ; ?></a>
         </li>
-        <li class="nav-item <?php echo route_is('news') ? 'active' : '' ; ?>">
-          <a class="nav-link" href="<?php echo route('news'); ?>"><?php echo locale('views', 'news'); echo route_is('news') ? '<span class="sr-only">(current)</span>' : '' ; ?></a>
+
+        <!-- News Dropdown -->
+        <li class="nav-item dropdown <?php echo route_is('news') ? 'active' : '' ; ?>">
+          <a class="nav-link dropdown-toggle" id="galleryDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <?php echo locale('views', 'news'); echo route_is('news') ? '<span class="sr-only">(current)</span>' : '' ; ?>
+          </a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="galleryDropdownMenuLink">
+            <a class="dropdown-item" href="<?php echo route('news'); ?>"><?php echo locale('views', 'see_all_news'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('news', ['type' => 'upcoming_events']); ?>"><?php echo locale('views', 'upcoming_events'); ?></a>
+          </div>
         </li>
       </ul>
     </div>
