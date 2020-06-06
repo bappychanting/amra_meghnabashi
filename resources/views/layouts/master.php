@@ -131,6 +131,11 @@
 	            // console.log('You Clicked Page: '+pageNum)
 	        };
 
+	        // Control Mega Menu
+	        $(".megamenu").on("click", function(e) {
+				e.stopPropagation();
+			});
+
 	        // Control Submenu
 	        $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
 	        	if (!$(this).next().hasClass('show')) {

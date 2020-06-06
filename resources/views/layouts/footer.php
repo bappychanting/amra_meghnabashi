@@ -40,7 +40,7 @@
         <h5 class="text-uppercase"><?php echo locale('views', 'links'); ?></h5>
         <ul class="list-unstyled">
           <li>
-            <a href="<?php echo route('meghna/about'); ?>"><?php echo locale('views', 'about_meghna'); ?></a>
+            <a href="javascript:void(0);"><?php echo locale('views', 'about_meghna'); ?> Plase check</a>
           </li>
           <li>
             <a href="<?php echo route('members'); ?>"><?php echo locale('views', 'members'); ?></a>
