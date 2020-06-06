@@ -30,7 +30,7 @@
           <a class="nav-link dropdown-toggle" id="meghnaDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <?php echo locale('views', 'our_meghna'); echo route_is('meghna') ? '<span class="sr-only">(current)</span>' : '' ; ?>
           </a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-wide dropdown-primary" aria-labelledby="meghnaDropdownMenuLink">
+          <div class="dropdown-menu dropdown-primary dropdown-wide dropdown-center" aria-labelledby="meghnaDropdownMenuLink">
             <div class="row">
               <div class="col-sm-4 dropdown-wide-items">
                 <span class="text-primary font-weight-bold mx-2"><?php echo locale('views', 'about_meghna'); ?></span>
@@ -66,7 +66,7 @@
           <a class="nav-link dropdown-toggle" id="upazillaDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <?php echo locale('views', 'upazilla_info'); echo route_is('upazilla') ? '<span class="sr-only">(current)</span>' : '' ; ?>
           </a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-wide dropdown-primary" aria-labelledby="upazillaDropdownMenuLink">
+          <div class="dropdown-menu dropdown-primary dropdown-wide dropdown-center" aria-labelledby="upazillaDropdownMenuLink">
             <div class="row">
               <div class="col-sm-4 dropdown-wide-items">
                 <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'committee']); ?>"><?php echo locale('views', 'upazilla_committee'); ?></a>

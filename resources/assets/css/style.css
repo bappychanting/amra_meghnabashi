@@ -53,4 +53,12 @@ a.link-unstyled:hover {
     min-width: 550px !important;
   }
 
+  .dropdown-center {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+
 }
