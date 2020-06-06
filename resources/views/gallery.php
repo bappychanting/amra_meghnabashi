@@ -23,7 +23,7 @@
 		<?php $i=0; foreach ($gallery['items'] as $item) { ?>
 		<div class="col-sm-4">
 			<?php if($_GET['type'] == 'video'){ ?>
-				<div class="embed-responsive embed-responsive-16by9">
+				<div class="embed-responsive embed-responsive-16by9" title="<?php echo $item['title']; ?>">
 					<iframe class="embed-responsive-item" src="<?php echo $contents['video_src']; ?>" allowfullscreen></iframe>
 				</div>
 			<?php } else{ ?>
