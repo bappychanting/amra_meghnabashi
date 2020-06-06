@@ -81,9 +81,8 @@ class NewsController extends Controller
     private function notifySubscibers($title, $link){
         $subscribers = $this->get_subscribers();
         if(count($subscribers) > 0){
-            $subject = 'Amra Meghnabashi: New news article has been added!';
+            $subject = 'New news article has been added!';
             $body = 'We have published a new article titled "<b>'.$title.'</b>"! Please click on <a href="'.$link.'">this link</a> to checkout this article!';
-            $body .= '<br><b>Regards,</b><br>Amra Meghnabashi';
             $this->sendMail($subscribers, $subject, $body);
         }
     }

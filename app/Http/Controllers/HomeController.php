@@ -120,9 +120,8 @@ class HomeController extends Controller
 
     public function subscribe(){
         $this->add_subscriber($_POST['sub_email']);
-        $subject = 'Amra Meghnabashi: Thanks for subscribing!';
+        $subject = 'Thanks for subscribing!';
         $body = 'Thanks for subscribing! You will be receiving our news and updates!';
-        $body .= '<br><b>Regards,</b><br>Amra Meghnabashi';
         $this->sendMail([$_POST['sub_email']], $subject, $body);
         $this->abort(200, 'Thanks for subscribing! Please check your email!');
     }
