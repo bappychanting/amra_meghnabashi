@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'All Members || '.$member['name'].' || '.title(); ?>
+<?php echo 'All Members & Persons || '.$member['name'].' || '.title(); ?>
 
 <?php endblock() ?>
 
@@ -30,7 +30,7 @@
     <p><strong>Designation:</strong> <?php echo $member['designation']; ?></p>
     <p><strong>Created At:</strong> <?php echo date('F d (l), Y', strtotime($member['created_at'])); ?></p>
     <?php if($member['approved'] == 1){ echo $member['details']; ?>
-    <a class="btn btn-warning btn-sm" href="<?php echo route('admin/members/edit', ['id' => $member['id']]) ?>"><i class="fas fa-edit pr-2"></i>Edit Member</a>
+    <a class="btn btn-warning btn-sm" href="<?php echo route('admin/members/edit', ['id' => $member['id']]) ?>"><i class="fas fa-edit pr-2"></i>Edit Person</a>
     <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#donation_modal"><i class="fas fa-plus pr-2"></i>Add Donation</button>
     <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
@@ -90,6 +90,11 @@
           <input type="hidden" value="<?php echo $details_arr['email']; ?>" name="email">
           <input type="hidden" value="<?php echo $member_detail; ?>" name="details">
           <button class="btn btn-warning btn-sm" type="submit"><i class="fas fa-check pr-2"></i>Approve Volunteer</button>
+        </form>
+        <form method="post" action="<?php echo route('admin/members/delete') ?>" onsubmit="return confirm('Do you really want to delete requesting volunteer?');">
+          <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+          <input type="hidden" value="<?php echo $member['id']; ?>" name="id">
+          <button class="btn btn-danger btn-sm" type="submit"><i class="fas fa-trash pr-2"></i>Delete Volunteer</button>
         </form>
     <?php } ?>
   </div>

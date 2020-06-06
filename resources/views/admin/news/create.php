@@ -30,12 +30,27 @@
           <label for="select_tag">Select Category Tag</label>
           <select class="form-control" id="select_tag">
             <option value="news"><?php echo locale('views', 'news'); ?></option>
+            <option value="upcoming_events"><?php echo locale('views', 'upcoming_events'); ?></option>
+            <option value="photo"><?php echo locale('views', 'photo_gallery'); ?></option>
+            <option value="video"><?php echo locale('views', 'video_gallery'); ?></option>
+            <option value="bridge"><?php echo locale('views', 'meghna_bridge'); ?></option>
+            <option value="road"><?php echo locale('views', 'meghna_road'); ?></option>
+            <option value="river"><?php echo locale('views', 'meghna_river'); ?></option>
             <option value="school"><?php echo locale('views', 'meghna_school'); ?></option>
             <option value="college"><?php echo locale('views', 'meghna_college'); ?></option>
             <option value="mosque"><?php echo locale('views', 'meghna_mosque'); ?></option>
             <option value="madrasa"><?php echo locale('views', 'meghna_madrasa'); ?></option>
-            <option value="market"><?php echo locale('views', 'meghna_market'); ?></option>
+            <option value="temple"><?php echo locale('views', 'meghna_temple'); ?></option>
+            <option value="sports"><?php echo locale('views', 'meghna_sports'); ?></option>
             <option value="monument"><?php echo locale('views', 'meghna_monument'); ?></option>
+            <option value="committee"><?php echo locale('views', 'upazilla_committee'); ?></option>
+            <option value="admin"><?php echo locale('views', 'upazilla_admin'); ?></option>
+            <option value="hospital"><?php echo locale('views', 'upazilla_hospital'); ?></option>
+            <option value="ambulance"><?php echo locale('views', 'upazilla_ambulance'); ?></option>
+            <option value="market"><?php echo locale('views', 'upazilla_market'); ?></option>
+            <option value="dock"><?php echo locale('views', 'upazilla_dock'); ?></option>
+            <option value="office"><?php echo locale('views', 'upazilla_office'); ?></option>
+            <option value="link"><?php echo locale('views', 'upazilla_link'); ?></option>
           </select>
         </div>
         <div class="col-9">
@@ -43,7 +58,7 @@
           <textarea rows="1" name="tags" class="form-control" id="tags" required></textarea>
         </div>
         <div class="col-12">
-          <small>Tags must be included to seperate <span class="red-text">news, school, college, mosque, madrasa, market and monument</span> category. Use comma to seperate tags!</small>
+          <small>Category tags: <span class="red-text">news, upcoming_events, photo, video, bridge, road, river, school, college, mosque, madrasa, temple, sports, monument, committee, admin, hospital, ambulance, market, dock, office, link</span>. Use comma to seperate tags!</small>
         </div>
       </div>
 

@@ -43,7 +43,7 @@
         <?php $auth = new Base\Authenticable; if($auth->check()){ ?>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item <?php echo route_is('admin/members') ? 'active' : '' ?>">
-              <a class="nav-link" href="<?php echo route('admin/members/all'); ?>">Members</a>
+              <a class="nav-link" href="<?php echo route('admin/members/all'); ?>">Members & Persons</a>
             </li>
             <li class="nav-item <?php echo route_is('admin/projects') ? 'active' : '' ?>">
               <a class="nav-link" href="<?php echo route('admin/projects/all'); ?>">Projects</a>

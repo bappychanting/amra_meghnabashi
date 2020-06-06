@@ -2,13 +2,13 @@
 
 <?php startblock('title') ?>
 
-<?php echo title().' || '.locale('views', 'upazilla_info').' || '.locale('views', 'meghna_'.$_GET['type']); ?>
+<?php echo title().' || '.locale('views', 'upazilla_info').' || '.locale('views', 'upazilla_'.$_GET['type']); ?>
 
 <?php endblock() ?>
 
 <?php startblock('meta_tags') ?>
 
-<meta name="keywords" content="<?php echo $contents['keywords'].', '.$meghna['keywords'].', '.$_GET['type']; ?>">
+<meta name="keywords" content="<?php echo $contents['keywords'].', '.$_GET['type']; ?>">
 <meta name="description" content="<?php echo $contents['slogan']; ?>">
 
 <?php endblock() ?>
@@ -17,7 +17,7 @@
 
 <section class="container my-3 py-3">
 	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-book-reader pr-2"></i><?php echo locale('views', 'upazilla_info'); ?></h1>
-	<h4 class="my-3 font-weight-bold text-primary"><?php echo locale('views', 'meghna_'.$_GET['type']); ?></h4>
+	<h4 class="my-3 font-weight-bold text-primary"><?php echo locale('views', 'upazilla_'.$_GET['type']); ?></h4>
 
 	<input class="searchBox form-control mb-4"  class="form-control" placeholder="<?php echo locale('views', 'search_something'); ?>">
 	<div class="content_paginator">

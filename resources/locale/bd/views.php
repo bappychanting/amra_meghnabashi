@@ -35,7 +35,7 @@ return [
     'meghna_temple' => 'মন্দীর',
     'meghna_sports' => 'ক্রীড়া ও সংস্কৃতি',
     'meghna_monument' => 'ঐতিহাসিক স্থাপনা',
-    'meghna_fighter' => 'মুক্তিযুদ্ধা',
+    'meghna_freedom_fighter' => 'মুক্তিযুদ্ধা',
     'meghna_personality' => 'মেঘনার বিশিষ্টজন',
     'search_something' => 'অনুসন্ধান করুন',
 

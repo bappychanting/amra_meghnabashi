@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'All Members || Add New Member || '.title(); ?>
+<?php echo 'All Members & Persons || Add New Person || '.title(); ?>
 
 <?php endblock() ?>
 
@@ -12,7 +12,7 @@
   <div class="card-header">Admin Dashboard</div>
   <div class="card-body">
 
-    <h5 class="text-center my-3 text-muted"><i class="fas fa-plus pr-2"></i>Add New Member</h5>
+    <h5 class="text-center my-3 text-muted"><i class="fas fa-plus pr-2"></i>Add New Person</h5>
 
     <form method="POST" action="<?php echo route('admin/members/store'); ?>" enctype="multipart/form-data"> 
 
@@ -31,8 +31,12 @@
             <option value="admin"><?php echo locale('views', 'admins'); ?></option>
             <option value="vip"><?php echo locale('views', 'vips'); ?></option>
             <option value="volunteer"><?php echo locale('views', 'volunteers'); ?></option>
-            <option value="fighter"><?php echo locale('views', 'meghna_fighter'); ?></option>
+            <option value="freedom_fighter"><?php echo locale('views', 'meghna_freedom_fighter'); ?></option>
             <option value="personality"><?php echo locale('views', 'personalities'); ?></option>
+            <option value="police"><?php echo locale('views', 'upazilla_police'); ?></option>
+            <option value="doctor"><?php echo locale('views', 'upazilla_doctor'); ?></option>
+            <option value="meghna_doctor"><?php echo locale('views', 'upazilla_meghna_doctor'); ?></option>
+            <option value="immigrant"><?php echo locale('views', 'upazilla_immigrant'); ?></option>
           </select>
         </div>
         <div class="col-9">
@@ -40,7 +44,7 @@
           <textarea rows="1" name="tags" class="form-control" id="tags" required></textarea>
         </div>
         <div class="col-12">
-          <small>Tags must be included to seperate <span class="red-text">adviser, admin, personality, vip and volunteer</span> category. Use comma to seperate tags!</small>
+          <small>Category tags: <span class="red-text">adviser, admin, vip, volunteer, fighter, personality, police, doctor, meghna_doctor, immigrant</span>. Use comma to seperate tags!</small>
         </div>
       </div>
 
