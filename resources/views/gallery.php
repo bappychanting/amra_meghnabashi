@@ -24,7 +24,7 @@
 			<div class="col-sm-4">
 	            <div class="view overlay rounded z-depth-1">
 	              <img src="<?php echo $item['image_path']; ?>" class="img-fluid" alt="<?php echo $item['title']; ?>">
-	              <a href="<?php echo $item['image_path']; ?>" target="_blank"><div class="mask rgba-white-slight"></div></a>
+	              <a href="<?php echo empty($item['image_path']) ? 'javascript:void(0);' : $item['image_path']; ?>" target="_blank"><div class="mask rgba-white-slight"></div></a>
 	            </div>
 			</div>
 	<?php $i++; if($i==3){ echo '<div class="col-sm-12"><hr></div>'; } } ?>

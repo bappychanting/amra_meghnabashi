@@ -24,7 +24,7 @@
           <div class="col-lg-5 col-xl-4 mb-4">
             <div class="view overlay rounded z-depth-1">
               <img src="<?php echo $project['image_path']; ?>" class="img-fluid" alt="<?php echo $project['name']; ?>">
-              <a href="<?php echo $project['image_path']; ?>" target="_blank"><div class="mask rgba-white-slight"></div></a>
+              <a href="<?php echo route('projects/show', ['id' => $project['id']]); ?>"><div class="mask rgba-white-slight"></div></a>
             </div>
           </div>
           <div class="col-lg-7 col-xl-7 ml-xl-4 mb-4">
