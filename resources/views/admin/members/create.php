@@ -31,11 +31,11 @@
             <option value="admin"><?php echo locale('views', 'admins'); ?></option>
             <option value="vip"><?php echo locale('views', 'vips'); ?></option>
             <option value="volunteer"><?php echo locale('views', 'volunteers'); ?></option>
-            <option value="freedom_fighter"><?php echo locale('views', 'meghna_freedom_fighter'); ?></option>
+            <option value="ffighter"><?php echo locale('views', 'meghna_ffighter'); ?></option>
             <option value="personality"><?php echo locale('views', 'personalities'); ?></option>
             <option value="police"><?php echo locale('views', 'upazilla_police'); ?></option>
             <option value="doctor"><?php echo locale('views', 'upazilla_doctor'); ?></option>
-            <option value="meghna_doctor"><?php echo locale('views', 'upazilla_meghna_doctor'); ?></option>
+            <option value="mdoctor"><?php echo locale('views', 'upazilla_mdoctor'); ?></option>
             <option value="immigrant"><?php echo locale('views', 'upazilla_immigrant'); ?></option>
           </select>
         </div>
@@ -44,7 +44,7 @@
           <textarea rows="1" name="tags" class="form-control" id="tags" required></textarea>
         </div>
         <div class="col-12">
-          <small>Category tags: <span class="red-text">adviser, admin, vip, volunteer, fighter, personality, police, doctor, meghna_doctor, immigrant</span>. Use comma to seperate tags!</small>
+          <small>Category tags: <span class="red-text">adviser, admin, vip, volunteer, ffighter, personality, police, doctor, mdoctor, immigrant</span>. Use comma to seperate tags!</small>
         </div>
       </div>
 

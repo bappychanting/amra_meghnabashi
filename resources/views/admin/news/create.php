@@ -30,7 +30,7 @@
           <label for="select_tag">Select Category Tag</label>
           <select class="form-control" id="select_tag">
             <option value="news"><?php echo locale('views', 'news'); ?></option>
-            <option value="upcoming_events"><?php echo locale('views', 'upcoming_events'); ?></option>
+            <option value="event"><?php echo locale('views', 'event'); ?></option>
             <option value="photo"><?php echo locale('views', 'photo_gallery'); ?></option>
             <option value="video"><?php echo locale('views', 'video_gallery'); ?></option>
             <option value="bridge"><?php echo locale('views', 'meghna_bridge'); ?></option>
@@ -58,7 +58,7 @@
           <textarea rows="1" name="tags" class="form-control" id="tags" required></textarea>
         </div>
         <div class="col-12">
-          <small>Category tags: <span class="red-text">news, upcoming_events, photo, video, bridge, road, river, school, college, mosque, madrasa, temple, sports, monument, committee, admin, hospital, ambulance, market, dock, office, link</span>. Use comma to seperate tags!</small>
+          <small>Category tags: <span class="red-text">news, event, photo, video, bridge, road, river, school, college, mosque, madrasa, temple, sports, monument, committee, admin, hospital, ambulance, market, dock, office, link</span>. Use comma to seperate tags!</small>
         </div>
       </div>
 

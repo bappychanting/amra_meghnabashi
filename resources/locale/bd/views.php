@@ -35,7 +35,7 @@ return [
     'meghna_temple' => 'মন্দীর',
     'meghna_sports' => 'ক্রীড়া ও সংস্কৃতি',
     'meghna_monument' => 'ঐতিহাসিক স্থাপনা',
-    'meghna_freedom_fighter' => 'মুক্তিযুদ্ধা',
+    'meghna_ffighter' => 'মুক্তিযুদ্ধা',
     'meghna_personality' => 'মেঘনার বিশিষ্টজন',
     'search_something' => 'অনুসন্ধান করুন',
 
@@ -47,7 +47,7 @@ return [
     'upazilla_healthcare' => 'স্বাস্থ্য সেবা',
     'upazilla_hospital' => 'হাসপাতাল',
     'upazilla_doctor' => 'ডাক্তার',
-    'upazilla_meghna_doctor' => 'মেঘনাবাসী ডাক্তার ',
+    'upazilla_mdoctor' => 'মেঘনাবাসী ডাক্তার ',
     'upazilla_ambulance' => 'এ্যাম্বুলেন্স',
     'upazilla_market' => 'হাটবাজার',
     'upazilla_dock' => 'নৌঘাট',
@@ -74,8 +74,8 @@ return [
 
         // News    
     'news' => 'খবর',
+    'event' => 'ইভেন্টস',
     'see_all_news' => 'সমস্ত খবর দেখুন',
-    'upcoming_events' => 'আসন্ন ইভেন্টস',
 
         // Projects
     'projects' => 'প্রকল্পসমূহ',
