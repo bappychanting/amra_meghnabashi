@@ -100,8 +100,10 @@ class HomeController extends Controller
     public function showPoject() 
     {
         $contents = $this->getContents();
-        $project = $this->project->setData($_GET)->getProject();
-        return $this->view('projects.show', compact('contents', 'project'));
+        $this->project->setData($_GET);
+        $project = $this->project->getProject();
+        $donations = $this->project->getDonations();
+        return $this->view('projects.show', compact('contents', 'project', 'donations'));
     }
 
     public function news() 

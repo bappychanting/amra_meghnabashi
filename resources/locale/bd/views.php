@@ -87,5 +87,8 @@ return [
     'projects' => 'প্রকল্পসমূহ',
     'our_projects' => 'আমাদের প্রকল্পসমূহ',
     'see_all_projects' => 'সমস্ত প্রকল্পসমূহ দেখুন',
+    'view_donations' => 'অনুদান দেখুন',
+    'member_name' => 'সদস্যের নাম',
+    'total_donation' => 'মোট অনুদান',
 
 ];
