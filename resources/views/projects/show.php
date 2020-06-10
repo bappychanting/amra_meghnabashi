@@ -28,7 +28,7 @@
     </div>
     <?php echo $project['details']; ?>
 	<div id="social_share" class="my-3"></div>
-  <a class="my-3 font-weight-bold text-primary h4" data-toggle="collapse" href="#donations" aria-expanded="false" aria-controls="donations">
+  <a class="my-3 font-weight-bold text-primary h5" data-toggle="collapse" href="#donations" aria-expanded="false" aria-controls="donations">
     <?php echo locale('views', 'view_donations'); ?>
   </a>
   <div class="collapse mt-3" id="donations">
@@ -51,7 +51,8 @@
       </tbody>
     </table>
   </div>
-  <a class="font-weight-bold text-primary h4" href="javascript:void(0);" data-toggle="modal" data-target="#join_modal"><?php echo locale('views', 'be_volunteer'); ?></a>
+  <br>
+  <a class="font-weight-bold text-primary h5" href="javascript:void(0);" data-toggle="modal" data-target="#join_modal"><?php echo locale('views', 'be_volunteer'); ?></a>
 	
 </section>
 
