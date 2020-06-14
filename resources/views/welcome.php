@@ -86,7 +86,7 @@
 	<ul class="pagination-sm content-paginate"></ul>
 	<p class="h3 text-info font-weight-bold my-3 text-center"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></p>
 	<div class="owl-carousel">
-		<?php $i=0; foreach ($members as $member) { if((strpos($member['tags'], 'adviser') !== false) || (strpos($member['tags'], 'vip') !== false) || (strpos($member['tags'], 'admin') !== false) || (strpos($member['tags'], 'volunteer') !== false)){ ?>
+		<?php $i=0; foreach ($members as $member) { if( ($member['approved'] == 1) && ( (strpos($member['tags'], 'adviser') !== false) || (strpos($member['tags'], 'vip') !== false) || (strpos($member['tags'], 'admin') !== false) || (strpos($member['tags'], 'volunteer') !== false) ) ){ ?>
 			<div>
 				<a href="<?php echo route('members/show', ['id' => $member['id']]); ?>" title="<?php echo $member['name']; ?>" class="link-unstyled">
 					<?php echo image($member['image_path'], $member['name'], ['class'=>'rounded-circle mt-3', 'height'=>'150px']); ?>
