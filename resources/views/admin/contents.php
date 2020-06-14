@@ -114,7 +114,8 @@
 
       <div class="form-label-group my-3">
         <label>Video Src URL</label>
-        <input type="url" name="content[video_src]" value="<?php echo $content['video_src']; ?>" class="form-control" required>
+        <input type="url" name="content[video_src]" value="<?php echo $content['video_src']; ?>"  placeholder="Format: https://www.youtube.com/embed/video_id" class="form-control" required>
+        <small>Please copy paste the <span class="red-text">embed link</span> from youtube above!</small>
       </div>
 
       <div class="form-label-group my-3">

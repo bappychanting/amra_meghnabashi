@@ -4,6 +4,7 @@ return [
 
 	'app_title' => 'আমরা মেঘনাবাসী',
 	'links' => 'লিংকসমূহ',
+    'others' => 'অন্যান্য',
     'home_page' => 'হোমপেজ',
     'donate_now' => 'দান করুন!',
     'who_are_we' => 'আমাদের পরিচয়',
@@ -26,6 +27,8 @@ return [
         // Our Meghna
     'our_meghna' => 'আমাদের মেঘনা',
     'about_meghna' => 'একনজরে মেঘনা',
+    'meghna_size' => 'আয়তন',
+    'meghna_location' => 'অবস্থান',
     'meghna_bridge' => 'ব্রীজ কালভার্ট',
     'meghna_road' => 'সড়ক পথ',
     'meghna_river' => 'নদী পথ',
@@ -37,11 +40,12 @@ return [
     'meghna_temple' => 'মন্দীর',
     'meghna_sports' => 'ক্রীড়া ও সংস্কৃতি',
     'meghna_monument' => 'ঐতিহাসিক স্থাপনা',
-    'meghna_ffighter' => 'মুক্তিযুদ্ধা',
+    'meghna_ffighter' => 'মুক্তিযোদ্ধা',
     'meghna_personality' => 'মেঘনার বিশিষ্টজন',
 
         // Upazilla
     'upazilla_info' => 'উপজেলার তথ্যাদি',
+    'upazilla_about' => 'উপজেলা সম্পর্কে',
     'upazilla_committee' => 'উপজেলা পরিষদ',
     'upazilla_admin' => 'উপজেলা প্রশাসন',
     'upazilla_police' => 'উপজেলা পুলিশ',
@@ -75,12 +79,16 @@ return [
 
         // News    
     'news' => 'খবর',
-    'event' => 'ইভেন্টস',
+    'news_program' => 'সকল প্রোগ্রাম',
+    'news_upcoming' => 'আসন্ন প্রোগ্রাম',
     'see_all_news' => 'সমস্ত খবর দেখুন',
 
         // Projects
     'projects' => 'প্রকল্পসমূহ',
     'our_projects' => 'আমাদের প্রকল্পসমূহ',
     'see_all_projects' => 'সমস্ত প্রকল্পসমূহ দেখুন',
+    'view_donations' => 'অনুদান দেখুন',
+    'member_name' => 'সদস্যের নাম',
+    'total_donation' => 'মোট অনুদান',
 
 ];

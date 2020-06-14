@@ -100,7 +100,7 @@
 
           <div class="form-label-group my-3">
             <label for="image_path">Video Src URL</label>
-            <input type="text" name="image_path" id="image_path" class="form-control" placeholder="https://www.youtube.com/embed/video_id" required>
+            <input type="text" name="image_path" id="image_path" class="form-control" placeholder="Format: https://www.youtube.com/embed/video_id" required>
             <small>Please copy paste the <span class="red-text">embed link</span> from youtube above!</small>
           </div>
 

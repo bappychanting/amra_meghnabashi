@@ -100,6 +100,12 @@ class Project extends Model{
 	    return $projects[0];
     }
 
+        // Function for getting donations
+    public function getDonations(){ 
+        $donations = $this->db->get('SELECT member_name, member_id, SUM(donation) as donation FROM donations_view WHERE project_id = '.$this->getId().' GROUP BY member_id');
+        return $donations;
+    }
+
     	// Function for storing projects
     public function store() {   
         $store = $this->db->table('projects')->data(['name' => $this->getName(), 'tags' => $this->getTag(), 'image_path' => $this->getImage(), 'details' => $this->getDetail()])->create();

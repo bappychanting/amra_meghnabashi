@@ -130,11 +130,6 @@
 			flexiblePagination.getController().onPageClick = function(pageNum, e){
 	            // console.log('You Clicked Page: '+pageNum)
 	        };
-
-	        // Control Mega Menu
-	        $(".megamenu").on("click", function(e) {
-				e.stopPropagation();
-			});
 	        
 	    });
 	</script>

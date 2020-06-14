@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         $contents = $this->getContents();
         $projects = $this->project->getProjects();
-        $newses = $this->news->getItemsPeg('news');
+        $newses = $this->news->getItemsPeg('program');
         $members = $this->member->getMembers();
         shuffle($members);
         return $this->view('welcome', compact('contents', 'newses', 'members', 'projects'));
@@ -100,8 +100,10 @@ class HomeController extends Controller
     public function showPoject() 
     {
         $contents = $this->getContents();
-        $project = $this->project->setData($_GET)->getProject();
-        return $this->view('projects.show', compact('contents', 'project'));
+        $this->project->setData($_GET);
+        $project = $this->project->getProject();
+        $donations = $this->project->getDonations();
+        return $this->view('projects.show', compact('contents', 'project', 'donations'));
     }
 
     public function news() 
