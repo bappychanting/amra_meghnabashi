@@ -21,9 +21,10 @@
 		<?php echo locale('views', 'advisers'); ?>
 	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'advisers') ? 'show' : ''; ?> mt-3" id="advisers">
-		<div class="row">
+		<input class="searchBox form-control mb-4"  class="form-control" placeholder="<?php echo locale('views', 'search_something'); ?>">
+		<div class="row content_paginator">
 		<?php foreach ($members['advisers'] as $adviser) { ?>
-			<div class="col-sm-4 mb-3">
+			<div class="result col-sm-4 mb-3">
 				<div class="media">
 					<?php echo image($adviser['image_path'], $adviser['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
 					<div class="media-body">
@@ -40,9 +41,10 @@
 		<?php echo locale('views', 'vips'); ?>
 	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'vips') ? 'show' : ''; ?> mt-3" id="vips">
-		<div class="row">
+		<input class="searchBox form-control mb-4"  class="form-control" placeholder="<?php echo locale('views', 'search_something'); ?>">
+		<div class="row content_paginator">
 		<?php foreach ($members['vips'] as $vip) { ?>
-			<div class="col-sm-4 mb-3">
+			<div class="result col-sm-4 mb-3">
 				<div class="media">
 					<?php echo image($vip['image_path'], $vip['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
 					<div class="media-body">
@@ -59,9 +61,10 @@
 		<?php echo locale('views', 'admins'); ?>
 	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'admins') ? 'show' : ''; ?> mt-3" id="admins">
-		<div class="row">
+		<input class="searchBox form-control mb-4"  class="form-control" placeholder="<?php echo locale('views', 'search_something'); ?>">
+		<div class="row content_paginator">
 		<?php foreach ($members['admins'] as $admin) { ?>
-			<div class="col-sm-4 mb-3">
+			<div class="result col-sm-4 mb-3">
 				<div class="media">
 					<?php echo image($admin['image_path'], $admin['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
 					<div class="media-body">
@@ -78,9 +81,10 @@
 		<?php echo locale('views', 'volunteers'); ?>
 	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'volunteers') ? 'show' : ''; ?> mt-3" id="volunteers">
-		<div class="row">
+		<input class="searchBox form-control mb-4"  class="form-control" placeholder="<?php echo locale('views', 'search_something'); ?>">
+		<div class="row content_paginator">
 		<?php foreach ($members['volunteers'] as $volunteer) { ?>
-			<div class="col-sm-4 mb-3">
+			<div class="result col-sm-4 mb-3">
 				<div class="media">
 					<?php echo image($volunteer['image_path'], $volunteer['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
 					<div class="media-body">
