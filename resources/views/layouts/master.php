@@ -116,7 +116,7 @@
 			var flexiblePagination = $('.content_paginator').flexiblePagination({
 				itemsPerPage : 12,
 				itemSelector : 'div.result:visible',
-				pagingControlsContainer : '#pagingControls',
+				pagingControlsContainer : '.pagingControls',
 	            // showingInfoSelector : '#showingInfo',
 	            css: {
 	            	btnNumberingClass: 'btn btn-sm btn-white waves-effect',
