@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-6">
         <nav class="nav">
-          <a href="javascript:void(0);" class="nav-link text-muted"><i class="fas fa-phone pr-2"></i><?php echo $contents['contact']; ?></a>
+          <a href="tel:<?php echo $contents['contact']; ?>" class="nav-link text-muted"><i class="fas fa-phone pr-2"></i><?php echo $contents['contact']; ?></a>
           <a href="mailto:<?php echo $contents['email']; ?>" class="nav-link text-muted"><i class="fas fa-envelope pr-2"></i><?php echo $contents['email']; ?></a>
         </nav>
       </div>
