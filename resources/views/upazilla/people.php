@@ -24,14 +24,14 @@
 		<?php foreach ($people as $ppl) { ?>
 			<div class="result col-sm-4 mb-3">
 				<div class="media">
-					<?php echo image($ppl['image_path'], $ppl['name'], ['class'=>'rounded-circle mr-3', 'height'=>'100px', 'width' => '100px']); ?>
+					<?php echo image($ppl['image_path'], $ppl['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
 					<div class="media-body">
 						<h5 class="mt-0 font-weight-bold"><?php echo $ppl['name']; ?></h5>
 						<i class="far fa-id-card pr-2"></i><?php echo $ppl['designation']; ?>
 						<span style="display: none;"><?php echo strip_tags($ppl['details']); ?></span>
-						<br><a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $ppl['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 					</div>
 				</div>
+				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $ppl['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
 				<hr>
 			</div>
 		<?php } ?>
