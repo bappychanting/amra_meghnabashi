@@ -103,13 +103,13 @@
 				autoplayHoverPause:true,
 				responsive:{
 					0:{
-						items:2,
-					},
-					600:{
 						items:4,
 					},
+					600:{
+						items:7,
+					},
 					1000:{
-						items:6,
+						items:12,
 					}
 				}
 			});
