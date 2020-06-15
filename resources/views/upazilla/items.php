@@ -42,7 +42,7 @@
 			</div>
 		<?php } ?>
 	</div>
-	<div id="pagingControls"></div>
+	<div class="pagingControls"></div>
 	<!-- <div id="showingInfo" class="well my-3"></div> -->
 
 	
