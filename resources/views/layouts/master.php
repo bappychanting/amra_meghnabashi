@@ -66,6 +66,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js" referrerpolicy="origin"></script>
 	<!-- Paginator Javascript -->
 	<?php echo script('plugins/paginator/flexible.pagination.js'); ?>
+	<!-- Load More Javascript -->
+	<?php echo script('plugins/loadmore/jquery.simpleLoadMore.min.js'); ?>
 	<!-- MDB core JavaScript -->
 	<?php echo script('js/mdb.min.js'); ?>
 	<!-- Custom Script -->
@@ -111,6 +113,14 @@
 					}
 				}
 			});
+
+			// Initialize Load More
+			$('.view-members').simpleLoadMore({
+  				item: 'div',
+  				count: 36,
+  				itemsToLoad: 36,
+  				btnHTML:'<div class="col-sm-12 mb-3 text-center"><a href="javascript:void(0);" class="font-weight-bold text-primary h5">আরো দেখুন</a></div>'
+			})
 
 			// Initialize Pagination
 			var flexiblePagination = $('.content_paginator').flexiblePagination({
