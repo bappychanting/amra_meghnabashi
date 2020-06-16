@@ -59,6 +59,7 @@
               <div class="col-sm-4 dropdown-wide-items">
                 <span class="text-primary font-weight-bold text-muted mx-2"><?php echo locale('views', 'others'); ?></span>
                 <hr>
+                <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'arts']); ?>"><?php echo locale('views', 'meghna_arts'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'sports']); ?>"><?php echo locale('views', 'meghna_sports'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('meghna/items', ['type' => 'monument']); ?>"><?php echo locale('views', 'meghna_monument'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('meghna/people', ['type' => 'ffighter']); ?>"><?php echo locale('views', 'meghna_ffighter'); ?></a>

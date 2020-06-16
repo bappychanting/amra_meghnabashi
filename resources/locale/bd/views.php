@@ -39,6 +39,7 @@ return [
     'meghna_madrasa' => 'মাদ্রাসা',
     'meghna_temple' => 'মন্দীর',
     'meghna_sports' => 'ক্রীড়া ও সংস্কৃতি',
+    'meghna_arts' => 'শিল্প ও সাহিত্য',
     'meghna_monument' => 'ঐতিহাসিক স্থাপনা',
     'meghna_ffighter' => 'মুক্তিযোদ্ধা',
     'meghna_personality' => 'মেঘনার বিশিষ্টজন',
