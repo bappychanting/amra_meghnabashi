@@ -33,31 +33,31 @@
 
 <!-- Our Achievements -->
 <!-- <section class='grey lighten-3 py-3'> -->
-<section class='yellow lighten-4 py-3'>
+<section class='amber lighten-5 py-3'>
 	<div class="container">
 		<div class="row features-small wow fadeIn text-center">
 			<div class="col-xl-3 col-lg-6">
 				<p>
 					<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['programs']; ?>" data-speed="5000" data-refresh-interval="50"></span>
-					<br><span class="py-1 text-muted">Programs<?php // echo locale('views', 'programs'); ?></span>
+					<hr><span class="py-1 text-muted">Programs<?php // echo locale('views', 'programs'); ?></span>
 				</p>
 			</div>
 			<div class="col-xl-3 col-lg-6">
 				<p>
 					<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['beneficiaries']; ?>" data-speed="5000" data-refresh-interval="50"></span>
-					<br><span class="py-1 text-muted">Beneficiaries<?php // echo locale('views', 'beneficiaries'); ?></span>
+					<hr><span class="py-1 text-muted">Beneficiaries<?php // echo locale('views', 'beneficiaries'); ?></span>
 				</p>
 			</div>
 			<div class="col-xl-3 col-lg-6">
 				<p>
 					<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['reached']; ?>" data-speed="5000" data-refresh-interval="50"></span><span class="h1 text-primary">&#37;</span>
-					<br><span class="py-1 text-muted">Reached<?php // echo locale('views', 'reached'); ?></span>
+					<hr><span class="py-1 text-muted">Reached<?php // echo locale('views', 'reached'); ?></span>
 				</p>
 			</div>
 			<div class="col-xl-3 col-lg-6">
 				<p>
 					<span class="h1 text-primary timer" data-from="0" data-to="<?php echo $contents['job_scholarship']; ?>" data-speed="5000" data-refresh-interval="50"></span><span class="h1 text-primary">&#43;</span>
-					<br><span class="py-1 text-muted">Jobs & Scholarships<?php // locale('views', 'job_scholarship'); ?></span>
+					<hr><span class="py-1 text-muted">Jobs & Scholarships<?php // locale('views', 'job_scholarship'); ?></span>
 				</p>
 			</div>
 		</div>
