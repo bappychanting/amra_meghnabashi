@@ -41,7 +41,8 @@
             <option value="college"><?php echo locale('views', 'meghna_college'); ?></option>
             <option value="mosque"><?php echo locale('views', 'meghna_mosque'); ?></option>
             <option value="madrasa"><?php echo locale('views', 'meghna_madrasa'); ?></option>
-            <option value="temple"><?php echo locale('views', 'meghna_temple'); ?></option>
+            <option value="temple"><?php echo locale('views', 'meghna_temple'); ?></option>>
+            <option value="arts"><?php echo locale('views', 'meghna_arts'); ?></option>
             <option value="sports"><?php echo locale('views', 'meghna_sports'); ?></option>
             <option value="monument"><?php echo locale('views', 'meghna_monument'); ?></option>
             <option value="committee"><?php echo locale('views', 'upazilla_committee'); ?></option>
@@ -60,7 +61,7 @@
           <textarea rows="1" name="tags" class="form-control" id="tags" required><?php echo $news['tags']; ?></textarea>
         </div>
         <div class="col-12">
-          <small>Category tags: <span class="red-text">program, event, photo, size, location, bridge, road, river, school, college, mosque, madrasa, temple, sports, monument, committee, admin, hospital, ambulance, market, dock, office, agro, link</span>. Add <span class="red-text">upcoming</span> if upcoming program. Use comma to seperate tags!</small>
+          <small>Category tags: <span class="red-text">program, event, photo, size, location, bridge, road, river, school, college, mosque, madrasa, temple, arts, sports, monument, committee, admin, hospital, ambulance, market, dock, office, agro, link</span>. Add <span class="red-text">upcoming</span> if upcoming program. Use comma to seperate tags!</small>
         </div>
       </div>
 
@@ -84,7 +85,7 @@
         <textarea name="details" class="editor"><?php echo $news['details']; ?></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary mr-5">Submit</button>
+      <button type="submit" class="btn btn-primary submit mr-5">Submit</button>
     </form>
 
   </div>

@@ -21,7 +21,7 @@
 		<?php echo locale('views', 'advisers'); ?>
 	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'advisers') ? 'show' : ''; ?> mt-3" id="advisers">
-		<div class="row">
+		<div class="row view-members">
 		<?php foreach ($members['advisers'] as $adviser) { ?>
 			<div class="col-sm-4 mb-3">
 				<div class="media">
@@ -40,7 +40,7 @@
 		<?php echo locale('views', 'vips'); ?>
 	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'vips') ? 'show' : ''; ?> mt-3" id="vips">
-		<div class="row">
+		<div class="row view-members">
 		<?php foreach ($members['vips'] as $vip) { ?>
 			<div class="col-sm-4 mb-3">
 				<div class="media">
@@ -59,7 +59,7 @@
 		<?php echo locale('views', 'admins'); ?>
 	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'admins') ? 'show' : ''; ?> mt-3" id="admins">
-		<div class="row">
+		<div class="row view-members">
 		<?php foreach ($members['admins'] as $admin) { ?>
 			<div class="col-sm-4 mb-3">
 				<div class="media">
@@ -78,7 +78,7 @@
 		<?php echo locale('views', 'volunteers'); ?>
 	</a>
 	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'volunteers') ? 'show' : ''; ?> mt-3" id="volunteers">
-		<div class="row">
+		<div class="row view-members">
 		<?php foreach ($members['volunteers'] as $volunteer) { ?>
 			<div class="col-sm-4 mb-3">
 				<div class="media">

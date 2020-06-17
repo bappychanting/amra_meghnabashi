@@ -133,7 +133,7 @@
         <textarea class="editor" name="content[our_programs_3]"><?php echo $content['our_programs_3'] ?></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary mr-5">Submit</button>
+      <button type="submit" class="btn btn-primary submit mr-5">Submit</button>
     </form>
   </div>
 </div>

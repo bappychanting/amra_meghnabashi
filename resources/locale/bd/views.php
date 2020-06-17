@@ -18,7 +18,7 @@ return [
     'follow_us' => 'আমাদের অনুসরণ করুন',
     'subscribe_us' => 'আমাদের সাবস্ক্রাইব করুন',
     'show_details' => 'বিস্তারিত দেখুন',
-    'read_more' => 'আরও পড়ুন',
+    'read_more' => 'আরো দেখুন',
     'go_back' => 'ফিরে যান',
     'close' => 'বন্ধ করুন',
     'submit' => 'জমা দিন',
@@ -39,6 +39,7 @@ return [
     'meghna_madrasa' => 'মাদ্রাসা',
     'meghna_temple' => 'মন্দীর',
     'meghna_sports' => 'ক্রীড়া ও সংস্কৃতি',
+    'meghna_arts' => 'শিল্প ও সাহিত্য',
     'meghna_monument' => 'ঐতিহাসিক স্থাপনা',
     'meghna_ffighter' => 'মুক্তিযোদ্ধা',
     'meghna_personality' => 'মেঘনার বিশিষ্টজন',
@@ -58,7 +59,8 @@ return [
     'upazilla_dock' => 'নৌঘাট',
     'upazilla_office' => 'উপজেলার সব অফিস',
     'upazilla_agro' => 'কৃষক ও এগ্রো ইন্ডাস্ট্রি',
-    'upazilla_immigrant' => 'প্রবাসী',
+    'upazilla_immigrant_local' => 'প্রবাসী (আবাসী)',
+    'upazilla_immigrant_foreign' => 'প্রবাসী (অনাবাসী)',
     'upazilla_link' => 'গুরুত্বপূর্ণ লিংকস',
 
         // gallery
