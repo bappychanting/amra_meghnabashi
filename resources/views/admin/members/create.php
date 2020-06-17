@@ -37,7 +37,8 @@
             <option value="police"><?php echo locale('views', 'upazilla_police'); ?></option>
             <option value="doctor"><?php echo locale('views', 'upazilla_doctor'); ?></option>
             <option value="mdoctor"><?php echo locale('views', 'upazilla_mdoctor'); ?></option>
-            <option value="immigrant"><?php echo locale('views', 'upazilla_immigrant'); ?></option>
+            <option value="immigrant_local"><?php echo locale('views', 'upazilla_immigrant_local'); ?></option>
+            <option value="immigrant_foreign"><?php echo locale('views', 'upazilla_immigrant_foreign'); ?></option>
           </select>
         </div>
         <div class="col-9">
@@ -71,7 +72,7 @@
         </textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary mr-5">Submit</button>
+      <button type="submit" class="btn btn-primary submit mr-5">Submit</button>
     </form>
   </div>
 </div>

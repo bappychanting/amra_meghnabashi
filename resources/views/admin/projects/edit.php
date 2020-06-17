@@ -51,7 +51,7 @@
         <textarea name="details" class="editor"><?php echo $project['details']; ?></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary mr-5">Submit</button>
+      <button type="submit" class="btn btn-primary submit mr-5">Submit</button>
     </form>
 
   </div>

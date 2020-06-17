@@ -100,7 +100,8 @@
                 <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'market']); ?>"><?php echo locale('views', 'upazilla_market'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'dock']); ?>"><?php echo locale('views', 'upazilla_dock'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'agro']); ?>"><?php echo locale('views', 'upazilla_agro'); ?></a>
-                <a class="dropdown-item" href="<?php echo route('upazilla/people', ['type' => 'immigrant']); ?>"><?php echo locale('views', 'upazilla_immigrant'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/people', ['type' => 'immigrant_local']); ?>"><?php echo locale('views', 'upazilla_immigrant_local'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/people', ['type' => 'immigrant_foreign']); ?>"><?php echo locale('views', 'upazilla_immigrant_foreign'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'link']); ?>"><?php echo locale('views', 'upazilla_link'); ?></a>
               </div>
             </div>

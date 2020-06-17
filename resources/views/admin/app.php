@@ -159,11 +159,18 @@
                           'image': data,
                           'type': 'base64'
                       },
+                      beforeSend: function() {
+                        $(".submit").prop("disabled",true);
+                      },
                       success: function(response) {
                           $("#image_uploaded_src").val(response.data.link);
                           alert("Image upload done!");
-                      }, error: function() {
+                      }, 
+                      error: function() {
                           alert("Error while uploading...");
+                      },
+                      complete: function() {
+                        $(".submit").prop("disabled",false);
                       }
                   });
               };
