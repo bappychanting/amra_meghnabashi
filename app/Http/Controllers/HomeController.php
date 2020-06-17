@@ -82,12 +82,15 @@ class HomeController extends Controller
     }
 
     public function joinMember() 
-    {
-        $app = $this->config('app');  
-        $_POST['image_path'] = \App\Helpers\Upload::imageUpload($_FILES['member_image'], $app['upload'].'/member_images', 500, 375, true);
-        $db = new \Base\DB;
-        $db->table('members')->data(['name' => $_POST['name'], 'tags' => 'volunteer', 'designation' => 'Volunteer', 'image_path' => $_POST['image_path'], 'details' => json_encode(['email' => $_POST['email'], 'phone' => $_POST['phone'], 'address' => $_POST['address'], 'details' => $_POST['details']]), 'approved' => 0])->create();
-        $this->abort(200, 'Thanks for your submission! You will get back to you asap!');
+    { 
+        if(!empty($_FILES['member_image'])){
+            $app = $this->config('app'); 
+            $_POST['image_path'] = \App\Helpers\Upload::imageUpload($_FILES['member_image'], $app['upload'].'/member_images', 500, 375, true);
+            $db = new \Base\DB;
+            $db->table('members')->data(['name' => $_POST['name'], 'tags' => 'volunteer', 'designation' => 'Volunteer', 'image_path' => $_POST['image_path'], 'details' => json_encode(['email' => $_POST['email'], 'phone' => $_POST['phone'], 'address' => $_POST['address'], 'details' => $_POST['details']]), 'approved' => 0])->create();
+            $this->abort(200, 'Thanks for your submission! You will get back to you asap!');
+        }
+        $this->abort(500, 'There was an error processing your request!');
     }
 
     public function projects() 
