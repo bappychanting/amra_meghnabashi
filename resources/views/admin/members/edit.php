@@ -39,8 +39,8 @@
             <option value="police"><?php echo locale('views', 'upazilla_police'); ?></option>
             <option value="doctor"><?php echo locale('views', 'upazilla_doctor'); ?></option>
             <option value="mdoctor"><?php echo locale('views', 'upazilla_mdoctor'); ?></option>
-            <option value="immigrant_local"><?php echo locale('views', 'upazilla_immigrant_local'); ?></option>
-            <option value="immigrant_foreign"><?php echo locale('views', 'upazilla_immigrant_foreign'); ?></option>
+            <option value="imlocal"><?php echo locale('views', 'upazilla_imlocal'); ?></option>
+            <option value="imforeign"><?php echo locale('views', 'upazilla_imforeign'); ?></option>
           </select>
         </div>
         <div class="col-9">
@@ -48,7 +48,7 @@
           <textarea rows="1" name="tags" class="form-control" id="tags" required><?php echo $member['tags']; ?></textarea>
         </div>
         <div class="col-12">
-          <small>Category tags: <span class="red-text">adviser, admin, vip, volunteer, ffighter, personality, police, doctor, mdoctor, immigrant</span>. Use comma to seperate tags!</small>
+          <small>Category tags: <span class="red-text">adviser, admin, vip, volunteer, ffighter, personality, police, doctor, mdoctor, imlocal, imforeign</span>. Use comma to seperate tags!</small>
         </div>
       </div>
 
