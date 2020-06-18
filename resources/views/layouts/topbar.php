@@ -100,8 +100,7 @@
                 <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'market']); ?>"><?php echo locale('views', 'upazilla_market'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'dock']); ?>"><?php echo locale('views', 'upazilla_dock'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'agro']); ?>"><?php echo locale('views', 'upazilla_agro'); ?></a>
-                <a class="dropdown-item" href="<?php echo route('upazilla/people', ['type' => 'imlocal']); ?>"><?php echo locale('views', 'upazilla_imlocal'); ?></a>
-                <a class="dropdown-item" href="<?php echo route('upazilla/people', ['type' => 'imforeign']); ?>"><?php echo locale('views', 'upazilla_imforeign'); ?></a>
+                <a class="dropdown-item" href="<?php echo route('upazilla/people', ['type' => 'immigrant']); ?>"><?php echo locale('views', 'upazilla_immigrant'); ?></a>
                 <a class="dropdown-item" href="<?php echo route('upazilla/items', ['type' => 'link']); ?>"><?php echo locale('views', 'upazilla_link'); ?></a>
               </div>
             </div>
@@ -155,7 +154,7 @@
 
 <!-- Join Modal -->
 <div class="modal fade" id="join_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header blue lighten-1 text-white">
         <h4 class="modal-title w-100" id="myModalLabel"><?php echo locale('views', 'be_volunteer'); ?></h4>
@@ -186,7 +185,7 @@
           </div>
 
           <div class="md-form">
-            <label for="inp-phone"><?php echo locale('views', 'email'); ?></label>
+            <label for="inp-phone"><?php echo locale('views', 'phone'); ?></label>
             <input type="text" id="inp-phone" name="phone" class="form-control" maxlength="50" minlength="2" required>
           </div>
 

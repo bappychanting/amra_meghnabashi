@@ -68,8 +68,9 @@ return [
     'upazilla_dock' => 'নৌঘাট',
     'upazilla_office' => 'উপজেলার সব অফিস',
     'upazilla_agro' => 'কৃষক ও এগ্রো ইন্ডাস্ট্রি',
-    'upazilla_imlocal' => 'প্রবাসী (আবাসী)',
-    'upazilla_imforeign' => 'প্রবাসী (অনাবাসী)',
+    'upazilla_immigrant' => 'প্রবাসী',
+    'upazilla_immigrantlocal' => 'প্রবাসী (আবাসী)',
+    'upazilla_immigrantforeign' => 'প্রবাসী (অনাবাসী)',
     'upazilla_link' => 'গুরুত্বপূর্ণ লিংকস',
 
         // gallery
