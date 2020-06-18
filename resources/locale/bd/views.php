@@ -2,7 +2,8 @@
 
 return [
 
-	'app_title' => 'আমরা মেঘনাবাসী',
+	    // General navigation
+    'app_title' => 'আমরা মেঘনাবাসী',
 	'links' => 'লিংকসমূহ',
     'others' => 'অন্যান্য',
     'home_page' => 'হোমপেজ',
@@ -21,6 +22,14 @@ return [
     'read_more' => 'আরো দেখুন',
     'go_back' => 'ফিরে যান',
     'close' => 'বন্ধ করুন',
+
+        // Form
+    'image' => 'আপনার চিত্র (আকার 500 কেবি এর থেকে কম হবে)',
+    'name' => 'আপনার নাম',
+    'email' => ' আপনার ইমেইল',
+    'phone' => ' আপনার ফোন',
+    'address' => ' আপনার ঠিকানা',
+    'details' => 'আপনার অন্যান্য বিবরণ',
     'submit' => 'জমা দিন',
     'search_something' => 'অনুসন্ধান করুন',
 
@@ -59,8 +68,7 @@ return [
     'upazilla_dock' => 'নৌঘাট',
     'upazilla_office' => 'উপজেলার সব অফিস',
     'upazilla_agro' => 'কৃষক ও এগ্রো ইন্ডাস্ট্রি',
-    'upazilla_immigrant_local' => 'প্রবাসী (আবাসী)',
-    'upazilla_immigrant_foreign' => 'প্রবাসী (অনাবাসী)',
+    'upazilla_immigrant' => 'প্রবাসী',
     'upazilla_link' => 'গুরুত্বপূর্ণ লিংকস',
 
         // gallery
