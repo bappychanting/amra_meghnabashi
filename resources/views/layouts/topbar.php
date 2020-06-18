@@ -166,38 +166,38 @@
       <div class="modal-body">
         <form method="POST" action="<?php echo route('members/join'); ?>" enctype="multipart/form-data"> 
 
-          <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-
-          <div class="form-label-group my-3">
-            <label>Name</label>
-            <input type="text" name="name" class="form-control" maxlength="50" minlength="2" required>
-          </div>
-
           <div class="input-group my-4">
             <div class="custom-file">
               <input type="file" name="member_image" class="custom-file-input" id="member_image" aria-describedby="inputGroupFileAddon01" required>
-              <label class="custom-file-label" for="member_image">Image (must be less than 1mb)</label>
+              <label class="custom-file-label" for="member_image"><?php echo locale('views', 'image'); ?></label>
             </div>
           </div>
 
-          <div class="form-label-group my-3">
-            <label>Email</label>
-            <input type="email" name="email" class="form-control" required>
+          <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+
+          <div class="md-form">
+            <label for="inp-name"><?php echo locale('views', 'name'); ?></label>
+            <input type="text" id="inp-name" name="name" class="form-control" maxlength="50" minlength="2" required>
           </div>
 
-          <div class="form-label-group my-3">
-            <label>Phone</label>
-            <input type="text" name="phone" class="form-control" maxlength="50" minlength="2" required>
+          <div class="md-form">
+            <label for="inp-email"><?php echo locale('views', 'email'); ?></label>
+            <input type="email" id="inp-email" name="email" class="form-control" required>
           </div>
 
-          <div class="form-label-group my-3">
-            <label>Address</label>
-            <input type="text" name="address" class="form-control" maxlength="50" minlength="2" required>
+          <div class="md-form">
+            <label for="inp-phone"><?php echo locale('views', 'email'); ?></label>
+            <input type="text" id="inp-phone" name="phone" class="form-control" maxlength="50" minlength="2" required>
           </div>
 
-          <div class="form-label-group my-3">
-            <label>Details</label>
-            <textarea name="details" class="form-control" placeholder="Your about, connections etc."></textarea>
+          <div class="md-form">
+            <label for="inp-address"><?php echo locale('views', 'address'); ?></label>
+            <input type="text" id="inp-address" name="address" class="form-control" maxlength="50" minlength="2" required>
+          </div>
+
+          <div class="md-form">
+            <label for="inp-details"><?php echo locale('views', 'details'); ?></label>
+            <textarea id="inp-details" name="details" class="form-control md-textarea"></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary mr-5"><?php echo locale('views', 'submit'); ?></button>
