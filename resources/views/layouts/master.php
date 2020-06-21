@@ -114,14 +114,6 @@
 				}
 			});
 
-			// Initialize Load More
-			$('.view-members').simpleLoadMore({
-  				item: 'div',
-  				count: 36,
-  				itemsToLoad: 36,
-  				btnHTML:'<div class="col-sm-12 mb-3 text-center"><a href="javascript:void(0);" class="font-weight-bold text-primary h5"><?php echo locale('views', 'read_more'); ?></a></div>'
-			})
-
 			// Initialize Pagination
 			var flexiblePagination = $('.content_paginator').flexiblePagination({
 				itemsPerPage : 12,
