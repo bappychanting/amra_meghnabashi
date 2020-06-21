@@ -66,8 +66,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js" referrerpolicy="origin"></script>
 	<!-- Paginator Javascript -->
 	<?php echo script('plugins/paginator/flexible.pagination.js'); ?>
-	<!-- Load More Javascript -->
-	<?php echo script('plugins/loadmore/jquery.simpleLoadMore.min.js'); ?>
 	<!-- MDB core JavaScript -->
 	<?php echo script('js/mdb.min.js'); ?>
 	<!-- Custom Script -->
