@@ -67,7 +67,7 @@
   <div class="footer-copyright text-center py-3">
     &copy; <?php echo date('Y'); ?> Copyright:<a href="https://amrameghnabasi.org"> AmraMeghnabashi.org</a><br>
     Planning &amp; System Analysis: <a href="https://www.facebook.com/nzamaan" target="_blank">Mohammad Nuruzzaman</a><br>
-    Developed By <a href="https://www.linkedin.com/in/mahadi-hasan-966112b0/" target="_blank">Mahadi Hasan</a> Using <a href="http://mhasan.amrameghnabasi.org/codecube-framework/" target="_blank">CodeCube Framework</a><br>
+    Developed By <a href="http://mhasan.amrameghnabasi.org" target="_blank">Mahadi Hasan</a> Using <a href="http://mhasan.amrameghnabasi.org/codecube-framework/" target="_blank">CodeCube Framework</a><br>
   </div>
 </footer>
 <!-- Footer -->
