@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'Members || '.$member['name'].' || '.title(); ?>
+<?php echo title().' || '.locale('views', 'our_members').' || '.$member['name']; ?>
 
 <?php endblock() ?>
 

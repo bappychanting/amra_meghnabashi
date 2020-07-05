@@ -2,13 +2,13 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'Members || '.title(); ?>
+<?php echo title().' || '.locale('views', 'our_members').' || '.locale('views', 'member_'.$_GET['type']); ?>
 
 <?php endblock() ?>
 
 <?php startblock('meta_tags') ?>
 
-<meta name="keywords" content="<?php echo $contents['keywords']; ?>">
+<meta name="keywords" content="<?php echo $contents['keywords'].', '.$_GET['type']; ?>">
 <meta name="description" content="<?php echo $contents['slogan']; ?>">
 
 <?php endblock() ?>
@@ -16,83 +16,28 @@
 <?php startblock('content') ?>
 
 <section class="container my-3 py-3">
-	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-users pr-2"></i><?php echo locale('views', 'our_members'); ?></h1>
-	<a class="my-3 font-weight-bold text-primary h4" <?php echo (isset($_GET['type']) && $_GET['type'] != 'advisers') ? 'style="display:none;"' : ''; ?> data-toggle="collapse" href="#advisers" aria-expanded="false" aria-controls="advisers">
-		<?php echo locale('views', 'advisers'); ?>
-	</a>
-	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'advisers') ? 'show' : ''; ?> mt-3" id="advisers">
-		<div class="row">
-		<?php foreach ($members['advisers'] as $adviser) { ?>
-			<div class="col-sm-4 mb-3">
+	<h1 class="text-info font-weight-bold mb-5"><i class="fas fa-book-reader pr-2"></i><?php echo locale('views', 'our_members'); ?></h1>
+	<h4 class="my-3 font-weight-bold text-primary"><?php echo locale('views', 'member_'.$_GET['type']); ?></h4>
+
+	<input class="searchBox form-control mb-4"  class="form-control" placeholder="<?php echo locale('views', 'search_something'); ?>">
+	<div class="row content_paginator">
+		<?php foreach ($members as $member) { ?>
+			<div class="result col-sm-4 mb-3">
 				<div class="media">
-					<?php echo image($adviser['image_path'], $adviser['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
+					<?php echo image($member['image_path'], $member['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
 					<div class="media-body">
-						<h5 class="mt-0 font-weight-bold"><?php echo $adviser['name']; ?></h5>
-						<i class="far fa-id-card pr-2"></i><?php echo $adviser['designation']; ?>
+						<h5 class="mt-0 font-weight-bold"><?php echo $member['name']; ?></h5>
+						<i class="far fa-id-card pr-2"></i><?php echo $member['designation']; ?>
+						<span style="display: none;"><?php echo strip_tags($member['details']); ?></span>
 					</div>
 				</div>
-				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $adviser['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a><hr>
+				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $member['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a>
+				<hr>
 			</div>
-			<?php } ?>
-		</div>
+		<?php } ?>
 	</div>
-	<a class="my-3 font-weight-bold text-primary h4" <?php echo (isset($_GET['type']) && $_GET['type'] != 'vips') ? 'style="display:none;"' : ''; ?> data-toggle="collapse" href="#vips" aria-expanded="false" aria-controls="vips">
-		<?php echo locale('views', 'vips'); ?>
-	</a>
-	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'vips') ? 'show' : ''; ?> mt-3" id="vips">
-		<div class="row">
-		<?php foreach ($members['vips'] as $vip) { ?>
-			<div class="col-sm-4 mb-3">
-				<div class="media">
-					<?php echo image($vip['image_path'], $vip['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
-					<div class="media-body">
-						<h5 class="mt-0 font-weight-bold"><?php echo $vip['name']; ?></h5>
-						<i class="far fa-id-card pr-2"></i><?php echo $vip['designation']; ?>
-					</div>
-				</div>
-				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $vip['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a><hr>
-			</div>
-			<?php } ?>
-		</div>
-	</div>
-	<a class="my-3 font-weight-bold text-primary h4" <?php echo (isset($_GET['type']) && $_GET['type'] != 'admins') ? 'style="display:none;"' : ''; ?> data-toggle="collapse" href="#admins" aria-expanded="false" aria-controls="admins">
-		<?php echo locale('views', 'admins'); ?>
-	</a>
-	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'admins') ? 'show' : ''; ?> mt-3" id="admins">
-		<div class="row">
-		<?php foreach ($members['admins'] as $admin) { ?>
-			<div class="col-sm-4 mb-3">
-				<div class="media">
-					<?php echo image($admin['image_path'], $admin['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
-					<div class="media-body">
-						<h5 class="mt-0 font-weight-bold"><?php echo $admin['name']; ?></h5>
-						<i class="far fa-id-card pr-2"></i><?php echo $admin['designation']; ?>
-					</div>
-				</div>
-				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $admin['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a><hr>
-			</div>
-			<?php } ?>
-		</div>
-	</div>
-	<a class="my-3 font-weight-bold text-primary h4" <?php echo (isset($_GET['type']) && $_GET['type'] != 'volunteers') ? 'style="display:none;"' : ''; ?> data-toggle="collapse" href="#volunteers" aria-expanded="false" aria-controls="volunteers">
-		<?php echo locale('views', 'volunteers'); ?>
-	</a>
-	<div class="collapse <?php echo (!isset($_GET['type']) || $_GET['type'] == 'volunteers') ? 'show' : ''; ?> mt-3" id="volunteers">
-		<div class="row">
-		<?php foreach ($members['volunteers'] as $volunteer) { ?>
-			<div class="col-sm-4 mb-3">
-				<div class="media">
-					<?php echo image($volunteer['image_path'], $volunteer['name'], ['class'=>'rounded-circle mr-3', 'height'=>'60px', 'width' => '60px']); ?>
-					<div class="media-body">
-						<h5 class="mt-0 font-weight-bold"><?php echo $volunteer['name']; ?></h5>
-						<i class="far fa-id-card pr-2"></i><?php echo $volunteer['designation']; ?>
-					</div>
-				</div>
-				<a class="btn btn-warning btn-sm" href="<?php echo route('members/show', ['id' => $volunteer['id']]); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'show_details'); ?></a><hr>
-			</div>
-			<?php } ?>
-		</div>
-	</div>
+	<div class="pagingControls"></div>
+	<!-- <div id="showingInfo" class="well my-3"></div> -->
 </section>
 
 <?php endblock() ?>

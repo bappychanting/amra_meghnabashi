@@ -107,21 +107,6 @@
           </div>
         </li>
 
-        <!-- Members Dropdown -->
-        <li class="nav-item dropdown <?php echo route_is('members') ? 'active' : '' ; ?>">
-          <a class="nav-link dropdown-toggle" id="memberDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <?php echo locale('views', 'members'); echo route_is('members') ? '<span class="sr-only">(current)</span>' : '' ; ?>
-          </a>
-          <div class="dropdown-menu dropdown-primary" aria-labelledby="memberDropdownMenuLink">
-            <a class="dropdown-item" href="<?php echo route('members'); ?>"><?php echo locale('views', 'see_all_members'); ?></a>
-            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'advisers']); ?>"><?php echo locale('views', 'advisers'); ?></a>
-            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'vips']); ?>"><?php echo locale('views', 'vips'); ?></a>
-            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'admins']); ?>"><?php echo locale('views', 'admins'); ?></a>
-            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'volunteers']); ?>"><?php echo locale('views', 'volunteers'); ?></a>
-            <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#join_modal"><?php echo locale('views', 'be_volunteer'); ?></a>
-          </div>
-        </li>
-
         <!-- Gallery Dropdown -->
         <li class="nav-item dropdown <?php echo route_is('gallery') ? 'active' : '' ; ?>">
           <a class="nav-link dropdown-toggle" id="galleryDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -130,6 +115,20 @@
           <div class="dropdown-menu dropdown-primary" aria-labelledby="galleryDropdownMenuLink">
             <a class="dropdown-item" href="<?php echo route('gallery', ['type' => 'photo']); ?>"><?php echo locale('views', 'gallery_photo'); ?></a>
             <a class="dropdown-item" href="<?php echo route('gallery', ['type' => 'video']); ?>"><?php echo locale('views', 'gallery_video'); ?></a>
+          </div>
+        </li>
+
+        <!-- Members Dropdown -->
+        <li class="nav-item dropdown <?php echo route_is('members') ? 'active' : '' ; ?>">
+          <a class="nav-link dropdown-toggle" id="memberDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <?php echo locale('views', 'members'); echo route_is('members') ? '<span class="sr-only">(current)</span>' : '' ; ?>
+          </a>
+          <div class="dropdown-menu dropdown-primary" aria-labelledby="memberDropdownMenuLink">
+            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'adviser']); ?>"><?php echo locale('views', 'member_adviser'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'vip']); ?>"><?php echo locale('views', 'member_vip'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'admin']); ?>"><?php echo locale('views', 'member_admin'); ?></a>
+            <a class="dropdown-item" href="<?php echo route('members', ['type' => 'volunteer']); ?>"><?php echo locale('views', 'member_volunteer'); ?></a>
+            <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#join_modal"><?php echo locale('views', 'be_volunteer'); ?></a>
           </div>
         </li>
 

@@ -28,12 +28,12 @@
           <label for="select_tag">Select Category Tag</label>
           <select class="form-control" id="select_tag">
             <option selected disabled>Please select tags</option>
-            <option value="adviser"><?php echo locale('views', 'advisers'); ?></option>
-            <option value="vip"><?php echo locale('views', 'vips'); ?></option>
-            <option value="admin"><?php echo locale('views', 'admins'); ?></option>
-            <option value="volunteer"><?php echo locale('views', 'volunteers'); ?></option>
+            <option value="adviser"><?php echo locale('views', 'member_adviser'); ?></option>
+            <option value="vip"><?php echo locale('views', 'member_vip'); ?></option>
+            <option value="admin"><?php echo locale('views', 'member_admin'); ?></option>
+            <option value="volunteer"><?php echo locale('views', 'member_volunteer'); ?></option>
             <option value="ffighter"><?php echo locale('views', 'meghna_ffighter'); ?></option>
-            <option value="personality"><?php echo locale('views', 'personalities'); ?></option>
+            <option value="personality"><?php echo locale('views', 'meghna_personality'); ?></option>
             <option value="police"><?php echo locale('views', 'upazilla_police'); ?></option>
             <option value="immigrant"><?php echo locale('views', 'upazilla_immigrant'); ?></option>
             <option value="doctor"><?php echo locale('views', 'upazilla_doctor'); ?></option>

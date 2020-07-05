@@ -31,6 +31,7 @@ return [
     'address' => ' আপনার ঠিকানা',
     'details' => 'আপনার অন্যান্য বিবরণ',
     'submit' => 'জমা দিন',
+    'search' => 'অনুসন্ধান',
     'search_something' => 'অনুসন্ধান করুন',
 
         // Our Meghna
@@ -80,11 +81,10 @@ return [
     'members' => 'সদস্যগণ',
     'our_members' => 'আমাদের সদস্যগণ',
     'see_all_members' => 'সমস্ত সদস্যদের দেখুন',
-    'volunteers' => 'সেচ্ছাসেবকবৃন্দ',
-    'admins' => 'এডমিনবৃন্দ',
-    'personalities' => 'বিশিষ্টজন',
-    'vips' => 'সুধীমন্ডলী',
-    'advisers' => 'উপদেষ্টামন্ডলী',
+    'member_volunteer' => 'সেচ্ছাসেবকবৃন্দ',
+    'member_admin' => 'এডমিনবৃন্দ',
+    'member_vip' => 'সুধীমন্ডলী',
+    'member_adviser' => 'উপদেষ্টামন্ডলী',
     'be_volunteer' => 'স্বেচ্ছাসেবক হোন',
 
         // News    

@@ -96,7 +96,7 @@
 	</div>
 	<div class="row justify-content-center my-3">
 		<a class="btn btn-warning btn-md" href="<?php echo route('members'); ?>"><i class="fas fa-external-link-alt pr-2"></i><?php echo locale('views', 'see_all_members'); ?></a>
-	</div>
+	</div>	
 	<hr>
 	<p class="h3 text-info font-weight-bold my-4 text-center"><i class="fas fa-briefcase pr-2"></i><?php echo locale('views', 'our_projects'); ?></p>
 	<!-- <div id="project-carousel" class="carousel slide carousel-fade" data-ride="carousel">
