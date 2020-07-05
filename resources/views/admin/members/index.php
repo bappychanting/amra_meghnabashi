@@ -36,6 +36,7 @@
             <th class="th-sm">Tags</th>
             <th class="th-sm">Created At</th>
             <th class="th-sm">Actions</th>
+            <th style="display: none;"></th>
           </tr>
         </thead>
         <tbody>
@@ -54,6 +55,7 @@
                   <button class="btn btn-danger btn-sm" type="submit"><i class="fas fa-trash"></i></button>
                 </form>
               </td>
+              <td style="display: none;"><?php echo $member['details']; ?></td>
             </tr>
           <?php } ?>
         </tbody>
@@ -65,6 +67,7 @@
             <th class="th-sm">Tags</th>
             <th class="th-sm">Created At</th>
             <th class="th-sm">Actions</th>
+            <th style="display: none;"></th>
           </tr>
         </tfoot>
       </table>
