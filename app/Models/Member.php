@@ -100,7 +100,7 @@ class Member extends Model{
   }
 
   public function getPeople($tag='personality'){    
-    $people = $this->db->table('members')->where('tags', 'LIKE', '%'.$tag.'%')->orderBy('name')->limit(2000)->read();
+    $people = $this->db->table('members')->where('tags', 'LIKE', '%'.$tag.'%')->and('approved', '=', 1)->orderBy('name')->limit(2000)->read();
     return $people;
   }
 
