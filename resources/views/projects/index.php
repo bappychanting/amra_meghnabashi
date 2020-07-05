@@ -2,7 +2,7 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'Projects || '.title(); ?>
+<?php echo title().' || '.locale('views', 'our_projects'); ?>
 
 <?php endblock() ?>
 
