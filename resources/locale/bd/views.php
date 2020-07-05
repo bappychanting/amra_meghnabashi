@@ -31,7 +31,6 @@ return [
     'address' => ' আপনার ঠিকানা',
     'details' => 'আপনার অন্যান্য বিবরণ',
     'submit' => 'জমা দিন',
-    'search' => 'অনুসন্ধান',
     'search_something' => 'অনুসন্ধান করুন',
 
         // Our Meghna
