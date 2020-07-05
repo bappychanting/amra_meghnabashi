@@ -79,6 +79,7 @@ return [
         // Members
     'members' => 'সদস্যগণ',
     'our_members' => 'আমাদের সদস্যগণ',
+    'see_all_members' => 'সমস্ত সদস্যদের দেখুন',
     'member_volunteer' => 'সেচ্ছাসেবকবৃন্দ',
     'member_admin' => 'এডমিনবৃন্দ',
     'member_vip' => 'সুধীমন্ডলী',
