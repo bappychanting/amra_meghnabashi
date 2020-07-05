@@ -99,16 +99,8 @@ class Member extends Model{
     return $members;
   }
 
-  public function getMembersByCategory(){    
-    $vips = $this->db->table('members')->where('tags', 'LIKE', '%vip%')->orderBy('name')->read();
-    $advisers = $this->db->table('members')->where('tags', 'LIKE', '%adviser%')->orderBy('name')->read();
-    $admins = $this->db->table('members')->where('tags', 'LIKE', '%admin%')->orderBy('name')->read();
-    $volunteers = $this->db->table('members')->where('tags', 'LIKE', '%volunteer%')->and('approved', '=', 1)->orderBy('name')->read();
-    return array('volunteers' => $volunteers, 'admins' => $admins, 'vips' => $vips, 'advisers' => $advisers);
-  }
-
   public function getPeople($tag='personality'){    
-    $people = $this->db->table('members')->where('tags', 'LIKE', '%'.$tag.'%')->orderBy('name')->limit(2000)->read();
+    $people = $this->db->table('members')->where('tags', 'LIKE', '%'.$tag.'%')->and('approved', '=', 1)->orderBy('name')->limit(2000)->read();
     return $people;
   }
 

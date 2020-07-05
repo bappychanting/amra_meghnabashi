@@ -2,7 +2,11 @@
 
 <?php startblock('title') ?>
 
-<?php echo 'News || '.$news['title'].' || '.title(); ?>
+<?php echo title().' || '.locale('views', 'news').' || '.$news['title']; ?>
+
+<?php endblock() ?>
+
+<?php startblock('meta_tags') ?>
 
 <meta name="keywords" content="<?php echo $contents['keywords'].', '.$news['tags']; ?>">
 <meta name="description" content="<?php echo $contents['slogan']; ?>">
