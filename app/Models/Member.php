@@ -99,8 +99,15 @@ class Member extends Model{
     return $members;
   }
 
-  public function getPeople($tag='personality'){    
-    $people = $this->db->table('members')->where('tags', 'LIKE', '%'.$tag.'%')->and('approved', '=', 1)->orderBy('name')->limit(2000)->read();
+  public function getPeople($tag='all'){    
+    $people = $this->db->table('members');
+    if($tag == 'all'){
+      $people = $people->condition('WHERE tags LIKE "%adviser%" OR tags LIKE "%vip%" OR tags LIKE "%admin%" OR tags LIKE "%volunteer%"');
+    }
+    else{
+      $people = $people->where('tags', 'LIKE', '%'.$tag.'%');
+    }
+    $people = $people->and('approved', '=', 1)->orderBy('name')->limit(2000)->read();
     return $people;
   }
 
