@@ -1,0 +1,21 @@
+services:
+  # The PHP-FPM service
+  php-fpm:
+    build:
+      context: ./
+      dockerfile: ./docker/php/Dockerfile
+    container_name: amrameghnabasi_php_fpm
+    volumes:
+      - ./src:/var/www
+
+  # The Nginx web server
+  nginx:
+    build:
+      context: ./docker/nginx
+    container_name: amrameghnabasi_laravel_nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www
+    depends_on:
+      - php-fpm
