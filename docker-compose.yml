@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       dockerfile: ./docker/php/Dockerfile
-    container_name: amrameghnabasi_php_fpm
+    container_name: amrameghnabashi_php_fpm
     volumes:
       - ./src:/var/www
 
@@ -12,7 +12,7 @@ services:
   nginx:
     build:
       context: ./docker/nginx
-    container_name: amrameghnabasi_laravel_nginx
+    container_name: amrameghnabashi_laravel_nginx
     ports:
       - "8080:80"
     volumes:

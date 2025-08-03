@@ -50,8 +50,12 @@ WORKDIR /var/www
 # Copy the application source code from the 'src' directory
 COPY src ./
 
-# Copy vendor directory from the builder stage
-COPY --from=builder /app/vendor ./vendor
+# Copy vendor directory into /tmp (not overwritten by volume)
+COPY --from=builder /app/vendor /tmp/vendor
+
+# Add entrypoint script
+COPY ./docker/php/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 # Set permissions for the web server user
 RUN chown -R www-data:www-data /var/www/storage
@@ -60,4 +64,5 @@ RUN chown -R www-data:www-data /var/www/storage
 EXPOSE 9000
 
 # The default command runs PHP-FPM
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["php-fpm"]
