@@ -1,0 +1,28 @@
+{
+    "name": "codecube/codecube",
+    "type": "project",
+    "description": "The CodeCube Framework: An easy & lightweight PHP framework.",
+    "keywords": [
+        "php",
+        "framework",
+        "codecube"
+    ],
+    "authors": [
+        {
+            "name": "Mahadi Hasan",
+            "email": "bappychanting@outlook.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "codecube/base": "^1.2"
+    },
+    "autoload": {
+        "psr-4":{
+            "App\\": "app/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
