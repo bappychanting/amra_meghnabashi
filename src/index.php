@@ -1,5 +1,24 @@
 <?php
 
+if (!function_exists('apache_request_headers')) {
+    /**
+     * Replacement for getallheaders() which is often missing in PHP-FPM on minimalist distros like Alpine.
+     * Reads headers from the $_SERVER superglobal, where they are prefixed with 'HTTP_'.
+     */
+    function apache_request_headers() {
+        $headers = [];
+        foreach ($_SERVER as $name => $value) {
+            // Headers are stored in $_SERVER with the prefix 'HTTP_' and uppercase, 
+            // e.g., 'Authorization' becomes 'HTTP_AUTHORIZATION'.
+            if (substr($name, 0, 5) == 'HTTP_') {
+                $header_name = str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))));
+                $headers[$header_name] = $value;
+            }
+        }
+        return $headers;
+    }
+}
+
 try{
 
     ob_start();
